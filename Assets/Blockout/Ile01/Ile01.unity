@@ -354,18 +354,8 @@ Prefab:
       objectReference: {fileID: 905352165}
     - target: {fileID: 114116046164100624, guid: dc9cd405a9253154ba9e3840dd1eb18c,
         type: 2}
-      propertyPath: m_mouseSmoothDeadzoneSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114116046164100624, guid: dc9cd405a9253154ba9e3840dd1eb18c,
-        type: 2}
-      propertyPath: m_inverseVerticalAxis
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114116046164100624, guid: dc9cd405a9253154ba9e3840dd1eb18c,
-        type: 2}
       propertyPath: m_FPSMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc9cd405a9253154ba9e3840dd1eb18c, type: 2}

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,7 +57,9 @@ public class FollowCamera: MonoBehaviour
     [SerializeField] float m_blockedComeSpeed = 20f;
     [SerializeField] float m_blockedBackSpeed = 1;
 
-    [SerializeField] LayerMask m_raycastsMask;
+    [SerializeField] float m_recenterTime = 0.5f;
+
+    [SerializeField] LayerMask m_raycastsMask = 0;
 
     Camera m_camera;
 
@@ -89,6 +92,8 @@ public class FollowCamera: MonoBehaviour
 
     Vector2 m_mouseRotValue;
 
+    bool m_onTransform = false;
+
     SubscriberList m_subscriberList = new SubscriberList();
 
     private void Awake()
@@ -96,6 +101,7 @@ public class FollowCamera: MonoBehaviour
         m_camera = GetComponent<Camera>();
 
         m_subscriberList.Add(new Event<LockPlayerControlesEvent>.Subscriber(onControlesLock));
+        m_subscriberList.Add(new Event<ChangeControlerViewEvent>.Subscriber(onChangeViewType));
         m_subscriberList.Subscribe();
     }
 
@@ -160,6 +166,9 @@ public class FollowCamera: MonoBehaviour
         updateCameraTransform();
 
         m_targetOldposition = m_target.position;
+
+        if (Input.GetButtonDown(nameRecenterCam))
+            recenter();
     }
 
     void updateTargetinformations()
@@ -406,8 +415,52 @@ public class FollowCamera: MonoBehaviour
         m_cameraTargetRecenterFromSurface = -angle * m_groundAngleMultiplier;
     }
 
+    void recenter()
+    {
+        if(!m_onTransform)
+        { 
+            m_onTransform = true;
+            StartCoroutine(recenterCoroutine(m_recenterTime));
+        }
+    }
+
+    IEnumerator recenterCoroutine(float time)
+    {
+        m_onTransform = true;
+        float currentTime = 0;
+
+        Quaternion currentAngle = transform.rotation;
+
+        while(currentTime < time)
+        {
+            yield return new WaitForEndOfFrame();
+            currentTime += Time.deltaTime;
+            m_currentCameraOrientation = Quaternion.Slerp(currentAngle, m_target.rotation, Mathf.Clamp(currentTime / time, 0, 1)).eulerAngles;
+            if (m_currentCameraOrientation.x > 180)
+                m_currentCameraOrientation.x -= 360f;
+        }
+
+        m_currentCameraOrientation = m_target.rotation.eulerAngles;
+        if (m_currentCameraOrientation.x > 180)
+            m_currentCameraOrientation.x -= 360f;
+        m_onTransform = false;
+    }
+
     void onControlesLock(LockPlayerControlesEvent e)
     {
         m_controlesLocked = e.locked;
+    }
+
+    void onChangeViewType(ChangeControlerViewEvent e)
+    {
+        if(e.viewType == ChangeControlerViewEvent.ControlerViewType.FPS_VIEW)
+        {
+            m_FPSMode = true;
+        }
+        else
+        {
+            m_FPSMode = false;
+            m_target.rotation = Quaternion.Euler(0, m_currentCameraOrientation.y, 0);
+        }
     }
 }
