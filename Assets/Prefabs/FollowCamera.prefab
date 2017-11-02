@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3eb3cd4c5376a8458ff240dc8198671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FPSMode: 1
+  m_FPSMode: 0
   m_FPSCameraHeight: 1.5
   m_updateType: 2
   m_target: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_manualCameraVerticalSpeedMultiplier: 80
   m_manualCameraDeadZone: 0.1
   m_manualCameraAcceleration: 500
-  m_mouseSensibility: 1.5
+  m_mouseSensibility: 0.15
   m_mouseSmoothDeadzoneSpeed: 1
   m_mouseSmoothDeadzonePow: 2
   m_minVerticaloffset: -0.8
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_cameraRayRadius: 0.3
   m_blockedComeSpeed: 30
   m_blockedBackSpeed: 4
+  m_recenterTime: 0.5
   m_raycastsMask:
     serializedVersion: 2
     m_Bits: 1

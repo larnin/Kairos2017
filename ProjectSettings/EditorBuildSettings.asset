@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Blockout/Ile01/Ile01.unity
+    guid: e644d08503139dc4889883bf7e3f7296
+  - enabled: 1
+    path: Assets/Scenes/Toto.unity
+    guid: b8aa0057698f6924bbf17577f7876253
