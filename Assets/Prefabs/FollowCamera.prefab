@@ -114,7 +114,7 @@ MonoBehaviour:
   m_manualCameraVerticalSpeedMultiplier: 80
   m_manualCameraDeadZone: 0.1
   m_manualCameraAcceleration: 500
-  m_mouseSensibility: 0.15
+  m_mouseSensibility: 0.1
   m_mouseSmoothDeadzoneSpeed: 1
   m_mouseSmoothDeadzonePow: 2
   m_minVerticaloffset: -0.8
