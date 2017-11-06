@@ -305,9 +305,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b9c42eb4c19624f8a184b6a14cb8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 21300160, guid: e7b95fe2e96ea914691a0e5dc6cb2cbc, type: 3}
+    - {fileID: 21300162, guid: e7b95fe2e96ea914691a0e5dc6cb2cbc, type: 3}
+    - {fileID: 21300166, guid: e7b95fe2e96ea914691a0e5dc6cb2cbc, type: 3}
+    - {fileID: 21300164, guid: e7b95fe2e96ea914691a0e5dc6cb2cbc, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: m_textures
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.Sprite,
+        UnityEngine]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 1
+      Data: A
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 1
+      Data: B
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 1
+      Data: X
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 1
+      Data: Y
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   m_mouseSensibility: 1
   m_controlerSensibility: 10
   m_mouseArea: {x: 1900, y: 1060}
+  m_defaultTexture: {fileID: 0}
 --- !u!114 &339810778
 MonoBehaviour:
   m_ObjectHideFlags: 0

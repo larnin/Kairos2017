@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Sirenix.OdinInspector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class VirtualCursorLogic : MonoBehaviour
+public class VirtualCursorLogic : SerializedMonoBehaviour
 {
     string inputMouseX = "Mouse X";
     string inputMouseY = "Mouse Y";
@@ -15,6 +17,8 @@ public class VirtualCursorLogic : MonoBehaviour
     [SerializeField] float m_mouseSensibility = 1;
     [SerializeField] float m_controlerSensibility = 1;
     [SerializeField] Vector2 m_mouseArea = new Vector2(1900, 1060);
+    [SerializeField] Dictionary<string, Sprite> m_textures = new Dictionary<string, Sprite>();
+    [SerializeField] Sprite m_defaultTexture;
 
     SubscriberList m_subscriberList = new SubscriberList();
 
@@ -22,11 +26,19 @@ public class VirtualCursorLogic : MonoBehaviour
 
     RectTransform m_rectTransform;
 
+    Image m_image;
+
+    Vector2 m_baseSize;
+
     private void Awake()
     {
         m_rectTransform = GetComponent<RectTransform>();
+        m_image = GetComponent<Image>();
+        m_image.sprite = m_defaultTexture;
+        m_baseSize = GetComponent<RectTransform>().sizeDelta;
 
         m_subscriberList.Add(new Event<EnableCursorEvent>.Subscriber(onEnableEvent));
+        m_subscriberList.Add(new Event<ChangeCursorTextureEvent>.Subscriber(onChangeTextureEvent));
         m_subscriberList.Subscribe();
     }
 
@@ -34,7 +46,7 @@ public class VirtualCursorLogic : MonoBehaviour
     {
         m_subscriberList.Unsubscribe();
     }
-
+    
     private void Update()
     {
         var dir = new Vector2(Input.GetAxisRaw(inputMouseX), Input.GetAxisRaw(inputMouseY)) * m_mouseSensibility
@@ -56,6 +68,22 @@ public class VirtualCursorLogic : MonoBehaviour
             m_position = Vector2.zero;
             updatePosition();
         }
+    }
+
+    void onChangeTextureEvent(ChangeCursorTextureEvent e)
+    {
+        if (e.useDefaultTexture)
+            m_image.sprite = m_defaultTexture;
+        else
+        {
+            if (!m_textures.ContainsKey(e.textureName))
+                m_image.sprite = m_defaultTexture;
+            else m_image.sprite = m_textures[e.textureName];
+        }
+        if (m_image.sprite != null)
+            m_image.SetNativeSize();
+        else GetComponent<RectTransform>().sizeDelta = m_baseSize;
+        m_image.color = e.color;
     }
 
     void updatePosition()
