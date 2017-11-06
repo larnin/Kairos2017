@@ -6,11 +6,20 @@ using UnityEngine;
 
 public abstract class InteractableBaseLogic : MonoBehaviour
 {
-    public abstract void onEnter();
+    public enum OrigineType
+    {
+        CURSOR,
+        FIRST_PERSON_CAMERA,
+        THIRD_PERSON_CAMERA
+    }
 
-    public abstract void onExit();
+    public abstract void onEnter(OrigineType type, Vector3 localPosition);
 
-    public abstract void onInteract();
+    public abstract void onExit(OrigineType type);
 
-    public abstract void onDrag(Vector2 dist);
+    public abstract void onInteract(OrigineType type, Vector3 localPosition);
+
+    public abstract void onInteractEnd(OrigineType type);
+
+    public abstract void onDrag(Vector2 dist, OrigineType type);
 }
