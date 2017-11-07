@@ -13,7 +13,7 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
     string inputMouseY = "Mouse Y";
     string inputJoyX = "Horizontal";
     string inputJoyY = "Vertical";
-    string inputValidate = "Submit";
+    string inputValidate = "Interact";
 
     [SerializeField] float m_mouseSensibility = 1;
     [SerializeField] float m_controlerSensibility = 1;
@@ -168,7 +168,8 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
         if(Input.GetButtonUp(inputValidate) && m_selectedInteractable != null)
         {
             if (m_selectedInteractable != null)
-            m_selectedInteractable.onInteractEnd(InteractableBaseLogic.OrigineType.CURSOR);
+                m_selectedInteractable.onInteractEnd(InteractableBaseLogic.OrigineType.CURSOR);
+            m_selectedInteractable = null;
         }
 
         if((m_rectTransform.position - m_oldPosition).magnitude > 0.01f && m_selectedInteractable != null)
