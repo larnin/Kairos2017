@@ -21,5 +21,5 @@ public abstract class InteractableBaseLogic : MonoBehaviour
 
     public abstract void onInteractEnd(OrigineType type);
 
-    public abstract void onDrag(Vector2 dist, OrigineType type);
+    public abstract void onDrag(Vector3 dist, OrigineType type);
 }

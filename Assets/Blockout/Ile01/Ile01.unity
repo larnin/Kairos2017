@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &339810776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1074,6 +1074,26 @@ RectTransform:
   m_AnchoredPosition: {x: 499.93018, y: -449}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1544113353 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1987142631473010, guid: dc9cd405a9253154ba9e3840dd1eb18c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1729641954}
+--- !u!114 &1544113360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1544113353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768e5cdae49be44091a526140351f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_interactableMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_maxRayDistance: 10
 --- !u!1 &1610609513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,6 +1234,11 @@ Prefab:
       propertyPath: m_target
       value: 
       objectReference: {fileID: 905352165}
+    - target: {fileID: 114116046164100624, guid: dc9cd405a9253154ba9e3840dd1eb18c,
+        type: 2}
+      propertyPath: m_clampVerticalRotationBottom
+      value: -65
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc9cd405a9253154ba9e3840dd1eb18c, type: 2}
   m_IsPrefabParent: 0

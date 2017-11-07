@@ -62,6 +62,8 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
         var dir = new Vector2(Input.GetAxisRaw(inputMouseX), Input.GetAxisRaw(inputMouseY)) * m_mouseSensibility
             + new Vector2(Input.GetAxis(inputJoyX), Input.GetAxis(inputJoyY)) * m_controlerSensibility;
 
+        m_oldPosition = m_rectTransform.position;
+
         if (dir.magnitude > 0.01f)
         {
             m_position += dir;
@@ -79,7 +81,6 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
         var screen = new Vector2(Screen.width, Screen.height);
         Vector2 pos = new Vector2(m_position.x * scale.x, m_position.y * scale.y);
         pos += screen / 2.0f;
-        m_oldPosition = m_rectTransform.position;
         m_rectTransform.position = new Vector3(pos.x, pos.y, m_rectTransform.position.z);
     }
 
@@ -174,8 +175,9 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
 
         if((m_rectTransform.position - m_oldPosition).magnitude > 0.01f && m_selectedInteractable != null)
         {
-            Vector2 dir = new Vector2(m_rectTransform.position.x - m_oldPosition.x, m_rectTransform.position.y - m_oldPosition.y);
-            m_selectedInteractable.onDrag(dir, InteractableBaseLogic.OrigineType.CURSOR);
+            if (m_selectedInteractable.GetComponent<RectTransform>() != null)
+                m_selectedInteractable.onDrag(m_rectTransform.position - m_oldPosition, InteractableBaseLogic.OrigineType.CURSOR);
+            else dragInteractableInWorld(m_selectedInteractable);
         }
     }
 
@@ -203,5 +205,19 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
             m_image.SetNativeSize();
         else m_rectTransform.sizeDelta = m_baseSize;
         m_image.color = e.color;
+    }
+
+    void dragInteractableInWorld(InteractableBaseLogic interactable)
+    {
+        var camForward = m_camera.transform.forward;
+
+        var ray = m_camera.ScreenPointToRay(transform.position).direction;
+        var oldRay = m_camera.ScreenPointToRay(m_oldPosition).direction;
+
+        var dist = Mathf.Abs(Vector3.Dot(m_camera.transform.position - interactable.transform.position, camForward));
+        var d1 = Vector3.ProjectOnPlane(ray, camForward) / Vector3.Dot(ray, camForward) * dist;
+        var d2 = Vector3.ProjectOnPlane(oldRay, camForward) / Vector3.Dot(oldRay, camForward) * dist;
+        
+        m_selectedInteractable.onDrag(d1 - d2, InteractableBaseLogic.OrigineType.CURSOR);
     }
 }

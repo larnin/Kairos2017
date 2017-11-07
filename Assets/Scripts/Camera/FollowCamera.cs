@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public class FollowCamera: MonoBehaviour
+public class FollowCamera : MonoBehaviour
 {
     public enum UpdateType
     {
@@ -95,6 +95,9 @@ public class FollowCamera: MonoBehaviour
     bool m_onTransform = false;
 
     SubscriberList m_subscriberList = new SubscriberList();
+
+    public bool FPSMode { get { return m_FPSMode; } }
+    public Transform target { get { return m_target; } }
 
     private void Awake()
     {
