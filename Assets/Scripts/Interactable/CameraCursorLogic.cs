@@ -25,7 +25,13 @@ class CameraCursorLogic : MonoBehaviour
 
     Vector3 m_localHitPos;
     Vector3 m_oldPosition;
+    Vector3 m_targetOldPosition;
     Quaternion m_oldRotation;
+
+    Vector3 m_localInteractablePosition;
+    Quaternion m_localInteractableRotation;
+    Quaternion m_startInteractableRotation;
+    Quaternion m_startCameraRotation;
 
     private void Awake()
     {
@@ -37,6 +43,7 @@ class CameraCursorLogic : MonoBehaviour
 
         m_oldPosition = transform.position;
         m_oldRotation = transform.rotation;
+        m_targetOldPosition = m_followCamera.target.position;
     }
 
     private void OnDestroy()
@@ -54,6 +61,7 @@ class CameraCursorLogic : MonoBehaviour
 
         m_oldPosition = transform.position;
         m_oldRotation = transform.rotation;
+        m_targetOldPosition = m_followCamera.target.position;
     }
 
     void checkHoveredinteractables()
@@ -104,6 +112,12 @@ class CameraCursorLogic : MonoBehaviour
                 m_selectedInteractable.onInteractEnd(type);
             m_selectedInteractable = m_hoveredInteractable;
             m_selectedInteractable.onInteract(type, m_localHitPos);
+
+            m_localInteractablePosition = m_selectedInteractable.transform.position - m_followCamera.target.position;
+            m_localInteractablePosition = transform.forward * m_localInteractablePosition.magnitude;
+            m_localInteractableRotation = m_selectedInteractable.transform.rotation * Quaternion.Inverse(transform.rotation);
+            m_startInteractableRotation = m_selectedInteractable.transform.rotation;
+            m_startCameraRotation = transform.rotation;
         }
 
         if (Input.GetButtonUp(inputValidate) && m_selectedInteractable != null)
@@ -121,10 +135,19 @@ class CameraCursorLogic : MonoBehaviour
     {
         InteractableBaseLogic.OrigineType type = m_followCamera.FPSMode ? InteractableBaseLogic.OrigineType.FIRST_PERSON_CAMERA : InteractableBaseLogic.OrigineType.THIRD_PERSON_CAMERA;
 
-        var pos = m_selectedInteractable.transform.position - 2 * m_oldPosition + transform.position;
-        pos = transform.rotation * Quaternion.Inverse(m_oldRotation) * pos;
-        pos += transform.position;
-        m_selectedInteractable.onDrag(pos - m_selectedInteractable.transform.position, type);
+        var newRot = transform.rotation  * Quaternion.Inverse(m_startCameraRotation) * m_startInteractableRotation;
+        var dir = (transform.rotation * Quaternion.Inverse(m_oldRotation)).eulerAngles;
+        if (dir.x > 180)
+            dir.x -= 360;
+        if (dir.y > 180)
+            dir.y -= 360;
+
+        var distance = m_localInteractablePosition.magnitude;
+        var newLocalPos = transform.forward * distance;
+        var posOffset = m_followCamera.target.position - m_targetOldPosition;
+        
+        m_selectedInteractable.onDrag(new InteractableBaseLogic.DragData(new Vector2(dir.y, dir.x), posOffset + newLocalPos - m_localInteractablePosition,  Quaternion.Inverse(m_selectedInteractable.transform.rotation) * newRot, m_followCamera.target), type);
+        m_localInteractablePosition = newLocalPos;
     }
 
     void exitInteractables()

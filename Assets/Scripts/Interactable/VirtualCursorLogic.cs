@@ -176,7 +176,10 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
         if((m_rectTransform.position - m_oldPosition).magnitude > 0.01f && m_selectedInteractable != null)
         {
             if (m_selectedInteractable.GetComponent<RectTransform>() != null)
-                m_selectedInteractable.onDrag(m_rectTransform.position - m_oldPosition, InteractableBaseLogic.OrigineType.CURSOR);
+            {
+                var dir = m_rectTransform.position - m_oldPosition;
+                m_selectedInteractable.onDrag(new InteractableBaseLogic.DragData(dir, dir, m_rectTransform), InteractableBaseLogic.OrigineType.CURSOR);
+            }
             else dragInteractableInWorld(m_selectedInteractable);
         }
     }
@@ -217,7 +220,8 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
         var dist = Mathf.Abs(Vector3.Dot(m_camera.transform.position - interactable.transform.position, camForward));
         var d1 = Vector3.ProjectOnPlane(ray, camForward) / Vector3.Dot(ray, camForward) * dist;
         var d2 = Vector3.ProjectOnPlane(oldRay, camForward) / Vector3.Dot(oldRay, camForward) * dist;
-        
-        m_selectedInteractable.onDrag(d1 - d2, InteractableBaseLogic.OrigineType.CURSOR);
+
+        var dir = m_rectTransform.position - m_oldPosition;
+        m_selectedInteractable.onDrag(new InteractableBaseLogic.DragData(dir,  d1 - d2, m_camera.transform), InteractableBaseLogic.OrigineType.CURSOR);
     }
 }

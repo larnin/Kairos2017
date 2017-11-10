@@ -6,10 +6,11 @@ using UnityEngine;
 
 class TestInteractablelogic : InteractableBaseLogic
 {
-    public override void onDrag(Vector3 dist, OrigineType type)
+    public override void onDrag(DragData data, OrigineType type)
     {
-        Debug.Log("Dragged " + dist);
-        transform.position += dist;
+        Debug.Log("Dragged " + data.rawMove);
+        transform.position += data.move;
+        transform.rotation *= data.rotation;
     }
 
     public override void onEnter(OrigineType type, Vector3 localPosition)

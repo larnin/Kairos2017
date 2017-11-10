@@ -974,13 +974,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1469195317}
-  m_LocalRotation: {x: 0.1464466, y: 0.35355338, z: 0.35355338, w: 0.8535535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 188.49, y: 15.833, z: 449.5885}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 45}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1469195322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,6 +1238,11 @@ Prefab:
         type: 2}
       propertyPath: m_clampVerticalRotationBottom
       value: -65
+      objectReference: {fileID: 0}
+    - target: {fileID: 114116046164100624, guid: dc9cd405a9253154ba9e3840dd1eb18c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc9cd405a9253154ba9e3840dd1eb18c, type: 2}
