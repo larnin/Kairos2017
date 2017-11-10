@@ -15,8 +15,8 @@ public class Character : MonoBehaviour
     [SerializeField] float m_accelerationSpeed = 10f;
     [SerializeField] float m_delayMoveAfterRotation = 0.2f;
 
-    [SerializeField] float m_groundCastRadius;
-    [SerializeField] LayerMask m_raycastsMask;
+    [SerializeField] float m_groundCastRadius = 0.25f;
+    [SerializeField] LayerMask m_raycastsMask = 0;
 
     Rigidbody m_rigidbody;
     Animator m_animator;

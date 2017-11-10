@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(Character))]
 class PlayerCharacterControler : MonoBehaviour
 {
+    [SerializeField] List<MeshRenderer> m_renderers = new List<MeshRenderer>();
+
     const string moveXAxis = "Horizontal";
     const string moveYAxis = "Vertical";
 
@@ -19,6 +22,7 @@ class PlayerCharacterControler : MonoBehaviour
         m_camera = Camera.main.transform;
 
         m_subscriberList.Add(new Event<LockPlayerControlesEvent>.Subscriber(onLockControles));
+        m_subscriberList.Add(new Event<ChangeControlerViewEvent>.Subscriber(onChangeControlerView));
         m_subscriberList.Subscribe();
     }
 
@@ -26,12 +30,7 @@ class PlayerCharacterControler : MonoBehaviour
     {
         m_subscriberList.Unsubscribe();
     }
-
-    void onLockControles(LockPlayerControlesEvent e)
-    {
-        m_controlesLocked = e.locked;
-    }
-
+    
     private void Update()
     {
         var dir = new Vector2(Input.GetAxisRaw(moveXAxis), Input.GetAxisRaw(moveYAxis));
@@ -45,5 +44,17 @@ class PlayerCharacterControler : MonoBehaviour
         dir = dir.y * camDir2D + dir.x * camDir2DOthro;
 
         m_character.move(new Vector3(dir.x, 0, dir.y));
+    }
+
+    void onLockControles(LockPlayerControlesEvent e)
+    {
+        m_controlesLocked = e.locked;
+    }
+
+    void onChangeControlerView(ChangeControlerViewEvent e)
+    {
+        bool enable = e.viewType == ChangeControlerViewEvent.ControlerViewType.THIRD_VIEW;
+        foreach (var r in m_renderers)
+            r.enabled = enable;
     }
 }

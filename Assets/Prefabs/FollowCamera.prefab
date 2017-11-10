@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 81586558891980032}
   - component: {fileID: 114116046164100624}
   m_Layer: 0
-  m_Name: FollowCameraV3
+  m_Name: FollowCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987142631473010}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 190.96358, y: 16.669338, z: 452.55283}
+  m_LocalPosition: {x: 190.9636, y: 16.669338, z: 452.55283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,6 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3eb3cd4c5376a8458ff240dc8198671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FPSMode: 0
+  m_FPSCameraHeight: 1.5
   m_updateType: 2
   m_target: {fileID: 0}
   m_inverseVerticalAxis: 1
@@ -112,10 +114,14 @@ MonoBehaviour:
   m_manualCameraVerticalSpeedMultiplier: 80
   m_manualCameraDeadZone: 0.1
   m_manualCameraAcceleration: 500
-  m_mouseSensibility: 1.5
+  m_mouseSensibility: 0.1
+  m_mouseSmoothDeadzoneSpeed: 1
+  m_mouseSmoothDeadzonePow: 2
   m_minVerticaloffset: -0.8
   m_clampVerticalRotationTop: 85
   m_clampVerticalRotationBottom: -45
+  m_clampVerticalRotationTopFPS: 85
+  m_clampVerticalRotationBottomFPS: -85
   m_startSpeedRotationDecreaseDestance: 30
   m_distanceReduction: 5
   m_cameraRotSpeed: 40
@@ -132,6 +138,7 @@ MonoBehaviour:
   m_cameraRayRadius: 0.3
   m_blockedComeSpeed: 30
   m_blockedBackSpeed: 4
+  m_recenterTime: 0.5
   m_raycastsMask:
     serializedVersion: 2
     m_Bits: 1
