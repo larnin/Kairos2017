@@ -73,10 +73,7 @@ public class Character : MonoBehaviour
                 m_forwardAmount = m_targetForwardAmont;
         }
 
-            applyExtraTurnRotation();
-        
-        if (!m_grounded)
-            handleAirborneMovement();
+        applyExtraTurnRotation();
 
         updateAnimator(move);
 
@@ -86,6 +83,8 @@ public class Character : MonoBehaviour
             v.y = m_rigidbody.velocity.y;
             m_rigidbody.velocity = v;
         }
+        else
+            handleAirborneMovement();
     }
 
     public bool moving { get { return m_moving; } }
