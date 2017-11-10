@@ -83,4 +83,4 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Distance: {r: 1.5, g: 1.5, b: 1.5, a: 1.5}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Position1: {r: 4.038063, g: 12.01, b: -12.79, a: 0}
+    - _Position1: {r: 1.3859761, g: 12.01, b: -12.79, a: 0}
