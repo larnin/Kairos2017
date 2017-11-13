@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
-public class Character : MonoBehaviour
+public class Character : CharacterBase
 {
     [SerializeField] float m_moveSpeed = 1f;
     [SerializeField] float m_movingTurnSpeed = 360f;
@@ -37,7 +37,7 @@ public class Character : MonoBehaviour
         m_rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
     }
 
-    public void move(Vector3 move)
+    public override void move(Vector3 move)
     {
         const float maxFullAngle = Mathf.PI / 3;
         const float minZeroAngle = 2 * Mathf.PI / 3;

@@ -651,10 +651,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4997952183084524}
   - component: {fileID: 95777390469382070}
-  - component: {fileID: 54374066204695772}
   - component: {fileID: 136183609834355808}
-  - component: {fileID: 114066224035604792}
   - component: {fileID: 114602235842086824}
+  - component: {fileID: 114825794721093736}
+  - component: {fileID: 114716677193923736}
+  - component: {fileID: 195027451536223158}
   m_Layer: 2
   m_Name: Character
   m_TagString: Untagged
@@ -2444,7 +2445,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523252047068954}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 191.26358, y: 15.169338, z: 450.59982}
+  m_LocalPosition: {x: 191.26358, y: 15.81, z: 443.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4085310358733496}
@@ -2453,21 +2454,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!54 &54374066204695772
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1523252047068954}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!95 &95777390469382070
 Animator:
   serializedVersion: 3
@@ -2485,29 +2471,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114066224035604792
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1523252047068954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d3805e1ad981f4429f247c5f8273da8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_moveSpeed: 4
-  m_movingTurnSpeed: 180
-  m_stationaryTurnSpeed: 360
-  m_groundCheckDistance: 0.5
-  m_gravityMultiplier: 1
-  m_animSpeedMultiplier: 1
-  m_accelerationSpeed: 4
-  m_delayMoveAfterRotation: 0.25
-  m_groundCastRadius: 0.25
-  m_raycastsMask:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!114 &114602235842086824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2520,6 +2483,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_renderers: []
+--- !u!114 &114716677193923736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523252047068954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f38a7f5cc73890b44a43069cae93229a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_triggerMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &114825794721093736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523252047068954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fde83d400c094248918887068ecdbbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_moveSpeed: 4
+  m_movingTurnSpeed: 180
+  m_stationaryTurnSpeed: 360
+  m_groundCheckDistance: 0.2
+  m_gravityMultiplier: 1
+  m_animSpeedMultiplier: 1
+  m_accelerationSpeed: 4
+  m_delayMoveAfterRotation: 0.25
+  m_groundCastRadius: 0.25
+  m_raycastsMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!136 &136183609834355808
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2703,3 +2703,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0009998977, y: 0.007603839, z: 0.00028842688}
     m_Extent: {x: 0.80239844, y: 0.23826995, z: 0.5723474}
   m_DirtyAABB: 0
+--- !u!195 &195027451536223158
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523252047068954}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
