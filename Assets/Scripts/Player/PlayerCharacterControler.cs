@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Character))]
+[RequireComponent(typeof(CharacterBase))]
 class PlayerCharacterControler : MonoBehaviour
 {
     [SerializeField] List<MeshRenderer> m_renderers = new List<MeshRenderer>();
@@ -9,7 +9,7 @@ class PlayerCharacterControler : MonoBehaviour
     const string moveXAxis = "Horizontal";
     const string moveYAxis = "Vertical";
 
-    Character m_character;
+    CharacterBase m_character;
     Transform m_camera;
 
     SubscriberList m_subscriberList = new SubscriberList();
@@ -18,7 +18,7 @@ class PlayerCharacterControler : MonoBehaviour
 
     private void Awake()
     {
-        m_character = GetComponent<Character>();
+        m_character = GetComponent<CharacterBase>();
         m_camera = Camera.main.transform;
 
         m_subscriberList.Add(new Event<LockPlayerControlesEvent>.Subscriber(onLockControles));
