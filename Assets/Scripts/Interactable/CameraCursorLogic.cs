@@ -111,19 +111,19 @@ class CameraCursorLogic : MonoBehaviour
             if (m_selectedInteractable != null)
                 m_selectedInteractable.onInteractEnd(type);
             m_selectedInteractable = m_hoveredInteractable;
-            m_selectedInteractable.onInteract(type, m_localHitPos);
 
             m_localInteractablePosition = m_selectedInteractable.transform.position - m_followCamera.target.position;
             m_localInteractablePosition = transform.forward * m_localInteractablePosition.magnitude;
             m_localInteractableRotation = m_selectedInteractable.transform.rotation * Quaternion.Inverse(transform.rotation);
             m_startInteractableRotation = m_selectedInteractable.transform.rotation;
             m_startCameraRotation = transform.rotation;
+
+            m_selectedInteractable.onInteract(type, m_localHitPos);
         }
 
         if (Input.GetButtonUp(inputValidate) && m_selectedInteractable != null)
         {
-            if (m_selectedInteractable != null)
-                m_selectedInteractable.onInteractEnd(type);
+            m_selectedInteractable.onInteractEnd(type);
             m_selectedInteractable = null;
         }
 
