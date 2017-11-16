@@ -192,6 +192,7 @@ public class FollowCamera : MonoBehaviour
             m_currentCameraOrientation.x += m_recenterSpeed * Time.deltaTime;
         m_currentCameraOrientation.z = 0;
         m_currentCameraOrientation.x = Mathf.Clamp(m_currentCameraOrientation.x, m_FPSMode ? m_clampVerticalRotationBottomFPS : m_clampVerticalRotationBottom, m_FPSMode ? m_clampVerticalRotationTopFPS : m_clampVerticalRotationTop);
+        m_currentCameraOrientation.y = m_currentCameraOrientation.y % 360f;
 
         updateOffsetFromVerticalRotation();
 
@@ -407,6 +408,7 @@ public class FollowCamera : MonoBehaviour
             normal = hit.normal;
 
         Debug.DrawRay(m_target.position, normal, Color.green);
+        Debug.Log(Vector3.Angle(normal, Vector3.up));
 
         normal = Vector3.ProjectOnPlane(normal, transform.right);
         normal = transform.InverseTransformDirection(normal);
