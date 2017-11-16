@@ -39,10 +39,12 @@ public class StoryItem
         useSpaceIfHiden = false;
         spacing = 0;
         shift = 0;
+
         text = "";
         textSize = 10;
         textColor = Color.black;
         textFontName = "";
+        textStyle = FontStyle.Normal;
 
         textureName = "";
         textureResize = false;
@@ -65,6 +67,7 @@ public class StoryItem
     public int textSize;
     public Color textColor;
     public string textFontName;
+    public FontStyle textStyle;
 
     // -- image
     public string textureName;
@@ -169,12 +172,14 @@ public class BookStoryTool : EditorWindow
                             storyItem.text = GUILayout.TextArea(storyItem.text);
 
                             GUILayout.BeginHorizontal();
-                            EditorGUILayout.LabelField("Font name: ", GUILayout.MaxWidth(80));
+                            EditorGUILayout.LabelField("Font name: ", GUILayout.MaxWidth(75));
                             storyItem.textFontName = EditorGUILayout.TextField(storyItem.textFontName);
-                            EditorGUILayout.LabelField("Size: ", GUILayout.MaxWidth(50));
-                            storyItem.textSize = EditorGUILayout.IntField(storyItem.textSize);
-                            EditorGUILayout.LabelField("Color: ", GUILayout.MaxWidth(50));
-                            storyItem.textColor = EditorGUILayout.ColorField(storyItem.textColor);
+                            EditorGUILayout.LabelField("Size: ", GUILayout.MaxWidth(40));
+                            storyItem.textSize = EditorGUILayout.IntField(storyItem.textSize, GUILayout.MaxWidth(40));
+                            EditorGUILayout.LabelField("Color: ", GUILayout.MaxWidth(45));
+                            storyItem.textColor = EditorGUILayout.ColorField(storyItem.textColor, GUILayout.MaxWidth(50));
+                            EditorGUILayout.LabelField("Style: ", GUILayout.MaxWidth(45));
+                            storyItem.textStyle = (FontStyle)EditorGUILayout.EnumPopup(storyItem.textStyle);
                             GUILayout.EndHorizontal();
                         }
                         else //image

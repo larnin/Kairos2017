@@ -60,7 +60,7 @@ public class SaveSystem
         save();
     }
 
-    void setStoryItem(string category, string story, StoryItem.VisibilityState state)
+    public void setStoryItemVisibility(string category, string story, StoryItem.VisibilityState state)
     {
         var item = m_save.storyItems.Find(x => { return x.category == category && x.story == story; });
         if(item == null)
@@ -75,7 +75,7 @@ public class SaveSystem
         }
     }
 
-    StoryItem.VisibilityState getStoryItem(string category, string story)
+    public StoryItem.VisibilityState getStoryItemVisibility(string category, string story)
     {
         var item = m_save.storyItems.Find(x => { return x.category == category && x.story == story; });
         if (item == null)
