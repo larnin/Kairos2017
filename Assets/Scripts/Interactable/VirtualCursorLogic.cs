@@ -52,6 +52,11 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
         m_subscriberList.Subscribe();
     }
 
+    private void Start()
+    {
+        gameObject.SetActive(false);
+    }
+
     private void OnDestroy()
     {
         m_subscriberList.Unsubscribe();

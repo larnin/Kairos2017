@@ -408,7 +408,7 @@ public class FollowCamera : MonoBehaviour
             normal = hit.normal;
 
         Debug.DrawRay(m_target.position, normal, Color.green);
-        Debug.Log(Vector3.Angle(normal, Vector3.up));
+        //Debug.Log(Vector3.Angle(normal, Vector3.up));
 
         normal = Vector3.ProjectOnPlane(normal, transform.right);
         normal = transform.InverseTransformDirection(normal);

@@ -41,6 +41,7 @@ public class InteractableMiniGameByCursorLogic : InteractableBaseLogic
     
     void beginMiniGame()
     {
+        Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(true, true));
         Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(true));
         gameObject.SetActive(false);
         m_miniGame.activate();
@@ -49,13 +50,7 @@ public class InteractableMiniGameByCursorLogic : InteractableBaseLogic
     void StopMiniGame()
     {
         gameObject.SetActive(true);
-    }
-
-    void unlockPlayerCamera()
-    {
-        gameObject.SetActive(false);
-        m_renderer.enabled = true;
-        Camera.main.GetComponent<FollowCamera>().enabled = true;
+        Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(false));
         Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(false));
     }
 

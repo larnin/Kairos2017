@@ -19,8 +19,23 @@ public class FloatingPhraseLogic : MonoBehaviour
     private Color m_BeginningColor = Color.black;
 
     private Camera m_camera;
-	// Use this for initialization
-	void Start ()
+
+    private bool canMoveUp = false;
+
+    private float m_decalSin = 0f;
+
+    public void SetTargetToRest(Transform e)
+    {
+        m_targetToRest = e;
+    }
+
+    public void SetDecalSin(float decalSin)
+    {
+        m_decalSin = decalSin;
+    }
+
+    // Use this for initialization
+    void Start ()
     {
         m_camera = Camera.main;
         GotToRest();
@@ -30,7 +45,28 @@ public class FloatingPhraseLogic : MonoBehaviour
 	void Update ()
     {
         transform.LookAt(m_camera.transform);
-	}
+
+
+        if (m_textToChange.enabled)
+        {
+            if(transform.position.y > 5.4f)
+            {
+                m_textToChange.enabled = false;
+                transform.DOScale(0.1f,1f).OnComplete(() => {
+                    Destroy(gameObject);
+                });
+
+                GetComponentInChildren<Renderer>().material.DOColor(Color.black, 0.5f);
+            }
+        }
+
+        if(canMoveUp)
+        {
+            Vector3 newForce = Vector3.up * 0.85f + transform.forward * Mathf.Sin(m_decalSin + transform.position.y * 1.5f) * 0.75f;
+            newForce *= Time.deltaTime;
+            transform.Translate(newForce);
+        }
+    }
 
     void SettargetToRest(Transform e)
     {
@@ -43,12 +79,13 @@ public class FloatingPhraseLogic : MonoBehaviour
         e.material.color = m_BeginningColor;
         m_textToChange.enabled = false;
         transform.localScale = m_BeginningScale;
-        transform.DOMove(m_targetToRest.position, 0.75f).OnComplete(() => {
+        transform.DOMove(m_targetToRest.position + Random.insideUnitSphere*0.5f, 0.75f).OnComplete(() => {
             e.material.DOColor(Color.white, 0.25f);
             transform.DOScale(1f, 0.25f).OnComplete(() =>{
                 m_textToChange.enabled = true;
+                canMoveUp = true;
             });
         });
+        GetComponent<Collider>().enabled = true;
     }
-
 }

@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class FindTheWayOnMap : MiniGameBaseLogic
 {
-    public readonly Color m_selectableColor;
-    public readonly Color m_selectedColor;
-    public readonly uint m_maxNumberOfPlaceSelected = 3;
+    public  Color m_selectableColor;
+    public  Color m_selectedColor;
+    public  uint m_maxNumberOfPlaceSelected;
     
     // TODO linerenderer must be fix someday 
     public override void activate()
     {
-        Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(true, true));
         enableMiniGame(true);
     }
 
@@ -28,9 +27,6 @@ public class FindTheWayOnMap : MiniGameBaseLogic
     [SerializeField]
     private GameObject m_feedbackWin;
     private bool m_win = false;
-
-    [SerializeField]
-    private GameObject m_explication;
 
     private uint m_currentNumberOfPlaceSelected;
 
@@ -62,12 +58,11 @@ public class FindTheWayOnMap : MiniGameBaseLogic
             else
             {
                 gameObject.SetActive(false);
-                this.enabled = false;
                 desactivate();
             }
         }
 
-        if (m_selectedPlace.Count > 0 && isMaxNotReached())
+        if (m_selectedPlace.Count > 0 && isMaxNotReached() && !m_win)
         {
             positionLineRendererOnCursor();
         }
@@ -117,7 +112,7 @@ public class FindTheWayOnMap : MiniGameBaseLogic
     void positionLineRendererOnCursor()
     {
         Vector3 cursorScreenPosition = m_cursor.transform.position;
-        cursorScreenPosition.z = 0.5f;
+        cursorScreenPosition.z = 5.0f;
         Vector3 cursorWorldPosition = m_PlayerCamera.ScreenToWorldPoint(cursorScreenPosition);
 
         m_lineRenderer.SetPosition((int)m_currentNumberOfPlaceSelected, cursorWorldPosition);
@@ -126,6 +121,5 @@ public class FindTheWayOnMap : MiniGameBaseLogic
     void enableMiniGame(bool _enable)
     {
         gameObject.SetActive(_enable);
-        m_explication.SetActive(_enable);
     }
 }

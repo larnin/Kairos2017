@@ -34,6 +34,11 @@ public class SelectablePlaceLogic : InteractableBaseLogic
 
     public override void onInteract(OrigineType type, Vector3 localPosition)
     {
+        if (m_isSelected)
+        {
+            return;
+        }
+
         int number = m_findTheWayOnMap.addPlace(this);
         if (number != -1)
         {
