@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEditor;
+using System.IO;
 
-
-
+[Serializable]
 public class StoryItem
 {
     public enum VisibilityState
@@ -72,6 +72,7 @@ public class StoryItem
     public Vector2 textureSize;
 }
 
+[Serializable]
 public class StoryCategory
 {
     public StoryCategory(string _categoryName)
@@ -86,8 +87,22 @@ public class StoryCategory
     public List<StoryItem> items = new List<StoryItem>();
 }
 
+[Serializable]
+public class StorySerializer
+{
+    public StorySerializer(List<StoryCategory> _categories)
+    {
+        categories = _categories;
+    }
+
+    public List<StoryCategory> categories;
+}
+
 public class BookStoryTool : EditorWindow
 {
+    string assetPath = "Assets/Resources/InventoryBook/";
+    string assetName = "Story.json";
+
     List<StoryCategory> m_categories = new List<StoryCategory>();
     Vector2 m_scrollPosition = Vector2.zero;
 
@@ -96,6 +111,16 @@ public class BookStoryTool : EditorWindow
     {
         BookStoryTool window = (BookStoryTool)EditorWindow.GetWindow(typeof(BookStoryTool));
         window.Show();
+    }
+
+    private void OnEnable()
+    {
+        var text = AssetDatabase.LoadAssetAtPath<TextAsset>(assetPath + assetName);
+        if (text != null)
+        {
+            var data = JsonUtility.FromJson<StorySerializer>(text.text);
+            m_categories = data.categories;
+        }
     }
 
     void OnGUI()
@@ -269,7 +294,14 @@ public class BookStoryTool : EditorWindow
 
     void save()
     {
+        var s = new StorySerializer(m_categories);
+        var json = JsonUtility.ToJson(s);
 
+        Directory.CreateDirectory(assetPath);
+        StreamWriter writer = new StreamWriter(assetPath+assetName);
+        writer.WriteLine(json);
+        writer.Close();
+        AssetDatabase.ImportAsset(assetPath+assetName);
     }
 }
 
