@@ -6,6 +6,7 @@ using System.Text;
 public sealed class G
 {
     private static volatile G m_instance;
+    private SaveSystem m_saveSystem = new SaveSystem();
     private InventoryData m_inventory = new InventoryData();
 
     public static G sys
@@ -18,5 +19,6 @@ public sealed class G
         }
     }
 
+    public SaveSystem saveSystem { get { return m_saveSystem; } }
     public InventoryData inventory { get { return m_inventory; } }
 }
