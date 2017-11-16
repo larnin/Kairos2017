@@ -12,7 +12,6 @@ public class FindTheWayOnMap : MiniGameBaseLogic
     // TODO linerenderer must be fix someday 
     public override void activate()
     {
-        print("HELLO WORLD JE PASSE ICI putain");
         Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(true, true));
         enableMiniGame(true);
     }
@@ -62,7 +61,9 @@ public class FindTheWayOnMap : MiniGameBaseLogic
             }
             else
             {
-               // desactivate();
+                gameObject.SetActive(false);
+                this.enabled = false;
+                desactivate();
             }
         }
 

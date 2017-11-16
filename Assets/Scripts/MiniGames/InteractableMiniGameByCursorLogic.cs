@@ -10,6 +10,10 @@ public class InteractableMiniGameByCursorLogic : InteractableBaseLogic
 
     private Renderer m_renderer;
 
+    private Vector3 baseCameraPosition;
+    private Vector3 baseCameraRotation;
+
+
     public override void onDrag(DragData data, OrigineType type)
     {
         // no used for this class
@@ -27,11 +31,7 @@ public class InteractableMiniGameByCursorLogic : InteractableBaseLogic
 
     public override void onInteract(OrigineType type, Vector3 localPosition)
     {
-        m_renderer.enabled = false;
-        Camera.main.GetComponent<FollowCamera>().enabled = false;
-        Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(true));
-        Camera.main.transform.DOMove (m_miniGame.CameraTransformUsed.position, 1.0f);
-        Camera.main.transform.DORotate(m_miniGame.CameraTransformUsed.rotation.eulerAngles, 1.0f).OnComplete(beginMiniGame);
+        beginMiniGame();
     }
 
     public override void onInteractEnd(OrigineType type)
@@ -41,18 +41,27 @@ public class InteractableMiniGameByCursorLogic : InteractableBaseLogic
     
     void beginMiniGame()
     {
+        Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(true));
         gameObject.SetActive(false);
         m_miniGame.activate();
     }
 
-    void replaceCamera()
+    void StopMiniGame()
     {
         gameObject.SetActive(true);
+    }
+
+    void unlockPlayerCamera()
+    {
+        gameObject.SetActive(false);
+        m_renderer.enabled = true;
+        Camera.main.GetComponent<FollowCamera>().enabled = true;
+        Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(false));
     }
 
     void Start()
     {
         m_renderer = GetComponent<Renderer>();
-       // m_miniGame.desactivate += StopMiniGame;
+        m_miniGame.desactivate += StopMiniGame;
     }
 }
