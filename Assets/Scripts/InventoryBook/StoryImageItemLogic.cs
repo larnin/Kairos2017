@@ -26,4 +26,10 @@ public class StoryImageItemLogic : MonoBehaviour
         m_image.sprite = image;
         m_image.SetNativeSize();
     }
+
+    public void set(Vector2 imageSize)
+    {
+        var tr = GetComponent<RectTransform>();
+        tr.sizeDelta = imageSize;
+    }
 }

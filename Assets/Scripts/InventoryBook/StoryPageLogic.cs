@@ -12,7 +12,6 @@ class StoryPageLogic : MonoBehaviour
     [SerializeField] GameObject m_categoryTextPrefab;
     [SerializeField] GameObject m_storyItemTextPrefab;
     [SerializeField] GameObject m_storyItemImagePrefab;
-    [SerializeField] Font m_defaultFont;
     [SerializeField] Vector2 m_categoryOrigine;
     [SerializeField] float m_categoryHeight = 400;
     [SerializeField] float m_categoryHeightMax = 100;
@@ -63,10 +62,9 @@ class StoryPageLogic : MonoBehaviour
 
     void loadStoryData()
     {
-        string assetPath = "InventoryBook/";
-        string assetName = "Story";
+        string assetName = "InventoryBook/Story";
 
-        var text = Resources.Load<TextAsset>(assetPath + assetName);
+        var text = Resources.Load<TextAsset>(assetName);
         if (text != null)
         {
             var items = JsonUtility.FromJson<StorySerializer>(text.text);
@@ -146,11 +144,81 @@ class StoryPageLogic : MonoBehaviour
         foreach (var o in m_objects)
             Destroy(o);
         m_objects.Clear();
-        createCurrentCategoryPage();
+        createCategoryPage(categoryName);
     }
 
-    void createCurrentCategoryPage()
+    void createCategoryPage(string categoryName)
     {
+        var c = m_categories.Find(x => { return x.categoryName == categoryName; });
+        if (c == null)
+            return;
 
+        int currentOffset = 0;
+
+        foreach(var item in c.items)
+        {
+            var pos = new Vector2(m_storyArea.x + m_storyArea.width / 2 + item.shift, m_storyArea.y - currentOffset);
+            if (item.contentAlignement == StoryItem.ContentAlignement.TOP_LEFT)
+                pos = new Vector2(m_storyArea.x + m_storyArea.width + item.shift, m_storyArea.y);
+            
+            if(item.visibility != StoryItem.VisibilityState.HIDDEN)
+            {
+                switch(item.contentType)
+                {
+                    case StoryItem.ContentType.TEXT:
+                        createTextItem(item, pos);
+                        break;
+                    case StoryItem.ContentType.IMAGE:
+                        createImageItem(item, pos);
+                        break;
+                    default:
+                        Debug.LogError("Content type not supported !");
+                        break;
+                }
+                currentOffset += item.spacing;
+            }
+            else if(item.useSpaceIfHiden)
+                currentOffset += item.spacing;
+        }
+    }
+
+    void createTextItem(StoryItem item, Vector2 offset)
+    {
+        string fontpath = "InventoryBook/Fonts/";
+
+        Font font = null;
+        if(item.textFontName.Count() != 0)
+            font = Resources.Load<Font>(fontpath + item.textFontName);
+
+        var obj = Instantiate(m_storyItemTextPrefab, transform);
+        obj.transform.localPosition = offset;
+        var textItem = obj.GetComponent<StoryTextItemLogic>();
+        if (item.visibility == StoryItem.VisibilityState.VISIBLE)
+            textItem.set(item.text, item.contentAlignement, font, item.textSize, item.textStyle, item.textColor, m_storyArea.width);
+        else textItem.set("???", item.contentAlignement, font, item.textSize, item.textStyle, item.textColor, m_storyArea.width);
+        m_objects.Add(obj);
+    }
+
+    void createImageItem(StoryItem item, Vector2 offset)
+    {
+        string imagePath = "InventoryBook/Images/";
+
+        Sprite s = Resources.Load<Sprite>(imagePath + item.textureName);
+        var obj = Instantiate(m_storyItemImagePrefab, transform);
+        obj.transform.localPosition = offset;
+        var imageItem = obj.GetComponent<StoryImageItemLogic>();
+        if (item.visibility == StoryItem.VisibilityState.VISIBLE)
+        {
+            if (item.textureResize)
+                imageItem.set(s, item.textureSize);
+            else imageItem.set(s);
+        }
+        else
+        {
+            if (item.textureResize)
+                imageItem.set(item.textureSize);
+            else imageItem.set(new Vector2(s.texture.width, s.texture.height));
+        }
+        m_objects.Add(obj);
     }
 }

@@ -22,6 +22,7 @@ public class Save
         public StoryItem.VisibilityState state = StoryItem.VisibilityState.HIDDEN;
     }
 
+    public int version = 0;
     public List<StoryBookItem> storyItems = new List<StoryBookItem>();
 
     public Save()
@@ -31,10 +32,9 @@ public class Save
 
     void initializeStoryBookItem()
     {
-        string assetPath = "InventoryBook/";
-        string assetName = "Story.json";
+        string assetName = "InventoryBook/Story";
 
-        var text = Resources.Load<TextAsset>(assetPath + assetName);
+        var text = Resources.Load<TextAsset>(assetName);
         if(text != null)
         {
             var items = JsonUtility.FromJson<StorySerializer>(text.text);

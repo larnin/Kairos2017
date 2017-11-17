@@ -14,7 +14,7 @@ public class StoryTextItemLogic : MonoBehaviour
         m_text = GetComponent<Text>();
     }
 
-    public void set(string text, StoryItem.ContentAlignement alignement, Font font, int fontSize, FontStyle style, Color color, int width)
+    public void set(string text, StoryItem.ContentAlignement alignement, Font font, int fontSize, FontStyle style, Color color, float width)
     {
         var tr = GetComponent<RectTransform>();
         tr.sizeDelta = new Vector2(width, tr.sizeDelta.y);
@@ -22,13 +22,13 @@ public class StoryTextItemLogic : MonoBehaviour
         {
             case StoryItem.ContentAlignement.RIGHT:
             case StoryItem.ContentAlignement.TOP_LEFT: //can't place text in that position
-                m_text.alignment = TextAnchor.UpperLeft;
+                m_text.alignment = TextAnchor.UpperRight;
                 break;
             case StoryItem.ContentAlignement.CENTRED:
                 m_text.alignment = TextAnchor.UpperCenter;
                 break;
             case StoryItem.ContentAlignement.LEFT:
-                m_text.alignment = TextAnchor.UpperRight;
+                m_text.alignment = TextAnchor.UpperLeft;
                 break;
             default:
                 Debug.LogError("Can't use that alignement !");
@@ -36,7 +36,8 @@ public class StoryTextItemLogic : MonoBehaviour
         }
 
         m_text.text = text;
-        m_text.font = font;
+        if(font != null)
+            m_text.font = font;
         m_text.fontSize = fontSize;
         m_text.color = color;
         m_text.fontStyle = style;

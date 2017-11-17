@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class SaveSystem
 {
+    static int version = 1;
+
     Save m_save = new Save();
 
     string filename = "Save.json";
@@ -35,8 +37,11 @@ public class SaveSystem
         {
             Debug.LogWarning("Can't load the file !");
             Debug.Log(e.ToString());
-            m_save = new Save();
+            reset();
         }
+
+        if (m_save.version != version)
+            reset();
     }
 
     void save()
@@ -57,6 +62,7 @@ public class SaveSystem
     public void reset()
     {
         m_save = new Save();
+        m_save.version = version;
         save();
     }
 
