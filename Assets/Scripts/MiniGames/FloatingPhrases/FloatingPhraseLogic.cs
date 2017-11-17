@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System;
 
 public class FloatingPhraseLogic : MonoBehaviour
 {
@@ -18,11 +19,41 @@ public class FloatingPhraseLogic : MonoBehaviour
     [SerializeField]
     private Color m_BeginningColor = Color.black;
 
+    public delegate void destroyedDelegate(FloatingPhraseLogic floatingPhrase);
+    
     private Camera m_camera;
 
     private bool canMoveUp = false;
 
     private float m_decalSin = 0f;
+
+    private byte m_index;
+    public byte Index
+    {
+        get
+        {
+            return m_index;
+        }
+
+        set
+        {
+            m_index = value;
+        }
+    }
+
+    private destroyedDelegate m_onDestroyCallback;
+    public destroyedDelegate OnDestroyCallback
+    {
+        get
+        {
+            return m_onDestroyCallback;
+        }
+
+        set
+        {
+            m_onDestroyCallback = value;
+        }
+    }
 
     public void SetTargetToRest(Transform e)
     {
@@ -45,8 +76,7 @@ public class FloatingPhraseLogic : MonoBehaviour
 	void Update ()
     {
         transform.LookAt(m_camera.transform);
-
-
+        
         if (m_textToChange.enabled)
         {
             if(transform.position.y > 5.4f)
@@ -68,6 +98,11 @@ public class FloatingPhraseLogic : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        m_onDestroyCallback(this);
+    }
+
     void SettargetToRest(Transform e)
     {
         m_targetToRest = e;
@@ -79,7 +114,7 @@ public class FloatingPhraseLogic : MonoBehaviour
         e.material.color = m_BeginningColor;
         m_textToChange.enabled = false;
         transform.localScale = m_BeginningScale;
-        transform.DOMove(m_targetToRest.position + Random.insideUnitSphere*0.5f, 0.75f).OnComplete(() => {
+        transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere*0.5f, 0.75f).OnComplete(() => {
             e.material.DOColor(Color.white, 0.25f);
             transform.DOScale(1f, 0.25f).OnComplete(() =>{
                 m_textToChange.enabled = true;

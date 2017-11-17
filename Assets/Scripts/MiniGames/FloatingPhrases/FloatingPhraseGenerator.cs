@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// todo A modifier vraiment
+
 public class FloatingPhraseGenerator : MonoBehaviour
 {
     [SerializeField]
@@ -18,28 +18,73 @@ public class FloatingPhraseGenerator : MonoBehaviour
     private Transform m_targetToRest;
 
     [SerializeField]
-    private  FloatingPhraseLogic[] FloatingPhrasePrebabs;
+    private FloatingPhraseLogic[] m_floatingPhrasePrebabs;
+    /*
+     * Lorsque l'on veut faire spawn une nouvelle phrase, on pioche au hassard dans la reserve. 
+     * Lorsque que la reserve est vide, on la rempli avec la reserve temporaire. 
+     * note : lorsque une phrase est détruit elle est ajoute dans la reserve temporaire (m_tempReserveFloatingPhrase) 
+     * Si la reserve est vive meme aprés l'avoir rempli avec la reserve temporaire, on "comportement a définir") 
+     */
+    private List<byte> m_reserveFloatingPhrase = new List<byte>();
+    private List<byte> m_tempReserveFloatingPhrase = new List<byte>();
+    //private List<byte> m_spawnedFloatingPhrase = new List<byte>();
 
-    private float decalSin = 0f; 
+    private float m_decalSin = 0f; 
    	
-	// Update is called once per frame
     void Start()
     {
-        SpawnFloatingPhrase(FloatingPhrasePrebabs[0]);
+        for (byte i = 0; i < m_floatingPhrasePrebabs.Length; i++)
+        {
+            m_reserveFloatingPhrase.Add(i);
+        }
+        SpawnFloatingPhrase();
         InvokeRepeating("TrySpawnFloatingPhrase", m_minDelayToSpawn, m_minDelayToSpawn);
     }
 
     void TrySpawnFloatingPhrase()
     {
-        SpawnFloatingPhrase(FloatingPhrasePrebabs[0]);
+        if(m_reserveFloatingPhrase.Count > 0)
+        {
+            SpawnFloatingPhrase();
+        }
+        else
+        {
+            m_reserveFloatingPhrase.AddRange(m_tempReserveFloatingPhrase);
+            if(m_reserveFloatingPhrase.Count > 0)
+            {
+                SpawnFloatingPhrase();
+            }
+            else
+            {
+                // what to do ? 
+            }
+        }
     }
     
-    void SpawnFloatingPhrase(FloatingPhraseLogic floatingPhrase)
+    void SpawnFloatingPhrase()
     {
-        int numero = Random.Range(0, 2);
-        FloatingPhraseLogic spawned = Instantiate(floatingPhrase, m_emplacementForSpawn.GetChild(numero).position, Quaternion.identity);
+        byte index = (byte)m_reserveFloatingPhrase[UnityEngine.Random.Range(0, m_reserveFloatingPhrase.Count)];
+        int numero = UnityEngine.Random.Range(0, 2);
+        FloatingPhraseLogic spawned = Instantiate(m_floatingPhrasePrebabs[index], m_emplacementForSpawn.position, Quaternion.identity);
         spawned.SetTargetToRest(m_targetToRest);
-        spawned.SetDecalSin(decalSin);
-        decalSin += 1f;
+        spawned.SetDecalSin(m_decalSin);
+        spawned.Index = index;
+        spawned.OnDestroyCallback += OnPhraseIsDestroy;
+        m_reserveFloatingPhrase.Remove(index);
+        m_decalSin += 1f ;
+    }
+
+    void OnPhraseIsDestroy(FloatingPhraseLogic floatingPhrase)
+    {
+        m_tempReserveFloatingPhrase.Add(floatingPhrase.Index);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(true));
+            Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(true));
+        }
     }
 }
