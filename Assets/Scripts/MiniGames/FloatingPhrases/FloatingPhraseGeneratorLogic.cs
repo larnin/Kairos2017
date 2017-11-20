@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class FloatingPhraseGenerator : MonoBehaviour
+public class FloatingPhraseGeneratorLogic : MonoBehaviour
 {
     [SerializeField]
     private float m_minDelayToSpawn = 0.5f;
@@ -23,11 +23,17 @@ public class FloatingPhraseGenerator : MonoBehaviour
      * Lorsque l'on veut faire spawn une nouvelle phrase, on pioche au hassard dans la reserve. 
      * Lorsque que la reserve est vide, on la rempli avec la reserve temporaire. 
      * note : lorsque une phrase est détruit elle est ajoute dans la reserve temporaire (m_tempReserveFloatingPhrase) 
-     * Si la reserve est vive meme aprés l'avoir rempli avec la reserve temporaire, on "comportement a définir") 
+     * Si la reserve est vide meme aprés l'avoir rempli avec la reserve temporaire, on a "comportement a définir") 
      */
     private List<byte> m_reserveFloatingPhrase = new List<byte>();
     private List<byte> m_tempReserveFloatingPhrase = new List<byte>();
-    //private List<byte> m_spawnedFloatingPhrase = new List<byte>();
+    //private List<byte> m_spawnedFloatingPhrase = new List<byte>(); it will be used later
+
+    private RumorsOfShadowsManager m_rumorsOfShadowsManager;
+    public void setRumorsOfShadowsManager(RumorsOfShadowsManager rumorsOfShadowsManager)
+    {
+        m_rumorsOfShadowsManager = rumorsOfShadowsManager;
+    }
 
     private float m_decalSin = 0f; 
    	
@@ -54,10 +60,8 @@ public class FloatingPhraseGenerator : MonoBehaviour
             {
                 SpawnFloatingPhrase();
             }
-            else
-            {
-                // what to do ? 
-            }
+            // else
+            // do nothing        
         }
     }
     
@@ -69,7 +73,8 @@ public class FloatingPhraseGenerator : MonoBehaviour
         spawned.SetTargetToRest(m_targetToRest);
         spawned.SetDecalSin(m_decalSin);
         spawned.Index = index;
-        spawned.OnDestroyCallback += OnPhraseIsDestroy;
+        spawned.onDestroyCallback += OnPhraseIsDestroy;
+        spawned.onSelected += m_rumorsOfShadowsManager.FloatingPhraseIsSelected;
         m_reserveFloatingPhrase.Remove(index);
         m_decalSin += 1f ;
     }
@@ -81,7 +86,7 @@ public class FloatingPhraseGenerator : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A)) // placeholder code
         {
             Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(true));
             Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(true));

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System;
 
-public class FloatingPhraseLogic : MonoBehaviour
+public class FloatingPhraseLogic : InteractableBaseLogic
 {
     [SerializeField]
     private Text m_textToChange;
@@ -20,12 +20,20 @@ public class FloatingPhraseLogic : MonoBehaviour
     private Color m_BeginningColor = Color.black;
 
     public delegate void destroyedDelegate(FloatingPhraseLogic floatingPhrase);
+    public delegate void selectedDelegate(FloatingPhraseLogic floatingPhrase);
     
     private Camera m_camera;
+    private Collider m_collider;
+    private Renderer m_renderer;
 
     private bool canMoveUp = false;
 
     private float m_decalSin = 0f;
+
+    private bool m_cursorIsHover = false;
+    private Color m_currentColorHoverinSetted = Color.white;
+
+    private bool m_selected = false;
 
     private byte m_index;
     public byte Index
@@ -41,20 +49,35 @@ public class FloatingPhraseLogic : MonoBehaviour
         }
     }
 
-    private destroyedDelegate m_onDestroyCallback;
-    public destroyedDelegate OnDestroyCallback
+    private destroyedDelegate m_onDestroyDelegate;
+    public destroyedDelegate onDestroyCallback
     {
         get
         {
-            return m_onDestroyCallback;
+            return m_onDestroyDelegate;
         }
 
         set
         {
-            m_onDestroyCallback = value;
+            m_onDestroyDelegate = value;
         }
     }
 
+    
+    private selectedDelegate m_onSelectedDelegate;
+    public selectedDelegate onSelected
+    {
+        get
+        {
+            return m_onSelectedDelegate;
+        }
+
+        set
+        {
+            m_onSelectedDelegate = value;
+        }
+    }
+    
     public void SetTargetToRest(Transform e)
     {
         m_targetToRest = e;
@@ -69,38 +92,78 @@ public class FloatingPhraseLogic : MonoBehaviour
     void Start ()
     {
         m_camera = Camera.main;
+        m_collider = GetComponent<Collider>();
+        m_renderer = GetComponentInChildren<Renderer>();
         GotToRest();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-        transform.LookAt(m_camera.transform);
-        
-        if (m_textToChange.enabled)
-        {
-            if(transform.position.y > 5.4f)
+        if(! m_selected)
+        { 
+            if (canMoveUp)
             {
-                m_textToChange.enabled = false;
-                transform.DOScale(0.1f,1f).OnComplete(() => {
-                    Destroy(gameObject);
-                });
-
-                GetComponentInChildren<Renderer>().material.DOColor(Color.black, 0.5f);
+                moveUp();
+                updateHoveringColor();
             }
-        }
 
-        if(canMoveUp)
+            if (m_textToChange.enabled)
+            {
+                if (transform.position.y > 5.4f)
+                {
+                    beginDisappear();
+                }
+            }
+
+        }
+        transform.LookAt(m_camera.transform);
+    }
+
+    private void beginDisappear()
+    {
+        m_textToChange.enabled = false;
+        transform.DOScale(0.1f, 1f).OnComplete(() =>
         {
-            Vector3 newForce = Vector3.up * 0.85f + transform.forward * Mathf.Sin(m_decalSin + transform.position.y * 1.5f) * 0.75f;
-            newForce *= Time.deltaTime;
-            transform.Translate(newForce);
+            Destroy(gameObject);
+        });
+
+        m_collider.enabled = false;
+        m_cursorIsHover = false;
+        m_renderer.material.DOColor(Color.black, 0.5f);
+    }
+
+    private void moveUp()
+    {
+        // this code is "buggy" 
+        //Vector3 horizontalForce = transform.forward * Mathf.Sin(m_decalSin + transform.position.y * 1.5f) * 0.75f;
+        Vector3 verticalForce = Vector3.up * 0.85f;
+        Vector3 newForce = (verticalForce) * (m_cursorIsHover ? 0.5f : 1f);
+        newForce *= Time.deltaTime;
+
+        transform.Translate(newForce, Space.World);
+    }
+
+    private void updateHoveringColor()
+    {
+        if(m_textToChange.enabled)
+        {
+            if (m_cursorIsHover && m_currentColorHoverinSetted != Color.blue)
+            {
+                m_renderer.material.color = Color.blue; 
+                m_currentColorHoverinSetted = Color.blue;
+            }
+            else if (!m_cursorIsHover && m_currentColorHoverinSetted != Color.white)
+            {
+                m_renderer.material.color = Color.white;
+                m_currentColorHoverinSetted = Color.white;
+            }
         }
     }
 
     void OnDestroy()
     {
-        m_onDestroyCallback(this);
+        m_onDestroyDelegate(this);
     }
 
     void SettargetToRest(Transform e)
@@ -110,17 +173,56 @@ public class FloatingPhraseLogic : MonoBehaviour
 
     void GotToRest()
     {
-        Renderer e = GetComponentInChildren<Renderer>();
-        e.material.color = m_BeginningColor;
+        m_renderer.material.color = m_BeginningColor;
         m_textToChange.enabled = false;
         transform.localScale = m_BeginningScale;
         transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere*0.5f, 0.75f).OnComplete(() => {
-            e.material.DOColor(Color.white, 0.25f);
+            m_renderer.material.DOColor(Color.white, 0.25f);
             transform.DOScale(1f, 0.25f).OnComplete(() =>{
                 m_textToChange.enabled = true;
                 canMoveUp = true;
             });
         });
-        GetComponent<Collider>().enabled = true;
+    }
+
+    public override void onEnter(OrigineType type, Vector3 localPosition)
+    {
+        if(type == OrigineType.CURSOR)
+        {
+            m_cursorIsHover = true;
+        }
+
+    }
+
+    public override void onExit(OrigineType type)
+    {
+        if (type == OrigineType.CURSOR)
+        {
+            m_cursorIsHover = false;
+        }
+    }
+
+    public override void onInteract(OrigineType type, Vector3 localPosition)
+    {
+        if (type == OrigineType.CURSOR && m_textToChange.enabled)
+        {
+            Time.timeScale = 0f;
+            m_renderer.material.color = Color.cyan;
+            transform.DOMove(transform.position + transform.forward, 0.75f).SetUpdate(true).OnComplete(() =>
+            {
+                onSelected(this);
+            });
+            m_selected = true;
+        }
+    }
+
+    public override void onInteractEnd(OrigineType type)
+    {
+        
+    }
+
+    public override void onDrag(DragData data, OrigineType type)
+    {
+        
     }
 }
