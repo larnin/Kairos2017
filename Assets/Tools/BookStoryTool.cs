@@ -49,7 +49,7 @@ public class StoryItem
         textureName = "";
         textureResize = false;
         textureSize = new Vector2(100, 100);
-        folded = false;
+        folded = true;
     }
 
     public bool folded;
@@ -145,7 +145,7 @@ public class BookStoryTool : EditorWindow
             GUILayout.BeginVertical(categoryStyle);
             categoryItem.folded = EditorGUILayout.Foldout(categoryItem.folded, categoryItem.categoryName);
             
-            if(!categoryItem.folded)
+            if(categoryItem.folded)
             {
                 categoryItem.fancyCategoryName = EditorGUILayout.TextField("Fancy category name :", categoryItem.fancyCategoryName);
 
@@ -154,7 +154,7 @@ public class BookStoryTool : EditorWindow
                     var storyItem = categoryItem.items[j];
                     GUILayout.BeginVertical(itemStyle);
                     storyItem.folded = EditorGUILayout.Foldout(storyItem.folded, storyItem.name);
-                    if (!storyItem.folded)
+                    if (storyItem.folded)
                     {
 
                         GUILayout.BeginVertical(itemStyle);
