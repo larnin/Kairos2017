@@ -19,6 +19,7 @@ public class CardData
     {
         name = _name;
         visibility = VisibilityState.HIDDEN;
+        fancyName = "";
         textureName = "";
         description = "";
         descriptionSize = 10;
@@ -31,6 +32,7 @@ public class CardData
     public bool folded;
     public VisibilityState visibility;
     public string name;
+    public string fancyName;
     public string textureName;
 
     public string description;
@@ -98,6 +100,11 @@ public class BookCardsTool : EditorWindow
             if (card.folded)
             {
                 GUILayout.BeginVertical(itemStyle);
+
+                GUILayout.BeginHorizontal();
+                EditorGUILayout.LabelField("Fancy name: ", GUILayout.MaxWidth(80));
+                card.fancyName = GUILayout.TextField(card.fancyName);
+                GUILayout.EndHorizontal();
 
                 card.visibility = (CardData.VisibilityState)EditorGUILayout.EnumPopup("Visibility: ", card.visibility);
                 GUILayout.BeginHorizontal();
