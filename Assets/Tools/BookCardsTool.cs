@@ -54,7 +54,7 @@ public class CardsSerializer
 public class BookCardsTool : EditorWindow
 {
     string assetPath = "Assets/Resources/InventoryBook/";
-    string assetName = "cards.json";
+    string assetName = "Cards.json";
 
     List<CardData> m_cards = new List<CardData>();
 

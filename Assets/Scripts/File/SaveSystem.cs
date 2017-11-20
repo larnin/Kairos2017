@@ -88,4 +88,27 @@ public class SaveSystem
             return StoryItem.VisibilityState.HIDDEN;
         return item.state;
     }
+
+    public void setCardVisibility(string name, CardData.VisibilityState state)
+    {
+        var item = m_save.cardDatas.Find(x => { return x.name == name; });
+        if (item == null)
+        {
+            m_save.cardDatas.Add(new Save.CardBookItem(name, state));
+            save();
+        }
+        else if (item.state != state)
+        {
+            item.state = state;
+            save();
+        }
+    }
+
+    public CardData.VisibilityState getCardVisibility(string name)
+    {
+        var item = m_save.cardDatas.Find(x => { return x.name == name; });
+        if (item == null)
+            return CardData.VisibilityState.HIDDEN;
+        return item.state;
+    }
 }

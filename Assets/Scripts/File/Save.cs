@@ -22,12 +22,27 @@ public class Save
         public StoryItem.VisibilityState state = StoryItem.VisibilityState.HIDDEN;
     }
 
+    [Serializable]
+    public class CardBookItem
+    {
+        public CardBookItem(string _name, CardData.VisibilityState _state)
+        {
+            name = _name;
+            state = _state;
+        }
+
+        public string name = "";
+        public CardData.VisibilityState state = CardData.VisibilityState.HIDDEN;
+    }
+
     public int version = 0;
     public List<StoryBookItem> storyItems = new List<StoryBookItem>();
+    public List<CardBookItem> cardDatas = new List<CardBookItem>();
 
     public Save()
     {
         initializeStoryBookItem();
+        initializeCardDatas();
     }
 
     void initializeStoryBookItem()
@@ -44,6 +59,23 @@ public class Save
                 foreach(var i in items.categories)
                     foreach (var j in i.items)
                         storyItems.Add(new StoryBookItem(i.categoryName, j.name, j.visibility));
+            }
+        }
+    }
+
+    void initializeCardDatas()
+    {
+        string assetName = "InventoryBook/Cards";
+
+        var text = Resources.Load<TextAsset>(assetName);
+        if(text != null)
+        {
+            var items = JsonUtility.FromJson<CardsSerializer>(text.text);
+            if(items != null)
+            {
+                cardDatas = new List<CardBookItem>();
+                foreach (var i in items.cards)
+                    cardDatas.Add(new CardBookItem(i.name, i.visibility));
             }
         }
     }
