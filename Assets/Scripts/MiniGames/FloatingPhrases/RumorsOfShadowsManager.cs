@@ -52,29 +52,42 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
             m_firstSelected.transform.DOMove(m_placeForSelected1.position, 0.75f).SetUpdate(true);
             m_secondSelected.transform.DOMove(m_placeForSelected2.position, 0.75f).SetUpdate(true);
 
-            if (true) // add the check to dertmine if the phrase are compatible. 
-            { // for testing we assume there are always compatible. 
+            if (m_firstSelected.MatchingIndex == m_secondSelected.MatchingIndex) 
+            { 
                 StartCoroutine(animationForCorrectPhrase(m_firstSelected, m_secondSelected));
             }
-
+            else
+            {
+                StartCoroutine(animationForWrongPhrase(m_firstSelected, m_secondSelected));
+            }
 
         }
     }
 
-    public void FloatingPhraseIsDestroy(FloatingPhraseLogic floatingPhrase)
-    {
-
-    } 
-
     IEnumerator animationForCorrectPhrase(FloatingPhraseLogic floatingPhrase1, FloatingPhraseLogic floatingPhrase2)
     {
-        floatingPhrase1.enabled = false;
-        floatingPhrase2.enabled = false;
+        floatingPhrase1.IsMatched = true;
+        floatingPhrase2.IsMatched = true;
 
         yield return new WaitForSecondsRealtime(1f);
         floatingPhrase1.transform.DOMove(floatingPhrase1.transform.position + floatingPhrase1.transform.right * 5f, 2f)
             .SetUpdate(true);
-        floatingPhrase2.transform.DOMove(floatingPhrase2.transform.position + floatingPhrase2.transform.right * -5f, 2f)
+        Tween animationTween = floatingPhrase2.transform.DOMove(floatingPhrase2.transform.position + floatingPhrase2.transform.right * -5f, 2f)
             .SetUpdate(true);
+        yield return animationTween.WaitForCompletion();
+        Destroy(floatingPhrase1.gameObject);
+        Destroy(floatingPhrase2.gameObject);
+        Time.timeScale = 1f;
+    }
+
+    IEnumerator animationForWrongPhrase(FloatingPhraseLogic floatingPhrase1, FloatingPhraseLogic floatingPhrase2)
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        foreach (FloatingPhraseGeneratorLogic e in m_generators)
+        {
+            e.destroyAllPhrase();
+        }
+        Camera.main.DOShakePosition(0.75f);
+        Time.timeScale = 1f;
     }
 }

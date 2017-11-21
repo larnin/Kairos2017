@@ -28,12 +28,42 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
     private bool canMoveUp = false;
 
-    private float m_decalSin = 0f;
+    //private float m_decalSin = 0f;
 
     private bool m_cursorIsHover = false;
     private Color m_currentColorHoverinSetted = Color.white;
 
     private bool m_selected = false;
+    private bool m_isTheLastOneAndTheIndice = false;
+
+    private bool m_isMatched = false;
+    public bool IsMatched
+    {
+        get
+        {
+            return m_isMatched;
+        }
+
+        set
+        {
+            m_isMatched = value;
+        }
+    }
+
+    [SerializeField]
+    private byte m_matchingIndex;
+    public byte MatchingIndex
+    {
+        get
+        {
+            return m_matchingIndex;
+        }
+
+        set
+        {
+            m_matchingIndex = value;
+        }
+    }
 
     private byte m_index;
     public byte Index
@@ -62,7 +92,6 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             m_onDestroyDelegate = value;
         }
     }
-
     
     private selectedDelegate m_onSelectedDelegate;
     public selectedDelegate onSelected
@@ -77,15 +106,22 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             m_onSelectedDelegate = value;
         }
     }
-    
+
     public void SetTargetToRest(Transform e)
     {
         m_targetToRest = e;
     }
 
+    /*
     public void SetDecalSin(float decalSin)
     {
         m_decalSin = decalSin;
+    }
+    */
+
+    public void ItsTheLastOneAndTheIndice()
+    {
+        m_isTheLastOneAndTheIndice = true;
     }
 
     // Use this for initialization
@@ -171,16 +207,17 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         m_targetToRest = e;
     }
 
-    void GotToRest()
+
+    private void GotToRest()
     {
         m_renderer.material.color = m_BeginningColor;
         m_textToChange.enabled = false;
         transform.localScale = m_BeginningScale;
         transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere*0.5f, 0.75f).OnComplete(() => {
             m_renderer.material.DOColor(Color.white, 0.25f);
-            transform.DOScale(1f, 0.25f).OnComplete(() =>{
+            transform.DOScale((m_isTheLastOneAndTheIndice ? 1.5f : 1f), 0.25f).OnComplete(() =>{
                 m_textToChange.enabled = true;
-                canMoveUp = true;
+                canMoveUp = !m_isTheLastOneAndTheIndice;
             });
         });
     }
