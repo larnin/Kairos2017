@@ -707,7 +707,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f557853906fd4146a396132076ba2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_minDelayToSpawn: 1.5
+  m_MultipleSpawnEmplacement: []
+  m_MultipleRestEmplacement: []
+  m_minDelayToSpawn: 3
   m_emplacementForSpawn: {fileID: 1865389320}
   m_targetToRest: {fileID: 1346157125}
   m_PlaceToRestWhenIndiceLast: {fileID: 1856757079}
@@ -2502,7 +2504,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f557853906fd4146a396132076ba2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_minDelayToSpawn: 1.5
+  m_MultipleSpawnEmplacement: []
+  m_MultipleRestEmplacement: []
+  m_minDelayToSpawn: 3
   m_emplacementForSpawn: {fileID: 873255308}
   m_targetToRest: {fileID: 580640407}
   m_PlaceToRestWhenIndiceLast: {fileID: 1856757079}
