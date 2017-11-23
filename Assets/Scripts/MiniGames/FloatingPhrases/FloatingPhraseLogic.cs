@@ -49,6 +49,8 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     private bool m_isTheLastOneAndTheIndice = false;
     private bool m_IsDoingAnimation = false;
     private bool m_isMatched = false;
+    private bool m_frozen = false;
+
     public bool IsMatched
     {
         get
@@ -58,7 +60,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
         set
         {
-            m_isMatched = value;
+            m_isMatched = value;            
         }
     }
     
@@ -72,13 +74,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     
     public void unselect()
     {
-        m_IsDoingAnimation = true;
         m_renderer.material.color = Color.white;
-        transform.DOMove(transform.position - transform.forward, 0.5f).SetUpdate(true).OnComplete(() =>
-        {
-            m_IsDoingAnimation = false;
-            Time.timeScale = 1f;
-        });
         m_selected = false;
     }
 
@@ -97,8 +93,8 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         }
     }
 
-    private byte m_index;
-    public byte Index
+    private int m_index;
+    public int Index
     {
         get
         {
@@ -165,10 +161,27 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     }
     */
 
-    public void ItsTheLastOneAndTheIndice()
+    
+    public void SetSpeedUP(float value)
     {
-        m_isTheLastOneAndTheIndice = true;
+        m_speedUP = value;
     }
+    
+    public void setHeightWhenPhraseDisappear(float value)
+    {
+        m_heightWhenPhraseDisappear = value;
+    }
+
+    public void freeze()
+    {
+        m_frozen = true;
+    }
+
+    public void unFreeze()
+    {
+        m_frozen = false;
+    }
+
 
     // Use this for initialization
     void Start ()
@@ -182,12 +195,17 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     // Update is called once per frame
     void Update()
     {
-        if(! m_selected)
+        if(! m_selected || (m_selected && m_isMatched))
         { 
             if (canMoveUp)
             {
-                moveUp();
+                if (!m_frozen)
+                {
+                    moveUp();
+                }
+
                 updateHoveringColor();
+                
             }
 
             if (m_textToChange.enabled)
@@ -221,7 +239,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         //Vector3 horizontalForce = transform.forward * Mathf.Sin(m_decalSin + transform.position.y * 1.5f) * 0.75f;
 
         Vector3 verticalForce = Vector3.up * m_speedUP;
-        Vector3 newForce = (verticalForce) * (m_cursorIsHover ? 0.5f : 1f);
+        Vector3 newForce = (verticalForce); //* (m_cursorIsHover ? 0.5f : 1f);
         newForce *= Time.deltaTime;
 
         transform.Translate(newForce, Space.World);
@@ -240,6 +258,12 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             {
                 m_renderer.material.color = Color.white;
                 m_currentColorHoverinSetted = Color.white;
+            }
+
+            else if(m_isMatched && m_collider.enabled)
+            {
+                m_renderer.material.color = Color.yellow;
+                m_collider.enabled = false;
             }
         }
     }
@@ -291,22 +315,15 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         if (type == OrigineType.CURSOR && m_textToChange.enabled && !m_IsDoingAnimation &&
             !IsWholeAnimationOccuring())
         {
-            if(m_selected)
+            if (m_selected)
             {
                 onSelected(this);
             }
             else
             {
-                m_IsDoingAnimation = true;
-                Time.timeScale = 0f;
                 m_renderer.material.color = Color.cyan;
-                transform.DOMove(transform.position + transform.forward, 0.5f).SetUpdate(true).OnComplete(() =>
-                {
-                    m_IsDoingAnimation = false;
-                    onSelected(this);
-                });
+                onSelected(this);
                 m_selected = true;
-
             }
         }
     }

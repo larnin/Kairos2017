@@ -32,7 +32,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
     // Use this for initialization
     void Awake ()
     {
-        m_generators = GetComponentsInChildren<FloatingPhraseGeneratorLogic>();
+        m_generators = FindObjectsOfType<FloatingPhraseGeneratorLogic>();
         foreach(FloatingPhraseGeneratorLogic e in m_generators)
         {
             e.setRumorsOfShadowsManager(this);
@@ -49,6 +49,9 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
             {
                 if (!m_secondSelected)
                 {
+                    FloatingPhraseGeneratorLogic generator = m_firstSelected.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
+                    // quand une phrase est selectionner on met en pause le générateur.
+                    generator.resume();
                     m_firstSelected.unselect();
                     m_firstSelected = null;
                 }
@@ -66,22 +69,27 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         if (!m_firstSelected)
         {
             m_firstSelected = floatingPhrase;
+            FloatingPhraseGeneratorLogic generator = floatingPhrase.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
+            // quand une phrase est selectionner on met en pause le générateur.
+            generator.pause();
         }
         else if (m_firstSelected == floatingPhrase)
         {
             m_firstSelected.unselect();
             m_firstSelected = null;
+            FloatingPhraseGeneratorLogic generator = floatingPhrase.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
+            // quand une phrase est selectionner on met en pause le générateur.
+            generator.resume();
+        }
+        else if (m_firstSelected.transform.parent == floatingPhrase.transform.parent)
+        {
+            m_firstSelected.unselect();
+            m_firstSelected = floatingPhrase;
         }
 
         else
         {
             m_secondSelected = floatingPhrase;
-
-            m_firstSelected.GetComponent<Collider>().enabled = false;
-            m_secondSelected.GetComponent<Collider>().enabled = false;
-
-            m_firstSelected.transform.DOMove(m_placeForSelected1.position, m_animationTime).SetUpdate(true);
-            m_secondSelected.transform.DOMove(m_placeForSelected2.position, m_animationTime).SetUpdate(true);
 
             if (m_firstSelected.MatchingIndex == m_secondSelected.MatchingIndex) 
             { 
@@ -99,18 +107,16 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         floatingPhrase1.IsMatched = true;
         floatingPhrase2.IsMatched = true;
         m_animationIsOccuring = true;
+        FloatingPhraseGeneratorLogic generator1 = floatingPhrase1.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
+        generator1.resume();
 
-        yield return new WaitForSecondsRealtime(1f);
-        floatingPhrase1.transform.DOMove(floatingPhrase1.transform.position + floatingPhrase1.transform.right * 5f, m_animationTime*4f)
-            .SetUpdate(true);
-        Tween animationTween = floatingPhrase2.transform.DOMove(floatingPhrase2.transform.position + floatingPhrase2.transform.right * -5f, m_animationTime * 4f)
-            .SetUpdate(true);
-        yield return animationTween.WaitForCompletion();
-        Destroy(floatingPhrase1.gameObject);
-        Destroy(floatingPhrase2.gameObject);
-        Time.timeScale = 1f;
-        m_firstSelected = null;
-        m_secondSelected = null;
+        FloatingPhraseGeneratorLogic generator2 = floatingPhrase2.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
+        generator2.resume();
+
+        generator1.phraseIsMatched(floatingPhrase1);
+        generator2.phraseIsMatched(floatingPhrase2);
+
+        yield return null;
         m_animationIsOccuring = false;
     }
 
