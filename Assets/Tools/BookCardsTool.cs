@@ -115,7 +115,7 @@ public class BookCardsTool : EditorWindow
                 EditorGUILayout.LabelField("Description: ");
                 card.description = GUILayout.TextArea(card.description);
 
-                GUILayout.BeginHorizontal();
+                /*GUILayout.BeginHorizontal();
                 EditorGUILayout.LabelField("Font name: ", GUILayout.MaxWidth(75));
                 card.descriptionFontName = EditorGUILayout.TextField(card.descriptionFontName);
                 EditorGUILayout.LabelField("Size: ", GUILayout.MaxWidth(40));
@@ -124,7 +124,7 @@ public class BookCardsTool : EditorWindow
                 card.descriptionColor = EditorGUILayout.ColorField(card.descriptionColor, GUILayout.MaxWidth(50));
                 EditorGUILayout.LabelField("Style: ", GUILayout.MaxWidth(45));
                 card.descriptionStyle = (FontStyle)EditorGUILayout.EnumPopup(card.descriptionStyle);
-                GUILayout.EndHorizontal();
+                GUILayout.EndHorizontal();*/
 
                 GUILayout.BeginHorizontal();
                 if (i > 0 && GUILayout.Button("Up", GUILayout.MaxWidth(150)))
