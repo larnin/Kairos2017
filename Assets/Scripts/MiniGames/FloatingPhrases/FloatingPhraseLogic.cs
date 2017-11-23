@@ -5,6 +5,10 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System;
 
+/*
+ * cette classe sert a gerer une phrase flottante. 
+ * */
+
 public class FloatingPhraseLogic : InteractableBaseLogic
 {
     [SerializeField]
@@ -19,9 +23,17 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     [SerializeField]
     private Color m_BeginningColor = Color.black;
 
+    [SerializeField]
+    private float m_heightWhenPhraseDisappear = 5.4f;
+
+    [SerializeField]
+    private float m_speedUP = 0.50f;
+
+
     public delegate void destroyedDelegate(FloatingPhraseLogic floatingPhrase);
     public delegate void selectedDelegate(FloatingPhraseLogic floatingPhrase);
-    
+    public delegate bool isWholeAnimationOccuringDelegate();
+
     private Camera m_camera;
     private Collider m_collider;
     private Renderer m_renderer;
@@ -35,7 +47,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
     private bool m_selected = false;
     private bool m_isTheLastOneAndTheIndice = false;
-
+    private bool m_IsDoingAnimation = false;
     private bool m_isMatched = false;
     public bool IsMatched
     {
@@ -48,6 +60,26 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         {
             m_isMatched = value;
         }
+    }
+    
+    public bool IsDoingAnimation
+    {
+        get
+        {
+            return m_IsDoingAnimation;
+        }
+    }
+    
+    public void unselect()
+    {
+        m_IsDoingAnimation = true;
+        m_renderer.material.color = Color.white;
+        transform.DOMove(transform.position - transform.forward, 0.5f).SetUpdate(true).OnComplete(() =>
+        {
+            m_IsDoingAnimation = false;
+            Time.timeScale = 1f;
+        });
+        m_selected = false;
     }
 
     [SerializeField]
@@ -107,6 +139,20 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         }
     }
 
+    private isWholeAnimationOccuringDelegate m_isWholeAnimationOccuring;
+    public isWholeAnimationOccuringDelegate IsWholeAnimationOccuring
+    {
+        get
+        {
+            return m_isWholeAnimationOccuring;
+        }
+
+        set
+        {
+            m_isWholeAnimationOccuring = value;
+        }
+    }
+
     public void SetTargetToRest(Transform e)
     {
         m_targetToRest = e;
@@ -146,7 +192,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
             if (m_textToChange.enabled)
             {
-                if (transform.position.y > 5.4f)
+                if (transform.position.y > m_heightWhenPhraseDisappear)
                 {
                     beginDisappear();
                 }
@@ -171,9 +217,10 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
     private void moveUp()
     {
-        // this code is "buggy" 
+        // this code is will be remplaced 
         //Vector3 horizontalForce = transform.forward * Mathf.Sin(m_decalSin + transform.position.y * 1.5f) * 0.75f;
-        Vector3 verticalForce = Vector3.up * 0.85f;
+
+        Vector3 verticalForce = Vector3.up * m_speedUP;
         Vector3 newForce = (verticalForce) * (m_cursorIsHover ? 0.5f : 1f);
         newForce *= Time.deltaTime;
 
@@ -213,7 +260,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         m_renderer.material.color = m_BeginningColor;
         m_textToChange.enabled = false;
         transform.localScale = m_BeginningScale;
-        transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere*0.5f, 0.75f).OnComplete(() => {
+        transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere * 0.5f, 0.75f).OnComplete(() => {
             m_renderer.material.DOColor(Color.white, 0.25f);
             transform.DOScale((m_isTheLastOneAndTheIndice ? 1.5f : 1f), 0.25f).OnComplete(() =>{
                 m_textToChange.enabled = true;
@@ -241,15 +288,26 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
     public override void onInteract(OrigineType type, Vector3 localPosition)
     {
-        if (type == OrigineType.CURSOR && m_textToChange.enabled)
+        if (type == OrigineType.CURSOR && m_textToChange.enabled && !m_IsDoingAnimation &&
+            !IsWholeAnimationOccuring())
         {
-            Time.timeScale = 0f;
-            m_renderer.material.color = Color.cyan;
-            transform.DOMove(transform.position + transform.forward, 0.75f).SetUpdate(true).OnComplete(() =>
+            if(m_selected)
             {
                 onSelected(this);
-            });
-            m_selected = true;
+            }
+            else
+            {
+                m_IsDoingAnimation = true;
+                Time.timeScale = 0f;
+                m_renderer.material.color = Color.cyan;
+                transform.DOMove(transform.position + transform.forward, 0.5f).SetUpdate(true).OnComplete(() =>
+                {
+                    m_IsDoingAnimation = false;
+                    onSelected(this);
+                });
+                m_selected = true;
+
+            }
         }
     }
 
