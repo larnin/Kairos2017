@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class MenuPageLogic : MonoBehaviour
 {
     List<MenuButtonLogic> m_buttons = new List<MenuButtonLogic>();
+    int currentIndex = 0;
 
     private void Awake()
     {
@@ -15,6 +16,11 @@ public class MenuPageLogic : MonoBehaviour
             if (comp != null)
                 m_buttons.Add(comp);
         }
+    }
+
+    private void Update()
+    {
+        
     }
 
     public void onResume()
