@@ -22,10 +22,10 @@ public class CardData
         fancyName = "";
         textureName = "";
         description = "";
-        descriptionSize = 10;
-        descriptionColor = Color.black;
-        descriptionFontName = "";
-        descriptionStyle = FontStyle.Normal;
+        //descriptionSize = 10;
+        //descriptionColor = Color.black;
+        //descriptionFontName = "";
+        //descriptionStyle = FontStyle.Normal;
         folded = true;
     }
 
@@ -36,10 +36,10 @@ public class CardData
     public string textureName;
 
     public string description;
-    public int descriptionSize;
-    public Color descriptionColor;
-    public string descriptionFontName;
-    public FontStyle descriptionStyle;
+    //public int descriptionSize;
+    //public Color descriptionColor;
+    //public string descriptionFontName;
+    //public FontStyle descriptionStyle;
 }
 
 [Serializable]
