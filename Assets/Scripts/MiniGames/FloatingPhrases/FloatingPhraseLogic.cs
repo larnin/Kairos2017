@@ -28,8 +28,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
     [SerializeField]
     private float m_speedUP = 0.50f;
-
-
+    
     public delegate void destroyedDelegate(FloatingPhraseLogic floatingPhrase);
     public delegate void selectedDelegate(FloatingPhraseLogic floatingPhrase);
     public delegate bool isWholeAnimationOccuringDelegate();
@@ -43,7 +42,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     //private float m_decalSin = 0f;
 
     private bool m_cursorIsHover = false;
-    private Color m_currentColorHoverinSetted = Color.white;
+    private Color m_currentColor = Color.white;
 
     private bool m_selected = false;
     private bool m_isTheLastOneAndTheIndice = false;
@@ -60,7 +59,11 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
         set
         {
-            m_isMatched = value;            
+            m_isMatched = value;    
+            if(m_isMatched)
+            {
+                m_selected = false;
+            }
         }
     }
     
@@ -71,10 +74,9 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             return m_IsDoingAnimation;
         }
     }
-    
+
     public void unselect()
     {
-        m_renderer.material.color = Color.white;
         m_selected = false;
     }
 
@@ -203,9 +205,6 @@ public class FloatingPhraseLogic : InteractableBaseLogic
                 {
                     moveUp();
                 }
-
-                updateHoveringColor();
-                
             }
 
             if (m_textToChange.enabled)
@@ -217,6 +216,12 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             }
 
         }
+
+        if (canMoveUp)
+        {
+            updateColorFeedback();
+        }
+
         transform.LookAt(m_camera.transform);
     }
 
@@ -245,25 +250,29 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         transform.Translate(newForce, Space.World);
     }
 
-    private void updateHoveringColor()
+    private void updateColorFeedback()
     {
         if(m_textToChange.enabled)
         {
-            if (m_cursorIsHover && m_currentColorHoverinSetted != Color.blue)
-            {
-                m_renderer.material.color = Color.blue; 
-                m_currentColorHoverinSetted = Color.blue;
-            }
-            else if (!m_cursorIsHover && m_currentColorHoverinSetted != Color.white)
-            {
-                m_renderer.material.color = Color.white;
-                m_currentColorHoverinSetted = Color.white;
-            }
-
-            else if(m_isMatched && m_collider.enabled)
+            if (m_isMatched)
             {
                 m_renderer.material.color = Color.yellow;
                 m_collider.enabled = false;
+            }
+            
+            else if(m_selected)
+            {
+                m_renderer.material.color = Color.cyan;
+            }
+
+            else if (m_cursorIsHover)
+            {
+                m_renderer.material.color = Color.blue;
+            }
+
+            else
+            {
+                m_renderer.material.color = Color.white;
             }
         }
     }
@@ -278,6 +287,30 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         m_targetToRest = e;
     }
 
+    public bool tryAppearing()
+    {
+        if(canMoveUp)
+        {
+            m_textToChange.enabled = true;
+        }
+        m_renderer.enabled = true;
+        
+        return !m_selected;
+    }
+
+    public bool tryDisappearing()
+    {
+        bool canDoIt = (!m_isMatched) && (!m_selected);
+        if (canDoIt)
+        {
+            if (canMoveUp)
+            {
+                m_textToChange.enabled = false;
+            }
+            m_renderer.enabled = false;
+        }
+        return !m_selected;
+    }
 
     private void GotToRest()
     {
@@ -287,8 +320,12 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere * 0.5f, 0.75f).OnComplete(() => {
             m_renderer.material.DOColor(Color.white, 0.25f);
             transform.DOScale((m_isTheLastOneAndTheIndice ? 1.5f : 1f), 0.25f).OnComplete(() =>{
-                m_textToChange.enabled = true;
-                canMoveUp = !m_isTheLastOneAndTheIndice;
+
+                if (m_renderer.enabled)
+                {
+                    m_textToChange.enabled = true;
+                }
+                canMoveUp = true;
             });
         });
     }
@@ -321,9 +358,8 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             }
             else
             {
-                m_renderer.material.color = Color.cyan;
-                onSelected(this);
                 m_selected = true;
+                onSelected(this);
             }
         }
     }

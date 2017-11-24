@@ -8,7 +8,7 @@ public class InteractableMiniGameByCursorLogic : InteractableBaseLogic
     [SerializeField]
     private MiniGameBaseLogic m_miniGame;
 
-    private Renderer m_renderer;
+    public Renderer m_renderer;
 
     private Vector3 baseCameraPosition;
     private Vector3 baseCameraRotation;

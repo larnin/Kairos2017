@@ -31,6 +31,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
     [SerializeField]
     private bool m_stack = false;
 
+    private bool m_coroutineIsRunning = false;
 
     private List<FloatingPhraseLogic> m_spawnedFloatingPhrase = new List<FloatingPhraseLogic>();
     private List<int> m_indexWhoIsMatched = new List<int>();
@@ -43,22 +44,19 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
 
     //private float m_decalSin = 0f; 
     private bool m_pauseGenerator = false;
-   	
-    void Awake()
+    
+
+    void Start()
     {
         foreach (SpokenPhrase e in m_spokenPhrases)
         {
             e.m_spawnPoint = e.m_shadow.Find("SpawnPoint");
-           e.m_goPoint = e.m_shadow.Find("GoPoint");
+            e.m_goPoint = e.m_shadow.Find("GoPoint");
         }
+
+      //  StartCoroutine(SpawningFloatingPhraseInSequence());
     }
 
-    void Start()
-    {
-
-        StartCoroutine(SpawningFloatingPhraseInSequence());
-    }
-    
     void SpawnFloatingPhrase(int index = 0)
     {
         SpokenPhrase spokenPhrase = m_spokenPhrases[index];
@@ -70,7 +68,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         // on set les variable 
         spawned.SetTargetToRest(spokenPhrase.m_goPoint);
         if(m_stack)
-        {
+        { // when they stack, they don't disappear !
             spawned.setHeightWhenPhraseDisappear(99999);
         }
 
@@ -80,8 +78,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             spawned.IsMatched = true;
         }
         spawned.transform.SetParent(this.transform, true);
-
-
+        
         // on set les delegates
         spawned.onDestroyCallback += OnPhraseIsDestroy;
         spawned.onSelected += m_rumorsOfShadowsManager.floatingPhraseIsSelected;
@@ -94,13 +91,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
 
     void OnPhraseIsDestroy(FloatingPhraseLogic floatingPhrase)
     {
-        if(!floatingPhrase.IsMatched)
-        {
-           // m_tempReserveFloatingPhrase.Add(floatingPhrase.Index);
-        }
-        // si une carte a était matché elle ne doit pas réapaitre
-        //(on ne l'ajoute pas a la reserve !)
-        m_spawnedFloatingPhrase.Remove(floatingPhrase);
+
     }
 
     public void destroyAllPhrase()
@@ -130,24 +121,49 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         }
     }
 
-    bool flipflop = true;
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A)) // placeholder code
-        {
-            Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(flipflop));
-            Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(flipflop));
-            flipflop = !flipflop;
-        }
-    }
-
     public void phraseIsMatched(FloatingPhraseLogic floatingPhrase)
     {
         m_indexWhoIsMatched.Add(floatingPhrase.Index);
     }
 
+    public void appearing()
+    {
+        if (!m_coroutineIsRunning)
+        {
+            StartCoroutine(SpawningFloatingPhraseInSequence());
+        }
+        else
+        {
+            bool theyAllCanAppear = true;
+
+            foreach(Transform e in this.transform)
+            {
+                FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
+                theyAllCanAppear = floatingPhrase.tryAppearing() && theyAllCanAppear;
+            }
+
+            if (theyAllCanAppear)
+            {
+                resume();
+            }
+        }
+    }
+
+    public void disappearing()
+    {
+        foreach (Transform e in this.transform)
+        {
+            FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
+            floatingPhrase.tryDisappearing();
+        }
+
+        pause();        
+    }
+
     IEnumerator SpawningFloatingPhraseInSequence()
     {
+        m_coroutineIsRunning = true;
+
         int currentIndex = 0;
         float elapsedTime = 0;
         float targetTime = m_spokenPhrases[currentIndex].m_spawnAfterThePreviousOne;
@@ -183,18 +199,15 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
                 {
                     targetTime = m_spokenPhrases[currentIndex].m_spawnAfterThePreviousOne;
                 }
-
-                
             }
             yield return null;
         }
-            yield return new WaitForSeconds(targetTime);
 
-            foreach(Transform e in transform)
-            {
-                e.GetComponent<FloatingPhraseLogic>().SetSpeedUP(0f);
-            }
-        
+        yield return new WaitForSeconds(targetTime);
+
+        foreach(Transform e in transform)
+        {
+            e.GetComponent<FloatingPhraseLogic>().SetSpeedUP(0f);
+        }
     }
-    
 }
