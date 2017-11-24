@@ -76,7 +76,7 @@ class StoryPageLogic : MonoBehaviour
 
         foreach (var c in m_categories)
             foreach (var i in c.items)
-                i.visibility = G.sys.saveSystem.getStoryItemVisibility(c.categoryName, i.name);
+                i.visibility = G.sys.saveSystem.get<StoryItem.VisibilityState>("Story." + c.categoryName + "." + i.name, i.visibility);
     }
 
     void createCategories()

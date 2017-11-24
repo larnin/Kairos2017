@@ -110,7 +110,7 @@ class CardPageLogic : MonoBehaviour
         else Debug.LogError("Can't load story asset !");
 
         foreach (var c in m_cards)
-            c.visibility = G.sys.saveSystem.getCardVisibility(c.name);
+            c.visibility = G.sys.saveSystem.get<CardData.VisibilityState>("Card." + c.name, c.visibility);
     }
 
     void instanciateAllCards()

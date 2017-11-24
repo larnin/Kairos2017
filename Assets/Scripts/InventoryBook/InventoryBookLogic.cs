@@ -42,9 +42,9 @@ class InventoryBookLogic : MonoBehaviour
     {
         int index = m_currentIndex;
         if (Input.GetButtonDown(rightPageButton))
-            index += -1;
-        if (Input.GetButtonDown(leftPageButton))
             index += 1;
+        if (Input.GetButtonDown(leftPageButton))
+            index += -1;
         if (index < 0)
             index += m_buttons.Count;
         if (index >= m_buttons.Count)
@@ -64,10 +64,10 @@ class InventoryBookLogic : MonoBehaviour
         if (m_currentIndex >= 0)
         {
             m_buttons[m_currentIndex].page.SetActive(false);
-            m_buttons[m_currentIndex].transform.position += new Vector3(m_selectedOffset, 0, 0);
+            m_buttons[m_currentIndex].transform.position += new Vector3(m_selectedOffset, 0, 0) * transform.lossyScale.x;
         }
         m_currentIndex = index;
         m_buttons[m_currentIndex].page.SetActive(true);
-        m_buttons[m_currentIndex].transform.position += new Vector3(-m_selectedOffset, 0, 0);
+        m_buttons[m_currentIndex].transform.position += new Vector3(-m_selectedOffset, 0, 0) * transform.lossyScale.x;
     }
 }
