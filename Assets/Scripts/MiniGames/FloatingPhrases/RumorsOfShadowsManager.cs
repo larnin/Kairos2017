@@ -20,10 +20,6 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
     [SerializeField]
     private GameObject m_PlayerWinFeedback;
 
-
-    // TODO actived a gameObjectWhenNumber achieve. 
-    // after that disabling all ? 
-
     private bool m_activated = true;
     private bool m_animationIsOccuring = false;
     private int m_currentNumberOfMatch = 0;
@@ -46,7 +42,8 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         {
             e.setRumorsOfShadowsManager(this);
         }
-	}
+        m_PlayerWinFeedback.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -69,7 +66,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         {
             m_firstSelected = floatingPhrase;
             FloatingPhraseGeneratorLogic generator = floatingPhrase.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
-            // quand une phrase est selectionner on met en pause le générateur.
+
             generator.pause();
         }
         else if (m_firstSelected == floatingPhrase)
@@ -77,9 +74,8 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
             m_firstSelected.unselect();
             m_firstSelected = null;
             FloatingPhraseGeneratorLogic generator = floatingPhrase.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
-            // quand une phrase est selectionner on met en pause le générateur.
+
             generator.resume();
-            print("je passe par ici WTF");
         }
         else if (m_firstSelected.transform.parent == floatingPhrase.transform.parent)
         {
@@ -112,8 +108,15 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
 
         generator1.phraseIsMatched(floatingPhrase1);
         generator2.phraseIsMatched(floatingPhrase2);
-
+        m_currentNumberOfMatch++;
+        if (m_currentNumberOfMatch == m_numberOfMatchNeeded)
+        {
+            m_PlayerWinFeedback.SetActive(true);
+        }
         yield return null;
+        m_firstSelected = null;
+        m_secondSelected = null;
+
         m_animationIsOccuring = false;
     }
 
