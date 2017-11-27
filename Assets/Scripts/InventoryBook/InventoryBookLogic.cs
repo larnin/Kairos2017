@@ -8,11 +8,14 @@ class InventoryBookLogic : MonoBehaviour
 {
     string leftPageButton = "Page Left";
     string rightPageButton = "Page Right";
+    string returnButton = "Cancel";
 
     [SerializeField] float m_selectedOffset = 10;
 
     List<BookTabButton> m_buttons = new List<BookTabButton>();
     int m_currentIndex = -1;
+
+    public bool blockCancel = false;
 
     private void Awake()
     {
@@ -41,6 +44,8 @@ class InventoryBookLogic : MonoBehaviour
     private void Update()
     {
         int index = m_currentIndex;
+        if (Input.GetButtonDown(returnButton) && !blockCancel)
+            resume();
         if (Input.GetButtonDown(rightPageButton))
             index += 1;
         if (Input.GetButtonDown(leftPageButton))
@@ -50,6 +55,12 @@ class InventoryBookLogic : MonoBehaviour
         if (index >= m_buttons.Count)
             index -= m_buttons.Count;
         selectButton(index);
+    }
+
+    void resume()
+    {
+        Event<PauseEvent>.Broadcast(new PauseEvent(false));
+        Destroy(gameObject);
     }
 
     void onClickButton(BookTabButton b)

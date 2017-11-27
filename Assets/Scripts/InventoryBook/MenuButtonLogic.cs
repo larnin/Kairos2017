@@ -42,8 +42,24 @@ public class MenuButtonLogic : MonoBehaviour, IPointerClickHandler, IPointerEnte
         m_clickEvent.Invoke();
     }
 
+
     public void OnPointerEnter(PointerEventData eventData)
     {
+        hover();
+    }
+
+
+    public void hover()
+    {
+        for (int i = 0; i < transform.parent.childCount; i++)
+        {
+            var t = transform.parent.GetChild(i);
+            if (t == transform)
+                continue;
+            var script = t.GetComponent<MenuButtonLogic>();
+            if (script != null)
+                script.UnHover();
+        }
         hovered = true;
     }
 
@@ -82,5 +98,10 @@ public class MenuButtonLogic : MonoBehaviour, IPointerClickHandler, IPointerEnte
     public void Unselect()
     {
         selected = false;
+    }
+
+    public void UnHover()
+    {
+        hovered = false;
     }
 }
