@@ -291,9 +291,9 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     {
         if(canMoveUp)
         {
-            m_textToChange.enabled = true;
+            //m_textToChange.enabled = true;
         }
-        m_renderer.enabled = true;
+       // m_renderer.enabled = true;
         
         return !m_selected;
     }
@@ -305,11 +305,22 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         {
             if (canMoveUp)
             {
-                m_textToChange.enabled = false;
+               // m_textToChange.enabled = false;
             }
-            m_renderer.enabled = false;
+           // m_renderer.enabled = false;
         }
         return !m_selected;
+    }
+
+    public bool trySetAlpha(float value)
+    {
+       // if(canMoveUp)
+        {
+            Color e = m_textToChange.color;
+            e.a = value;
+            m_textToChange.color = e;
+        }
+        return canMoveUp;
     }
 
     private void GotToRest()
@@ -317,7 +328,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         m_renderer.material.color = m_BeginningColor;
         m_textToChange.enabled = false;
         transform.localScale = m_BeginningScale;
-        transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere * 0.5f, 0.75f).OnComplete(() => {
+        transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere * 0.25f, 0.75f).OnComplete(() => {
             m_renderer.material.DOColor(Color.white, 0.25f);
             transform.DOScale((m_isTheLastOneAndTheIndice ? 1.5f : 1f), 0.25f).OnComplete(() =>{
 

@@ -490,6 +490,8 @@ MonoBehaviour:
     m_spawnAfterThePreviousOne: 2
   m_resetTimeAFterLast: 4.5
   m_stack: 1
+  m_DistanceForBeginAppearing: 5
+  m_DistanceForEndAppearing: 10
 --- !u!1001 &803165251
 Prefab:
   m_ObjectHideFlags: 0
@@ -852,6 +854,8 @@ MonoBehaviour:
     m_spawnAfterThePreviousOne: 2
   m_resetTimeAFterLast: 4
   m_stack: 1
+  m_DistanceForBeginAppearing: 15.99
+  m_DistanceForEndAppearing: 10
 --- !u!4 &1013920618
 Transform:
   m_ObjectHideFlags: 0
@@ -859,7 +863,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1013920616}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.06, y: 0, z: 1.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 365232779}
@@ -983,7 +987,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1094219168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.175, y: 0.08, z: -5.21}
+  m_LocalPosition: {x: 5.5, y: 0.08, z: 2.14}
   m_LocalScale: {x: 22.105822, y: 1, z: 20.666561}
   m_Children: []
   m_Father: {fileID: 365232779}
@@ -1188,6 +1192,10 @@ Prefab:
     - target: {fileID: 4631380925265620, guid: dc9c783e2b6f131458e5023d781c58e1, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 56.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 1731656769634504, guid: dc9c783e2b6f131458e5023d781c58e1, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc9c783e2b6f131458e5023d781c58e1, type: 2}

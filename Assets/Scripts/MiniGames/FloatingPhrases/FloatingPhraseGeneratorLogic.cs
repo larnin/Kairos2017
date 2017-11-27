@@ -31,8 +31,12 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
     [SerializeField]
     private bool m_stack = false;
 
+    [SerializeField]
+    private float m_DistanceForBeginAppearing = 10f;
+    [SerializeField]
+    private float m_DistanceForEndAppearing = 15f;
+    
     private bool m_coroutineIsRunning = false;
-
     private List<FloatingPhraseLogic> m_spawnedFloatingPhrase = new List<FloatingPhraseLogic>();
     private List<int> m_indexWhoIsMatched = new List<int>();
 
@@ -41,6 +45,8 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
     {
         m_rumorsOfShadowsManager = rumorsOfShadowsManager;
     }
+    private Transform playerTransform;
+
 
     //private float m_decalSin = 0f; 
     private bool m_pauseGenerator = false;
@@ -48,13 +54,51 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
 
     void Start()
     {
+        playerTransform = GameObject.FindWithTag("Player").transform;
+
         foreach (SpokenPhrase e in m_spokenPhrases)
         {
             e.m_spawnPoint = e.m_shadow.Find("SpawnPoint");
             e.m_goPoint = e.m_shadow.Find("GoPoint");
         }
-
       //  StartCoroutine(SpawningFloatingPhraseInSequence());
+    }
+
+    void Update()
+    {
+        float distance = Vector3.Distance(playerTransform.position, transform.position);
+
+        //must complete after using text mesh pro. 
+
+        //print("distance" + distance);
+
+        if(distance <= m_DistanceForEndAppearing)
+        {
+            foreach (Transform e in transform)
+            {
+                e.GetComponent<FloatingPhraseLogic>().trySetAlpha(255f);
+            }
+        }
+
+        else if (distance <= m_DistanceForBeginAppearing)
+        {
+
+            foreach (Transform e in transform)
+            {
+                float value = ((distance - m_DistanceForEndAppearing) / 
+                    (m_DistanceForBeginAppearing - m_DistanceForEndAppearing))*255f;
+                ///print(value);
+                //
+               // e.GetComponent<FloatingPhraseLogic>().trySetAlpha(value);
+            }
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, m_DistanceForBeginAppearing);
+        Gizmos.DrawWireSphere(transform.position, m_DistanceForEndAppearing);
     }
 
     void SpawnFloatingPhrase(int index = 0)
