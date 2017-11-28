@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 using System;
+using System.Reflection;
 
 /*
  * cette classe sert a gerer une phrase flottante. 
  * */
-
 public class FloatingPhraseLogic : InteractableBaseLogic
 {
     [SerializeField]
-    private Text m_textToChange;
-
+    private TextMeshProAttributes m_hoverAttributes;
     [SerializeField]
-    private Transform m_targetToRest;
+    private TextMeshProAttributes m_selectedAttributes;
+    [SerializeField]
+    private TextMeshProAttributes m_MatchedAttributes;
+
+
+    private TextMeshProAttributes m_baseAttributes;
 
     [SerializeField]
     private Vector3 m_BeginningScale = new Vector3(0.2f, 0.5f, 1.5f);
@@ -36,6 +41,10 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     private Camera m_camera;
     private Collider m_collider;
     private Renderer m_renderer;
+    private TextMeshPro m_textToChange;
+
+    // [SerializeField]
+    private Transform m_targetToRest;
 
     private bool canMoveUp = false;
 
@@ -50,6 +59,9 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     private bool m_isMatched = false;
     private bool m_frozen = false;
 
+    //PLACEHOLDERS !!!!!
+    public Transform m_shadow = null;
+
     public bool IsMatched
     {
         get
@@ -62,6 +74,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             m_isMatched = value;    
             if(m_isMatched)
             {
+                applyTextMeshProAttributes(m_MatchedAttributes);
                 m_selected = false;
             }
         }
@@ -74,10 +87,18 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             return m_IsDoingAnimation;
         }
     }
+    // PLACEHOLDERS
+    public void selectPlaceholder()
+    {
+        m_selected = true;
+        applyTextMeshProAttributes(m_selectedAttributes);
+    }
+
 
     public void unselect()
     {
         m_selected = false;
+        applyTextMeshProAttributes(m_baseAttributes);
     }
 
     [SerializeField]
@@ -190,7 +211,10 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     {
         m_camera = Camera.main;
         m_collider = GetComponent<Collider>();
-        m_renderer = GetComponentInChildren<Renderer>();
+        m_renderer = transform.GetChild(0).GetChild(0).GetComponent<Renderer>();
+        m_textToChange = GetComponent<TextMeshPro>();
+        m_baseAttributes = new TextMeshProAttributes();
+        saveTextMeshProAttributes(m_baseAttributes);
         GotToRest();
     }
 
@@ -223,6 +247,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         }
 
         transform.LookAt(m_camera.transform);
+        transform.Rotate(Vector3.up, 180f);
     }
 
     private void beginDisappear()
@@ -252,6 +277,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
     private void updateColorFeedback()
     {
+        /*
         if(m_textToChange.enabled)
         {
             if (m_isMatched)
@@ -268,6 +294,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             else if (m_cursorIsHover)
             {
                 m_renderer.material.color = Color.blue;
+               // m_textToChange.material = m_hoverMaterial;
             }
 
             else
@@ -275,6 +302,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
                 m_renderer.material.color = Color.white;
             }
         }
+        */
     }
 
     void OnDestroy()
@@ -291,9 +319,9 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     {
         if(canMoveUp)
         {
-            m_textToChange.enabled = true;
+            //m_textToChange.enabled = true;
         }
-        m_renderer.enabled = true;
+       // m_renderer.enabled = true;
         
         return !m_selected;
     }
@@ -305,11 +333,36 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         {
             if (canMoveUp)
             {
-                m_textToChange.enabled = false;
+               // m_textToChange.enabled = false;
             }
-            m_renderer.enabled = false;
+           // m_renderer.enabled = false;
         }
         return !m_selected;
+    }
+
+    public bool trySetAlpha(float value)
+    {
+       // if(canMoveUp)
+        {
+            Color e = m_textToChange.color;
+            e.a = value;
+            m_textToChange.color = e;
+        }
+        return canMoveUp;
+    }
+
+    public void applyTextMeshProAttributes(TextMeshProAttributes value)
+    {
+        m_textToChange.fontStyle = value.m_fontStyle;
+        m_textToChange.color = value.m_faceSettingColor;
+        m_textToChange.outlineColor = value.m_outlineColor;
+    }
+
+    public void saveTextMeshProAttributes(TextMeshProAttributes value)
+    {
+        value.m_fontStyle = m_textToChange.fontStyle;
+        value.m_faceSettingColor = m_textToChange.color;
+        value.m_outlineColor = m_textToChange.outlineColor;
     }
 
     private void GotToRest()
@@ -317,11 +370,11 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         m_renderer.material.color = m_BeginningColor;
         m_textToChange.enabled = false;
         transform.localScale = m_BeginningScale;
-        transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere * 0.5f, 0.75f).OnComplete(() => {
-            m_renderer.material.DOColor(Color.white, 0.25f);
+        transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere * 0.25f, 0.75f).OnComplete(() => {
+            //m_renderer.material.DOColor(Color.white, 0.25f);
             transform.DOScale((m_isTheLastOneAndTheIndice ? 1.5f : 1f), 0.25f).OnComplete(() =>{
 
-                if (m_renderer.enabled)
+                ///if (m_renderer.enabled)
                 {
                     m_textToChange.enabled = true;
                 }
@@ -332,23 +385,33 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
     public override void onEnter(OrigineType type, Vector3 localPosition)
     {
-        if(type == OrigineType.CURSOR)
+        if(type == OrigineType.CURSOR && !m_isMatched && !m_selected)
         {
             m_cursorIsHover = true;
+            //Destroy(m_textToChange);
+            //UnityEditorInternal.ComponentUtility.CopyComponent(m_hoverPrefab);
+            //UnityEditorInternal.ComponentUtility.PasteComponentValues(m_textToChange);
+            //  m_textToChange = gameObject.GetComponent<TextMeshPro>();
+            //Destroy(m_textToChange);
+            //m_textToChange = gameObject.AddComponent2<TextMeshPro>(m_hoverPrefab);
+
+            applyTextMeshProAttributes(m_hoverAttributes);
         }
 
     }
 
     public override void onExit(OrigineType type)
     {
-        if (type == OrigineType.CURSOR)
+        if (type == OrigineType.CURSOR && !m_isMatched && !m_selected)
         {
-            m_cursorIsHover = false;
+            //    m_cursorIsHover = false;
+            applyTextMeshProAttributes(m_baseAttributes);
         }
     }
 
     public override void onInteract(OrigineType type, Vector3 localPosition)
     {
+        
         if (type == OrigineType.CURSOR && m_textToChange.enabled && !m_IsDoingAnimation &&
             !IsWholeAnimationOccuring())
         {
@@ -359,9 +422,11 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             else
             {
                 m_selected = true;
+                applyTextMeshProAttributes(m_selectedAttributes);
                 onSelected(this);
             }
         }
+        
     }
 
     public override void onInteractEnd(OrigineType type)
