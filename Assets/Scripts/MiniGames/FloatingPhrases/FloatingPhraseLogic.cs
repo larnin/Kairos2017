@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 using System;
+using System.Reflection;
 
 /*
  * cette classe sert a gerer une phrase flottante. 
  * */
-
 public class FloatingPhraseLogic : InteractableBaseLogic
 {
     [SerializeField]
-    private Text m_textToChange;
+    private TextMeshProAttributes m_hoverAttributes;
 
-    [SerializeField]
-    private Transform m_targetToRest;
+    private TextMeshProAttributes m_baseAttributes;
 
     [SerializeField]
     private Vector3 m_BeginningScale = new Vector3(0.2f, 0.5f, 1.5f);
@@ -36,6 +36,10 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     private Camera m_camera;
     private Collider m_collider;
     private Renderer m_renderer;
+    private TextMeshPro m_textToChange;
+
+    // [SerializeField]
+    private Transform m_targetToRest;
 
     private bool canMoveUp = false;
 
@@ -190,7 +194,8 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     {
         m_camera = Camera.main;
         m_collider = GetComponent<Collider>();
-        m_renderer = GetComponentInChildren<Renderer>();
+        m_renderer = transform.GetChild(0).GetChild(0).GetComponent<Renderer>();
+        m_textToChange = GetComponent<TextMeshPro>();
         GotToRest();
     }
 
@@ -223,6 +228,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         }
 
         transform.LookAt(m_camera.transform);
+        transform.Rotate(Vector3.up, 180f);
     }
 
     private void beginDisappear()
@@ -268,6 +274,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             else if (m_cursorIsHover)
             {
                 m_renderer.material.color = Color.blue;
+               // m_textToChange.material = m_hoverMaterial;
             }
 
             else
@@ -323,16 +330,23 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         return canMoveUp;
     }
 
+    public void applyTextMeshProAttributes(TextMeshProAttributes value)
+    {
+        m_textToChange.fontStyle = value.m_fontStyle;
+        m_textToChange.color = value.m_faceSettingColor;
+        m_textToChange.outlineColor = value.m_outlineColor;
+    }
+
     private void GotToRest()
     {
         m_renderer.material.color = m_BeginningColor;
         m_textToChange.enabled = false;
         transform.localScale = m_BeginningScale;
         transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere * 0.25f, 0.75f).OnComplete(() => {
-            m_renderer.material.DOColor(Color.white, 0.25f);
+            //m_renderer.material.DOColor(Color.white, 0.25f);
             transform.DOScale((m_isTheLastOneAndTheIndice ? 1.5f : 1f), 0.25f).OnComplete(() =>{
 
-                if (m_renderer.enabled)
+                ///if (m_renderer.enabled)
                 {
                     m_textToChange.enabled = true;
                 }
@@ -343,9 +357,20 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
     public override void onEnter(OrigineType type, Vector3 localPosition)
     {
+       // print("hello");
+
         if(type == OrigineType.CURSOR)
         {
             m_cursorIsHover = true;
+            // Destroy(m_textToChange);
+            //UnityEditorInternal.ComponentUtility.CopyComponent(m_hoverPrefab);
+            //UnityEditorInternal.ComponentUtility.PasteComponentValues(m_textToChange);
+            //  m_textToChange = gameObject.GetComponent<TextMeshPro>();
+            //Destroy(m_textToChange);
+            //m_textToChange = gameObject.AddComponent2<TextMeshPro>(m_hoverPrefab);
+
+            applyTextMeshProAttributes(m_hoverAttributes);
+
         }
 
     }
@@ -355,6 +380,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         if (type == OrigineType.CURSOR)
         {
             m_cursorIsHover = false;
+
         }
     }
 
@@ -384,4 +410,6 @@ public class FloatingPhraseLogic : InteractableBaseLogic
     {
         
     }
+
+ 
 }

@@ -96,9 +96,11 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
 
     void OnDrawGizmos()
     {
+        /*
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, m_DistanceForBeginAppearing);
         Gizmos.DrawWireSphere(transform.position, m_DistanceForEndAppearing);
+        */
     }
 
     void SpawnFloatingPhrase(int index = 0)
