@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c26bf37904d5c2c4fb65679bdf858e57
+timeCreated: 1511876382
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Manos
+  fontNames:
+  - Manos
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -370,7 +370,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         m_renderer.material.color = m_BeginningColor;
         m_textToChange.enabled = false;
         transform.localScale = m_BeginningScale;
-        transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere * 0.25f, 0.75f).OnComplete(() => {
+        transform.DOMove(m_targetToRest.position, 0.75f).OnComplete(() => {
             //m_renderer.material.DOColor(Color.white, 0.25f);
             transform.DOScale((m_isTheLastOneAndTheIndice ? 1.5f : 1f), 0.25f).OnComplete(() =>{
 

@@ -248,7 +248,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             }
             yield return null;
         }
-
+		targetTime = m_resetTimeAFterLast;
         yield return new WaitForSeconds(targetTime);
 
         foreach(Transform e in transform)
