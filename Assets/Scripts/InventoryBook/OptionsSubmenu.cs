@@ -14,8 +14,13 @@ class OptionsSubmenu : MenuSubmenu
             var labelObj = parent.Find("Label");
             label = labelObj.GetComponent<OptionsSubmenuButtonLogic>();
             propertyName = labelObj.GetComponent<OptionsSubmenuSaveInfoLogic>().propertyName;
-            slider = parent.Find("Slider").GetComponent<Slider>();
-            value = parent.Find("Value").GetComponent<Text>();
+            var s = parent.Find("Slider");
+            if (s != null)
+            {
+                slider = parent.Find("Slider").GetComponent<Slider>();
+                value = parent.Find("Value").GetComponent<Text>();
+            }
+            else toggle = parent.Find("Toggle").GetComponent<Toggle>();
         }
 
         public Category(OptionsSubmenuButtonLogic _label)
@@ -25,6 +30,7 @@ class OptionsSubmenu : MenuSubmenu
 
         public OptionsSubmenuButtonLogic label;
         public Slider slider;
+        public Toggle toggle;
         public Text value;
         public string propertyName;
     }
@@ -51,6 +57,9 @@ class OptionsSubmenu : MenuSubmenu
         m_categories.Add(new Category(m_returnButton));
         foreach (var c in m_categories)
             c.label.hoverAction = disableHovered;
+        foreach (var c in m_categories)
+            if (c.toggle != null)
+                c.label.clickAction = () => { toggle(c.toggle); };
         m_item.SetActive(false);
     }
     
@@ -67,15 +76,23 @@ class OptionsSubmenu : MenuSubmenu
     void loadProperties()
     {
         foreach (var c in m_categories)
-            if(c.slider != null)
+        {
+            if (c.slider != null)
                 c.slider.value = G.sys.saveSystem.getFloat(c.propertyName, c.slider.value);
+            if (c.toggle != null)
+                c.toggle.isOn = G.sys.saveSystem.getBool(c.propertyName, c.toggle.isOn);
+        }
     }
 
     void saveProperties()
     {
         foreach (var c in m_categories)
+        {
             if (c.slider != null)
                 G.sys.saveSystem.set(c.propertyName, c.slider.value);
+            if (c.toggle != null)
+                G.sys.saveSystem.set(c.propertyName, c.toggle.isOn);
+        }
     }
 
     protected override void onDisable()
@@ -127,6 +144,9 @@ class OptionsSubmenu : MenuSubmenu
         if (item.slider == null)
             return;
         var offset = Input.GetAxisRaw(horizontalAxis);
+        if (Mathf.Abs(offset) < 0.6f)
+            offset = 0;
+        else offset = Mathf.Sign(offset);
         if (offset == 0)
             return;
         offset *= moveSpeed * (item.slider.maxValue - item.slider.minValue) * Time.deltaTime;
@@ -155,5 +175,10 @@ class OptionsSubmenu : MenuSubmenu
     {
         for (int i = 0; i < m_categories.Count; i++)
             m_categories[i].label.hovered = false;
+    }
+
+    void toggle(Toggle t)
+    {
+        t.isOn = !t.isOn;
     }
 }
