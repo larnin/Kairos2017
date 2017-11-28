@@ -15,6 +15,7 @@ class OptionsSubmenuButtonLogic : MonoBehaviour, IPointerClickHandler, IPointerE
     Outline m_outline;
 
     Action m_clickAction;
+    Action m_hoverAction;
 
     private void Awake()
     {
@@ -24,12 +25,13 @@ class OptionsSubmenuButtonLogic : MonoBehaviour, IPointerClickHandler, IPointerE
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (m_clickAction != null)
-            m_clickAction();
+        click();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (m_hoverAction != null)
+            m_hoverAction();
         hovered = true;
     }
 
@@ -39,6 +41,7 @@ class OptionsSubmenuButtonLogic : MonoBehaviour, IPointerClickHandler, IPointerE
     }
 
     public Action clickAction { set { m_clickAction = value; } }
+    public Action hoverAction { set { m_hoverAction = value; } }
 
     public bool hovered
     {
@@ -50,5 +53,11 @@ class OptionsSubmenuButtonLogic : MonoBehaviour, IPointerClickHandler, IPointerE
                 m_outline.effectColor = m_hoveredColor;
             else m_outline.effectColor = new Color(0, 0, 0, 0);
         }
+    }
+
+    public void click()
+    {
+        if (m_clickAction != null)
+            m_clickAction();
     }
 }

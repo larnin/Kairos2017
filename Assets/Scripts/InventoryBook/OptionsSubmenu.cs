@@ -18,18 +18,28 @@ class OptionsSubmenu : MenuSubmenu
             value = parent.Find("Value").GetComponent<Text>();
         }
 
+        public Category(OptionsSubmenuButtonLogic _label)
+        {
+            label = _label;
+        }
+
         public OptionsSubmenuButtonLogic label;
         public Slider slider;
         public Text value;
         public string propertyName;
     }
 
+    string submitButton = "Submit";
     string returnButton = "Cancel";
+    string verticalAxis = "Vertical";
+    string horizontalAxis = "Horizontal";
+    float axisThreshold = 0.6f;
+    float moveSpeed = 1.0f;
 
     GameObject m_item;
     List<Category> m_categories = new List<Category>();
     OptionsSubmenuButtonLogic m_returnButton;
-
+    float m_oldVerticalAxisValue = 0;
 
     public OptionsSubmenu(MenuPageLogic menu, GameObject item) : base(menu)
     {
@@ -38,6 +48,9 @@ class OptionsSubmenu : MenuSubmenu
         loadProperties();
         m_returnButton = m_item.transform.Find("Exit").GetComponent<OptionsSubmenuButtonLogic>();
         m_returnButton.clickAction = disable;
+        m_categories.Add(new Category(m_returnButton));
+        foreach (var c in m_categories)
+            c.label.hoverAction = disableHovered;
         m_item.SetActive(false);
     }
     
@@ -54,13 +67,15 @@ class OptionsSubmenu : MenuSubmenu
     void loadProperties()
     {
         foreach (var c in m_categories)
-            c.slider.value = G.sys.saveSystem.getFloat(c.propertyName, c.slider.value);
+            if(c.slider != null)
+                c.slider.value = G.sys.saveSystem.getFloat(c.propertyName, c.slider.value);
     }
 
     void saveProperties()
     {
         foreach (var c in m_categories)
-            G.sys.saveSystem.set(c.propertyName, c.slider.value);
+            if (c.slider != null)
+                G.sys.saveSystem.set(c.propertyName, c.slider.value);
     }
 
     protected override void onDisable()
@@ -80,11 +95,65 @@ class OptionsSubmenu : MenuSubmenu
             disable();
 
         updateValues();
+
+        var value = Input.GetAxisRaw(verticalAxis);
+        var direction = value > axisThreshold && m_oldVerticalAxisValue < axisThreshold ? -1 : value < -axisThreshold && m_oldVerticalAxisValue > -axisThreshold ? 1 : 0;
+        m_oldVerticalAxisValue = value;
+        if (direction != 0)
+        {
+            var old = getCurrentSelected();
+            var current = Mathf.Clamp(old + direction, 0, m_categories.Count - 1);
+            if (old >= 0)
+                m_categories[old].label.hovered = false;
+            m_categories[current].label.hovered = true;
+        }
+
+        controlSlider();
+
+        if(Input.GetButtonDown(submitButton))
+        {
+            var selected = getCurrentSelected();
+            if (selected > 0)
+                m_categories[selected].label.click();
+        }
+    }
+
+    void controlSlider()
+    {
+        var selected = getCurrentSelected();
+        if (selected < 0)
+            return;
+        var item = m_categories[selected];
+        if (item.slider == null)
+            return;
+        var offset = Input.GetAxisRaw(horizontalAxis);
+        if (offset == 0)
+            return;
+        offset *= moveSpeed * (item.slider.maxValue - item.slider.minValue) * Time.deltaTime;
+        item.slider.value += offset;
     }
 
     void updateValues()
     {
         foreach (var c in m_categories)
-            c.value.text = ((int)c.slider.value).ToString();
+            if(c.value != null && c.slider != null)
+                c.value.text = ((int)c.slider.value).ToString();
+    }
+
+    int getCurrentSelected()
+    {
+        for (int i = 0; i < m_categories.Count; i++)
+        {
+            var c = m_categories[i];
+            if (c.label.hovered)
+                return i;
+        }
+        return -1;
+    }
+
+    void disableHovered()
+    {
+        for (int i = 0; i < m_categories.Count; i++)
+            m_categories[i].label.hovered = false;
     }
 }

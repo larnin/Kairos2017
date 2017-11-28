@@ -157,66 +157,10 @@ public class SaveSystem
         save();
     }
 
-    /*public void set<T>(string key, T value)
-    {
-        var item = m_save.items.Find(x => { return x.key == key; });
-        if (item == null)
-            m_save.items.Add(new Save.Item(key, value));
-        else item.value = value;
-        save();
-    }
-
-    public T get<T>(string key, T defaultValue = default(T))
-    {
-        var item = m_save.items.Find(x => { return x.key == key; });
-        if (item == null || item.value == null)
-            return defaultValue;
-        return (T)item.value;
-    }
-
-    public void remove(string key)
-    {
-        m_save.items.RemoveAll(x => { return x.key == key; });
-        save();
-    }*/
-
     Save defaultSave()
     {
         var s = new Save();
         s.version = version;
         return s;
     }
-
-    /*void initializeStoryBookItem(Save s)
-    {
-        string assetName = "InventoryBook/Story";
-
-        var text = Resources.Load<TextAsset>(assetName);
-        if (text != null)
-        {
-            var items = JsonUtility.FromJson<StorySerializer>(text.text);
-            if (items != null)
-            {
-                foreach (var i in items.categories)
-                    foreach (var j in i.items)
-                        s.items.Add(new Save.Item("Story." + i.categoryName + "." + j.name, j.visibility));
-            }
-        }
-    }
-
-    void initializeCardDatas(Save s)
-    {
-        string assetName = "InventoryBook/Cards";
-
-        var text = Resources.Load<TextAsset>(assetName);
-        if (text != null)
-        {
-            var items = JsonUtility.FromJson<CardsSerializer>(text.text);
-            if (items != null)
-            {
-                foreach (var i in items.cards)
-                    s.items.Add(new Save.Item("Card." + i.name, i.visibility));
-            }
-        }
-    }*/
 }

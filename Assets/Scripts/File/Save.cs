@@ -60,7 +60,6 @@ public class Save
     }
 
     public int version = 0;
-    //public List<Item> items = new List<Item>();
 
     public List<ItemInt> itemsInt = new List<ItemInt>();
     public List<ItemFloat> itemsFloat = new List<ItemFloat>();
