@@ -23,6 +23,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
     [SerializeField]
     private List<ShadowMatched> shadowMatchedList;
     
+    [System.Serializable]
     class ShadowMatched
     {
         public Transform A;
@@ -63,6 +64,16 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
             desactivate();
         }
 	}
+
+    private bool canMatch(Transform shadow1,Transform Shadow2)
+    {
+        bool isMatch = false;
+
+
+
+        return isMatch;
+    }
+
 
     public bool globalAnimationOccuring()
     {
