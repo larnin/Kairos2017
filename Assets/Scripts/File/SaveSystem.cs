@@ -65,7 +65,99 @@ public class SaveSystem
         save();
     }
 
-    public void set<T>(string key, T value)
+    public void set(string key, int value)
+    {
+        var item = m_save.itemsInt.Find(x => { return x.key == key; });
+        if (item != null)
+           item.value = value;
+        else m_save.itemsInt.Add(new Save.ItemInt(key, value));
+        save();
+    }
+
+    public void set(string key, float value)
+    {
+        var item = m_save.itemsFloat.Find(x => { return x.key == key; });
+        if (item != null)
+            item.value = value;
+        else m_save.itemsFloat.Add(new Save.ItemFloat(key, value));
+        save();
+    }
+
+    public void set(string key, bool value)
+    {
+        var item = m_save.itemsBool.Find(x => { return x.key == key; });
+        if (item != null)
+            item.value = value;
+        else m_save.itemsBool.Add(new Save.ItemBool(key, value));
+        save();
+    }
+
+    public void set(string key, string value)
+    {
+        var item = m_save.itemsString.Find(x => { return x.key == key; });
+        if (item != null)
+            item.value = value;
+        else m_save.itemsString.Add(new Save.ItemString(key, value));
+        save();
+    }
+
+    public int getInt(string key, int defaultValue = 0)
+    {
+        var item = m_save.itemsInt.Find(x => { return x.key == key; });
+        if (item != null)
+            return item.value;
+        return defaultValue;
+    }
+
+    public float getFloat(string key, float defaultValue = 0)
+    {
+        var item = m_save.itemsFloat.Find(x => { return x.key == key; });
+        if (item != null)
+            return item.value;
+        return defaultValue;
+    }
+
+    public bool getBool(string key, bool defaultValue = false)
+    {
+        var item = m_save.itemsBool.Find(x => { return x.key == key; });
+        if (item != null)
+            return item.value;
+        return defaultValue;
+    }
+
+    public string getString(string key, string defaultValue = "")
+    {
+        var item = m_save.itemsString.Find(x => { return x.key == key; });
+        if (item != null)
+            return item.value;
+        return defaultValue;
+    }
+
+    public void removeInt(string key)
+    {
+        m_save.itemsInt.RemoveAll(x => { return x.key == key; });
+        save();
+    }
+
+    public void removeFloat(string key)
+    {
+        m_save.itemsFloat.RemoveAll(x => { return x.key == key; });
+        save();
+    }
+
+    public void removeBool(string key)
+    {
+        m_save.itemsBool.RemoveAll(x => { return x.key == key; });
+        save();
+    }
+
+    public void removeString(string key)
+    {
+        m_save.itemsString.RemoveAll(x => { return x.key == key; });
+        save();
+    }
+
+    /*public void set<T>(string key, T value)
     {
         var item = m_save.items.Find(x => { return x.key == key; });
         if (item == null)
@@ -77,35 +169,25 @@ public class SaveSystem
     public T get<T>(string key, T defaultValue = default(T))
     {
         var item = m_save.items.Find(x => { return x.key == key; });
-        if (item == null)
+        if (item == null || item.value == null)
             return defaultValue;
         return (T)item.value;
-    }
-
-    public object get(string key)
-    {
-        var item = m_save.items.Find(x => { return x.key == key; });
-        if (item == null)
-            return null;
-        return item.value;
     }
 
     public void remove(string key)
     {
         m_save.items.RemoveAll(x => { return x.key == key; });
         save();
-    }
+    }*/
 
     Save defaultSave()
     {
         var s = new Save();
         s.version = version;
-        initializeStoryBookItem(s);
-        initializeCardDatas(s);
         return s;
     }
 
-    void initializeStoryBookItem(Save s)
+    /*void initializeStoryBookItem(Save s)
     {
         string assetName = "InventoryBook/Story";
 
@@ -136,5 +218,5 @@ public class SaveSystem
                     s.items.Add(new Save.Item("Card." + i.name, i.visibility));
             }
         }
-    }
+    }*/
 }
