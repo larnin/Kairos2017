@@ -46,8 +46,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         m_rumorsOfShadowsManager = rumorsOfShadowsManager;
     }
     private Transform playerTransform;
-
-
+    
     //private float m_decalSin = 0f; 
     private bool m_pauseGenerator = false;
     
@@ -117,6 +116,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         { // when they stack, they don't disappear !
             spawned.setHeightWhenPhraseDisappear(99999);
         }
+        spawned.m_shadow = spokenPhrase.m_shadow;
 
         spawned.Index = index;
         if(m_indexWhoIsMatched.Contains(index))

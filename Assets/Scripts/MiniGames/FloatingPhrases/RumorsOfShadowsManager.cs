@@ -20,6 +20,15 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
     [SerializeField]
     private GameObject m_PlayerWinFeedback;
 
+    [SerializeField]
+    private List<ShadowMatched> shadowMatchedList;
+    
+    class ShadowMatched
+    {
+        public Transform A;
+        public Transform B;
+    }
+
     private bool m_activated = true;
     private bool m_animationIsOccuring = false;
     private int m_currentNumberOfMatch = 0;
@@ -27,7 +36,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
     private FloatingPhraseGeneratorLogic[] m_generators;
     private FloatingPhraseLogic m_firstSelected = null;
     private FloatingPhraseLogic m_secondSelected = null;
-
+    
     public override void activate()
     {
         Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(true));
@@ -65,9 +74,23 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         if (!m_firstSelected)
         {
             m_firstSelected = floatingPhrase;
-            FloatingPhraseGeneratorLogic generator = floatingPhrase.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
+            m_firstSelected.selectPlaceholder();
 
+            
+
+            FloatingPhraseGeneratorLogic generator = floatingPhrase.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
             generator.pause();
+            /*
+            foreach (Transform e in generator.transform)
+            {
+                print(m_firstSelected.m_shadow);
+                if (e.GetComponent<FloatingPhraseLogic>().m_shadow ==
+                    m_firstSelected.m_shadow)
+                {
+                    e.GetComponent<FloatingPhraseLogic>().selectPlaceholder();
+                }
+            }
+            */
         }
         else if (m_firstSelected == floatingPhrase)
         {
@@ -102,6 +125,18 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
     {
         floatingPhrase1.IsMatched = true;
         floatingPhrase2.IsMatched = true;
+
+        /*
+        foreach(Transform e in floatingPhrase1.transform.parent)
+        {
+            if(e.GetComponent<FloatingPhraseLogic>().m_shadow ==
+                floatingPhrase1.m_shadow)
+            {
+                e.GetComponent<FloatingPhraseLogic>().IsMatched = true;
+            }
+        }
+        */
+
         m_animationIsOccuring = true;
         FloatingPhraseGeneratorLogic generator1 = floatingPhrase1.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
         FloatingPhraseGeneratorLogic generator2 = floatingPhrase2.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
