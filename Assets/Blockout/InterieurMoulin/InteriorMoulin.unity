@@ -4387,15 +4387,15 @@ MonoBehaviour:
   - m_floatingPhrasePrebabs: {fileID: 114835051819064730, guid: 066a74d78ecd8ce47b31e5340c8b0198,
       type: 2}
     m_shadow: {fileID: 558815708}
-    m_spawnAfterThePreviousOne: 1.5
+    m_spawnAfterThePreviousOne: 1.25
   - m_floatingPhrasePrebabs: {fileID: 114835051819064730, guid: b97b94a31e8dac148b3fa8430f50c6a7,
       type: 2}
     m_shadow: {fileID: 361687166}
-    m_spawnAfterThePreviousOne: 1.5
+    m_spawnAfterThePreviousOne: 1
   - m_floatingPhrasePrebabs: {fileID: 114835051819064730, guid: 5497be4e31f8e0942833e59a8d641844,
       type: 2}
     m_shadow: {fileID: 361687166}
-    m_spawnAfterThePreviousOne: 1.5
+    m_spawnAfterThePreviousOne: 1.25
   - m_floatingPhrasePrebabs: {fileID: 114835051819064730, guid: 16ed3da6bea92f2489fafddfb5683436,
       type: 2}
     m_shadow: {fileID: 558815708}
@@ -16596,7 +16596,7 @@ Prefab:
     - target: {fileID: 114116046164100624, guid: dc9cd405a9253154ba9e3840dd1eb18c,
         type: 2}
       propertyPath: m_FPSMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114116046164100624, guid: dc9cd405a9253154ba9e3840dd1eb18c,
         type: 2}
