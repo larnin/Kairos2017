@@ -20,11 +20,18 @@ public class FollowCamera : MonoBehaviour
     string mouseNameAxisCamY = "Mouse Y";
     string nameRecenterCam = "Joystic Recenter";
 
+    string fpsMouseProperty = "FirstPersonMouse";
+    string fpsControlerProperty = "FirstPersonControler";
+    string thirdMouseProperty = "ThirdPersonMouse";
+    string thirdControlerProperty = "ThirdPersonControler";
+    string verticalMouseProperty = "VerticalAxisMouse";
+    string verticalControlerProperty = "VerticalAxisControler";
+
     [SerializeField] bool m_FPSMode = false;
     [SerializeField] float m_FPSCameraHeight = 1.5f;
     [SerializeField] UpdateType m_updateType = UpdateType.UPDATE;
     [SerializeField] Transform m_target = null;
-    [SerializeField] bool m_inverseVerticalAxis = false;
+    //[SerializeField] bool m_inverseVerticalAxis = false;
     [SerializeField] float m_manualCameraSpeedMultiplier = 2;
     [SerializeField] float m_manualCameraVerticalSpeedMultiplier = 2;
     [SerializeField] float m_manualCameraDeadZone = 0.1f;
@@ -96,6 +103,13 @@ public class FollowCamera : MonoBehaviour
 
     SubscriberList m_subscriberList = new SubscriberList();
 
+    float m_fpsMousePropertyValue = 1;
+    float m_fpsControlerPropertyValue = 1;
+    float m_thirdMousePropertyValue = 1;
+    float m_thirdControlerPropertyValue = 1;
+    bool m_verticalMousePropertyValue = false;
+    bool m_verticalControlerPropertyValue = false;
+
     public bool FPSMode { get { return m_FPSMode; } }
     public Transform target { get { return m_target; } }
 
@@ -105,6 +119,7 @@ public class FollowCamera : MonoBehaviour
 
         m_subscriberList.Add(new Event<LockPlayerControlesEvent>.Subscriber(onControlesLock));
         m_subscriberList.Add(new Event<ChangeControlerViewEvent>.Subscriber(onChangeViewType));
+        m_subscriberList.Add(new Event<PauseEvent>.Subscriber(onPause));
         m_subscriberList.Subscribe();
     }
 
@@ -133,6 +148,8 @@ public class FollowCamera : MonoBehaviour
         m_currentOffset = m_originalOffset;
         m_currentCenter = Vector3.zero;
         m_lastBlockedDistance = m_currentOffset.magnitude;
+
+        updateSavedProperties();
     }
 
     private void Update()
@@ -261,8 +278,8 @@ public class FollowCamera : MonoBehaviour
             dir.x = Mathf.Min(dir.x + m_manualCameraDeadZone, 0);
         else if (dir.x > 0)
             dir.x = Mathf.Max(dir.x - m_manualCameraDeadZone, 0);
-        dir.x *= m_manualCameraSpeedMultiplier;
-        dir.y *= m_manualCameraVerticalSpeedMultiplier;
+        dir.x *= m_manualCameraSpeedMultiplier * (m_FPSMode ? m_fpsControlerPropertyValue : m_thirdControlerPropertyValue);
+        dir.y *= m_manualCameraVerticalSpeedMultiplier * (m_FPSMode ? m_fpsControlerPropertyValue : m_thirdControlerPropertyValue);
 
         if (dir.magnitude > 0.01f || mouseDir.magnitude > 0.01f)
         {
@@ -270,11 +287,10 @@ public class FollowCamera : MonoBehaviour
             m_recenterSpeed = 0;
         }
 
-        if (m_inverseVerticalAxis)
-        {
-            dir.y *= -1;
+        if (m_verticalControlerPropertyValue)
             mouseDir.y *= -1;
-        }
+        if (m_verticalControlerPropertyValue)
+            dir.y *= -1;
 
         float clampVerticalRotationTop = m_FPSMode ? m_clampVerticalRotationTopFPS : m_clampVerticalRotationTop;
         float clampVerticalRotationBottom = m_FPSMode ? m_clampVerticalRotationBottomFPS : m_clampVerticalRotationBottom;
@@ -287,12 +303,13 @@ public class FollowCamera : MonoBehaviour
 
         dir.y *= multiplier;
 
-        float verticalAcceleration = m_manualCameraVerticalSpeedMultiplier / m_manualCameraSpeedMultiplier * m_manualCameraAcceleration;
+        float verticalAcceleration = m_manualCameraVerticalSpeedMultiplier / m_manualCameraSpeedMultiplier * m_manualCameraAcceleration * (m_FPSMode ? m_fpsControlerPropertyValue : m_thirdControlerPropertyValue);
+        float horisontalAcceleration = m_manualCameraAcceleration * (m_FPSMode ? m_fpsControlerPropertyValue : m_thirdControlerPropertyValue);
 
         if (m_manualCameraSpeed.x < dir.x)
-            m_manualCameraSpeed.x = Mathf.Min(m_manualCameraSpeed.x + m_manualCameraAcceleration * Time.deltaTime, dir.x);
+            m_manualCameraSpeed.x = Mathf.Min(m_manualCameraSpeed.x + horisontalAcceleration * Time.deltaTime, dir.x);
         if (m_manualCameraSpeed.x > dir.x)
-            m_manualCameraSpeed.x = Mathf.Max(m_manualCameraSpeed.x - m_manualCameraAcceleration * Time.deltaTime, dir.x);
+            m_manualCameraSpeed.x = Mathf.Max(m_manualCameraSpeed.x - horisontalAcceleration * Time.deltaTime, dir.x);
         if (m_manualCameraSpeed.y < dir.y)
             m_manualCameraSpeed.y = Mathf.Min(m_manualCameraSpeed.y + verticalAcceleration * Time.deltaTime, dir.y);
         if (m_manualCameraSpeed.y > dir.y)
@@ -304,8 +321,8 @@ public class FollowCamera : MonoBehaviour
         if (mouseDir.y < 0 && m_currentCameraOrientation.x < clampVerticalRotationBottom + m_startSpeedRotationDecreaseDestance)
             verticalMouseSensibility = 1 - ((clampVerticalRotationBottom + m_startSpeedRotationDecreaseDestance) - m_currentCameraOrientation.x) / m_startSpeedRotationDecreaseDestance;
 
-        m_mouseRotValue.x += mouseDir.x * m_mouseSensibility * m_manualCameraSpeedMultiplier * Time.deltaTime;
-        m_mouseRotValue.y += mouseDir.y * verticalMouseSensibility * Time.deltaTime;
+        m_mouseRotValue.x += mouseDir.x * m_mouseSensibility * m_manualCameraSpeedMultiplier * Time.deltaTime * (m_FPSMode ? m_fpsMousePropertyValue : m_thirdMousePropertyValue);
+        m_mouseRotValue.y += mouseDir.y * verticalMouseSensibility * Time.deltaTime * (m_FPSMode ? m_fpsMousePropertyValue : m_thirdMousePropertyValue);
 
         float smoothValueX = Mathf.Sign(m_mouseRotValue.x) * Mathf.Pow(Mathf.Abs(m_mouseRotValue.x), m_mouseSmoothDeadzonePow) * Time.deltaTime * m_mouseSmoothDeadzoneSpeed;
         if (Mathf.Abs(smoothValueX) > Mathf.Abs(m_mouseRotValue.x))
@@ -408,7 +425,6 @@ public class FollowCamera : MonoBehaviour
             normal = hit.normal;
 
         Debug.DrawRay(m_target.position, normal, Color.green);
-        Debug.Log(Vector3.Angle(normal, Vector3.up));
 
         normal = Vector3.ProjectOnPlane(normal, transform.right);
         normal = transform.InverseTransformDirection(normal);
@@ -456,6 +472,13 @@ public class FollowCamera : MonoBehaviour
         m_controlesLocked = e.locked;
     }
 
+    void onPause(PauseEvent e)
+    {
+        onControlesLock(new LockPlayerControlesEvent(e.paused));
+        if (!e.paused)
+            updateSavedProperties();
+    }
+
     void onChangeViewType(ChangeControlerViewEvent e)
     {
         if(e.viewType == ChangeControlerViewEvent.ControlerViewType.FPS_VIEW)
@@ -467,5 +490,23 @@ public class FollowCamera : MonoBehaviour
             m_FPSMode = false;
             m_target.rotation = Quaternion.Euler(0, m_currentCameraOrientation.y, 0);
         }
+    }
+
+    void updateSavedProperties()
+    {
+        float maxValue = 100;
+        float maxmultiplier = 5;
+
+        m_fpsMousePropertyValue = G.sys.saveSystem.getFloat(fpsMouseProperty, 0);
+        m_fpsControlerPropertyValue = G.sys.saveSystem.getFloat(fpsControlerProperty, 0);
+        m_thirdMousePropertyValue = G.sys.saveSystem.getFloat(thirdMouseProperty, 0);
+        m_thirdControlerPropertyValue = G.sys.saveSystem.getFloat(thirdControlerProperty, 0);
+        m_verticalMousePropertyValue = G.sys.saveSystem.getBool(verticalMouseProperty, m_verticalMousePropertyValue);
+        m_verticalControlerPropertyValue = G.sys.saveSystem.getBool(verticalControlerProperty, m_verticalControlerPropertyValue);
+
+        m_fpsMousePropertyValue = m_fpsMousePropertyValue > 0 ? (maxmultiplier - 1) * m_fpsMousePropertyValue / maxValue + 1 : m_fpsMousePropertyValue / (maxValue * (1 + 1 / (maxmultiplier - 1))) + 1;
+        m_fpsControlerPropertyValue = m_fpsControlerPropertyValue > 0 ? (maxmultiplier - 1) * m_fpsControlerPropertyValue / maxValue + 1 : m_fpsControlerPropertyValue / (maxValue * (1 + 1 / (maxmultiplier - 1))) + 1;
+        m_thirdMousePropertyValue = m_thirdMousePropertyValue > 0 ? (maxmultiplier - 1) * m_thirdMousePropertyValue / maxValue + 1 : m_thirdMousePropertyValue / (maxValue * (1 + 1 / (maxmultiplier - 1))) + 1;
+        m_thirdControlerPropertyValue = m_thirdControlerPropertyValue > 0 ? (maxmultiplier - 1) * m_thirdControlerPropertyValue / maxValue + 1 : m_thirdControlerPropertyValue / (maxValue * (1 + 1 / (maxmultiplier - 1))) + 1;
     }
 }

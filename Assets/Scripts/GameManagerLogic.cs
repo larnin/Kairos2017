@@ -10,7 +10,12 @@ public class GameManagerLogic : MonoBehaviour
 {
     static GameManagerLogic instance = null;
 
+    string inventoryButton = "Inventory";
+
+    [SerializeField] GameObject m_inventory;
+
     SubscriberList m_subscriberlist = new SubscriberList();
+    bool m_paused = false;
 
     private void Awake()
     {
@@ -23,7 +28,14 @@ public class GameManagerLogic : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         m_subscriberlist.Add(new Event<LoadSceneEvent>.Subscriber(onLoadScene));
+        m_subscriberlist.Add(new Event<PauseEvent>.Subscriber(onPauseEnd));
         m_subscriberlist.Subscribe();
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown(inventoryButton) && !m_paused)
+            openInventory();
     }
 
     private void OnDestroy()
@@ -48,5 +60,24 @@ public class GameManagerLogic : MonoBehaviour
             yield return new WaitForEndOfFrame();
         if (callback != null)
             callback();
+    }
+
+    void openInventory()
+    {
+        Event<PauseEvent>.Broadcast(new PauseEvent(true));
+        m_paused = true;
+
+        Event<FadeEvent>.Broadcast(new FadeEvent(new Color(0, 0, 0, 0.5f), 1));
+
+        Instantiate(m_inventory);
+    }
+
+    void onPauseEnd(PauseEvent e)
+    {
+        if (e.paused)
+            return;
+        m_paused = false;
+
+        Event<FadeEvent>.Broadcast(new FadeEvent(new Color(0, 0, 0, 0), 1));
     }
 }
