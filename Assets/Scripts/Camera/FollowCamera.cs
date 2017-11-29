@@ -105,6 +105,7 @@ public class FollowCamera : MonoBehaviour
 
         m_subscriberList.Add(new Event<LockPlayerControlesEvent>.Subscriber(onControlesLock));
         m_subscriberList.Add(new Event<ChangeControlerViewEvent>.Subscriber(onChangeViewType));
+        m_subscriberList.Add(new Event<PauseEvent>.Subscriber(onPause));
         m_subscriberList.Subscribe();
     }
 
@@ -408,7 +409,6 @@ public class FollowCamera : MonoBehaviour
             normal = hit.normal;
 
         Debug.DrawRay(m_target.position, normal, Color.green);
-        Debug.Log(Vector3.Angle(normal, Vector3.up));
 
         normal = Vector3.ProjectOnPlane(normal, transform.right);
         normal = transform.InverseTransformDirection(normal);
@@ -454,6 +454,11 @@ public class FollowCamera : MonoBehaviour
     void onControlesLock(LockPlayerControlesEvent e)
     {
         m_controlesLocked = e.locked;
+    }
+
+    void onPause(PauseEvent e)
+    {
+        onControlesLock(new LockPlayerControlesEvent(e.paused));
     }
 
     void onChangeViewType(ChangeControlerViewEvent e)

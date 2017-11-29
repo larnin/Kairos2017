@@ -23,6 +23,7 @@ class PlayerCharacterControler : MonoBehaviour
 
         m_subscriberList.Add(new Event<LockPlayerControlesEvent>.Subscriber(onLockControles));
         m_subscriberList.Add(new Event<ChangeControlerViewEvent>.Subscriber(onChangeControlerView));
+        m_subscriberList.Add(new Event<PauseEvent>.Subscriber(onPause));
         m_subscriberList.Subscribe();
     }
 
@@ -56,5 +57,10 @@ class PlayerCharacterControler : MonoBehaviour
         bool enable = e.viewType == ChangeControlerViewEvent.ControlerViewType.THIRD_VIEW;
         foreach (var r in m_renderers)
             r.enabled = enable;
+    }
+
+    void onPause(PauseEvent e)
+    {
+        onLockControles(new LockPlayerControlesEvent(e.paused));
     }
 }
