@@ -10,7 +10,7 @@ using System.Reflection;
 /*
  * cette classe sert a gerer une phrase flottante. 
  * */
-public class FloatingPhraseLogic : InteractableBaseLogic
+public class FloatingPhraseLogic : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProAttributes m_hoverAttributes;
@@ -87,7 +87,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
             return m_IsDoingAnimation;
         }
     }
-    // PLACEHOLDERS
+
     public void selectPlaceholder()
     {
         m_selected = true;
@@ -116,6 +116,11 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         }
     }
 
+    public void selectedFeedback()
+    {
+        applyTextMeshProAttributes(m_selectedAttributes);
+    }
+    
     private int m_index;
     public int Index
     {
@@ -317,6 +322,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
 
     public bool tryAppearing()
     {
+
         if(canMoveUp)
         {
             //m_textToChange.enabled = true;
@@ -324,6 +330,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
        // m_renderer.enabled = true;
         
         return !m_selected;
+        
     }
 
     public bool tryDisappearing()
@@ -370,7 +377,7 @@ public class FloatingPhraseLogic : InteractableBaseLogic
         m_renderer.material.color = m_BeginningColor;
         m_textToChange.enabled = false;
         transform.localScale = m_BeginningScale;
-        transform.DOMove(m_targetToRest.position + UnityEngine.Random.insideUnitSphere * 0.25f, 0.75f).OnComplete(() => {
+        transform.DOMove(m_targetToRest.position, 0.75f).OnComplete(() => {
             //m_renderer.material.DOColor(Color.white, 0.25f);
             transform.DOScale((m_isTheLastOneAndTheIndice ? 1.5f : 1f), 0.25f).OnComplete(() =>{
 
@@ -381,61 +388,5 @@ public class FloatingPhraseLogic : InteractableBaseLogic
                 canMoveUp = true;
             });
         });
-    }
-
-    public override void onEnter(OrigineType type, Vector3 localPosition)
-    {
-        if(type == OrigineType.CURSOR && !m_isMatched && !m_selected)
-        {
-            m_cursorIsHover = true;
-            //Destroy(m_textToChange);
-            //UnityEditorInternal.ComponentUtility.CopyComponent(m_hoverPrefab);
-            //UnityEditorInternal.ComponentUtility.PasteComponentValues(m_textToChange);
-            //  m_textToChange = gameObject.GetComponent<TextMeshPro>();
-            //Destroy(m_textToChange);
-            //m_textToChange = gameObject.AddComponent2<TextMeshPro>(m_hoverPrefab);
-
-            applyTextMeshProAttributes(m_hoverAttributes);
-        }
-
-    }
-
-    public override void onExit(OrigineType type)
-    {
-        if (type == OrigineType.CURSOR && !m_isMatched && !m_selected)
-        {
-            //    m_cursorIsHover = false;
-            applyTextMeshProAttributes(m_baseAttributes);
-        }
-    }
-
-    public override void onInteract(OrigineType type, Vector3 localPosition)
-    {
-        
-        if (type == OrigineType.CURSOR && m_textToChange.enabled && !m_IsDoingAnimation &&
-            !IsWholeAnimationOccuring())
-        {
-            if (m_selected)
-            {
-                onSelected(this);
-            }
-            else
-            {
-                m_selected = true;
-                applyTextMeshProAttributes(m_selectedAttributes);
-                onSelected(this);
-            }
-        }
-        
-    }
-
-    public override void onInteractEnd(OrigineType type)
-    {
-        
-    }
-
-    public override void onDrag(DragData data, OrigineType type)
-    {
-        
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 /*
  * cette classe sert a gérer le mini et a gérer les input de cancel
@@ -21,6 +22,14 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
     private GameObject m_PlayerWinFeedback;
 
     [SerializeField]
+    private TextMeshProAttributes m_hoverAttributes;
+    [SerializeField]
+    private TextMeshProAttributes m_selectedAttributes;
+    [SerializeField]
+    private TextMeshProAttributes m_MatchedAttributes;
+
+
+    [SerializeField]
     private List<ShadowMatched> shadowMatchedList;
     
     [System.Serializable]
@@ -36,12 +45,16 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
 
     private FloatingPhraseGeneratorLogic[] m_generators;
     private FloatingPhraseLogic m_firstSelected = null;
+
     private FloatingPhraseLogic m_secondSelected = null;
+
+    private Transform m_firstShadowSelected = null;
+    private Transform m_secondShadowSelected = null;
     
     public override void activate()
     {
-        Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(true));
-        Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(true));
+       // Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(true));
+       // Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(true));
     }
     
     // Use this for initialization
@@ -61,7 +74,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         // will be used latter to track the cancel input and finish the MiniGame;
         if (Input.GetButtonDown("Cancel"))
         {
-            desactivate();
+          //  desactivate();
         }
 	}
 
@@ -74,10 +87,82 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         return isMatch;
     }
 
+    public void hoverShadow(Transform transformShadow)
+    {
+        foreach(Transform e in transformShadow)
+        {
+            FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
+            if (floatingPhrase)
+            {
+                floatingPhrase.applyTextMeshProAttributes(m_hoverAttributes);
+            }
+        }
+    }
 
     public bool globalAnimationOccuring()
     {
         return m_animationIsOccuring;
+    }
+    
+    public void selectShadow(Transform transformShadow)
+    {
+        if (!m_firstShadowSelected)
+        {
+            m_firstShadowSelected = transformShadow;
+
+            foreach (Transform e in transformShadow)
+            {
+                FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
+                if (floatingPhrase)
+                {
+                    floatingPhrase.selectedFeedback();
+                }
+            }
+        }
+
+        else if (m_firstSelected == transformShadow)
+        {
+            foreach (Transform e in transformShadow)
+            {
+                FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
+                if (floatingPhrase)
+                {
+                   // floatingPhrase.nofeedBack();
+                }
+            }
+            m_firstSelected = null;
+        }
+
+        /*
+
+        else if (m_firstSelected == floatingPhrase)
+        {
+            m_firstSelected.unselect();
+            m_firstSelected = null;
+            FloatingPhraseGeneratorLogic generator = floatingPhrase.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
+
+            generator.resume();
+        }
+        else if (m_firstSelected.transform.parent == floatingPhrase.transform.parent)
+        {
+            m_firstSelected.unselect();
+            m_firstSelected = floatingPhrase;
+        }
+
+        else
+        {
+            m_secondSelected = floatingPhrase;
+
+            if (m_firstSelected.MatchingIndex == m_secondSelected.MatchingIndex && m_firstSelected.MatchingIndex != 0)
+            {
+                StartCoroutine(animationForCorrectPhrase(m_firstSelected, m_secondSelected));
+            }
+            else
+            {
+                StartCoroutine(animationForWrongPhrase(m_firstSelected, m_secondSelected));
+            }
+        }
+        */
     }
 
     public void floatingPhraseIsSelected(FloatingPhraseLogic floatingPhrase)

@@ -123,7 +123,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         {
             spawned.IsMatched = true;
         }
-        spawned.transform.SetParent(this.transform, true);
+        spawned.transform.SetParent(spokenPhrase.m_shadow, true);
         
         // on set les delegates
         spawned.onDestroyCallback += OnPhraseIsDestroy;
@@ -248,12 +248,12 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             }
             yield return null;
         }
-
+        targetTime = m_resetTimeAFterLast;
         yield return new WaitForSeconds(targetTime);
-
-        foreach(Transform e in transform)
+        
+        foreach (FloatingPhraseLogic e in m_spawnedFloatingPhrase)
         {
-            e.GetComponent<FloatingPhraseLogic>().SetSpeedUP(0f);
+            e.SetSpeedUP(0f);
         }
     }
 }
