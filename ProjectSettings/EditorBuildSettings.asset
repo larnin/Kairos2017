@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Toto.unity
     guid: b8aa0057698f6924bbf17577f7876253
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ShadowGameVersionA.unity
     guid: c8b520dd2196aa541bc6dc44f005d69b
+  - enabled: 1
+    path: Assets/Blockout/InterieurMoulin/InteriorMoulin.unity
+    guid: aeff420af7667614ea4b98c5d08d7e4c

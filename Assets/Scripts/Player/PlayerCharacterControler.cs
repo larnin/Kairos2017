@@ -33,6 +33,11 @@ class PlayerCharacterControler : MonoBehaviour
     
     private void Update()
     {
+		
+		if (Input.GetMouseButtonDown(0))
+		{
+			Debug.Log("Bite");
+		}
         var dir = new Vector2(Input.GetAxisRaw(moveXAxis), Input.GetAxisRaw(moveYAxis));
 
         if (m_controlesLocked)
