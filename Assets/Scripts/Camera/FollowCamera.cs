@@ -68,7 +68,7 @@ public class FollowCamera : MonoBehaviour
 
     [SerializeField] LayerMask m_raycastsMask = 0;
 
-    Camera m_camera;
+    //Camera m_camera;
 
     Vector3 m_targetOldposition;
     bool m_targetMoving = false;
@@ -115,7 +115,7 @@ public class FollowCamera : MonoBehaviour
 
     private void Awake()
     {
-        m_camera = GetComponent<Camera>();
+        //m_camera = GetComponent<Camera>();
 
         m_subscriberList.Add(new Event<LockPlayerControlesEvent>.Subscriber(onControlesLock));
         m_subscriberList.Add(new Event<ChangeControlerViewEvent>.Subscriber(onChangeViewType));
@@ -206,7 +206,7 @@ public class FollowCamera : MonoBehaviour
         if(Mathf.Abs(m_manualCameraSpeed.x) < 0.01f)
             m_currentCameraOrientation.y += m_rotationSpeed * Time.deltaTime;
         if (Mathf.Abs(m_manualCameraSpeed.y) < 0.01f)
-            m_currentCameraOrientation.x += m_recenterSpeed * Time.deltaTime;
+            m_currentCameraOrientation.x += m_recenterSpeed * Time.deltaTime * m_currentCenter.magnitude;
         m_currentCameraOrientation.z = 0;
         m_currentCameraOrientation.x = Mathf.Clamp(m_currentCameraOrientation.x, m_FPSMode ? m_clampVerticalRotationBottomFPS : m_clampVerticalRotationBottom, m_FPSMode ? m_clampVerticalRotationTopFPS : m_clampVerticalRotationTop);
         m_currentCameraOrientation.y = m_currentCameraOrientation.y % 360f;
