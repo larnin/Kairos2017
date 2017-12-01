@@ -5,30 +5,72 @@ using DG.Tweening;
 using System;
 
 /*
- * cette classe sert a gérer le mini et a gérer les input de cancel
+ * cette classe sert a gérer le mini jeu
  * 
  * * */
 public class RumorsOfShadowsManager : MiniGameBaseLogic
 {
+
     [SerializeField]
-    private Transform m_placeForSelected1;
-    [SerializeField]
-    private Transform m_placeForSelected2;
+    private IndiceGeneratorLogic indiceGeneratorLogic;
+
     [SerializeField]
     private float m_animationTime = 0.5f;
     [SerializeField]
     private int m_numberOfMatchNeeded = 2;
-    [SerializeField]
-    private GameObject m_PlayerWinFeedback;
 
     [SerializeField]
     private TextMeshProAttributes m_hoverAttributes;
+    public TextMeshProAttributes hoverAttributes
+    {
+        get
+        {
+            return m_hoverAttributes;
+        }
+    }
+
     [SerializeField]
     private TextMeshProAttributes m_selectedAttributes;
+    public TextMeshProAttributes selectedAttributes
+    {
+        get
+        {
+            return m_selectedAttributes;
+        }
+    }
+
     [SerializeField]
     private TextMeshProAttributes m_MatchedAttributes;
+    public TextMeshProAttributes matchedAttributes
+    {
+        get
+        {
+            return m_MatchedAttributes;
+        }
+    }
 
-
+    [SerializeField]
+    private TextMeshProAttributes m_unMtachedAttributes;
+    public TextMeshProAttributes UnMtachedAttributes
+    {
+        get
+        {
+            return m_unMtachedAttributes;
+        }
+    }
+    
+    [SerializeField]
+    float  m_timeTransitionBetweenAttributes = 0.4f;
+    public float timeTransitionBetweenAttribute
+    {
+        get
+        {
+            return m_timeTransitionBetweenAttributes;
+        }
+    }
+    
+    
+    
     [SerializeField]
     private List<ShadowMatched> shadowMatchedList;
     
@@ -53,8 +95,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
     
     public override void activate()
     {
-       // Event<EnableCursorEvent>.Broadcast(new EnableCursorEvent(true));
-       // Event<LockPlayerControlesEvent>.Broadcast(new LockPlayerControlesEvent(true));
+
     }
     
     // Use this for initialization
@@ -65,36 +106,38 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         {
             e.setRumorsOfShadowsManager(this);
         }
-        m_PlayerWinFeedback.SetActive(false);
     }
 	
-	// Update is called once per frame
-	void Update ()
+
+    private bool canMatch(Transform shadow1,Transform shadow2)
     {
-        // will be used latter to track the cancel input and finish the MiniGame;
-        if (Input.GetButtonDown("Cancel"))
+        foreach (ShadowMatched e in shadowMatchedList)
         {
-          //  desactivate();
+            if ( (e.A == shadow1 && e.B == shadow2) || (e.B == shadow1 && e.A == shadow2) )
+            {
+                return true;
+            }
         }
-	}
-
-    private bool canMatch(Transform shadow1,Transform Shadow2)
-    {
-        bool isMatch = false;
-
-
-
-        return isMatch;
+        
+        return false;
     }
 
-    public void hoverShadow(Transform transformShadow)
+    public void hoverShadow(Transform transformShadow, bool isHovering)
     {
         foreach(Transform e in transformShadow)
         {
             FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
             if (floatingPhrase)
             {
-                floatingPhrase.applyTextMeshProAttributes(m_hoverAttributes);
+                if(isHovering)
+                {
+                    floatingPhrase.applyTextMeshProAttributes(m_hoverAttributes, false);
+                }
+                else
+                {
+                    floatingPhrase.applyTextMeshProAttributes(null, false);
+                }
+                
             }
         }
     }
@@ -104,7 +147,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         return m_animationIsOccuring;
     }
     
-    public void selectShadow(Transform transformShadow)
+    public bool selectShadow(Transform transformShadow)
     {
         if (!m_firstShadowSelected)
         {
@@ -115,135 +158,69 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
                 FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
                 if (floatingPhrase)
                 {
-                    floatingPhrase.selectedFeedback();
+                    floatingPhrase.applyTextMeshProAttributes(m_selectedAttributes);
                 }
             }
+            return true;
         }
 
-        else if (m_firstSelected == transformShadow)
+        else if (m_firstShadowSelected == transformShadow)
         {
             foreach (Transform e in transformShadow)
             {
                 FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
                 if (floatingPhrase)
                 {
-                   // floatingPhrase.nofeedBack();
+                    floatingPhrase.applyTextMeshProAttributes(hoverAttributes, false);
                 }
             }
-            m_firstSelected = null;
+            m_firstShadowSelected = null;
+            return false;
         }
-
-        /*
-
-        else if (m_firstSelected == floatingPhrase)
-        {
-            m_firstSelected.unselect();
-            m_firstSelected = null;
-            FloatingPhraseGeneratorLogic generator = floatingPhrase.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
-
-            generator.resume();
-        }
-        else if (m_firstSelected.transform.parent == floatingPhrase.transform.parent)
-        {
-            m_firstSelected.unselect();
-            m_firstSelected = floatingPhrase;
-        }
-
         else
         {
-            m_secondSelected = floatingPhrase;
+            m_secondShadowSelected = transformShadow;
 
-            if (m_firstSelected.MatchingIndex == m_secondSelected.MatchingIndex && m_firstSelected.MatchingIndex != 0)
+            if (canMatch(m_firstShadowSelected, m_secondShadowSelected))
             {
-                StartCoroutine(animationForCorrectPhrase(m_firstSelected, m_secondSelected));
+                indiceGeneratorLogic.unlockOneIndice();
+                StartCoroutine(animationForCorrectPhrase(m_firstShadowSelected, m_secondShadowSelected));
             }
             else
             {
-                StartCoroutine(animationForWrongPhrase(m_firstSelected, m_secondSelected));
+                StartCoroutine(animationForWrongPhrase(m_firstShadowSelected, m_secondShadowSelected));
             }
-        }
-        */
-    }
-
-    public void floatingPhraseIsSelected(FloatingPhraseLogic floatingPhrase)
-    {
-        if (!m_firstSelected)
-        {
-            m_firstSelected = floatingPhrase;
-            m_firstSelected.selectPlaceholder();
-
             
-
-            FloatingPhraseGeneratorLogic generator = floatingPhrase.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
-            generator.pause();
-            /*
-            foreach (Transform e in generator.transform)
-            {
-                print(m_firstSelected.m_shadow);
-                if (e.GetComponent<FloatingPhraseLogic>().m_shadow ==
-                    m_firstSelected.m_shadow)
-                {
-                    e.GetComponent<FloatingPhraseLogic>().selectPlaceholder();
-                }
-            }
-            */
-        }
-        else if (m_firstSelected == floatingPhrase)
-        {
-            m_firstSelected.unselect();
-            m_firstSelected = null;
-            FloatingPhraseGeneratorLogic generator = floatingPhrase.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
-
-            generator.resume();
-        }
-        else if (m_firstSelected.transform.parent == floatingPhrase.transform.parent)
-        {
-            m_firstSelected.unselect();
-            m_firstSelected = floatingPhrase;
-        }
-
-        else
-        {
-            m_secondSelected = floatingPhrase;
-
-            if (m_firstSelected.MatchingIndex == m_secondSelected.MatchingIndex && m_firstSelected.MatchingIndex != 0) 
-            { 
-                StartCoroutine(animationForCorrectPhrase(m_firstSelected, m_secondSelected));
-            }
-            else
-            {
-                StartCoroutine(animationForWrongPhrase(m_firstSelected, m_secondSelected));
-            }
+            return true;
         }
     }
 
-    public  IEnumerator animationForCorrectPhrase(FloatingPhraseLogic floatingPhrase1, FloatingPhraseLogic floatingPhrase2)
-    {
-        floatingPhrase1.IsMatched = true;
-        floatingPhrase2.IsMatched = true;
 
-        /*
-        foreach(Transform e in floatingPhrase1.transform.parent)
+    public  IEnumerator animationForCorrectPhrase(Transform shadow1, Transform shadow2)
+    {
+        m_animationIsOccuring = true;
+
+        foreach (Transform e in shadow1)
         {
-            if(e.GetComponent<FloatingPhraseLogic>().m_shadow ==
-                floatingPhrase1.m_shadow)
+            FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
+            if (floatingPhrase)
             {
-                e.GetComponent<FloatingPhraseLogic>().IsMatched = true;
+                floatingPhrase.applyTextMeshProAttributes(m_MatchedAttributes, false);
             }
         }
-        */
 
-        m_animationIsOccuring = true;
-        FloatingPhraseGeneratorLogic generator1 = floatingPhrase1.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
-        FloatingPhraseGeneratorLogic generator2 = floatingPhrase2.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
-
-        generator1.phraseIsMatched(floatingPhrase1);
-        generator2.phraseIsMatched(floatingPhrase2);
-        m_currentNumberOfMatch++;
-        if (m_currentNumberOfMatch == m_numberOfMatchNeeded)
+        foreach (Transform e in shadow2)
         {
-            m_PlayerWinFeedback.SetActive(true);
+            FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
+            if (floatingPhrase)
+            {
+                floatingPhrase.applyTextMeshProAttributes(m_MatchedAttributes, false);
+            }
         }
+
+        shadow1.GetComponent<ShadowTriggerSelectionLogic>().shadowIsMatched = true;
+        shadow2.GetComponent<ShadowTriggerSelectionLogic>().shadowIsMatched = true;
+
         yield return null;
         m_firstSelected = null;
         m_secondSelected = null;
@@ -251,22 +228,32 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         m_animationIsOccuring = false;
     }
 
-    IEnumerator animationForWrongPhrase(FloatingPhraseLogic floatingPhrase1, FloatingPhraseLogic floatingPhrase2)
+    IEnumerator animationForWrongPhrase(Transform shadow1, Transform shadow2)
     {
         m_animationIsOccuring = true;
-        floatingPhrase1.unselect();
-        floatingPhrase2.unselect();
 
-        FloatingPhraseGeneratorLogic generator1 = floatingPhrase1.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
-        generator1.resume();
+        ShadowTriggerSelectionLogic ShadowTrigger1 = shadow1.GetComponent<ShadowTriggerSelectionLogic>();
+        ShadowTriggerSelectionLogic ShadowTrigger2 = shadow2.GetComponent<ShadowTriggerSelectionLogic>();
 
-        FloatingPhraseGeneratorLogic generator2 = floatingPhrase2.transform.parent.GetComponent<FloatingPhraseGeneratorLogic>();
-        generator2.resume();
+        ShadowTrigger1.shadowIsSelected = false;
+        ShadowTrigger2.shadowIsSelected = false;
 
-        Camera.main.DOShakePosition(m_animationTime);
-        yield return new WaitForSecondsRealtime(1f);
-        m_firstSelected = null;
-        m_secondSelected = null;
+        FloatingPhraseGeneratorLogic G2 = shadow2.parent.parent.gameObject.GetComponentInChildren<FloatingPhraseGeneratorLogic>();
+        G2.StopAllCoroutines();
+
+        float time = m_timeTransitionBetweenAttributes + 0.001f;
+        
+        G2.destroyAllPhrase(time, m_unMtachedAttributes);
+        
+
+        yield return new WaitForSeconds(time);
+        m_firstShadowSelected = null;
+        m_firstShadowSelected = null;
+        ShadowTrigger1.shadowIsSelected = false;
+        ShadowTrigger2.shadowIsSelected = false;
+
+        G2.StartCoroutine(G2.SpawningFloatingPhraseInSequence());
+
         m_animationIsOccuring = false;
     }
 }

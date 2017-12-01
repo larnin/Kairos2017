@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * cette classe sert a spawn les differente phrase de maniere aléatoire. 
+ * cette classe sert a spawn les differente phrase. 
  * */
 public class FloatingPhraseGeneratorLogic : MonoBehaviour
 {
@@ -38,7 +38,6 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
     
     private bool m_coroutineIsRunning = false;
     private List<FloatingPhraseLogic> m_spawnedFloatingPhrase = new List<FloatingPhraseLogic>();
-    private List<int> m_indexWhoIsMatched = new List<int>();
 
     private RumorsOfShadowsManager m_rumorsOfShadowsManager;
     public void setRumorsOfShadowsManager(RumorsOfShadowsManager rumorsOfShadowsManager)
@@ -47,10 +46,8 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
     }
     private Transform playerTransform;
     
-    //private float m_decalSin = 0f; 
     private bool m_pauseGenerator = false;
     
-
     void Start()
     {
         playerTransform = GameObject.FindWithTag("Player").transform;
@@ -60,46 +57,6 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             e.m_spawnPoint = e.m_shadow.Find("SpawnPoint");
             e.m_goPoint = e.m_shadow.Find("GoPoint");
         }
-      //  StartCoroutine(SpawningFloatingPhraseInSequence());
-    }
-
-    void Update()
-    {
-        float distance = Vector3.Distance(playerTransform.position, transform.position);
-
-        //must complete after using text mesh pro. 
-
-        //print("distance" + distance);
-
-        if(distance <= m_DistanceForEndAppearing)
-        {
-            foreach (Transform e in transform)
-            {
-                e.GetComponent<FloatingPhraseLogic>().trySetAlpha(255f);
-            }
-        }
-
-        else if (distance <= m_DistanceForBeginAppearing)
-        {
-
-            foreach (Transform e in transform)
-            {
-                float value = ((distance - m_DistanceForEndAppearing) / 
-                    (m_DistanceForBeginAppearing - m_DistanceForEndAppearing))*255f;
-                ///print(value);
-                //
-               // e.GetComponent<FloatingPhraseLogic>().trySetAlpha(value);
-            }
-        }
-    }
-
-    void OnDrawGizmos()
-    {
-        /*
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, m_DistanceForBeginAppearing);
-        Gizmos.DrawWireSphere(transform.position, m_DistanceForEndAppearing);
-        */
     }
 
     void SpawnFloatingPhrase(int index = 0)
@@ -110,103 +67,71 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         FloatingPhraseLogic spawned = Instantiate(spokenPhrase.m_floatingPhrasePrebabs, 
             positionForSpawn, 
             Quaternion.identity);
+        
         // on set les variable 
         spawned.SetTargetToRest(spokenPhrase.m_goPoint);
         if(m_stack)
         { // when they stack, they don't disappear !
             spawned.setHeightWhenPhraseDisappear(99999);
         }
-        spawned.m_shadow = spokenPhrase.m_shadow;
 
         spawned.Index = index;
-        if(m_indexWhoIsMatched.Contains(index))
-        {
-            spawned.IsMatched = true;
-        }
+
         spawned.transform.SetParent(spokenPhrase.m_shadow, true);
-        
+
+        ShadowTriggerSelectionLogic shadowTriggerSelection = spokenPhrase.m_shadow.GetComponent<ShadowTriggerSelectionLogic>();
+
+        spawned.timeTransitionBetweenAttributes = m_rumorsOfShadowsManager.timeTransitionBetweenAttribute;
+
+        if (shadowTriggerSelection.shadowIsMatched)
+        {
+            spawned.applyTextMeshProAttributes(m_rumorsOfShadowsManager.matchedAttributes);
+        }
+        else if (shadowTriggerSelection.shadowIsSelected)
+        {
+            spawned.applyTextMeshProAttributes(m_rumorsOfShadowsManager.selectedAttributes);
+        }
+        else if (shadowTriggerSelection.playerIsInside)
+        {
+            spawned.applyTextMeshProAttributes(m_rumorsOfShadowsManager.hoverAttributes);
+        }
+
         // on set les delegates
         spawned.onDestroyCallback += OnPhraseIsDestroy;
-        spawned.onSelected += m_rumorsOfShadowsManager.floatingPhraseIsSelected;
         spawned.IsWholeAnimationOccuring += m_rumorsOfShadowsManager.globalAnimationOccuring;
         
         m_spawnedFloatingPhrase.Add(spawned);
     }
 
-     
-
     void OnPhraseIsDestroy(FloatingPhraseLogic floatingPhrase)
     {
-
+        m_spawnedFloatingPhrase.Remove(floatingPhrase);
     }
 
-    public void destroyAllPhrase()
+    public void destroyAllPhrase(float timeToDoIt, TextMeshProAttributes effect)
     {
         foreach (FloatingPhraseLogic e in m_spawnedFloatingPhrase)
         {
-            Destroy(e.gameObject);
+            e.transform.parent = null;
+            e.applyTextMeshProAttributes(effect, false);
+            Destroy(e.gameObject, timeToDoIt);
         }
         m_spawnedFloatingPhrase.Clear();
-    }
 
-    public void pause()
-    {
-        m_pauseGenerator = true;
-        foreach (Transform e in transform)
-        {
-            e.GetComponent<FloatingPhraseLogic>().freeze();
-        }
-    }
-
-    public void resume()
-    {
-        m_pauseGenerator = false;
-        foreach (Transform e in transform)
-        {
-            e.GetComponent<FloatingPhraseLogic>().unFreeze();
-        }
-    }
-
-    public void phraseIsMatched(FloatingPhraseLogic floatingPhrase)
-    {
-        m_indexWhoIsMatched.Add(floatingPhrase.Index);
+        StopAllCoroutines();
     }
 
     public void appearing()
     {
-        if (!m_coroutineIsRunning)
-        {
-            StartCoroutine(SpawningFloatingPhraseInSequence());
-        }
-        else
-        {
-            bool theyAllCanAppear = true;
-
-            foreach(Transform e in this.transform)
-            {
-                FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-                theyAllCanAppear = floatingPhrase.tryAppearing() && theyAllCanAppear;
-            }
-
-            if (theyAllCanAppear)
-            {
-                resume();
-            }
-        }
+        StartCoroutine(SpawningFloatingPhraseInSequence());   
     }
 
-    public void disappearing()
+    public void disappearing(TextMeshProAttributes unMtachedAttributes, float timeTransitionBetweenAttribute)
     {
-        foreach (Transform e in this.transform)
-        {
-            FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-            floatingPhrase.tryDisappearing();
-        }
-
-        pause();        
+        destroyAllPhrase(timeTransitionBetweenAttribute, unMtachedAttributes);      
     }
 
-    IEnumerator SpawningFloatingPhraseInSequence()
+    public IEnumerator SpawningFloatingPhraseInSequence()
     {
         m_coroutineIsRunning = true;
 
@@ -231,15 +156,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
                 if (currentIndex == m_spokenPhrases.Count)
                 {
                     currentIndex = 0;
-
-                    if (m_stack)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        targetTime = m_resetTimeAFterLast;
-                    }
+                     break;
                 }
                 else
                 {

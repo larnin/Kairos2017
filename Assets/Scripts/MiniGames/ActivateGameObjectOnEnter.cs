@@ -5,15 +5,17 @@ using UnityEngine;
 public class ActivateGameObjectOnEnter : TriggerBaseLogic {
 
     [SerializeField]
-    private FloatingPhraseGeneratorLogic ToActivate = null;
-
+    private FloatingPhraseGeneratorLogic m_toActivate = null;
+    [SerializeField]
+    private RumorsOfShadowsManager m_rumorsOfShadowsManager = null;
+    
     public override void onEnter(TriggerInteractionLogic entity)
     {
-        ToActivate.appearing();
+        m_toActivate.appearing();
     }
 
     public override void onExit(TriggerInteractionLogic entity)
     {
-        ToActivate.disappearing();
+        m_toActivate.disappearing(m_rumorsOfShadowsManager.UnMtachedAttributes, m_rumorsOfShadowsManager.timeTransitionBetweenAttribute);
     }
 }

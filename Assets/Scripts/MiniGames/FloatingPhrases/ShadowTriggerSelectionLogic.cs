@@ -4,17 +4,55 @@ using UnityEngine;
 
 public class ShadowTriggerSelectionLogic : TriggerBaseLogic
 {
-    RumorsOfShadowsManager m_rumorsOfShadowsManager;
-    bool m_playerIsInside = false;
+    private RumorsOfShadowsManager m_rumorsOfShadowsManager;
+    private bool m_playerIsInside = false;
+    public bool playerIsInside
+    {
+        get
+        {
+            return m_playerIsInside;
+        }
+    }
 
+    private bool m_selected = false;
+    public bool shadowIsSelected
+    {
+        get
+        {
+            return m_selected;
+        }
+
+        set
+        {
+            m_selected = value;
+        }
+    }
+
+    private bool m_matched = false;
+    public bool shadowIsMatched
+    {
+        get
+        {
+            return m_matched;
+        }
+
+        set
+        {
+            m_matched = value;
+        }
+    }
+    
     public override void onEnter(TriggerInteractionLogic entity)
     {
        if(entity.tag == "Player")
        {
-            print("EEEEEEE");
             m_playerIsInside = true;
-            m_rumorsOfShadowsManager.hoverShadow(transform);
-       }
+
+            if (!m_matched && !m_selected)
+            {
+                m_rumorsOfShadowsManager.hoverShadow(transform, true);
+            }
+        }
     }
 
     public override void onExit(TriggerInteractionLogic entity)
@@ -22,20 +60,33 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
         if (entity.tag == "Player")
         {
             m_playerIsInside = false;
+            if (!m_matched && !m_selected)
+            {
+                m_rumorsOfShadowsManager.hoverShadow(transform, false);
+            }
         }
     }
 
     void Start()
     {
         m_rumorsOfShadowsManager = transform.GetComponentInParent<RumorsOfShadowsManager>();
-        print(m_rumorsOfShadowsManager);
     }
 
     void Update()
     {
-        if(Input.GetButtonDown("Interact"))
+        if(m_playerIsInside)
         {
-            print("HELLO WORLD");
+            if (Input.GetButtonDown("Interact") && !m_matched)
+            {
+                if (m_rumorsOfShadowsManager.selectShadow(transform))
+                {
+                    m_selected = true;
+                }
+                else
+                {
+                    m_selected = false;
+                }
+            }
         }
     }
 }
