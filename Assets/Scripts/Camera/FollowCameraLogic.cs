@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public class FollowCamera : MonoBehaviour
+public class FollowCameraLogic : MonoBehaviour
 {
     public enum UpdateType
     {

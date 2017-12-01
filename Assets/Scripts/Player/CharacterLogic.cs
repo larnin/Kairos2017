@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
-public class Character : CharacterBase
+public class CharacterLogic : BaseCharacterLogic
 {
     [SerializeField] float m_moveSpeed = 1f;
     [SerializeField] float m_movingTurnSpeed = 360f;
