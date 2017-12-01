@@ -14,9 +14,7 @@ public class IndiceGeneratorLogic : MonoBehaviour {
 
     [SerializeField]
     private SpawnIndiceAtNumber[] m_phraseIndices;
-
     
-
     int m_indiceNumber = 0; // collected
     int m_phraseAppearNumber = 0;// appeared
 
@@ -33,9 +31,7 @@ public class IndiceGeneratorLogic : MonoBehaviour {
                 P.DOMove(m_goToPoints.GetChild(m_phraseAppearNumber).position, 1.0f);
                 m_phraseAppearNumber++;
             }
-
         }
-        
         m_indiceNumber++;
     }
 

@@ -158,7 +158,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
                 FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
                 if (floatingPhrase)
                 {
-                    floatingPhrase.applyTextMeshProAttributes(m_selectedAttributes);
+                    floatingPhrase.applyTextMeshProAttributes(m_selectedAttributes, false);
                 }
             }
             return true;

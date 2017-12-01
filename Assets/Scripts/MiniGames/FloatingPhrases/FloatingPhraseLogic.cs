@@ -198,7 +198,9 @@ public class FloatingPhraseLogic : MonoBehaviour
     {
         m_targetToRest = e;
     }
-    
+
+    Tweener TweenColor = null;
+    Tweener TweenOutLineColor = null;
     public void applyTextMeshProAttributes(TextMeshProAttributes value = null,bool instant = true)
     {
         if (value == null)
@@ -215,12 +217,12 @@ public class FloatingPhraseLogic : MonoBehaviour
         }
         else
         {
-            DOTween.To(() => m_textToChange.color,
+           DOTween.To(() => m_textToChange.color,
                 x => { m_textToChange.color = x; m_textToChange.faceColor = x;},
                 value.m_faceSettingColor,
                 m_timeTransitionBetweenAttributes);
-            
-            DOTween.To( () => m_textToChange.outlineColor, 
+
+           DOTween.To( () => m_textToChange.outlineColor, 
                 x => m_textToChange.outlineColor = x, 
                 value.m_outlineColor, 
                 m_timeTransitionBetweenAttributes);
