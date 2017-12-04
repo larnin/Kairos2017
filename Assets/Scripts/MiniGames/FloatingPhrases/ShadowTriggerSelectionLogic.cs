@@ -6,13 +6,7 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
 {
     private RumorsOfShadowsManager m_rumorsOfShadowsManager;
     private bool m_playerIsInside = false;
-    public bool playerIsInside
-    {
-        get
-        {
-            return m_playerIsInside;
-        }
-    }
+    public bool playerIsInside { get { return m_playerIsInside; } }
 
     private bool m_selected = false;
     public bool shadowIsSelected
@@ -74,19 +68,7 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
 
     void Update()
     {
-        if(m_playerIsInside)
-        {
-            if (Input.GetButtonDown("Interact") && !m_matched)
-            {
-                if (m_rumorsOfShadowsManager.selectShadow(transform))
-                {
-                    m_selected = true;
-                }
-                else
-                {
-                    m_selected = false;
-                }
-            }
-        }
+        if (m_playerIsInside && Input.GetButtonDown("Interact") && !m_matched)
+            m_selected = m_rumorsOfShadowsManager.selectShadow(transform);
     }
 }
