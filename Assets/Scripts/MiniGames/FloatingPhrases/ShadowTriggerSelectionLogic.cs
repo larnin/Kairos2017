@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,33 +9,8 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
     private bool m_playerIsInside = false;
     public bool playerIsInside { get { return m_playerIsInside; } }
 
-    private bool m_selected = false;
-    public bool shadowIsSelected
-    {
-        get
-        {
-            return m_selected;
-        }
-
-        set
-        {
-            m_selected = value;
-        }
-    }
-
-    private bool m_matched = false;
-    public bool shadowIsMatched
-    {
-        get
-        {
-            return m_matched;
-        }
-
-        set
-        {
-            m_matched = value;
-        }
-    }
+    [NonSerialized] public bool m_selected = false;
+    [NonSerialized] public bool m_matched = false;
     
     public override void onEnter(TriggerInteractionLogic entity)
     {

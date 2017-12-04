@@ -60,18 +60,18 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             positionForSpawn, 
             Quaternion.identity);
         
-        spawned.Index = index;
+        spawned.m_index = index;
         spawned.transform.SetParent(spokenPhrase.m_shadow, true);
 
         ShadowTriggerSelectionLogic shadowTriggerSelection = spokenPhrase.m_shadow.GetComponent<ShadowTriggerSelectionLogic>();
 
         spawned.timeTransitionBetweenAttributes = m_rumorsOfShadowsManager.timeTransitionBetweenAttribute;
 
-        if (shadowTriggerSelection.shadowIsMatched)
+        if (shadowTriggerSelection.m_matched)
         {
             spawned.applyTextMeshProAttributes(m_rumorsOfShadowsManager.matchedAttributes);
         }
-        else if (shadowTriggerSelection.shadowIsSelected)
+        else if (shadowTriggerSelection.m_selected)
         {
             spawned.applyTextMeshProAttributes(m_rumorsOfShadowsManager.selectedAttributes);
         }
@@ -103,9 +103,9 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
     {
         foreach (FloatingPhraseLogic e in m_spawnedFloatingPhrase)
         {
-            if(e && !e.beingDestroy)
+            if(e && !e.m_beingDestroy)
             {
-                e.beingDestroy = true;
+                e.m_beingDestroy = true;
                 e.applyTextMeshProAttributes(effect, false);
                 Destroy(e.gameObject, timeToDoIt);
             }
@@ -130,7 +130,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         yield return new WaitForSeconds(timeToWait);
         if(floatingPhrase)
         {
-            floatingPhrase.beingDestroy = true;
+            floatingPhrase.m_beingDestroy = true;
             floatingPhrase.applyTextMeshProAttributes(m_rumorsOfShadowsManager.UnMtachedAttributes, false);
             Destroy(floatingPhrase.gameObject, m_rumorsOfShadowsManager.timeTransitionBetweenAttribute);
         }
