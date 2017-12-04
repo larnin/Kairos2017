@@ -30,10 +30,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
     private List<SpokenPhrase> m_spokenPhrases;
 
     [SerializeField]
-    private float m_resetAfterLast = 4f;
-
-    [SerializeField]
-    private bool m_stack = false;
+    private float m_resetAfterLast = 1f;
     
     private bool m_coroutineIsRunning = false;
     private List<FloatingPhraseLogic> m_spawnedFloatingPhrase = new List<FloatingPhraseLogic>();
