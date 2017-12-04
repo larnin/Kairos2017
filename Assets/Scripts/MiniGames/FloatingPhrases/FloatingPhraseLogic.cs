@@ -33,17 +33,24 @@ public class FloatingPhraseLogic : MonoBehaviour
     private Collider m_collider;
     private TextMeshPro m_textToChange;
     
-    private Transform m_targetToRest;
 
     private bool canMoveUp = false;
     
-
     private bool m_cursorIsHover = false;
     private Color m_currentColor = Color.white;
     
     private bool m_IsDoingAnimation = false;
     private bool m_frozen = false;
 
+    private float m_timeToRestBeforeDeathAnimation;
+    public float timeToRestBeforeDeathAnimation
+    {
+        set
+        {
+            m_timeToRestBeforeDeathAnimation = value;
+        }
+    }
+    
     private float m_timeTransitionBetweenAttributes = 0.4f;
     public float timeTransitionBetweenAttributes
     {
@@ -53,7 +60,6 @@ public class FloatingPhraseLogic : MonoBehaviour
         }
     }
     
-    
     public bool IsDoingAnimation
     {
         get
@@ -61,21 +67,21 @@ public class FloatingPhraseLogic : MonoBehaviour
             return m_IsDoingAnimation;
         }
     }
-
-    [SerializeField]
-    private byte m_matchingIndex;
-    public byte MatchingIndex
+    
+    private bool m_beingDestroy = false;
+    public bool beingDestroy
     {
         get
         {
-            return m_matchingIndex;
+            return m_beingDestroy;
         }
 
         set
         {
-            m_matchingIndex = value;
+            m_beingDestroy = value;
         }
     }
+
     
     private int m_index;
     public int Index
@@ -118,16 +124,6 @@ public class FloatingPhraseLogic : MonoBehaviour
             m_isWholeAnimationOccuring = value;
         }
     }
-
-    public void SetTargetToRest(Transform e)
-    {
-        m_targetToRest = e;
-    }
-
-    public void SetSpeedUP(float value)
-    {
-        m_speedUP = value;
-    }
     
     public void setHeightWhenPhraseDisappear(float value)
     {
@@ -151,54 +147,27 @@ public class FloatingPhraseLogic : MonoBehaviour
         m_camera = Camera.main;
         m_collider = GetComponent<Collider>();
         m_textToChange = GetComponent<TextMeshPro>();
-        m_baseAttributes = new TextMeshProAttributes();
+        m_baseAttributes = ScriptableObject.CreateInstance<TextMeshProAttributes>();
         saveTextMeshProAttributes(m_baseAttributes);
     }
 
     void Start()
     {  
-        GotToRest();
+        Init();
     }
 
     // Update is called once per frame
     void Update()
-    {
- 
-        if (canMoveUp)
-        {
-            if (!m_frozen)
-            {
-                moveUp();
-            }
-        }
-        
+    {        
         transform.LookAt(m_camera.transform);
         transform.Rotate(Vector3.up, 180f);
     }
-
-    private void moveUp()
-    {
-        // this code is will be remplaced 
-        //Vector3 horizontalForce = transform.forward * Mathf.Sin(m_decalSin + transform.position.y * 1.5f) * 0.75f;
-
-        Vector3 verticalForce = Vector3.up * m_speedUP;
-        Vector3 newForce = (verticalForce); //* (m_cursorIsHover ? 0.5f : 1f);
-        newForce *= Time.deltaTime;
-
-        transform.Translate(newForce, Space.World);
-    }
-    
 
     void OnDestroy()
     {
        // m_onDestroyDelegate(this);
     }
-
-    void SettargetToRest(Transform e)
-    {
-        m_targetToRest = e;
-    }
-
+   
     Tweener TweenColor = null;
     Tweener TweenOutLineColor = null;
     public void applyTextMeshProAttributes(TextMeshProAttributes value = null,bool instant = true)
@@ -236,11 +205,10 @@ public class FloatingPhraseLogic : MonoBehaviour
         value.m_outlineColor = m_textToChange.outlineColor;
     }
 
-    private void GotToRest()
+    private void Init()
     {
         canMoveUp = true;
         m_textToChange.enabled = true;
-        transform.position = m_targetToRest.position;
         transform.localScale = new Vector3(1f, 1f, 1f);
     }
 }

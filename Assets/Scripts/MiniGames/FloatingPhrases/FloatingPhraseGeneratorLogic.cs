@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 /*
  * cette classe sert a spawn les differente phrase. 
@@ -17,24 +18,22 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         [NonSerialized]
         public Transform m_spawnPoint = null;
         [NonSerialized]
-        public Transform m_goPoint = null;
+        public Transform m_goPoints = null;
 
-        public float m_spawnAfterThePreviousOne = 0f;
+        public int m_indiceOfTheGoPoint = 0;
+        public float m_SpawnAfterThePreviousOne = 0f;
+        public float m_GoToRestSpot = 0f;
+        public float m_RestBeforeDissapear = 0f; 
     }
 
     [SerializeField]
     private List<SpokenPhrase> m_spokenPhrases;
 
     [SerializeField]
-    private float m_resetTimeAFterLast = 4f;
+    private float m_resetAfterLast = 4f;
 
     [SerializeField]
     private bool m_stack = false;
-
-    [SerializeField]
-    private float m_DistanceForBeginAppearing = 10f;
-    [SerializeField]
-    private float m_DistanceForEndAppearing = 15f;
     
     private bool m_coroutineIsRunning = false;
     private List<FloatingPhraseLogic> m_spawnedFloatingPhrase = new List<FloatingPhraseLogic>();
@@ -55,7 +54,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         foreach (SpokenPhrase e in m_spokenPhrases)
         {
             e.m_spawnPoint = e.m_shadow.Find("SpawnPoint");
-            e.m_goPoint = e.m_shadow.Find("GoPoint");
+            e.m_goPoints = e.m_shadow.Find("GoPoints");
         }
     }
 
@@ -68,15 +67,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             positionForSpawn, 
             Quaternion.identity);
         
-        // on set les variable 
-        spawned.SetTargetToRest(spokenPhrase.m_goPoint);
-        if(m_stack)
-        { // when they stack, they don't disappear !
-            spawned.setHeightWhenPhraseDisappear(99999);
-        }
-
         spawned.Index = index;
-
         spawned.transform.SetParent(spokenPhrase.m_shadow, true);
 
         ShadowTriggerSelectionLogic shadowTriggerSelection = spokenPhrase.m_shadow.GetComponent<ShadowTriggerSelectionLogic>();
@@ -96,6 +87,13 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             spawned.applyTextMeshProAttributes(m_rumorsOfShadowsManager.hoverAttributes);
         }
 
+        // on les fait allez au spot 
+        spawned.transform.DOMove(spokenPhrase.m_goPoints.GetChild(spokenPhrase.m_indiceOfTheGoPoint).position,
+            spokenPhrase.m_GoToRestSpot).onComplete = () =>
+            {
+               StartCoroutine(deathAnimationForFloatingPhrase(spokenPhrase.m_RestBeforeDissapear, spawned));   
+            };
+        
         // on set les delegates
         spawned.onDestroyCallback += OnPhraseIsDestroy;
         spawned.IsWholeAnimationOccuring += m_rumorsOfShadowsManager.globalAnimationOccuring;
@@ -112,9 +110,12 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
     {
         foreach (FloatingPhraseLogic e in m_spawnedFloatingPhrase)
         {
-            e.transform.parent = null;
-            e.applyTextMeshProAttributes(effect, false);
-            Destroy(e.gameObject, timeToDoIt);
+            if(e && !e.beingDestroy)
+            {
+                e.beingDestroy = true;
+                e.applyTextMeshProAttributes(effect, false);
+                Destroy(e.gameObject, timeToDoIt);
+            }
         }
         m_spawnedFloatingPhrase.Clear();
 
@@ -131,13 +132,24 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         destroyAllPhrase(timeTransitionBetweenAttribute, unMtachedAttributes);      
     }
 
+    IEnumerator deathAnimationForFloatingPhrase(float timeToWait, FloatingPhraseLogic floatingPhrase)
+    {
+        yield return new WaitForSeconds(timeToWait);
+        if(floatingPhrase)
+        {
+            floatingPhrase.beingDestroy = true;
+            floatingPhrase.applyTextMeshProAttributes(m_rumorsOfShadowsManager.UnMtachedAttributes, false);
+            Destroy(floatingPhrase.gameObject, m_rumorsOfShadowsManager.timeTransitionBetweenAttribute);
+        }
+    }
+
     public IEnumerator SpawningFloatingPhraseInSequence()
     {
         m_coroutineIsRunning = true;
 
         int currentIndex = 0;
         float elapsedTime = 0;
-        float targetTime = m_spokenPhrases[currentIndex].m_spawnAfterThePreviousOne;
+        float targetTime = m_spokenPhrases[currentIndex].m_SpawnAfterThePreviousOne;
         float globalTime = 0;
 
         while (true)
@@ -156,21 +168,14 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
                 if (currentIndex == m_spokenPhrases.Count)
                 {
                     currentIndex = 0;
-                     break;
+                    targetTime = m_resetAfterLast;
                 }
                 else
                 {
-                    targetTime = m_spokenPhrases[currentIndex].m_spawnAfterThePreviousOne;
+                    targetTime = m_spokenPhrases[currentIndex].m_SpawnAfterThePreviousOne;
                 }
             }
             yield return null;
-        }
-        targetTime = m_resetTimeAFterLast;
-        yield return new WaitForSeconds(targetTime);
-        
-        foreach (FloatingPhraseLogic e in m_spawnedFloatingPhrase)
-        {
-            e.SetSpeedUP(0f);
         }
     }
 }

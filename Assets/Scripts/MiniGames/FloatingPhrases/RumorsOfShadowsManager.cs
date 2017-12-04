@@ -69,8 +69,6 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         }
     }
     
-    
-    
     [SerializeField]
     private List<ShadowMatched> shadowMatchedList;
     
@@ -127,7 +125,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         foreach(Transform e in transformShadow)
         {
             FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-            if (floatingPhrase)
+            if (floatingPhrase && !floatingPhrase.beingDestroy)
             {
                 if(isHovering)
                 {
@@ -155,11 +153,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
 
             foreach (Transform e in transformShadow)
             {
-                FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-                if (floatingPhrase)
-                {
-                    floatingPhrase.applyTextMeshProAttributes(m_selectedAttributes, false);
-                }
+                ApplyFeedBack(e, m_selectedAttributes);
             }
             return true;
         }
@@ -168,11 +162,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         {
             foreach (Transform e in transformShadow)
             {
-                FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-                if (floatingPhrase)
-                {
-                    floatingPhrase.applyTextMeshProAttributes(hoverAttributes, false);
-                }
+                ApplyFeedBack(e, m_hoverAttributes);
             }
             m_firstShadowSelected = null;
             return false;
@@ -195,6 +185,14 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         }
     }
 
+    private void ApplyFeedBack(Transform e, TextMeshProAttributes meshProAttributes)
+    {
+        FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
+        if (floatingPhrase && !floatingPhrase.beingDestroy)
+        {
+            floatingPhrase.applyTextMeshProAttributes(meshProAttributes, false);
+        }
+    }
 
     public  IEnumerator animationForCorrectPhrase(Transform shadow1, Transform shadow2)
     {
@@ -203,7 +201,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         foreach (Transform e in shadow1)
         {
             FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-            if (floatingPhrase)
+            if (floatingPhrase && !floatingPhrase.beingDestroy)
             {
                 floatingPhrase.applyTextMeshProAttributes(m_MatchedAttributes, false);
             }
@@ -212,7 +210,7 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         foreach (Transform e in shadow2)
         {
             FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-            if (floatingPhrase)
+            if (floatingPhrase && !floatingPhrase.beingDestroy)
             {
                 floatingPhrase.applyTextMeshProAttributes(m_MatchedAttributes, false);
             }
