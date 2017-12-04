@@ -21,57 +21,18 @@ public class FloatingPhraseLogic : MonoBehaviour
     private TextMeshPro m_textToChange;
     
     private bool m_IsDoingAnimation = false;
-    
+    public bool IsDoingAnimation { get { return m_IsDoingAnimation; }}
+
     private float m_timeTransitionBetweenAttributes = 0.4f;
-    public float timeTransitionBetweenAttributes
-    {
-        set
-        {
-            m_timeTransitionBetweenAttributes = value;
-        }
-    }
+    public float timeTransitionBetweenAttributes {set { m_timeTransitionBetweenAttributes = value; }}
     
-    public bool IsDoingAnimation
-    {
-        get
-        {
-            return m_IsDoingAnimation;
-        }
-    }
-    
-    private bool m_beingDestroy = false;
-    public bool beingDestroy
-    {
-        get
-        {
-            return m_beingDestroy;
-        }
+    [NonSerialized] public bool m_beingDestroy = false;
 
-        set
-        {
-            m_beingDestroy = value;
-        }
-    }
-
-    
-    private int m_index;
-    public int Index
-    {
-        get
-        {
-            return m_index;
-        }
-
-        set
-        {
-            m_index = value;
-        }
-    }
+    [NonSerialized] public int m_index;
     
     [NonSerialized] public Action<FloatingPhraseLogic> m_onDestroy;
     [NonSerialized] public Func<bool> m_isWholeAnimationOccuring;
     
-
     // Use this for initialization
     void Awake ()
     {

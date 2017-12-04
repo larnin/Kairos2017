@@ -38,13 +38,8 @@ public class RumorsOfShadowsManager : MonoBehaviour
     
     [SerializeField]
     float  m_timeTransitionBetweenAttributes = 0.4f;
-    public float timeTransitionBetweenAttribute
-    {
-        get
-        {
-            return m_timeTransitionBetweenAttributes;
-        }
-    }
+    public float timeTransitionBetweenAttribute { get { return m_timeTransitionBetweenAttributes; } }
+
 
     [SerializeField]
     private List<MatchedShadow> shadowMatchedList;
@@ -84,7 +79,7 @@ public class RumorsOfShadowsManager : MonoBehaviour
         foreach(Transform e in transformShadow)
         {
             FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-            if (floatingPhrase && !floatingPhrase.beingDestroy)
+            if (floatingPhrase && !floatingPhrase.m_beingDestroy)
             {
                 if(isHovering)
                 {
@@ -147,7 +142,7 @@ public class RumorsOfShadowsManager : MonoBehaviour
     private void ApplyFeedBack(Transform e, TextMeshProAttributes meshProAttributes)
     {
         FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-        if (floatingPhrase && !floatingPhrase.beingDestroy)
+        if (floatingPhrase && !floatingPhrase.m_beingDestroy)
         {
             floatingPhrase.applyTextMeshProAttributes(meshProAttributes, false);
         }
@@ -160,7 +155,7 @@ public class RumorsOfShadowsManager : MonoBehaviour
         foreach (Transform e in shadow1)
         {
             FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-            if (floatingPhrase && !floatingPhrase.beingDestroy)
+            if (floatingPhrase && !floatingPhrase.m_beingDestroy)
             {
                 floatingPhrase.applyTextMeshProAttributes(m_MatchedAttributes, false);
             }
@@ -169,14 +164,14 @@ public class RumorsOfShadowsManager : MonoBehaviour
         foreach (Transform e in shadow2)
         {
             FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-            if (floatingPhrase && !floatingPhrase.beingDestroy)
+            if (floatingPhrase && !floatingPhrase.m_beingDestroy)
             {
                 floatingPhrase.applyTextMeshProAttributes(m_MatchedAttributes, false);
             }
         }
 
-        shadow1.GetComponent<ShadowTriggerSelectionLogic>().shadowIsMatched = true;
-        shadow2.GetComponent<ShadowTriggerSelectionLogic>().shadowIsMatched = true;
+        shadow1.GetComponent<ShadowTriggerSelectionLogic>().m_matched = true;
+        shadow2.GetComponent<ShadowTriggerSelectionLogic>().m_matched = true;
 
         yield return null;
         m_firstShadowSelected = null;
@@ -192,8 +187,8 @@ public class RumorsOfShadowsManager : MonoBehaviour
         ShadowTriggerSelectionLogic ShadowTrigger1 = shadow1.GetComponent<ShadowTriggerSelectionLogic>();
         ShadowTriggerSelectionLogic ShadowTrigger2 = shadow2.GetComponent<ShadowTriggerSelectionLogic>();
 
-        ShadowTrigger1.shadowIsSelected = false;
-        ShadowTrigger2.shadowIsSelected = false;
+        ShadowTrigger1.m_selected = false;
+        ShadowTrigger2.m_selected = false;
 
         FloatingPhraseGeneratorLogic G2 = shadow2.parent.parent.gameObject.GetComponentInChildren<FloatingPhraseGeneratorLogic>();
         G2.StopAllCoroutines();
@@ -206,8 +201,8 @@ public class RumorsOfShadowsManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         m_firstShadowSelected = null;
         m_firstShadowSelected = null;
-        ShadowTrigger1.shadowIsSelected = false;
-        ShadowTrigger2.shadowIsSelected = false;
+        ShadowTrigger1.m_selected = false;
+        ShadowTrigger2.m_selected = false;
 
         G2.StartCoroutine(G2.SpawningFloatingPhraseInSequence());
 
