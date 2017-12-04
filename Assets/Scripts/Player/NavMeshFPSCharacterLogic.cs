@@ -14,12 +14,6 @@ class NavMeshFPSCharacterLogic : BaseCharacterLogic
 
     NavMeshAgent m_agent;
 
-    bool m_moving = false;
-    float m_turnAmount = 0;
-    float m_targetForwardAmont = 0;
-    float m_forwardAmount = 0;
-    float m_currentDelay;
-
     float m_currentSpeed = 0;
     Vector2 m_oldDir = new Vector2(); 
 
@@ -56,8 +50,6 @@ class NavMeshFPSCharacterLogic : BaseCharacterLogic
 
         m_agent.velocity = new Vector3(move2D.x * m_currentSpeed, m_agent.velocity.y, move2D.y * m_currentSpeed);
     }
-
-    public bool moving { get { return m_moving; } }
 
     public void OnAnimatorMove()
     {
