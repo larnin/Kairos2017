@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 50ec34658ec26b04b99a2320c69fdaef
+timeCreated: 1491125733
+licenseType: Free
+ShaderImporter:
+  defaultTextures:
+  - _Albedo: {fileID: 2800000, guid: 6b945e39de12bf34ab4880818ca028f6, type: 3}
+  - _Crayon: {fileID: 2800000, guid: a501453cc08e2d443893d1f88e5d5e58, type: 3}
+  - _Clouds: {fileID: 2800000, guid: ba37349d2e148c743a23954dcb764e72, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

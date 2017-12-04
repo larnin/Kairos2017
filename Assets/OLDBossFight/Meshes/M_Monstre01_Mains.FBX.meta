@@ -1,0 +1,4055 @@
+fileFormatVersion: 2
+guid: 095a0bae1e5192b49ab9f7023591ce0d
+timeCreated: 1490465371
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: b_annulaire01(mirrored)008
+    100002: b_annulaire01(mirrored)009
+    100004: b_annulaire01(mirrored)010
+    100006: b_annulaire01(mirrored)012
+    100008: b_annulaire01(mirrored)014
+    100010: b_annulaire01(mirrored)015
+    100012: b_annulaire01(mirrored)017
+    100014: b_annulaire01(mirrored)020
+    100016: b_annulaire01(mirrored)022
+    100018: b_annulaire01(mirrored)023
+    100020: b_annulaire01(mirrored)024
+    100022: b_annulaire01(mirrored)025
+    100024: b_annulaire01(mirrored)026
+    100026: b_annulaire01(mirrored)028
+    100028: b_annulaire01(mirrored)029
+    100030: b_annulaire01(mirrored)030
+    100032: b_annulaire01(mirrored)031
+    100034: b_annulaire01(mirrored)032
+    100036: b_annulaire01(mirrored)033
+    100038: b_annulaire01(mirrored)034
+    100040: b_annulaire01(mirrored)035
+    100042: b_annulaire02(mirrored)008
+    100044: b_annulaire02(mirrored)009
+    100046: b_annulaire02(mirrored)010
+    100048: b_annulaire02(mirrored)012
+    100050: b_annulaire02(mirrored)014
+    100052: b_annulaire02(mirrored)015
+    100054: b_annulaire02(mirrored)017
+    100056: b_annulaire02(mirrored)020
+    100058: b_annulaire02(mirrored)022
+    100060: b_annulaire02(mirrored)023
+    100062: b_annulaire02(mirrored)024
+    100064: b_annulaire02(mirrored)025
+    100066: b_annulaire02(mirrored)026
+    100068: b_annulaire02(mirrored)028
+    100070: b_annulaire02(mirrored)029
+    100072: b_annulaire02(mirrored)030
+    100074: b_annulaire02(mirrored)031
+    100076: b_annulaire02(mirrored)032
+    100078: b_annulaire02(mirrored)033
+    100080: b_annulaire02(mirrored)034
+    100082: b_annulaire02(mirrored)035
+    100084: b_annulaire03(mirrored)008
+    100086: b_annulaire03(mirrored)009
+    100088: b_annulaire03(mirrored)010
+    100090: b_annulaire03(mirrored)012
+    100092: b_annulaire03(mirrored)014
+    100094: b_annulaire03(mirrored)015
+    100096: b_annulaire03(mirrored)017
+    100098: b_annulaire03(mirrored)020
+    100100: b_annulaire03(mirrored)022
+    100102: b_annulaire03(mirrored)023
+    100104: b_annulaire03(mirrored)024
+    100106: b_annulaire03(mirrored)025
+    100108: b_annulaire03(mirrored)026
+    100110: b_annulaire03(mirrored)028
+    100112: b_annulaire03(mirrored)029
+    100114: b_annulaire03(mirrored)030
+    100116: b_annulaire03(mirrored)031
+    100118: b_annulaire03(mirrored)032
+    100120: b_annulaire03(mirrored)033
+    100122: b_annulaire03(mirrored)034
+    100124: b_annulaire03(mirrored)035
+    100126: b_auriculaire01(mirrored)008
+    100128: b_auriculaire01(mirrored)009
+    100130: b_auriculaire01(mirrored)010
+    100132: b_auriculaire01(mirrored)012
+    100134: b_auriculaire01(mirrored)014
+    100136: b_auriculaire01(mirrored)015
+    100138: b_auriculaire01(mirrored)017
+    100140: b_auriculaire01(mirrored)020
+    100142: b_auriculaire01(mirrored)022
+    100144: b_auriculaire01(mirrored)023
+    100146: b_auriculaire01(mirrored)024
+    100148: b_auriculaire01(mirrored)025
+    100150: b_auriculaire01(mirrored)026
+    100152: b_auriculaire01(mirrored)028
+    100154: b_auriculaire01(mirrored)029
+    100156: b_auriculaire01(mirrored)030
+    100158: b_auriculaire01(mirrored)031
+    100160: b_auriculaire01(mirrored)032
+    100162: b_auriculaire01(mirrored)033
+    100164: b_auriculaire01(mirrored)034
+    100166: b_auriculaire01(mirrored)035
+    100168: b_auriculaire02(mirrored)008
+    100170: b_auriculaire02(mirrored)009
+    100172: b_auriculaire02(mirrored)010
+    100174: b_auriculaire02(mirrored)012
+    100176: b_auriculaire02(mirrored)014
+    100178: b_auriculaire02(mirrored)015
+    100180: b_auriculaire02(mirrored)017
+    100182: b_auriculaire02(mirrored)020
+    100184: b_auriculaire02(mirrored)022
+    100186: b_auriculaire02(mirrored)023
+    100188: b_auriculaire02(mirrored)024
+    100190: b_auriculaire02(mirrored)025
+    100192: b_auriculaire02(mirrored)026
+    100194: b_auriculaire02(mirrored)028
+    100196: b_auriculaire02(mirrored)029
+    100198: b_auriculaire02(mirrored)030
+    100200: b_auriculaire02(mirrored)031
+    100202: b_auriculaire02(mirrored)032
+    100204: b_auriculaire02(mirrored)033
+    100206: b_auriculaire02(mirrored)034
+    100208: b_auriculaire02(mirrored)035
+    100210: b_auriculaire03(mirrored)008
+    100212: b_auriculaire03(mirrored)009
+    100214: b_auriculaire03(mirrored)010
+    100216: b_auriculaire03(mirrored)012
+    100218: b_auriculaire03(mirrored)014
+    100220: b_auriculaire03(mirrored)015
+    100222: b_auriculaire03(mirrored)017
+    100224: b_auriculaire03(mirrored)020
+    100226: b_auriculaire03(mirrored)022
+    100228: b_auriculaire03(mirrored)023
+    100230: b_auriculaire03(mirrored)024
+    100232: b_auriculaire03(mirrored)025
+    100234: b_auriculaire03(mirrored)026
+    100236: b_auriculaire03(mirrored)028
+    100238: b_auriculaire03(mirrored)029
+    100240: b_auriculaire03(mirrored)030
+    100242: b_auriculaire03(mirrored)031
+    100244: b_auriculaire03(mirrored)032
+    100246: b_auriculaire03(mirrored)033
+    100248: b_auriculaire03(mirrored)034
+    100250: b_auriculaire03(mirrored)035
+    100252: b_Hand01(mirrored)008
+    100254: b_Hand01(mirrored)009
+    100256: b_Hand01(mirrored)010
+    100258: b_Hand01(mirrored)012
+    100260: b_Hand01(mirrored)014
+    100262: b_Hand01(mirrored)015
+    100264: b_Hand01(mirrored)017
+    100266: b_Hand01(mirrored)020
+    100268: b_Hand01(mirrored)022
+    100270: b_Hand01(mirrored)023
+    100272: b_Hand01(mirrored)024
+    100274: b_Hand01(mirrored)025
+    100276: b_Hand01(mirrored)026
+    100278: b_Hand01(mirrored)028
+    100280: b_Hand01(mirrored)029
+    100282: b_Hand01(mirrored)030
+    100284: b_Hand01(mirrored)031
+    100286: b_Hand01(mirrored)032
+    100288: b_Hand01(mirrored)033
+    100290: b_Hand01(mirrored)034
+    100292: b_Hand01(mirrored)035
+    100294: b_Index01(mirrored)008
+    100296: b_Index01(mirrored)009
+    100298: b_Index01(mirrored)010
+    100300: b_Index01(mirrored)012
+    100302: b_Index01(mirrored)014
+    100304: b_Index01(mirrored)015
+    100306: b_Index01(mirrored)017
+    100308: b_Index01(mirrored)020
+    100310: b_Index01(mirrored)022
+    100312: b_Index01(mirrored)023
+    100314: b_Index01(mirrored)024
+    100316: b_Index01(mirrored)025
+    100318: b_Index01(mirrored)026
+    100320: b_Index01(mirrored)028
+    100322: b_Index01(mirrored)029
+    100324: b_Index01(mirrored)030
+    100326: b_Index01(mirrored)031
+    100328: b_Index01(mirrored)032
+    100330: b_Index01(mirrored)033
+    100332: b_Index01(mirrored)034
+    100334: b_Index01(mirrored)035
+    100336: b_index02(mirrored)008
+    100338: b_index02(mirrored)009
+    100340: b_index02(mirrored)010
+    100342: b_index02(mirrored)012
+    100344: b_index02(mirrored)014
+    100346: b_index02(mirrored)015
+    100348: b_index02(mirrored)017
+    100350: b_index02(mirrored)020
+    100352: b_index02(mirrored)022
+    100354: b_index02(mirrored)023
+    100356: b_index02(mirrored)024
+    100358: b_index02(mirrored)025
+    100360: b_index02(mirrored)026
+    100362: b_index02(mirrored)028
+    100364: b_index02(mirrored)029
+    100366: b_index02(mirrored)030
+    100368: b_index02(mirrored)031
+    100370: b_index02(mirrored)032
+    100372: b_index02(mirrored)033
+    100374: b_index02(mirrored)034
+    100376: b_index02(mirrored)035
+    100378: b_index03(mirrored)008
+    100380: b_index03(mirrored)009
+    100382: b_index03(mirrored)010
+    100384: b_index03(mirrored)012
+    100386: b_index03(mirrored)014
+    100388: b_index03(mirrored)015
+    100390: b_index03(mirrored)017
+    100392: b_index03(mirrored)020
+    100394: b_index03(mirrored)022
+    100396: b_index03(mirrored)023
+    100398: b_index03(mirrored)024
+    100400: b_index03(mirrored)025
+    100402: b_index03(mirrored)026
+    100404: b_index03(mirrored)028
+    100406: b_index03(mirrored)029
+    100408: b_index03(mirrored)030
+    100410: b_index03(mirrored)031
+    100412: b_index03(mirrored)032
+    100414: b_index03(mirrored)033
+    100416: b_index03(mirrored)034
+    100418: b_index03(mirrored)035
+    100420: b_majeur01(mirrored)008
+    100422: b_majeur01(mirrored)009
+    100424: b_majeur01(mirrored)010
+    100426: b_majeur01(mirrored)012
+    100428: b_majeur01(mirrored)014
+    100430: b_majeur01(mirrored)015
+    100432: b_majeur01(mirrored)017
+    100434: b_majeur01(mirrored)020
+    100436: b_majeur01(mirrored)022
+    100438: b_majeur01(mirrored)023
+    100440: b_majeur01(mirrored)024
+    100442: b_majeur01(mirrored)025
+    100444: b_majeur01(mirrored)026
+    100446: b_majeur01(mirrored)028
+    100448: b_majeur01(mirrored)029
+    100450: b_majeur01(mirrored)030
+    100452: b_majeur01(mirrored)031
+    100454: b_majeur01(mirrored)032
+    100456: b_majeur01(mirrored)033
+    100458: b_majeur01(mirrored)034
+    100460: b_majeur01(mirrored)035
+    100462: b_majeur02(mirrored)008
+    100464: b_majeur02(mirrored)009
+    100466: b_majeur02(mirrored)010
+    100468: b_majeur02(mirrored)012
+    100470: b_majeur02(mirrored)014
+    100472: b_majeur02(mirrored)015
+    100474: b_majeur02(mirrored)017
+    100476: b_majeur02(mirrored)020
+    100478: b_majeur02(mirrored)022
+    100480: b_majeur02(mirrored)023
+    100482: b_majeur02(mirrored)024
+    100484: b_majeur02(mirrored)025
+    100486: b_majeur02(mirrored)026
+    100488: b_majeur02(mirrored)028
+    100490: b_majeur02(mirrored)029
+    100492: b_majeur02(mirrored)030
+    100494: b_majeur02(mirrored)031
+    100496: b_majeur02(mirrored)032
+    100498: b_majeur02(mirrored)033
+    100500: b_majeur02(mirrored)034
+    100502: b_majeur02(mirrored)035
+    100504: b_majeur03(mirrored)008
+    100506: b_majeur03(mirrored)009
+    100508: b_majeur03(mirrored)010
+    100510: b_majeur03(mirrored)012
+    100512: b_majeur03(mirrored)014
+    100514: b_majeur03(mirrored)015
+    100516: b_majeur03(mirrored)017
+    100518: b_majeur03(mirrored)020
+    100520: b_majeur03(mirrored)022
+    100522: b_majeur03(mirrored)023
+    100524: b_majeur03(mirrored)024
+    100526: b_majeur03(mirrored)025
+    100528: b_majeur03(mirrored)026
+    100530: b_majeur03(mirrored)028
+    100532: b_majeur03(mirrored)029
+    100534: b_majeur03(mirrored)030
+    100536: b_majeur03(mirrored)031
+    100538: b_majeur03(mirrored)032
+    100540: b_majeur03(mirrored)033
+    100542: b_majeur03(mirrored)034
+    100544: b_majeur03(mirrored)035
+    100546: b_Pouce01(mirrored)008
+    100548: b_Pouce01(mirrored)009
+    100550: b_Pouce01(mirrored)010
+    100552: b_Pouce01(mirrored)012
+    100554: b_Pouce01(mirrored)014
+    100556: b_Pouce01(mirrored)015
+    100558: b_Pouce01(mirrored)017
+    100560: b_Pouce01(mirrored)020
+    100562: b_Pouce01(mirrored)022
+    100564: b_Pouce01(mirrored)023
+    100566: b_Pouce01(mirrored)024
+    100568: b_Pouce01(mirrored)025
+    100570: b_Pouce01(mirrored)026
+    100572: b_Pouce01(mirrored)028
+    100574: b_Pouce01(mirrored)029
+    100576: b_Pouce01(mirrored)030
+    100578: b_Pouce01(mirrored)031
+    100580: b_Pouce01(mirrored)032
+    100582: b_Pouce01(mirrored)033
+    100584: b_Pouce01(mirrored)034
+    100586: b_Pouce01(mirrored)035
+    100588: b_Pouce02(mirrored)008
+    100590: b_Pouce02(mirrored)009
+    100592: b_Pouce02(mirrored)010
+    100594: b_Pouce02(mirrored)012
+    100596: b_Pouce02(mirrored)014
+    100598: b_Pouce02(mirrored)015
+    100600: b_Pouce02(mirrored)017
+    100602: b_Pouce02(mirrored)020
+    100604: b_Pouce02(mirrored)022
+    100606: b_Pouce02(mirrored)023
+    100608: b_Pouce02(mirrored)024
+    100610: b_Pouce02(mirrored)025
+    100612: b_Pouce02(mirrored)026
+    100614: b_Pouce02(mirrored)028
+    100616: b_Pouce02(mirrored)029
+    100618: b_Pouce02(mirrored)030
+    100620: b_Pouce02(mirrored)031
+    100622: b_Pouce02(mirrored)032
+    100624: b_Pouce02(mirrored)033
+    100626: b_Pouce02(mirrored)034
+    100628: b_Pouce02(mirrored)035
+    100630: b_Pouce03(mirrored)008
+    100632: b_Pouce03(mirrored)009
+    100634: b_Pouce03(mirrored)010
+    100636: b_Pouce03(mirrored)012
+    100638: b_Pouce03(mirrored)014
+    100640: b_Pouce03(mirrored)015
+    100642: b_Pouce03(mirrored)017
+    100644: b_Pouce03(mirrored)020
+    100646: b_Pouce03(mirrored)022
+    100648: b_Pouce03(mirrored)023
+    100650: b_Pouce03(mirrored)024
+    100652: b_Pouce03(mirrored)025
+    100654: b_Pouce03(mirrored)026
+    100656: b_Pouce03(mirrored)028
+    100658: b_Pouce03(mirrored)029
+    100660: b_Pouce03(mirrored)030
+    100662: b_Pouce03(mirrored)031
+    100664: b_Pouce03(mirrored)032
+    100666: b_Pouce03(mirrored)033
+    100668: b_Pouce03(mirrored)034
+    100670: b_Pouce03(mirrored)035
+    100672: Bone033
+    100674: Bone034
+    100676: Bone035
+    100678: Bone036
+    100680: Bone037
+    100682: Bone038
+    100684: Bone039
+    100686: Bone040
+    100688: Bone041
+    100690: Bone042
+    100692: Bone043
+    100694: Bone044
+    100696: Bone049
+    100698: Bone050
+    100700: Bone051
+    100702: Bone052
+    100704: Bone057
+    100706: Bone058
+    100708: Bone059
+    100710: Bone060
+    100712: Bone061
+    100714: Bone062
+    100716: Bone063
+    100718: Bone064
+    100720: Bone069
+    100722: Bone070
+    100724: Bone071
+    100726: Bone072
+    100728: Bone081
+    100730: Bone082
+    100732: Bone083
+    100734: Bone084
+    100736: Bone089
+    100738: Bone090
+    100740: Bone091
+    100742: Bone092
+    100744: Bone093
+    100746: Bone094
+    100748: Bone095
+    100750: Bone096
+    100752: Bone097
+    100754: Bone098
+    100756: Bone099
+    100758: Bone100
+    100760: Bone101
+    100762: Bone102
+    100764: Bone103
+    100766: Bone104
+    100768: Bone105
+    100770: Bone106
+    100772: Bone107
+    100774: Bone112
+    100776: Bone113
+    100778: Bone114
+    100780: Bone115
+    100782: Bone116
+    100784: Bone117
+    100786: Bone118
+    100788: Bone119
+    100790: Bone120
+    100792: Bone121
+    100794: Bone122
+    100796: Bone123
+    100798: Bone124
+    100800: Bone125
+    100802: Bone126
+    100804: Bone127
+    100806: Bone128
+    100808: Bone129
+    100810: Bone130
+    100812: Bone131
+    100814: Bone132
+    100816: Bone133
+    100818: Bone134
+    100820: Bone135
+    100822: Bone136
+    100824: Bone137
+    100826: Bone138
+    100828: Bone139
+    100830: Bone140
+    100832: Bone141
+    100834: Bone142
+    100836: Box005
+    100838: Circle004
+    100840: Circle006
+    100842: Circle007
+    100844: Circle009
+    100846: Circle011
+    100848: Circle012
+    100850: Circle014
+    100852: Circle017
+    100854: Circle019
+    100856: Circle020
+    100858: Circle021
+    100860: Circle022
+    100862: Circle023
+    100864: Circle025
+    100866: Circle026
+    100868: Circle027
+    100870: Circle028
+    100872: Circle029
+    100874: Circle030
+    100876: Circle031
+    100878: Circle032
+    100880: IK Chain020
+    100882: IK Chain021
+    100884: IK Chain022
+    100886: IK Chain023
+    100888: IK Chain024
+    100890: Line011
+    100892: Line014
+    100894: Line015
+    100896: Line016
+    100898: Line018
+    100900: //RootNode
+    100902: MainMirror008
+    100904: MainMirror009
+    100906: MainMirror010
+    100908: MainMirror012
+    100910: MainMirror014
+    100912: MainMirror015
+    100914: MainMirror017
+    100916: MainMirror020
+    100918: MainMirror022
+    100920: MainMirror023
+    100922: MainMirror024
+    100924: MainMirror025
+    100926: MainMirror026
+    100928: MainMirror029
+    100930: MainMirror030
+    100932: MainMirror031
+    100934: MainMirror032
+    100936: MainMirror033
+    100938: MainMirror034
+    100940: MainMirror035
+    100942: MainMirror036
+    100944: Point057
+    100946: Point058
+    100948: Point059
+    100950: Point060
+    100952: Point061
+    100954: Point062
+    100956: Point063
+    100958: Point064
+    100960: Point065
+    100962: Point066
+    100964: Point067
+    100966: Point068
+    100968: Point073
+    100970: Point074
+    100972: Point075
+    100974: Point076
+    100976: Sky001
+    100978: b_annulaire01(mirrored)036
+    100980: b_annulaire01(mirrored)037
+    100982: b_annulaire01(mirrored)038
+    100984: b_annulaire01(mirrored)039
+    100986: b_annulaire02(mirrored)036
+    100988: b_annulaire02(mirrored)037
+    100990: b_annulaire02(mirrored)038
+    100992: b_annulaire02(mirrored)039
+    100994: b_annulaire03(mirrored)036
+    100996: b_annulaire03(mirrored)037
+    100998: b_annulaire03(mirrored)038
+    101000: b_annulaire03(mirrored)039
+    101002: b_auriculaire01(mirrored)036
+    101004: b_auriculaire01(mirrored)037
+    101006: b_auriculaire01(mirrored)038
+    101008: b_auriculaire01(mirrored)039
+    101010: b_auriculaire02(mirrored)036
+    101012: b_auriculaire02(mirrored)037
+    101014: b_auriculaire02(mirrored)038
+    101016: b_auriculaire02(mirrored)039
+    101018: b_auriculaire03(mirrored)036
+    101020: b_auriculaire03(mirrored)037
+    101022: b_auriculaire03(mirrored)038
+    101024: b_auriculaire03(mirrored)039
+    101026: b_Hand01(mirrored)036
+    101028: b_Hand01(mirrored)037
+    101030: b_Hand01(mirrored)038
+    101032: b_Hand01(mirrored)039
+    101034: b_Index01(mirrored)036
+    101036: b_Index01(mirrored)037
+    101038: b_Index01(mirrored)038
+    101040: b_Index01(mirrored)039
+    101042: b_index02(mirrored)036
+    101044: b_index02(mirrored)037
+    101046: b_index02(mirrored)038
+    101048: b_index02(mirrored)039
+    101050: b_index03(mirrored)036
+    101052: b_index03(mirrored)037
+    101054: b_index03(mirrored)038
+    101056: b_index03(mirrored)039
+    101058: b_majeur01(mirrored)036
+    101060: b_majeur01(mirrored)037
+    101062: b_majeur01(mirrored)038
+    101064: b_majeur01(mirrored)039
+    101066: b_majeur02(mirrored)036
+    101068: b_majeur02(mirrored)037
+    101070: b_majeur02(mirrored)038
+    101072: b_majeur02(mirrored)039
+    101074: b_majeur03(mirrored)036
+    101076: b_majeur03(mirrored)037
+    101078: b_majeur03(mirrored)038
+    101080: b_majeur03(mirrored)039
+    101082: b_Pouce01(mirrored)036
+    101084: b_Pouce01(mirrored)037
+    101086: b_Pouce01(mirrored)038
+    101088: b_Pouce01(mirrored)039
+    101090: b_Pouce02(mirrored)036
+    101092: b_Pouce02(mirrored)037
+    101094: b_Pouce02(mirrored)038
+    101096: b_Pouce02(mirrored)039
+    101098: b_Pouce03(mirrored)036
+    101100: b_Pouce03(mirrored)037
+    101102: b_Pouce03(mirrored)038
+    101104: b_Pouce03(mirrored)039
+    101106: Bone148
+    101108: Bone149
+    101110: Bone150
+    101112: Bone151
+    101114: Bone152
+    101116: Bone153
+    101118: Bone154
+    101120: Bone155
+    101122: Bone156
+    101124: Bone157
+    101126: Bone158
+    101128: Bone159
+    101130: Bone160
+    101132: Bone161
+    101134: Bone162
+    101136: Bone163
+    101138: Circle033
+    101140: Circle034
+    101142: Circle035
+    101144: Circle036
+    101146: MainMirror037
+    101148: MainMirror038
+    101150: MainMirror039
+    101152: MainMirror040
+    101154: b_annulaire01(mirrored)040
+    101156: b_annulaire01(mirrored)041
+    101158: b_annulaire02(mirrored)040
+    101160: b_annulaire02(mirrored)041
+    101162: b_annulaire03(mirrored)040
+    101164: b_annulaire03(mirrored)041
+    101166: b_auriculaire01(mirrored)040
+    101168: b_auriculaire01(mirrored)041
+    101170: b_auriculaire02(mirrored)040
+    101172: b_auriculaire02(mirrored)041
+    101174: b_auriculaire03(mirrored)040
+    101176: b_auriculaire03(mirrored)041
+    101178: b_Hand01(mirrored)040
+    101180: b_Hand01(mirrored)041
+    101182: b_Index01(mirrored)040
+    101184: b_Index01(mirrored)041
+    101186: b_index02(mirrored)040
+    101188: b_index02(mirrored)041
+    101190: b_index03(mirrored)040
+    101192: b_index03(mirrored)041
+    101194: b_majeur01(mirrored)040
+    101196: b_majeur01(mirrored)041
+    101198: b_majeur02(mirrored)040
+    101200: b_majeur02(mirrored)041
+    101202: b_majeur03(mirrored)040
+    101204: b_majeur03(mirrored)041
+    101206: b_Pouce01(mirrored)040
+    101208: b_Pouce01(mirrored)041
+    101210: b_Pouce02(mirrored)040
+    101212: b_Pouce02(mirrored)041
+    101214: b_Pouce03(mirrored)040
+    101216: b_Pouce03(mirrored)041
+    101218: Bone164
+    101220: Bone165
+    101222: Bone166
+    101224: Bone167
+    101226: Bone168
+    101228: Bone169
+    101230: Bone170
+    101232: Bone171
+    101234: Circle037
+    101236: Circle038
+    101238: MainMirror041
+    101240: MainMirror042
+    101242: Bone172
+    101244: Bone173
+    101246: Bone174
+    101248: Bone175
+    101250: Bone176
+    101252: Bone177
+    101254: Bone178
+    101256: Bone179
+    101258: Bone180
+    101260: Bone181
+    101262: Bone182
+    101264: Bone183
+    101266: Bone184
+    101268: Bone185
+    101270: Circle010
+    101272: Bone053
+    101274: Bone054
+    101276: Bone055
+    101278: Bone056
+    101280: MainMirror013
+    101282: Monstre01
+    400000: b_annulaire01(mirrored)008
+    400002: b_annulaire01(mirrored)009
+    400004: b_annulaire01(mirrored)010
+    400006: b_annulaire01(mirrored)012
+    400008: b_annulaire01(mirrored)014
+    400010: b_annulaire01(mirrored)015
+    400012: b_annulaire01(mirrored)017
+    400014: b_annulaire01(mirrored)020
+    400016: b_annulaire01(mirrored)022
+    400018: b_annulaire01(mirrored)023
+    400020: b_annulaire01(mirrored)024
+    400022: b_annulaire01(mirrored)025
+    400024: b_annulaire01(mirrored)026
+    400026: b_annulaire01(mirrored)028
+    400028: b_annulaire01(mirrored)029
+    400030: b_annulaire01(mirrored)030
+    400032: b_annulaire01(mirrored)031
+    400034: b_annulaire01(mirrored)032
+    400036: b_annulaire01(mirrored)033
+    400038: b_annulaire01(mirrored)034
+    400040: b_annulaire01(mirrored)035
+    400042: b_annulaire02(mirrored)008
+    400044: b_annulaire02(mirrored)009
+    400046: b_annulaire02(mirrored)010
+    400048: b_annulaire02(mirrored)012
+    400050: b_annulaire02(mirrored)014
+    400052: b_annulaire02(mirrored)015
+    400054: b_annulaire02(mirrored)017
+    400056: b_annulaire02(mirrored)020
+    400058: b_annulaire02(mirrored)022
+    400060: b_annulaire02(mirrored)023
+    400062: b_annulaire02(mirrored)024
+    400064: b_annulaire02(mirrored)025
+    400066: b_annulaire02(mirrored)026
+    400068: b_annulaire02(mirrored)028
+    400070: b_annulaire02(mirrored)029
+    400072: b_annulaire02(mirrored)030
+    400074: b_annulaire02(mirrored)031
+    400076: b_annulaire02(mirrored)032
+    400078: b_annulaire02(mirrored)033
+    400080: b_annulaire02(mirrored)034
+    400082: b_annulaire02(mirrored)035
+    400084: b_annulaire03(mirrored)008
+    400086: b_annulaire03(mirrored)009
+    400088: b_annulaire03(mirrored)010
+    400090: b_annulaire03(mirrored)012
+    400092: b_annulaire03(mirrored)014
+    400094: b_annulaire03(mirrored)015
+    400096: b_annulaire03(mirrored)017
+    400098: b_annulaire03(mirrored)020
+    400100: b_annulaire03(mirrored)022
+    400102: b_annulaire03(mirrored)023
+    400104: b_annulaire03(mirrored)024
+    400106: b_annulaire03(mirrored)025
+    400108: b_annulaire03(mirrored)026
+    400110: b_annulaire03(mirrored)028
+    400112: b_annulaire03(mirrored)029
+    400114: b_annulaire03(mirrored)030
+    400116: b_annulaire03(mirrored)031
+    400118: b_annulaire03(mirrored)032
+    400120: b_annulaire03(mirrored)033
+    400122: b_annulaire03(mirrored)034
+    400124: b_annulaire03(mirrored)035
+    400126: b_auriculaire01(mirrored)008
+    400128: b_auriculaire01(mirrored)009
+    400130: b_auriculaire01(mirrored)010
+    400132: b_auriculaire01(mirrored)012
+    400134: b_auriculaire01(mirrored)014
+    400136: b_auriculaire01(mirrored)015
+    400138: b_auriculaire01(mirrored)017
+    400140: b_auriculaire01(mirrored)020
+    400142: b_auriculaire01(mirrored)022
+    400144: b_auriculaire01(mirrored)023
+    400146: b_auriculaire01(mirrored)024
+    400148: b_auriculaire01(mirrored)025
+    400150: b_auriculaire01(mirrored)026
+    400152: b_auriculaire01(mirrored)028
+    400154: b_auriculaire01(mirrored)029
+    400156: b_auriculaire01(mirrored)030
+    400158: b_auriculaire01(mirrored)031
+    400160: b_auriculaire01(mirrored)032
+    400162: b_auriculaire01(mirrored)033
+    400164: b_auriculaire01(mirrored)034
+    400166: b_auriculaire01(mirrored)035
+    400168: b_auriculaire02(mirrored)008
+    400170: b_auriculaire02(mirrored)009
+    400172: b_auriculaire02(mirrored)010
+    400174: b_auriculaire02(mirrored)012
+    400176: b_auriculaire02(mirrored)014
+    400178: b_auriculaire02(mirrored)015
+    400180: b_auriculaire02(mirrored)017
+    400182: b_auriculaire02(mirrored)020
+    400184: b_auriculaire02(mirrored)022
+    400186: b_auriculaire02(mirrored)023
+    400188: b_auriculaire02(mirrored)024
+    400190: b_auriculaire02(mirrored)025
+    400192: b_auriculaire02(mirrored)026
+    400194: b_auriculaire02(mirrored)028
+    400196: b_auriculaire02(mirrored)029
+    400198: b_auriculaire02(mirrored)030
+    400200: b_auriculaire02(mirrored)031
+    400202: b_auriculaire02(mirrored)032
+    400204: b_auriculaire02(mirrored)033
+    400206: b_auriculaire02(mirrored)034
+    400208: b_auriculaire02(mirrored)035
+    400210: b_auriculaire03(mirrored)008
+    400212: b_auriculaire03(mirrored)009
+    400214: b_auriculaire03(mirrored)010
+    400216: b_auriculaire03(mirrored)012
+    400218: b_auriculaire03(mirrored)014
+    400220: b_auriculaire03(mirrored)015
+    400222: b_auriculaire03(mirrored)017
+    400224: b_auriculaire03(mirrored)020
+    400226: b_auriculaire03(mirrored)022
+    400228: b_auriculaire03(mirrored)023
+    400230: b_auriculaire03(mirrored)024
+    400232: b_auriculaire03(mirrored)025
+    400234: b_auriculaire03(mirrored)026
+    400236: b_auriculaire03(mirrored)028
+    400238: b_auriculaire03(mirrored)029
+    400240: b_auriculaire03(mirrored)030
+    400242: b_auriculaire03(mirrored)031
+    400244: b_auriculaire03(mirrored)032
+    400246: b_auriculaire03(mirrored)033
+    400248: b_auriculaire03(mirrored)034
+    400250: b_auriculaire03(mirrored)035
+    400252: b_Hand01(mirrored)008
+    400254: b_Hand01(mirrored)009
+    400256: b_Hand01(mirrored)010
+    400258: b_Hand01(mirrored)012
+    400260: b_Hand01(mirrored)014
+    400262: b_Hand01(mirrored)015
+    400264: b_Hand01(mirrored)017
+    400266: b_Hand01(mirrored)020
+    400268: b_Hand01(mirrored)022
+    400270: b_Hand01(mirrored)023
+    400272: b_Hand01(mirrored)024
+    400274: b_Hand01(mirrored)025
+    400276: b_Hand01(mirrored)026
+    400278: b_Hand01(mirrored)028
+    400280: b_Hand01(mirrored)029
+    400282: b_Hand01(mirrored)030
+    400284: b_Hand01(mirrored)031
+    400286: b_Hand01(mirrored)032
+    400288: b_Hand01(mirrored)033
+    400290: b_Hand01(mirrored)034
+    400292: b_Hand01(mirrored)035
+    400294: b_Index01(mirrored)008
+    400296: b_Index01(mirrored)009
+    400298: b_Index01(mirrored)010
+    400300: b_Index01(mirrored)012
+    400302: b_Index01(mirrored)014
+    400304: b_Index01(mirrored)015
+    400306: b_Index01(mirrored)017
+    400308: b_Index01(mirrored)020
+    400310: b_Index01(mirrored)022
+    400312: b_Index01(mirrored)023
+    400314: b_Index01(mirrored)024
+    400316: b_Index01(mirrored)025
+    400318: b_Index01(mirrored)026
+    400320: b_Index01(mirrored)028
+    400322: b_Index01(mirrored)029
+    400324: b_Index01(mirrored)030
+    400326: b_Index01(mirrored)031
+    400328: b_Index01(mirrored)032
+    400330: b_Index01(mirrored)033
+    400332: b_Index01(mirrored)034
+    400334: b_Index01(mirrored)035
+    400336: b_index02(mirrored)008
+    400338: b_index02(mirrored)009
+    400340: b_index02(mirrored)010
+    400342: b_index02(mirrored)012
+    400344: b_index02(mirrored)014
+    400346: b_index02(mirrored)015
+    400348: b_index02(mirrored)017
+    400350: b_index02(mirrored)020
+    400352: b_index02(mirrored)022
+    400354: b_index02(mirrored)023
+    400356: b_index02(mirrored)024
+    400358: b_index02(mirrored)025
+    400360: b_index02(mirrored)026
+    400362: b_index02(mirrored)028
+    400364: b_index02(mirrored)029
+    400366: b_index02(mirrored)030
+    400368: b_index02(mirrored)031
+    400370: b_index02(mirrored)032
+    400372: b_index02(mirrored)033
+    400374: b_index02(mirrored)034
+    400376: b_index02(mirrored)035
+    400378: b_index03(mirrored)008
+    400380: b_index03(mirrored)009
+    400382: b_index03(mirrored)010
+    400384: b_index03(mirrored)012
+    400386: b_index03(mirrored)014
+    400388: b_index03(mirrored)015
+    400390: b_index03(mirrored)017
+    400392: b_index03(mirrored)020
+    400394: b_index03(mirrored)022
+    400396: b_index03(mirrored)023
+    400398: b_index03(mirrored)024
+    400400: b_index03(mirrored)025
+    400402: b_index03(mirrored)026
+    400404: b_index03(mirrored)028
+    400406: b_index03(mirrored)029
+    400408: b_index03(mirrored)030
+    400410: b_index03(mirrored)031
+    400412: b_index03(mirrored)032
+    400414: b_index03(mirrored)033
+    400416: b_index03(mirrored)034
+    400418: b_index03(mirrored)035
+    400420: b_majeur01(mirrored)008
+    400422: b_majeur01(mirrored)009
+    400424: b_majeur01(mirrored)010
+    400426: b_majeur01(mirrored)012
+    400428: b_majeur01(mirrored)014
+    400430: b_majeur01(mirrored)015
+    400432: b_majeur01(mirrored)017
+    400434: b_majeur01(mirrored)020
+    400436: b_majeur01(mirrored)022
+    400438: b_majeur01(mirrored)023
+    400440: b_majeur01(mirrored)024
+    400442: b_majeur01(mirrored)025
+    400444: b_majeur01(mirrored)026
+    400446: b_majeur01(mirrored)028
+    400448: b_majeur01(mirrored)029
+    400450: b_majeur01(mirrored)030
+    400452: b_majeur01(mirrored)031
+    400454: b_majeur01(mirrored)032
+    400456: b_majeur01(mirrored)033
+    400458: b_majeur01(mirrored)034
+    400460: b_majeur01(mirrored)035
+    400462: b_majeur02(mirrored)008
+    400464: b_majeur02(mirrored)009
+    400466: b_majeur02(mirrored)010
+    400468: b_majeur02(mirrored)012
+    400470: b_majeur02(mirrored)014
+    400472: b_majeur02(mirrored)015
+    400474: b_majeur02(mirrored)017
+    400476: b_majeur02(mirrored)020
+    400478: b_majeur02(mirrored)022
+    400480: b_majeur02(mirrored)023
+    400482: b_majeur02(mirrored)024
+    400484: b_majeur02(mirrored)025
+    400486: b_majeur02(mirrored)026
+    400488: b_majeur02(mirrored)028
+    400490: b_majeur02(mirrored)029
+    400492: b_majeur02(mirrored)030
+    400494: b_majeur02(mirrored)031
+    400496: b_majeur02(mirrored)032
+    400498: b_majeur02(mirrored)033
+    400500: b_majeur02(mirrored)034
+    400502: b_majeur02(mirrored)035
+    400504: b_majeur03(mirrored)008
+    400506: b_majeur03(mirrored)009
+    400508: b_majeur03(mirrored)010
+    400510: b_majeur03(mirrored)012
+    400512: b_majeur03(mirrored)014
+    400514: b_majeur03(mirrored)015
+    400516: b_majeur03(mirrored)017
+    400518: b_majeur03(mirrored)020
+    400520: b_majeur03(mirrored)022
+    400522: b_majeur03(mirrored)023
+    400524: b_majeur03(mirrored)024
+    400526: b_majeur03(mirrored)025
+    400528: b_majeur03(mirrored)026
+    400530: b_majeur03(mirrored)028
+    400532: b_majeur03(mirrored)029
+    400534: b_majeur03(mirrored)030
+    400536: b_majeur03(mirrored)031
+    400538: b_majeur03(mirrored)032
+    400540: b_majeur03(mirrored)033
+    400542: b_majeur03(mirrored)034
+    400544: b_majeur03(mirrored)035
+    400546: b_Pouce01(mirrored)008
+    400548: b_Pouce01(mirrored)009
+    400550: b_Pouce01(mirrored)010
+    400552: b_Pouce01(mirrored)012
+    400554: b_Pouce01(mirrored)014
+    400556: b_Pouce01(mirrored)015
+    400558: b_Pouce01(mirrored)017
+    400560: b_Pouce01(mirrored)020
+    400562: b_Pouce01(mirrored)022
+    400564: b_Pouce01(mirrored)023
+    400566: b_Pouce01(mirrored)024
+    400568: b_Pouce01(mirrored)025
+    400570: b_Pouce01(mirrored)026
+    400572: b_Pouce01(mirrored)028
+    400574: b_Pouce01(mirrored)029
+    400576: b_Pouce01(mirrored)030
+    400578: b_Pouce01(mirrored)031
+    400580: b_Pouce01(mirrored)032
+    400582: b_Pouce01(mirrored)033
+    400584: b_Pouce01(mirrored)034
+    400586: b_Pouce01(mirrored)035
+    400588: b_Pouce02(mirrored)008
+    400590: b_Pouce02(mirrored)009
+    400592: b_Pouce02(mirrored)010
+    400594: b_Pouce02(mirrored)012
+    400596: b_Pouce02(mirrored)014
+    400598: b_Pouce02(mirrored)015
+    400600: b_Pouce02(mirrored)017
+    400602: b_Pouce02(mirrored)020
+    400604: b_Pouce02(mirrored)022
+    400606: b_Pouce02(mirrored)023
+    400608: b_Pouce02(mirrored)024
+    400610: b_Pouce02(mirrored)025
+    400612: b_Pouce02(mirrored)026
+    400614: b_Pouce02(mirrored)028
+    400616: b_Pouce02(mirrored)029
+    400618: b_Pouce02(mirrored)030
+    400620: b_Pouce02(mirrored)031
+    400622: b_Pouce02(mirrored)032
+    400624: b_Pouce02(mirrored)033
+    400626: b_Pouce02(mirrored)034
+    400628: b_Pouce02(mirrored)035
+    400630: b_Pouce03(mirrored)008
+    400632: b_Pouce03(mirrored)009
+    400634: b_Pouce03(mirrored)010
+    400636: b_Pouce03(mirrored)012
+    400638: b_Pouce03(mirrored)014
+    400640: b_Pouce03(mirrored)015
+    400642: b_Pouce03(mirrored)017
+    400644: b_Pouce03(mirrored)020
+    400646: b_Pouce03(mirrored)022
+    400648: b_Pouce03(mirrored)023
+    400650: b_Pouce03(mirrored)024
+    400652: b_Pouce03(mirrored)025
+    400654: b_Pouce03(mirrored)026
+    400656: b_Pouce03(mirrored)028
+    400658: b_Pouce03(mirrored)029
+    400660: b_Pouce03(mirrored)030
+    400662: b_Pouce03(mirrored)031
+    400664: b_Pouce03(mirrored)032
+    400666: b_Pouce03(mirrored)033
+    400668: b_Pouce03(mirrored)034
+    400670: b_Pouce03(mirrored)035
+    400672: Bone033
+    400674: Bone034
+    400676: Bone035
+    400678: Bone036
+    400680: Bone037
+    400682: Bone038
+    400684: Bone039
+    400686: Bone040
+    400688: Bone041
+    400690: Bone042
+    400692: Bone043
+    400694: Bone044
+    400696: Bone049
+    400698: Bone050
+    400700: Bone051
+    400702: Bone052
+    400704: Bone057
+    400706: Bone058
+    400708: Bone059
+    400710: Bone060
+    400712: Bone061
+    400714: Bone062
+    400716: Bone063
+    400718: Bone064
+    400720: Bone069
+    400722: Bone070
+    400724: Bone071
+    400726: Bone072
+    400728: Bone081
+    400730: Bone082
+    400732: Bone083
+    400734: Bone084
+    400736: Bone089
+    400738: Bone090
+    400740: Bone091
+    400742: Bone092
+    400744: Bone093
+    400746: Bone094
+    400748: Bone095
+    400750: Bone096
+    400752: Bone097
+    400754: Bone098
+    400756: Bone099
+    400758: Bone100
+    400760: Bone101
+    400762: Bone102
+    400764: Bone103
+    400766: Bone104
+    400768: Bone105
+    400770: Bone106
+    400772: Bone107
+    400774: Bone112
+    400776: Bone113
+    400778: Bone114
+    400780: Bone115
+    400782: Bone116
+    400784: Bone117
+    400786: Bone118
+    400788: Bone119
+    400790: Bone120
+    400792: Bone121
+    400794: Bone122
+    400796: Bone123
+    400798: Bone124
+    400800: Bone125
+    400802: Bone126
+    400804: Bone127
+    400806: Bone128
+    400808: Bone129
+    400810: Bone130
+    400812: Bone131
+    400814: Bone132
+    400816: Bone133
+    400818: Bone134
+    400820: Bone135
+    400822: Bone136
+    400824: Bone137
+    400826: Bone138
+    400828: Bone139
+    400830: Bone140
+    400832: Bone141
+    400834: Bone142
+    400836: Box005
+    400838: Circle004
+    400840: Circle006
+    400842: Circle007
+    400844: Circle009
+    400846: Circle011
+    400848: Circle012
+    400850: Circle014
+    400852: Circle017
+    400854: Circle019
+    400856: Circle020
+    400858: Circle021
+    400860: Circle022
+    400862: Circle023
+    400864: Circle025
+    400866: Circle026
+    400868: Circle027
+    400870: Circle028
+    400872: Circle029
+    400874: Circle030
+    400876: Circle031
+    400878: Circle032
+    400880: IK Chain020
+    400882: IK Chain021
+    400884: IK Chain022
+    400886: IK Chain023
+    400888: IK Chain024
+    400890: Line011
+    400892: Line014
+    400894: Line015
+    400896: Line016
+    400898: Line018
+    400900: //RootNode
+    400902: MainMirror008
+    400904: MainMirror009
+    400906: MainMirror010
+    400908: MainMirror012
+    400910: MainMirror014
+    400912: MainMirror015
+    400914: MainMirror017
+    400916: MainMirror020
+    400918: MainMirror022
+    400920: MainMirror023
+    400922: MainMirror024
+    400924: MainMirror025
+    400926: MainMirror026
+    400928: MainMirror029
+    400930: MainMirror030
+    400932: MainMirror031
+    400934: MainMirror032
+    400936: MainMirror033
+    400938: MainMirror034
+    400940: MainMirror035
+    400942: MainMirror036
+    400944: Point057
+    400946: Point058
+    400948: Point059
+    400950: Point060
+    400952: Point061
+    400954: Point062
+    400956: Point063
+    400958: Point064
+    400960: Point065
+    400962: Point066
+    400964: Point067
+    400966: Point068
+    400968: Point073
+    400970: Point074
+    400972: Point075
+    400974: Point076
+    400976: Sky001
+    400978: b_annulaire01(mirrored)036
+    400980: b_annulaire01(mirrored)037
+    400982: b_annulaire01(mirrored)038
+    400984: b_annulaire01(mirrored)039
+    400986: b_annulaire02(mirrored)036
+    400988: b_annulaire02(mirrored)037
+    400990: b_annulaire02(mirrored)038
+    400992: b_annulaire02(mirrored)039
+    400994: b_annulaire03(mirrored)036
+    400996: b_annulaire03(mirrored)037
+    400998: b_annulaire03(mirrored)038
+    401000: b_annulaire03(mirrored)039
+    401002: b_auriculaire01(mirrored)036
+    401004: b_auriculaire01(mirrored)037
+    401006: b_auriculaire01(mirrored)038
+    401008: b_auriculaire01(mirrored)039
+    401010: b_auriculaire02(mirrored)036
+    401012: b_auriculaire02(mirrored)037
+    401014: b_auriculaire02(mirrored)038
+    401016: b_auriculaire02(mirrored)039
+    401018: b_auriculaire03(mirrored)036
+    401020: b_auriculaire03(mirrored)037
+    401022: b_auriculaire03(mirrored)038
+    401024: b_auriculaire03(mirrored)039
+    401026: b_Hand01(mirrored)036
+    401028: b_Hand01(mirrored)037
+    401030: b_Hand01(mirrored)038
+    401032: b_Hand01(mirrored)039
+    401034: b_Index01(mirrored)036
+    401036: b_Index01(mirrored)037
+    401038: b_Index01(mirrored)038
+    401040: b_Index01(mirrored)039
+    401042: b_index02(mirrored)036
+    401044: b_index02(mirrored)037
+    401046: b_index02(mirrored)038
+    401048: b_index02(mirrored)039
+    401050: b_index03(mirrored)036
+    401052: b_index03(mirrored)037
+    401054: b_index03(mirrored)038
+    401056: b_index03(mirrored)039
+    401058: b_majeur01(mirrored)036
+    401060: b_majeur01(mirrored)037
+    401062: b_majeur01(mirrored)038
+    401064: b_majeur01(mirrored)039
+    401066: b_majeur02(mirrored)036
+    401068: b_majeur02(mirrored)037
+    401070: b_majeur02(mirrored)038
+    401072: b_majeur02(mirrored)039
+    401074: b_majeur03(mirrored)036
+    401076: b_majeur03(mirrored)037
+    401078: b_majeur03(mirrored)038
+    401080: b_majeur03(mirrored)039
+    401082: b_Pouce01(mirrored)036
+    401084: b_Pouce01(mirrored)037
+    401086: b_Pouce01(mirrored)038
+    401088: b_Pouce01(mirrored)039
+    401090: b_Pouce02(mirrored)036
+    401092: b_Pouce02(mirrored)037
+    401094: b_Pouce02(mirrored)038
+    401096: b_Pouce02(mirrored)039
+    401098: b_Pouce03(mirrored)036
+    401100: b_Pouce03(mirrored)037
+    401102: b_Pouce03(mirrored)038
+    401104: b_Pouce03(mirrored)039
+    401106: Bone148
+    401108: Bone149
+    401110: Bone150
+    401112: Bone151
+    401114: Bone152
+    401116: Bone153
+    401118: Bone154
+    401120: Bone155
+    401122: Bone156
+    401124: Bone157
+    401126: Bone158
+    401128: Bone159
+    401130: Bone160
+    401132: Bone161
+    401134: Bone162
+    401136: Bone163
+    401138: Circle033
+    401140: Circle034
+    401142: Circle035
+    401144: Circle036
+    401146: MainMirror037
+    401148: MainMirror038
+    401150: MainMirror039
+    401152: MainMirror040
+    401154: b_annulaire01(mirrored)040
+    401156: b_annulaire01(mirrored)041
+    401158: b_annulaire02(mirrored)040
+    401160: b_annulaire02(mirrored)041
+    401162: b_annulaire03(mirrored)040
+    401164: b_annulaire03(mirrored)041
+    401166: b_auriculaire01(mirrored)040
+    401168: b_auriculaire01(mirrored)041
+    401170: b_auriculaire02(mirrored)040
+    401172: b_auriculaire02(mirrored)041
+    401174: b_auriculaire03(mirrored)040
+    401176: b_auriculaire03(mirrored)041
+    401178: b_Hand01(mirrored)040
+    401180: b_Hand01(mirrored)041
+    401182: b_Index01(mirrored)040
+    401184: b_Index01(mirrored)041
+    401186: b_index02(mirrored)040
+    401188: b_index02(mirrored)041
+    401190: b_index03(mirrored)040
+    401192: b_index03(mirrored)041
+    401194: b_majeur01(mirrored)040
+    401196: b_majeur01(mirrored)041
+    401198: b_majeur02(mirrored)040
+    401200: b_majeur02(mirrored)041
+    401202: b_majeur03(mirrored)040
+    401204: b_majeur03(mirrored)041
+    401206: b_Pouce01(mirrored)040
+    401208: b_Pouce01(mirrored)041
+    401210: b_Pouce02(mirrored)040
+    401212: b_Pouce02(mirrored)041
+    401214: b_Pouce03(mirrored)040
+    401216: b_Pouce03(mirrored)041
+    401218: Bone164
+    401220: Bone165
+    401222: Bone166
+    401224: Bone167
+    401226: Bone168
+    401228: Bone169
+    401230: Bone170
+    401232: Bone171
+    401234: Circle037
+    401236: Circle038
+    401238: MainMirror041
+    401240: MainMirror042
+    401242: Bone172
+    401244: Bone173
+    401246: Bone174
+    401248: Bone175
+    401250: Bone176
+    401252: Bone177
+    401254: Bone178
+    401256: Bone179
+    401258: Bone180
+    401260: Bone181
+    401262: Bone182
+    401264: Bone183
+    401266: Bone184
+    401268: Bone185
+    401270: Circle010
+    401272: Bone053
+    401274: Bone054
+    401276: Bone055
+    401278: Bone056
+    401280: MainMirror013
+    401282: Monstre01
+    2300000: Box005
+    2300002: Line014
+    3300000: Box005
+    3300002: Line014
+    4300000: Box005
+    4300002: MainMirror008
+    4300004: MainMirror009
+    4300006: MainMirror010
+    4300008: MainMirror012
+    4300010: MainMirror014
+    4300012: MainMirror015
+    4300014: MainMirror017
+    4300016: MainMirror020
+    4300018: MainMirror022
+    4300020: MainMirror023
+    4300022: MainMirror024
+    4300024: MainMirror025
+    4300026: MainMirror026
+    4300028: MainMirror029
+    4300030: MainMirror030
+    4300032: MainMirror031
+    4300034: MainMirror033
+    4300036: MainMirror034
+    4300038: MainMirror035
+    4300040: MainMirror036
+    4300042: Line014
+    4300044: MainMirror032
+    4300046: MainMirror037
+    4300048: MainMirror038
+    4300050: MainMirror039
+    4300052: MainMirror040
+    4300054: MainMirror041
+    4300056: MainMirror042
+    4300058: MainMirror013
+    7400000: Frappe
+    7400002: Idle
+    9500000: //RootNode
+    13700000: MainMirror008
+    13700002: MainMirror009
+    13700004: MainMirror010
+    13700006: MainMirror012
+    13700008: MainMirror014
+    13700010: MainMirror015
+    13700012: MainMirror017
+    13700014: MainMirror020
+    13700016: MainMirror022
+    13700018: MainMirror023
+    13700020: MainMirror024
+    13700022: MainMirror025
+    13700024: MainMirror026
+    13700026: MainMirror029
+    13700028: MainMirror030
+    13700030: MainMirror031
+    13700032: MainMirror032
+    13700034: MainMirror033
+    13700036: MainMirror034
+    13700038: MainMirror035
+    13700040: MainMirror036
+    13700042: MainMirror037
+    13700044: MainMirror038
+    13700046: MainMirror039
+    13700048: MainMirror040
+    13700050: MainMirror041
+    13700052: MainMirror042
+    13700054: MainMirror013
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Frappe
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bone053
+        weight: 1
+      - path: Bone053/Bone054
+        weight: 1
+      - path: Bone053/Bone054/Bone055
+        weight: 1
+      - path: Bone053/Bone054/Bone055/Bone056
+        weight: 1
+      - path: Monstre01
+        weight: 1
+      - path: Monstre01/Bone033
+        weight: 1
+      - path: Monstre01/Bone033/Bone034
+        weight: 1
+      - path: Monstre01/Bone033/Bone034/Bone035
+        weight: 1
+      - path: Monstre01/Bone033/Bone034/Bone035/Bone036
+        weight: 1
+      - path: Monstre01/Bone037
+        weight: 1
+      - path: Monstre01/Bone037/Bone038
+        weight: 1
+      - path: Monstre01/Bone037/Bone038/Bone039
+        weight: 1
+      - path: Monstre01/Bone037/Bone038/Bone039/Bone040
+        weight: 1
+      - path: Monstre01/Bone041
+        weight: 1
+      - path: Monstre01/Bone041/Bone042
+        weight: 1
+      - path: Monstre01/Bone041/Bone042/Bone043
+        weight: 1
+      - path: Monstre01/Bone041/Bone042/Bone043/Bone044
+        weight: 1
+      - path: Monstre01/Bone049
+        weight: 1
+      - path: Monstre01/Bone049/Bone050
+        weight: 1
+      - path: Monstre01/Bone049/Bone050/Bone051
+        weight: 1
+      - path: Monstre01/Bone049/Bone050/Bone051/Bone052
+        weight: 1
+      - path: Monstre01/Bone183
+        weight: 1
+      - path: Monstre01/Bone183/Bone184
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone173
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone173/Bone174
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone175
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone175/Bone176
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone177
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone177/Bone178
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone179
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone179/Bone180
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone181
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone181/Bone182
+        weight: 1
+      - path: Monstre01/Box005
+        weight: 1
+      - path: Monstre01/Circle004
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_annulaire01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_annulaire01(mirrored)008/b_annulaire02(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_annulaire01(mirrored)008/b_annulaire02(mirrored)008/b_annulaire03(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_auriculaire01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_auriculaire01(mirrored)008/b_auriculaire02(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_auriculaire01(mirrored)008/b_auriculaire02(mirrored)008/b_auriculaire03(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Index01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Index01(mirrored)008/b_index02(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Index01(mirrored)008/b_index02(mirrored)008/b_index03(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_majeur01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_majeur01(mirrored)008/b_majeur02(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_majeur01(mirrored)008/b_majeur02(mirrored)008/b_majeur03(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Pouce01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Pouce01(mirrored)008/b_Pouce02(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Pouce01(mirrored)008/b_Pouce02(mirrored)008/b_Pouce03(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle006
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_annulaire01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_annulaire01(mirrored)009/b_annulaire02(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_annulaire01(mirrored)009/b_annulaire02(mirrored)009/b_annulaire03(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_auriculaire01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_auriculaire01(mirrored)009/b_auriculaire02(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_auriculaire01(mirrored)009/b_auriculaire02(mirrored)009/b_auriculaire03(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Index01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Index01(mirrored)009/b_index02(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Index01(mirrored)009/b_index02(mirrored)009/b_index03(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_majeur01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_majeur01(mirrored)009/b_majeur02(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_majeur01(mirrored)009/b_majeur02(mirrored)009/b_majeur03(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Pouce01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Pouce01(mirrored)009/b_Pouce02(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Pouce01(mirrored)009/b_Pouce02(mirrored)009/b_Pouce03(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/Point061
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/Point061/Point062
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/Point061/Point062/Point063
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/Point061/Point062/Point063/Point064
+        weight: 1
+      - path: Monstre01/Circle007
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_annulaire01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_annulaire01(mirrored)010/b_annulaire02(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_annulaire01(mirrored)010/b_annulaire02(mirrored)010/b_annulaire03(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_auriculaire01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_auriculaire01(mirrored)010/b_auriculaire02(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_auriculaire01(mirrored)010/b_auriculaire02(mirrored)010/b_auriculaire03(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Index01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Index01(mirrored)010/b_index02(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Index01(mirrored)010/b_index02(mirrored)010/b_index03(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_majeur01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_majeur01(mirrored)010/b_majeur02(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_majeur01(mirrored)010/b_majeur02(mirrored)010/b_majeur03(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Pouce01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Pouce01(mirrored)010/b_Pouce02(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Pouce01(mirrored)010/b_Pouce02(mirrored)010/b_Pouce03(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/Point065
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/Point065/Point066
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/Point065/Point066/Point067
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/Point065/Point066/Point067/Point068
+        weight: 1
+      - path: Monstre01/Circle009
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_annulaire01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_annulaire01(mirrored)012/b_annulaire02(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_annulaire01(mirrored)012/b_annulaire02(mirrored)012/b_annulaire03(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_auriculaire01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_auriculaire01(mirrored)012/b_auriculaire02(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_auriculaire01(mirrored)012/b_auriculaire02(mirrored)012/b_auriculaire03(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Index01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Index01(mirrored)012/b_index02(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Index01(mirrored)012/b_index02(mirrored)012/b_index03(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_majeur01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_majeur01(mirrored)012/b_majeur02(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_majeur01(mirrored)012/b_majeur02(mirrored)012/b_majeur03(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Pouce01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Pouce01(mirrored)012/b_Pouce02(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Pouce01(mirrored)012/b_Pouce02(mirrored)012/b_Pouce03(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/Point073
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/Point073/Point074
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/Point073/Point074/Point075
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/Point073/Point074/Point075/Point076
+        weight: 1
+      - path: Monstre01/Circle011
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_annulaire01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_annulaire01(mirrored)014/b_annulaire02(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_annulaire01(mirrored)014/b_annulaire02(mirrored)014/b_annulaire03(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_auriculaire01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_auriculaire01(mirrored)014/b_auriculaire02(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_auriculaire01(mirrored)014/b_auriculaire02(mirrored)014/b_auriculaire03(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Index01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Index01(mirrored)014/b_index02(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Index01(mirrored)014/b_index02(mirrored)014/b_index03(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_majeur01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_majeur01(mirrored)014/b_majeur02(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_majeur01(mirrored)014/b_majeur02(mirrored)014/b_majeur03(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Pouce01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Pouce01(mirrored)014/b_Pouce02(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Pouce01(mirrored)014/b_Pouce02(mirrored)014/b_Pouce03(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/Bone057
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/Bone057/Bone058
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/Bone057/Bone058/Bone059
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/Bone057/Bone058/Bone059/Bone060
+        weight: 1
+      - path: Monstre01/Circle012
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_annulaire01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_annulaire01(mirrored)015/b_annulaire02(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_annulaire01(mirrored)015/b_annulaire02(mirrored)015/b_annulaire03(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_auriculaire01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_auriculaire01(mirrored)015/b_auriculaire02(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_auriculaire01(mirrored)015/b_auriculaire02(mirrored)015/b_auriculaire03(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Index01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Index01(mirrored)015/b_index02(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Index01(mirrored)015/b_index02(mirrored)015/b_index03(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_majeur01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_majeur01(mirrored)015/b_majeur02(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_majeur01(mirrored)015/b_majeur02(mirrored)015/b_majeur03(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Pouce01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Pouce01(mirrored)015/b_Pouce02(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Pouce01(mirrored)015/b_Pouce02(mirrored)015/b_Pouce03(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/Bone061
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/Bone061/Bone062
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/Bone061/Bone062/Bone063
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/Bone061/Bone062/Bone063/Bone064
+        weight: 1
+      - path: Monstre01/Circle014
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_annulaire01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_annulaire01(mirrored)017/b_annulaire02(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_annulaire01(mirrored)017/b_annulaire02(mirrored)017/b_annulaire03(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_auriculaire01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_auriculaire01(mirrored)017/b_auriculaire02(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_auriculaire01(mirrored)017/b_auriculaire02(mirrored)017/b_auriculaire03(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Index01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Index01(mirrored)017/b_index02(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Index01(mirrored)017/b_index02(mirrored)017/b_index03(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_majeur01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_majeur01(mirrored)017/b_majeur02(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_majeur01(mirrored)017/b_majeur02(mirrored)017/b_majeur03(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Pouce01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Pouce01(mirrored)017/b_Pouce02(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Pouce01(mirrored)017/b_Pouce02(mirrored)017/b_Pouce03(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/Bone069
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/Bone069/Bone070
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/Bone069/Bone070/Bone071
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/Bone069/Bone070/Bone071/Bone072
+        weight: 1
+      - path: Monstre01/Circle017
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_annulaire01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_annulaire01(mirrored)020/b_annulaire02(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_annulaire01(mirrored)020/b_annulaire02(mirrored)020/b_annulaire03(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_auriculaire01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_auriculaire01(mirrored)020/b_auriculaire02(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_auriculaire01(mirrored)020/b_auriculaire02(mirrored)020/b_auriculaire03(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Index01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Index01(mirrored)020/b_index02(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Index01(mirrored)020/b_index02(mirrored)020/b_index03(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_majeur01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_majeur01(mirrored)020/b_majeur02(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_majeur01(mirrored)020/b_majeur02(mirrored)020/b_majeur03(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Pouce01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Pouce01(mirrored)020/b_Pouce02(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Pouce01(mirrored)020/b_Pouce02(mirrored)020/b_Pouce03(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/Bone081
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/Bone081/Bone082
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/Bone081/Bone082/Bone083
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/Bone081/Bone082/Bone083/Bone084
+        weight: 1
+      - path: Monstre01/Circle019
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_annulaire01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_annulaire01(mirrored)022/b_annulaire02(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_annulaire01(mirrored)022/b_annulaire02(mirrored)022/b_annulaire03(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_auriculaire01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_auriculaire01(mirrored)022/b_auriculaire02(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_auriculaire01(mirrored)022/b_auriculaire02(mirrored)022/b_auriculaire03(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Index01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Index01(mirrored)022/b_index02(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Index01(mirrored)022/b_index02(mirrored)022/b_index03(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_majeur01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_majeur01(mirrored)022/b_majeur02(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_majeur01(mirrored)022/b_majeur02(mirrored)022/b_majeur03(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Pouce01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Pouce01(mirrored)022/b_Pouce02(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Pouce01(mirrored)022/b_Pouce02(mirrored)022/b_Pouce03(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/Bone089
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/Bone089/Bone090
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/Bone089/Bone090/Bone091
+        weight: 1
+      - path: Monstre01/Circle020
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_annulaire01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_annulaire01(mirrored)023/b_annulaire02(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_annulaire01(mirrored)023/b_annulaire02(mirrored)023/b_annulaire03(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_auriculaire01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_auriculaire01(mirrored)023/b_auriculaire02(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_auriculaire01(mirrored)023/b_auriculaire02(mirrored)023/b_auriculaire03(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Index01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Index01(mirrored)023/b_index02(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Index01(mirrored)023/b_index02(mirrored)023/b_index03(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_majeur01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_majeur01(mirrored)023/b_majeur02(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_majeur01(mirrored)023/b_majeur02(mirrored)023/b_majeur03(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Pouce01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Pouce01(mirrored)023/b_Pouce02(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Pouce01(mirrored)023/b_Pouce02(mirrored)023/b_Pouce03(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/Bone092
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/Bone092/Bone093
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/Bone092/Bone093/Bone094
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/Bone092/Bone093/Bone094/Bone095
+        weight: 1
+      - path: Monstre01/Circle021
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_annulaire01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_annulaire01(mirrored)024/b_annulaire02(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_annulaire01(mirrored)024/b_annulaire02(mirrored)024/b_annulaire03(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_auriculaire01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_auriculaire01(mirrored)024/b_auriculaire02(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_auriculaire01(mirrored)024/b_auriculaire02(mirrored)024/b_auriculaire03(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Index01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Index01(mirrored)024/b_index02(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Index01(mirrored)024/b_index02(mirrored)024/b_index03(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_majeur01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_majeur01(mirrored)024/b_majeur02(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_majeur01(mirrored)024/b_majeur02(mirrored)024/b_majeur03(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Pouce01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Pouce01(mirrored)024/b_Pouce02(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Pouce01(mirrored)024/b_Pouce02(mirrored)024/b_Pouce03(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/Bone096
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/Bone096/Bone097
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/Bone096/Bone097/Bone098
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/Bone096/Bone097/Bone098/Bone099
+        weight: 1
+      - path: Monstre01/Circle022
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_annulaire01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_annulaire01(mirrored)025/b_annulaire02(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_annulaire01(mirrored)025/b_annulaire02(mirrored)025/b_annulaire03(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_auriculaire01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_auriculaire01(mirrored)025/b_auriculaire02(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_auriculaire01(mirrored)025/b_auriculaire02(mirrored)025/b_auriculaire03(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Index01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Index01(mirrored)025/b_index02(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Index01(mirrored)025/b_index02(mirrored)025/b_index03(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_majeur01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_majeur01(mirrored)025/b_majeur02(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_majeur01(mirrored)025/b_majeur02(mirrored)025/b_majeur03(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Pouce01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Pouce01(mirrored)025/b_Pouce02(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Pouce01(mirrored)025/b_Pouce02(mirrored)025/b_Pouce03(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/Bone100
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/Bone100/Bone101
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/Bone100/Bone101/Bone102
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/Bone100/Bone101/Bone102/Bone103
+        weight: 1
+      - path: Monstre01/Circle023
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_annulaire01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_annulaire01(mirrored)026/b_annulaire02(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_annulaire01(mirrored)026/b_annulaire02(mirrored)026/b_annulaire03(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_auriculaire01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_auriculaire01(mirrored)026/b_auriculaire02(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_auriculaire01(mirrored)026/b_auriculaire02(mirrored)026/b_auriculaire03(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Index01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Index01(mirrored)026/b_index02(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Index01(mirrored)026/b_index02(mirrored)026/b_index03(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_majeur01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_majeur01(mirrored)026/b_majeur02(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_majeur01(mirrored)026/b_majeur02(mirrored)026/b_majeur03(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Pouce01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Pouce01(mirrored)026/b_Pouce02(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Pouce01(mirrored)026/b_Pouce02(mirrored)026/b_Pouce03(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/Bone104
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/Bone104/Bone105
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/Bone104/Bone105/Bone106
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/Bone104/Bone105/Bone106/Bone107
+        weight: 1
+      - path: Monstre01/Circle025
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_annulaire01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_annulaire01(mirrored)028/b_annulaire02(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_annulaire01(mirrored)028/b_annulaire02(mirrored)028/b_annulaire03(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_auriculaire01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_auriculaire01(mirrored)028/b_auriculaire02(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_auriculaire01(mirrored)028/b_auriculaire02(mirrored)028/b_auriculaire03(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Index01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Index01(mirrored)028/b_index02(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Index01(mirrored)028/b_index02(mirrored)028/b_index03(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_majeur01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_majeur01(mirrored)028/b_majeur02(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_majeur01(mirrored)028/b_majeur02(mirrored)028/b_majeur03(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Pouce01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Pouce01(mirrored)028/b_Pouce02(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Pouce01(mirrored)028/b_Pouce02(mirrored)028/b_Pouce03(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/Bone112
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/Bone112/Bone113
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/Bone112/Bone113/Bone114
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/Bone112/Bone113/Bone114/Bone115
+        weight: 1
+      - path: Monstre01/Circle026
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_annulaire01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_annulaire01(mirrored)029/b_annulaire02(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_annulaire01(mirrored)029/b_annulaire02(mirrored)029/b_annulaire03(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_auriculaire01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_auriculaire01(mirrored)029/b_auriculaire02(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_auriculaire01(mirrored)029/b_auriculaire02(mirrored)029/b_auriculaire03(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Index01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Index01(mirrored)029/b_index02(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Index01(mirrored)029/b_index02(mirrored)029/b_index03(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_majeur01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_majeur01(mirrored)029/b_majeur02(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_majeur01(mirrored)029/b_majeur02(mirrored)029/b_majeur03(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Pouce01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Pouce01(mirrored)029/b_Pouce02(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Pouce01(mirrored)029/b_Pouce02(mirrored)029/b_Pouce03(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/Bone116
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/Bone116/Bone117
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/Bone116/Bone117/Bone118
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/Bone116/Bone117/Bone118/Bone119
+        weight: 1
+      - path: Monstre01/Circle027
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_annulaire01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_annulaire01(mirrored)030/b_annulaire02(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_annulaire01(mirrored)030/b_annulaire02(mirrored)030/b_annulaire03(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_auriculaire01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_auriculaire01(mirrored)030/b_auriculaire02(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_auriculaire01(mirrored)030/b_auriculaire02(mirrored)030/b_auriculaire03(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Index01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Index01(mirrored)030/b_index02(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Index01(mirrored)030/b_index02(mirrored)030/b_index03(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_majeur01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_majeur01(mirrored)030/b_majeur02(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_majeur01(mirrored)030/b_majeur02(mirrored)030/b_majeur03(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Pouce01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Pouce01(mirrored)030/b_Pouce02(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Pouce01(mirrored)030/b_Pouce02(mirrored)030/b_Pouce03(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/Bone120
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/Bone120/Bone121
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/Bone120/Bone121/Bone122
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/Bone120/Bone121/Bone122/Bone123
+        weight: 1
+      - path: Monstre01/Circle028
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_annulaire01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_annulaire01(mirrored)031/b_annulaire02(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_annulaire01(mirrored)031/b_annulaire02(mirrored)031/b_annulaire03(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_auriculaire01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_auriculaire01(mirrored)031/b_auriculaire02(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_auriculaire01(mirrored)031/b_auriculaire02(mirrored)031/b_auriculaire03(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Index01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Index01(mirrored)031/b_index02(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Index01(mirrored)031/b_index02(mirrored)031/b_index03(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_majeur01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_majeur01(mirrored)031/b_majeur02(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_majeur01(mirrored)031/b_majeur02(mirrored)031/b_majeur03(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Pouce01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Pouce01(mirrored)031/b_Pouce02(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Pouce01(mirrored)031/b_Pouce02(mirrored)031/b_Pouce03(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/Bone124
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/Bone124/Bone125
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/Bone124/Bone125/Bone126
+        weight: 1
+      - path: Monstre01/Circle029
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_annulaire01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_annulaire01(mirrored)032/b_annulaire02(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_annulaire01(mirrored)032/b_annulaire02(mirrored)032/b_annulaire03(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_auriculaire01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_auriculaire01(mirrored)032/b_auriculaire02(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_auriculaire01(mirrored)032/b_auriculaire02(mirrored)032/b_auriculaire03(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Index01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Index01(mirrored)032/b_index02(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Index01(mirrored)032/b_index02(mirrored)032/b_index03(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_majeur01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_majeur01(mirrored)032/b_majeur02(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_majeur01(mirrored)032/b_majeur02(mirrored)032/b_majeur03(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Pouce01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Pouce01(mirrored)032/b_Pouce02(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Pouce01(mirrored)032/b_Pouce02(mirrored)032/b_Pouce03(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/Bone127
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/Bone127/Bone128
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/Bone127/Bone128/Bone129
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/Bone127/Bone128/Bone129/Bone130
+        weight: 1
+      - path: Monstre01/Circle030
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_annulaire01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_annulaire01(mirrored)033/b_annulaire02(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_annulaire01(mirrored)033/b_annulaire02(mirrored)033/b_annulaire03(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_auriculaire01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_auriculaire01(mirrored)033/b_auriculaire02(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_auriculaire01(mirrored)033/b_auriculaire02(mirrored)033/b_auriculaire03(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Index01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Index01(mirrored)033/b_index02(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Index01(mirrored)033/b_index02(mirrored)033/b_index03(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_majeur01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_majeur01(mirrored)033/b_majeur02(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_majeur01(mirrored)033/b_majeur02(mirrored)033/b_majeur03(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Pouce01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Pouce01(mirrored)033/b_Pouce02(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Pouce01(mirrored)033/b_Pouce02(mirrored)033/b_Pouce03(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/Bone131
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/Bone131/Bone132
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/Bone131/Bone132/Bone133
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/Bone131/Bone132/Bone133/Bone134
+        weight: 1
+      - path: Monstre01/Circle031
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_annulaire01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_annulaire01(mirrored)034/b_annulaire02(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_annulaire01(mirrored)034/b_annulaire02(mirrored)034/b_annulaire03(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_auriculaire01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_auriculaire01(mirrored)034/b_auriculaire02(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_auriculaire01(mirrored)034/b_auriculaire02(mirrored)034/b_auriculaire03(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Index01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Index01(mirrored)034/b_index02(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Index01(mirrored)034/b_index02(mirrored)034/b_index03(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_majeur01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_majeur01(mirrored)034/b_majeur02(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_majeur01(mirrored)034/b_majeur02(mirrored)034/b_majeur03(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Pouce01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Pouce01(mirrored)034/b_Pouce02(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Pouce01(mirrored)034/b_Pouce02(mirrored)034/b_Pouce03(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/Bone135
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/Bone135/Bone136
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/Bone135/Bone136/Bone137
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/Bone135/Bone136/Bone137/Bone138
+        weight: 1
+      - path: Monstre01/Circle032
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_annulaire01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_annulaire01(mirrored)035/b_annulaire02(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_annulaire01(mirrored)035/b_annulaire02(mirrored)035/b_annulaire03(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_auriculaire01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_auriculaire01(mirrored)035/b_auriculaire02(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_auriculaire01(mirrored)035/b_auriculaire02(mirrored)035/b_auriculaire03(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Index01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Index01(mirrored)035/b_index02(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Index01(mirrored)035/b_index02(mirrored)035/b_index03(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_majeur01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_majeur01(mirrored)035/b_majeur02(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_majeur01(mirrored)035/b_majeur02(mirrored)035/b_majeur03(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Pouce01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Pouce01(mirrored)035/b_Pouce02(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Pouce01(mirrored)035/b_Pouce02(mirrored)035/b_Pouce03(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/Bone139
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/Bone139/Bone140
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/Bone139/Bone140/Bone141
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/Bone139/Bone140/Bone141/Bone142
+        weight: 1
+      - path: Monstre01/Circle033
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_annulaire01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_annulaire01(mirrored)036/b_annulaire02(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_annulaire01(mirrored)036/b_annulaire02(mirrored)036/b_annulaire03(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_auriculaire01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_auriculaire01(mirrored)036/b_auriculaire02(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_auriculaire01(mirrored)036/b_auriculaire02(mirrored)036/b_auriculaire03(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Index01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Index01(mirrored)036/b_index02(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Index01(mirrored)036/b_index02(mirrored)036/b_index03(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_majeur01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_majeur01(mirrored)036/b_majeur02(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_majeur01(mirrored)036/b_majeur02(mirrored)036/b_majeur03(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Pouce01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Pouce01(mirrored)036/b_Pouce02(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Pouce01(mirrored)036/b_Pouce02(mirrored)036/b_Pouce03(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/Bone148
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/Bone148/Bone149
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/Bone148/Bone149/Bone150
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/Bone148/Bone149/Bone150/Bone151
+        weight: 1
+      - path: Monstre01/Circle034
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_annulaire01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_annulaire01(mirrored)037/b_annulaire02(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_annulaire01(mirrored)037/b_annulaire02(mirrored)037/b_annulaire03(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_auriculaire01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_auriculaire01(mirrored)037/b_auriculaire02(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_auriculaire01(mirrored)037/b_auriculaire02(mirrored)037/b_auriculaire03(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Index01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Index01(mirrored)037/b_index02(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Index01(mirrored)037/b_index02(mirrored)037/b_index03(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_majeur01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_majeur01(mirrored)037/b_majeur02(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_majeur01(mirrored)037/b_majeur02(mirrored)037/b_majeur03(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Pouce01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Pouce01(mirrored)037/b_Pouce02(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Pouce01(mirrored)037/b_Pouce02(mirrored)037/b_Pouce03(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/Bone152
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/Bone152/Bone153
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/Bone152/Bone153/Bone154
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/Bone152/Bone153/Bone154/Bone155
+        weight: 1
+      - path: Monstre01/Circle035
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_annulaire01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_annulaire01(mirrored)038/b_annulaire02(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_annulaire01(mirrored)038/b_annulaire02(mirrored)038/b_annulaire03(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_auriculaire01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_auriculaire01(mirrored)038/b_auriculaire02(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_auriculaire01(mirrored)038/b_auriculaire02(mirrored)038/b_auriculaire03(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Index01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Index01(mirrored)038/b_index02(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Index01(mirrored)038/b_index02(mirrored)038/b_index03(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_majeur01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_majeur01(mirrored)038/b_majeur02(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_majeur01(mirrored)038/b_majeur02(mirrored)038/b_majeur03(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Pouce01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Pouce01(mirrored)038/b_Pouce02(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Pouce01(mirrored)038/b_Pouce02(mirrored)038/b_Pouce03(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/Bone156
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/Bone156/Bone157
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/Bone156/Bone157/Bone158
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/Bone156/Bone157/Bone158/Bone159
+        weight: 1
+      - path: Monstre01/Circle036
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_annulaire01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_annulaire01(mirrored)039/b_annulaire02(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_annulaire01(mirrored)039/b_annulaire02(mirrored)039/b_annulaire03(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_auriculaire01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_auriculaire01(mirrored)039/b_auriculaire02(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_auriculaire01(mirrored)039/b_auriculaire02(mirrored)039/b_auriculaire03(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Index01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Index01(mirrored)039/b_index02(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Index01(mirrored)039/b_index02(mirrored)039/b_index03(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_majeur01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_majeur01(mirrored)039/b_majeur02(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_majeur01(mirrored)039/b_majeur02(mirrored)039/b_majeur03(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Pouce01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Pouce01(mirrored)039/b_Pouce02(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Pouce01(mirrored)039/b_Pouce02(mirrored)039/b_Pouce03(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/Bone160
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/Bone160/Bone161
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/Bone160/Bone161/Bone162
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/Bone160/Bone161/Bone162/Bone163
+        weight: 1
+      - path: Monstre01/Circle037
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_annulaire01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_annulaire01(mirrored)040/b_annulaire02(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_annulaire01(mirrored)040/b_annulaire02(mirrored)040/b_annulaire03(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_auriculaire01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_auriculaire01(mirrored)040/b_auriculaire02(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_auriculaire01(mirrored)040/b_auriculaire02(mirrored)040/b_auriculaire03(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Index01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Index01(mirrored)040/b_index02(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Index01(mirrored)040/b_index02(mirrored)040/b_index03(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_majeur01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_majeur01(mirrored)040/b_majeur02(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_majeur01(mirrored)040/b_majeur02(mirrored)040/b_majeur03(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Pouce01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Pouce01(mirrored)040/b_Pouce02(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Pouce01(mirrored)040/b_Pouce02(mirrored)040/b_Pouce03(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/Bone164
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/Bone164/Bone165
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/Bone164/Bone165/Bone166
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/Bone164/Bone165/Bone166/Bone167
+        weight: 1
+      - path: Monstre01/Circle038
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_annulaire01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_annulaire01(mirrored)041/b_annulaire02(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_annulaire01(mirrored)041/b_annulaire02(mirrored)041/b_annulaire03(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_auriculaire01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_auriculaire01(mirrored)041/b_auriculaire02(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_auriculaire01(mirrored)041/b_auriculaire02(mirrored)041/b_auriculaire03(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Index01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Index01(mirrored)041/b_index02(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Index01(mirrored)041/b_index02(mirrored)041/b_index03(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_majeur01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_majeur01(mirrored)041/b_majeur02(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_majeur01(mirrored)041/b_majeur02(mirrored)041/b_majeur03(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Pouce01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Pouce01(mirrored)041/b_Pouce02(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Pouce01(mirrored)041/b_Pouce02(mirrored)041/b_Pouce03(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/Bone168
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/Bone168/Bone169
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/Bone168/Bone169/Bone170
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/Bone168/Bone169/Bone170/Bone171
+        weight: 1
+      - path: Monstre01/IK Chain020
+        weight: 1
+      - path: Monstre01/IK Chain021
+        weight: 1
+      - path: Monstre01/IK Chain022
+        weight: 1
+      - path: Monstre01/IK Chain023
+        weight: 1
+      - path: Monstre01/IK Chain024
+        weight: 1
+      - path: Monstre01/Line011
+        weight: 1
+      - path: Monstre01/Line014
+        weight: 1
+      - path: Monstre01/Line015
+        weight: 1
+      - path: Monstre01/Line016
+        weight: 1
+      - path: Monstre01/Line018
+        weight: 1
+      - path: Monstre01/MainMirror008
+        weight: 1
+      - path: Monstre01/MainMirror009
+        weight: 1
+      - path: Monstre01/MainMirror010
+        weight: 1
+      - path: Monstre01/MainMirror012
+        weight: 1
+      - path: Monstre01/MainMirror013
+        weight: 1
+      - path: Monstre01/MainMirror014
+        weight: 1
+      - path: Monstre01/MainMirror015
+        weight: 1
+      - path: Monstre01/MainMirror017
+        weight: 1
+      - path: Monstre01/MainMirror020
+        weight: 1
+      - path: Monstre01/MainMirror022
+        weight: 1
+      - path: Monstre01/MainMirror023
+        weight: 1
+      - path: Monstre01/MainMirror024
+        weight: 1
+      - path: Monstre01/MainMirror025
+        weight: 1
+      - path: Monstre01/MainMirror026
+        weight: 1
+      - path: Monstre01/MainMirror029
+        weight: 1
+      - path: Monstre01/MainMirror030
+        weight: 1
+      - path: Monstre01/MainMirror031
+        weight: 1
+      - path: Monstre01/MainMirror032
+        weight: 1
+      - path: Monstre01/MainMirror033
+        weight: 1
+      - path: Monstre01/MainMirror034
+        weight: 1
+      - path: Monstre01/MainMirror035
+        weight: 1
+      - path: Monstre01/MainMirror036
+        weight: 1
+      - path: Monstre01/MainMirror037
+        weight: 1
+      - path: Monstre01/MainMirror038
+        weight: 1
+      - path: Monstre01/MainMirror039
+        weight: 1
+      - path: Monstre01/MainMirror040
+        weight: 1
+      - path: Monstre01/MainMirror041
+        weight: 1
+      - path: Monstre01/MainMirror042
+        weight: 1
+      - path: Monstre01/Point057
+        weight: 1
+      - path: Monstre01/Point057/Point058
+        weight: 1
+      - path: Monstre01/Point057/Point058/Point059
+        weight: 1
+      - path: Monstre01/Point057/Point058/Point059/Point060
+        weight: 1
+      - path: Monstre01/Sky001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bone053
+        weight: 1
+      - path: Bone053/Bone054
+        weight: 1
+      - path: Bone053/Bone054/Bone055
+        weight: 1
+      - path: Bone053/Bone054/Bone055/Bone056
+        weight: 1
+      - path: Monstre01
+        weight: 1
+      - path: Monstre01/Bone033
+        weight: 1
+      - path: Monstre01/Bone033/Bone034
+        weight: 1
+      - path: Monstre01/Bone033/Bone034/Bone035
+        weight: 1
+      - path: Monstre01/Bone033/Bone034/Bone035/Bone036
+        weight: 1
+      - path: Monstre01/Bone037
+        weight: 1
+      - path: Monstre01/Bone037/Bone038
+        weight: 1
+      - path: Monstre01/Bone037/Bone038/Bone039
+        weight: 1
+      - path: Monstre01/Bone037/Bone038/Bone039/Bone040
+        weight: 1
+      - path: Monstre01/Bone041
+        weight: 1
+      - path: Monstre01/Bone041/Bone042
+        weight: 1
+      - path: Monstre01/Bone041/Bone042/Bone043
+        weight: 1
+      - path: Monstre01/Bone041/Bone042/Bone043/Bone044
+        weight: 1
+      - path: Monstre01/Bone049
+        weight: 1
+      - path: Monstre01/Bone049/Bone050
+        weight: 1
+      - path: Monstre01/Bone049/Bone050/Bone051
+        weight: 1
+      - path: Monstre01/Bone049/Bone050/Bone051/Bone052
+        weight: 1
+      - path: Monstre01/Bone183
+        weight: 1
+      - path: Monstre01/Bone183/Bone184
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone173
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone173/Bone174
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone175
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone175/Bone176
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone177
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone177/Bone178
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone179
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone179/Bone180
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone181
+        weight: 1
+      - path: Monstre01/Bone183/Bone184/Bone185/Circle010/Bone172/Bone181/Bone182
+        weight: 1
+      - path: Monstre01/Box005
+        weight: 1
+      - path: Monstre01/Circle004
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_annulaire01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_annulaire01(mirrored)008/b_annulaire02(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_annulaire01(mirrored)008/b_annulaire02(mirrored)008/b_annulaire03(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_auriculaire01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_auriculaire01(mirrored)008/b_auriculaire02(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_auriculaire01(mirrored)008/b_auriculaire02(mirrored)008/b_auriculaire03(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Index01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Index01(mirrored)008/b_index02(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Index01(mirrored)008/b_index02(mirrored)008/b_index03(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_majeur01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_majeur01(mirrored)008/b_majeur02(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_majeur01(mirrored)008/b_majeur02(mirrored)008/b_majeur03(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Pouce01(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Pouce01(mirrored)008/b_Pouce02(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle004/b_Hand01(mirrored)008/b_Pouce01(mirrored)008/b_Pouce02(mirrored)008/b_Pouce03(mirrored)008
+        weight: 1
+      - path: Monstre01/Circle006
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_annulaire01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_annulaire01(mirrored)009/b_annulaire02(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_annulaire01(mirrored)009/b_annulaire02(mirrored)009/b_annulaire03(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_auriculaire01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_auriculaire01(mirrored)009/b_auriculaire02(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_auriculaire01(mirrored)009/b_auriculaire02(mirrored)009/b_auriculaire03(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Index01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Index01(mirrored)009/b_index02(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Index01(mirrored)009/b_index02(mirrored)009/b_index03(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_majeur01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_majeur01(mirrored)009/b_majeur02(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_majeur01(mirrored)009/b_majeur02(mirrored)009/b_majeur03(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Pouce01(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Pouce01(mirrored)009/b_Pouce02(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/b_Pouce01(mirrored)009/b_Pouce02(mirrored)009/b_Pouce03(mirrored)009
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/Point061
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/Point061/Point062
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/Point061/Point062/Point063
+        weight: 1
+      - path: Monstre01/Circle006/b_Hand01(mirrored)009/Point061/Point062/Point063/Point064
+        weight: 1
+      - path: Monstre01/Circle007
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_annulaire01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_annulaire01(mirrored)010/b_annulaire02(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_annulaire01(mirrored)010/b_annulaire02(mirrored)010/b_annulaire03(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_auriculaire01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_auriculaire01(mirrored)010/b_auriculaire02(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_auriculaire01(mirrored)010/b_auriculaire02(mirrored)010/b_auriculaire03(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Index01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Index01(mirrored)010/b_index02(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Index01(mirrored)010/b_index02(mirrored)010/b_index03(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_majeur01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_majeur01(mirrored)010/b_majeur02(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_majeur01(mirrored)010/b_majeur02(mirrored)010/b_majeur03(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Pouce01(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Pouce01(mirrored)010/b_Pouce02(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/b_Pouce01(mirrored)010/b_Pouce02(mirrored)010/b_Pouce03(mirrored)010
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/Point065
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/Point065/Point066
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/Point065/Point066/Point067
+        weight: 1
+      - path: Monstre01/Circle007/b_Hand01(mirrored)010/Point065/Point066/Point067/Point068
+        weight: 1
+      - path: Monstre01/Circle009
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_annulaire01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_annulaire01(mirrored)012/b_annulaire02(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_annulaire01(mirrored)012/b_annulaire02(mirrored)012/b_annulaire03(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_auriculaire01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_auriculaire01(mirrored)012/b_auriculaire02(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_auriculaire01(mirrored)012/b_auriculaire02(mirrored)012/b_auriculaire03(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Index01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Index01(mirrored)012/b_index02(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Index01(mirrored)012/b_index02(mirrored)012/b_index03(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_majeur01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_majeur01(mirrored)012/b_majeur02(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_majeur01(mirrored)012/b_majeur02(mirrored)012/b_majeur03(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Pouce01(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Pouce01(mirrored)012/b_Pouce02(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/b_Pouce01(mirrored)012/b_Pouce02(mirrored)012/b_Pouce03(mirrored)012
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/Point073
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/Point073/Point074
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/Point073/Point074/Point075
+        weight: 1
+      - path: Monstre01/Circle009/b_Hand01(mirrored)012/Point073/Point074/Point075/Point076
+        weight: 1
+      - path: Monstre01/Circle011
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_annulaire01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_annulaire01(mirrored)014/b_annulaire02(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_annulaire01(mirrored)014/b_annulaire02(mirrored)014/b_annulaire03(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_auriculaire01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_auriculaire01(mirrored)014/b_auriculaire02(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_auriculaire01(mirrored)014/b_auriculaire02(mirrored)014/b_auriculaire03(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Index01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Index01(mirrored)014/b_index02(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Index01(mirrored)014/b_index02(mirrored)014/b_index03(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_majeur01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_majeur01(mirrored)014/b_majeur02(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_majeur01(mirrored)014/b_majeur02(mirrored)014/b_majeur03(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Pouce01(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Pouce01(mirrored)014/b_Pouce02(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/b_Pouce01(mirrored)014/b_Pouce02(mirrored)014/b_Pouce03(mirrored)014
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/Bone057
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/Bone057/Bone058
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/Bone057/Bone058/Bone059
+        weight: 1
+      - path: Monstre01/Circle011/b_Hand01(mirrored)014/Bone057/Bone058/Bone059/Bone060
+        weight: 1
+      - path: Monstre01/Circle012
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_annulaire01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_annulaire01(mirrored)015/b_annulaire02(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_annulaire01(mirrored)015/b_annulaire02(mirrored)015/b_annulaire03(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_auriculaire01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_auriculaire01(mirrored)015/b_auriculaire02(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_auriculaire01(mirrored)015/b_auriculaire02(mirrored)015/b_auriculaire03(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Index01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Index01(mirrored)015/b_index02(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Index01(mirrored)015/b_index02(mirrored)015/b_index03(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_majeur01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_majeur01(mirrored)015/b_majeur02(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_majeur01(mirrored)015/b_majeur02(mirrored)015/b_majeur03(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Pouce01(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Pouce01(mirrored)015/b_Pouce02(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/b_Pouce01(mirrored)015/b_Pouce02(mirrored)015/b_Pouce03(mirrored)015
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/Bone061
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/Bone061/Bone062
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/Bone061/Bone062/Bone063
+        weight: 1
+      - path: Monstre01/Circle012/b_Hand01(mirrored)015/Bone061/Bone062/Bone063/Bone064
+        weight: 1
+      - path: Monstre01/Circle014
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_annulaire01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_annulaire01(mirrored)017/b_annulaire02(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_annulaire01(mirrored)017/b_annulaire02(mirrored)017/b_annulaire03(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_auriculaire01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_auriculaire01(mirrored)017/b_auriculaire02(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_auriculaire01(mirrored)017/b_auriculaire02(mirrored)017/b_auriculaire03(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Index01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Index01(mirrored)017/b_index02(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Index01(mirrored)017/b_index02(mirrored)017/b_index03(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_majeur01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_majeur01(mirrored)017/b_majeur02(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_majeur01(mirrored)017/b_majeur02(mirrored)017/b_majeur03(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Pouce01(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Pouce01(mirrored)017/b_Pouce02(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/b_Pouce01(mirrored)017/b_Pouce02(mirrored)017/b_Pouce03(mirrored)017
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/Bone069
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/Bone069/Bone070
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/Bone069/Bone070/Bone071
+        weight: 1
+      - path: Monstre01/Circle014/b_Hand01(mirrored)017/Bone069/Bone070/Bone071/Bone072
+        weight: 1
+      - path: Monstre01/Circle017
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_annulaire01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_annulaire01(mirrored)020/b_annulaire02(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_annulaire01(mirrored)020/b_annulaire02(mirrored)020/b_annulaire03(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_auriculaire01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_auriculaire01(mirrored)020/b_auriculaire02(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_auriculaire01(mirrored)020/b_auriculaire02(mirrored)020/b_auriculaire03(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Index01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Index01(mirrored)020/b_index02(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Index01(mirrored)020/b_index02(mirrored)020/b_index03(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_majeur01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_majeur01(mirrored)020/b_majeur02(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_majeur01(mirrored)020/b_majeur02(mirrored)020/b_majeur03(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Pouce01(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Pouce01(mirrored)020/b_Pouce02(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/b_Pouce01(mirrored)020/b_Pouce02(mirrored)020/b_Pouce03(mirrored)020
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/Bone081
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/Bone081/Bone082
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/Bone081/Bone082/Bone083
+        weight: 1
+      - path: Monstre01/Circle017/b_Hand01(mirrored)020/Bone081/Bone082/Bone083/Bone084
+        weight: 1
+      - path: Monstre01/Circle019
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_annulaire01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_annulaire01(mirrored)022/b_annulaire02(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_annulaire01(mirrored)022/b_annulaire02(mirrored)022/b_annulaire03(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_auriculaire01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_auriculaire01(mirrored)022/b_auriculaire02(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_auriculaire01(mirrored)022/b_auriculaire02(mirrored)022/b_auriculaire03(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Index01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Index01(mirrored)022/b_index02(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Index01(mirrored)022/b_index02(mirrored)022/b_index03(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_majeur01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_majeur01(mirrored)022/b_majeur02(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_majeur01(mirrored)022/b_majeur02(mirrored)022/b_majeur03(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Pouce01(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Pouce01(mirrored)022/b_Pouce02(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/b_Pouce01(mirrored)022/b_Pouce02(mirrored)022/b_Pouce03(mirrored)022
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/Bone089
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/Bone089/Bone090
+        weight: 1
+      - path: Monstre01/Circle019/b_Hand01(mirrored)022/Bone089/Bone090/Bone091
+        weight: 1
+      - path: Monstre01/Circle020
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_annulaire01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_annulaire01(mirrored)023/b_annulaire02(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_annulaire01(mirrored)023/b_annulaire02(mirrored)023/b_annulaire03(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_auriculaire01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_auriculaire01(mirrored)023/b_auriculaire02(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_auriculaire01(mirrored)023/b_auriculaire02(mirrored)023/b_auriculaire03(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Index01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Index01(mirrored)023/b_index02(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Index01(mirrored)023/b_index02(mirrored)023/b_index03(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_majeur01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_majeur01(mirrored)023/b_majeur02(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_majeur01(mirrored)023/b_majeur02(mirrored)023/b_majeur03(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Pouce01(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Pouce01(mirrored)023/b_Pouce02(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/b_Pouce01(mirrored)023/b_Pouce02(mirrored)023/b_Pouce03(mirrored)023
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/Bone092
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/Bone092/Bone093
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/Bone092/Bone093/Bone094
+        weight: 1
+      - path: Monstre01/Circle020/b_Hand01(mirrored)023/Bone092/Bone093/Bone094/Bone095
+        weight: 1
+      - path: Monstre01/Circle021
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_annulaire01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_annulaire01(mirrored)024/b_annulaire02(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_annulaire01(mirrored)024/b_annulaire02(mirrored)024/b_annulaire03(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_auriculaire01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_auriculaire01(mirrored)024/b_auriculaire02(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_auriculaire01(mirrored)024/b_auriculaire02(mirrored)024/b_auriculaire03(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Index01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Index01(mirrored)024/b_index02(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Index01(mirrored)024/b_index02(mirrored)024/b_index03(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_majeur01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_majeur01(mirrored)024/b_majeur02(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_majeur01(mirrored)024/b_majeur02(mirrored)024/b_majeur03(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Pouce01(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Pouce01(mirrored)024/b_Pouce02(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/b_Pouce01(mirrored)024/b_Pouce02(mirrored)024/b_Pouce03(mirrored)024
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/Bone096
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/Bone096/Bone097
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/Bone096/Bone097/Bone098
+        weight: 1
+      - path: Monstre01/Circle021/b_Hand01(mirrored)024/Bone096/Bone097/Bone098/Bone099
+        weight: 1
+      - path: Monstre01/Circle022
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_annulaire01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_annulaire01(mirrored)025/b_annulaire02(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_annulaire01(mirrored)025/b_annulaire02(mirrored)025/b_annulaire03(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_auriculaire01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_auriculaire01(mirrored)025/b_auriculaire02(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_auriculaire01(mirrored)025/b_auriculaire02(mirrored)025/b_auriculaire03(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Index01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Index01(mirrored)025/b_index02(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Index01(mirrored)025/b_index02(mirrored)025/b_index03(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_majeur01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_majeur01(mirrored)025/b_majeur02(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_majeur01(mirrored)025/b_majeur02(mirrored)025/b_majeur03(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Pouce01(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Pouce01(mirrored)025/b_Pouce02(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/b_Pouce01(mirrored)025/b_Pouce02(mirrored)025/b_Pouce03(mirrored)025
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/Bone100
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/Bone100/Bone101
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/Bone100/Bone101/Bone102
+        weight: 1
+      - path: Monstre01/Circle022/b_Hand01(mirrored)025/Bone100/Bone101/Bone102/Bone103
+        weight: 1
+      - path: Monstre01/Circle023
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_annulaire01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_annulaire01(mirrored)026/b_annulaire02(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_annulaire01(mirrored)026/b_annulaire02(mirrored)026/b_annulaire03(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_auriculaire01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_auriculaire01(mirrored)026/b_auriculaire02(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_auriculaire01(mirrored)026/b_auriculaire02(mirrored)026/b_auriculaire03(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Index01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Index01(mirrored)026/b_index02(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Index01(mirrored)026/b_index02(mirrored)026/b_index03(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_majeur01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_majeur01(mirrored)026/b_majeur02(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_majeur01(mirrored)026/b_majeur02(mirrored)026/b_majeur03(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Pouce01(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Pouce01(mirrored)026/b_Pouce02(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/b_Pouce01(mirrored)026/b_Pouce02(mirrored)026/b_Pouce03(mirrored)026
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/Bone104
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/Bone104/Bone105
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/Bone104/Bone105/Bone106
+        weight: 1
+      - path: Monstre01/Circle023/b_Hand01(mirrored)026/Bone104/Bone105/Bone106/Bone107
+        weight: 1
+      - path: Monstre01/Circle025
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_annulaire01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_annulaire01(mirrored)028/b_annulaire02(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_annulaire01(mirrored)028/b_annulaire02(mirrored)028/b_annulaire03(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_auriculaire01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_auriculaire01(mirrored)028/b_auriculaire02(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_auriculaire01(mirrored)028/b_auriculaire02(mirrored)028/b_auriculaire03(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Index01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Index01(mirrored)028/b_index02(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Index01(mirrored)028/b_index02(mirrored)028/b_index03(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_majeur01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_majeur01(mirrored)028/b_majeur02(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_majeur01(mirrored)028/b_majeur02(mirrored)028/b_majeur03(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Pouce01(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Pouce01(mirrored)028/b_Pouce02(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/b_Pouce01(mirrored)028/b_Pouce02(mirrored)028/b_Pouce03(mirrored)028
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/Bone112
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/Bone112/Bone113
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/Bone112/Bone113/Bone114
+        weight: 1
+      - path: Monstre01/Circle025/b_Hand01(mirrored)028/Bone112/Bone113/Bone114/Bone115
+        weight: 1
+      - path: Monstre01/Circle026
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_annulaire01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_annulaire01(mirrored)029/b_annulaire02(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_annulaire01(mirrored)029/b_annulaire02(mirrored)029/b_annulaire03(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_auriculaire01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_auriculaire01(mirrored)029/b_auriculaire02(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_auriculaire01(mirrored)029/b_auriculaire02(mirrored)029/b_auriculaire03(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Index01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Index01(mirrored)029/b_index02(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Index01(mirrored)029/b_index02(mirrored)029/b_index03(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_majeur01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_majeur01(mirrored)029/b_majeur02(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_majeur01(mirrored)029/b_majeur02(mirrored)029/b_majeur03(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Pouce01(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Pouce01(mirrored)029/b_Pouce02(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/b_Pouce01(mirrored)029/b_Pouce02(mirrored)029/b_Pouce03(mirrored)029
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/Bone116
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/Bone116/Bone117
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/Bone116/Bone117/Bone118
+        weight: 1
+      - path: Monstre01/Circle026/b_Hand01(mirrored)029/Bone116/Bone117/Bone118/Bone119
+        weight: 1
+      - path: Monstre01/Circle027
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_annulaire01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_annulaire01(mirrored)030/b_annulaire02(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_annulaire01(mirrored)030/b_annulaire02(mirrored)030/b_annulaire03(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_auriculaire01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_auriculaire01(mirrored)030/b_auriculaire02(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_auriculaire01(mirrored)030/b_auriculaire02(mirrored)030/b_auriculaire03(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Index01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Index01(mirrored)030/b_index02(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Index01(mirrored)030/b_index02(mirrored)030/b_index03(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_majeur01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_majeur01(mirrored)030/b_majeur02(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_majeur01(mirrored)030/b_majeur02(mirrored)030/b_majeur03(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Pouce01(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Pouce01(mirrored)030/b_Pouce02(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/b_Pouce01(mirrored)030/b_Pouce02(mirrored)030/b_Pouce03(mirrored)030
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/Bone120
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/Bone120/Bone121
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/Bone120/Bone121/Bone122
+        weight: 1
+      - path: Monstre01/Circle027/b_Hand01(mirrored)030/Bone120/Bone121/Bone122/Bone123
+        weight: 1
+      - path: Monstre01/Circle028
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_annulaire01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_annulaire01(mirrored)031/b_annulaire02(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_annulaire01(mirrored)031/b_annulaire02(mirrored)031/b_annulaire03(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_auriculaire01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_auriculaire01(mirrored)031/b_auriculaire02(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_auriculaire01(mirrored)031/b_auriculaire02(mirrored)031/b_auriculaire03(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Index01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Index01(mirrored)031/b_index02(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Index01(mirrored)031/b_index02(mirrored)031/b_index03(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_majeur01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_majeur01(mirrored)031/b_majeur02(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_majeur01(mirrored)031/b_majeur02(mirrored)031/b_majeur03(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Pouce01(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Pouce01(mirrored)031/b_Pouce02(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/b_Pouce01(mirrored)031/b_Pouce02(mirrored)031/b_Pouce03(mirrored)031
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/Bone124
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/Bone124/Bone125
+        weight: 1
+      - path: Monstre01/Circle028/b_Hand01(mirrored)031/Bone124/Bone125/Bone126
+        weight: 1
+      - path: Monstre01/Circle029
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_annulaire01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_annulaire01(mirrored)032/b_annulaire02(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_annulaire01(mirrored)032/b_annulaire02(mirrored)032/b_annulaire03(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_auriculaire01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_auriculaire01(mirrored)032/b_auriculaire02(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_auriculaire01(mirrored)032/b_auriculaire02(mirrored)032/b_auriculaire03(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Index01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Index01(mirrored)032/b_index02(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Index01(mirrored)032/b_index02(mirrored)032/b_index03(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_majeur01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_majeur01(mirrored)032/b_majeur02(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_majeur01(mirrored)032/b_majeur02(mirrored)032/b_majeur03(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Pouce01(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Pouce01(mirrored)032/b_Pouce02(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/b_Pouce01(mirrored)032/b_Pouce02(mirrored)032/b_Pouce03(mirrored)032
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/Bone127
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/Bone127/Bone128
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/Bone127/Bone128/Bone129
+        weight: 1
+      - path: Monstre01/Circle029/b_Hand01(mirrored)032/Bone127/Bone128/Bone129/Bone130
+        weight: 1
+      - path: Monstre01/Circle030
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_annulaire01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_annulaire01(mirrored)033/b_annulaire02(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_annulaire01(mirrored)033/b_annulaire02(mirrored)033/b_annulaire03(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_auriculaire01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_auriculaire01(mirrored)033/b_auriculaire02(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_auriculaire01(mirrored)033/b_auriculaire02(mirrored)033/b_auriculaire03(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Index01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Index01(mirrored)033/b_index02(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Index01(mirrored)033/b_index02(mirrored)033/b_index03(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_majeur01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_majeur01(mirrored)033/b_majeur02(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_majeur01(mirrored)033/b_majeur02(mirrored)033/b_majeur03(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Pouce01(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Pouce01(mirrored)033/b_Pouce02(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/b_Pouce01(mirrored)033/b_Pouce02(mirrored)033/b_Pouce03(mirrored)033
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/Bone131
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/Bone131/Bone132
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/Bone131/Bone132/Bone133
+        weight: 1
+      - path: Monstre01/Circle030/b_Hand01(mirrored)033/Bone131/Bone132/Bone133/Bone134
+        weight: 1
+      - path: Monstre01/Circle031
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_annulaire01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_annulaire01(mirrored)034/b_annulaire02(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_annulaire01(mirrored)034/b_annulaire02(mirrored)034/b_annulaire03(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_auriculaire01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_auriculaire01(mirrored)034/b_auriculaire02(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_auriculaire01(mirrored)034/b_auriculaire02(mirrored)034/b_auriculaire03(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Index01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Index01(mirrored)034/b_index02(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Index01(mirrored)034/b_index02(mirrored)034/b_index03(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_majeur01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_majeur01(mirrored)034/b_majeur02(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_majeur01(mirrored)034/b_majeur02(mirrored)034/b_majeur03(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Pouce01(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Pouce01(mirrored)034/b_Pouce02(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/b_Pouce01(mirrored)034/b_Pouce02(mirrored)034/b_Pouce03(mirrored)034
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/Bone135
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/Bone135/Bone136
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/Bone135/Bone136/Bone137
+        weight: 1
+      - path: Monstre01/Circle031/b_Hand01(mirrored)034/Bone135/Bone136/Bone137/Bone138
+        weight: 1
+      - path: Monstre01/Circle032
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_annulaire01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_annulaire01(mirrored)035/b_annulaire02(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_annulaire01(mirrored)035/b_annulaire02(mirrored)035/b_annulaire03(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_auriculaire01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_auriculaire01(mirrored)035/b_auriculaire02(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_auriculaire01(mirrored)035/b_auriculaire02(mirrored)035/b_auriculaire03(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Index01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Index01(mirrored)035/b_index02(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Index01(mirrored)035/b_index02(mirrored)035/b_index03(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_majeur01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_majeur01(mirrored)035/b_majeur02(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_majeur01(mirrored)035/b_majeur02(mirrored)035/b_majeur03(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Pouce01(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Pouce01(mirrored)035/b_Pouce02(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/b_Pouce01(mirrored)035/b_Pouce02(mirrored)035/b_Pouce03(mirrored)035
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/Bone139
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/Bone139/Bone140
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/Bone139/Bone140/Bone141
+        weight: 1
+      - path: Monstre01/Circle032/b_Hand01(mirrored)035/Bone139/Bone140/Bone141/Bone142
+        weight: 1
+      - path: Monstre01/Circle033
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_annulaire01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_annulaire01(mirrored)036/b_annulaire02(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_annulaire01(mirrored)036/b_annulaire02(mirrored)036/b_annulaire03(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_auriculaire01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_auriculaire01(mirrored)036/b_auriculaire02(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_auriculaire01(mirrored)036/b_auriculaire02(mirrored)036/b_auriculaire03(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Index01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Index01(mirrored)036/b_index02(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Index01(mirrored)036/b_index02(mirrored)036/b_index03(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_majeur01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_majeur01(mirrored)036/b_majeur02(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_majeur01(mirrored)036/b_majeur02(mirrored)036/b_majeur03(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Pouce01(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Pouce01(mirrored)036/b_Pouce02(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/b_Pouce01(mirrored)036/b_Pouce02(mirrored)036/b_Pouce03(mirrored)036
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/Bone148
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/Bone148/Bone149
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/Bone148/Bone149/Bone150
+        weight: 1
+      - path: Monstre01/Circle033/b_Hand01(mirrored)036/Bone148/Bone149/Bone150/Bone151
+        weight: 1
+      - path: Monstre01/Circle034
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_annulaire01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_annulaire01(mirrored)037/b_annulaire02(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_annulaire01(mirrored)037/b_annulaire02(mirrored)037/b_annulaire03(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_auriculaire01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_auriculaire01(mirrored)037/b_auriculaire02(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_auriculaire01(mirrored)037/b_auriculaire02(mirrored)037/b_auriculaire03(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Index01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Index01(mirrored)037/b_index02(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Index01(mirrored)037/b_index02(mirrored)037/b_index03(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_majeur01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_majeur01(mirrored)037/b_majeur02(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_majeur01(mirrored)037/b_majeur02(mirrored)037/b_majeur03(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Pouce01(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Pouce01(mirrored)037/b_Pouce02(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/b_Pouce01(mirrored)037/b_Pouce02(mirrored)037/b_Pouce03(mirrored)037
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/Bone152
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/Bone152/Bone153
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/Bone152/Bone153/Bone154
+        weight: 1
+      - path: Monstre01/Circle034/b_Hand01(mirrored)037/Bone152/Bone153/Bone154/Bone155
+        weight: 1
+      - path: Monstre01/Circle035
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_annulaire01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_annulaire01(mirrored)038/b_annulaire02(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_annulaire01(mirrored)038/b_annulaire02(mirrored)038/b_annulaire03(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_auriculaire01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_auriculaire01(mirrored)038/b_auriculaire02(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_auriculaire01(mirrored)038/b_auriculaire02(mirrored)038/b_auriculaire03(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Index01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Index01(mirrored)038/b_index02(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Index01(mirrored)038/b_index02(mirrored)038/b_index03(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_majeur01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_majeur01(mirrored)038/b_majeur02(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_majeur01(mirrored)038/b_majeur02(mirrored)038/b_majeur03(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Pouce01(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Pouce01(mirrored)038/b_Pouce02(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/b_Pouce01(mirrored)038/b_Pouce02(mirrored)038/b_Pouce03(mirrored)038
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/Bone156
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/Bone156/Bone157
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/Bone156/Bone157/Bone158
+        weight: 1
+      - path: Monstre01/Circle035/b_Hand01(mirrored)038/Bone156/Bone157/Bone158/Bone159
+        weight: 1
+      - path: Monstre01/Circle036
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_annulaire01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_annulaire01(mirrored)039/b_annulaire02(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_annulaire01(mirrored)039/b_annulaire02(mirrored)039/b_annulaire03(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_auriculaire01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_auriculaire01(mirrored)039/b_auriculaire02(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_auriculaire01(mirrored)039/b_auriculaire02(mirrored)039/b_auriculaire03(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Index01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Index01(mirrored)039/b_index02(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Index01(mirrored)039/b_index02(mirrored)039/b_index03(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_majeur01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_majeur01(mirrored)039/b_majeur02(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_majeur01(mirrored)039/b_majeur02(mirrored)039/b_majeur03(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Pouce01(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Pouce01(mirrored)039/b_Pouce02(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/b_Pouce01(mirrored)039/b_Pouce02(mirrored)039/b_Pouce03(mirrored)039
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/Bone160
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/Bone160/Bone161
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/Bone160/Bone161/Bone162
+        weight: 1
+      - path: Monstre01/Circle036/b_Hand01(mirrored)039/Bone160/Bone161/Bone162/Bone163
+        weight: 1
+      - path: Monstre01/Circle037
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_annulaire01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_annulaire01(mirrored)040/b_annulaire02(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_annulaire01(mirrored)040/b_annulaire02(mirrored)040/b_annulaire03(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_auriculaire01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_auriculaire01(mirrored)040/b_auriculaire02(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_auriculaire01(mirrored)040/b_auriculaire02(mirrored)040/b_auriculaire03(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Index01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Index01(mirrored)040/b_index02(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Index01(mirrored)040/b_index02(mirrored)040/b_index03(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_majeur01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_majeur01(mirrored)040/b_majeur02(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_majeur01(mirrored)040/b_majeur02(mirrored)040/b_majeur03(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Pouce01(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Pouce01(mirrored)040/b_Pouce02(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/b_Pouce01(mirrored)040/b_Pouce02(mirrored)040/b_Pouce03(mirrored)040
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/Bone164
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/Bone164/Bone165
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/Bone164/Bone165/Bone166
+        weight: 1
+      - path: Monstre01/Circle037/b_Hand01(mirrored)040/Bone164/Bone165/Bone166/Bone167
+        weight: 1
+      - path: Monstre01/Circle038
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_annulaire01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_annulaire01(mirrored)041/b_annulaire02(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_annulaire01(mirrored)041/b_annulaire02(mirrored)041/b_annulaire03(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_auriculaire01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_auriculaire01(mirrored)041/b_auriculaire02(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_auriculaire01(mirrored)041/b_auriculaire02(mirrored)041/b_auriculaire03(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Index01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Index01(mirrored)041/b_index02(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Index01(mirrored)041/b_index02(mirrored)041/b_index03(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_majeur01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_majeur01(mirrored)041/b_majeur02(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_majeur01(mirrored)041/b_majeur02(mirrored)041/b_majeur03(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Pouce01(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Pouce01(mirrored)041/b_Pouce02(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/b_Pouce01(mirrored)041/b_Pouce02(mirrored)041/b_Pouce03(mirrored)041
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/Bone168
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/Bone168/Bone169
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/Bone168/Bone169/Bone170
+        weight: 1
+      - path: Monstre01/Circle038/b_Hand01(mirrored)041/Bone168/Bone169/Bone170/Bone171
+        weight: 1
+      - path: Monstre01/IK Chain020
+        weight: 1
+      - path: Monstre01/IK Chain021
+        weight: 1
+      - path: Monstre01/IK Chain022
+        weight: 1
+      - path: Monstre01/IK Chain023
+        weight: 1
+      - path: Monstre01/IK Chain024
+        weight: 1
+      - path: Monstre01/Line011
+        weight: 1
+      - path: Monstre01/Line014
+        weight: 1
+      - path: Monstre01/Line015
+        weight: 1
+      - path: Monstre01/Line016
+        weight: 1
+      - path: Monstre01/Line018
+        weight: 1
+      - path: Monstre01/MainMirror008
+        weight: 1
+      - path: Monstre01/MainMirror009
+        weight: 1
+      - path: Monstre01/MainMirror010
+        weight: 1
+      - path: Monstre01/MainMirror012
+        weight: 1
+      - path: Monstre01/MainMirror013
+        weight: 1
+      - path: Monstre01/MainMirror014
+        weight: 1
+      - path: Monstre01/MainMirror015
+        weight: 1
+      - path: Monstre01/MainMirror017
+        weight: 1
+      - path: Monstre01/MainMirror020
+        weight: 1
+      - path: Monstre01/MainMirror022
+        weight: 1
+      - path: Monstre01/MainMirror023
+        weight: 1
+      - path: Monstre01/MainMirror024
+        weight: 1
+      - path: Monstre01/MainMirror025
+        weight: 1
+      - path: Monstre01/MainMirror026
+        weight: 1
+      - path: Monstre01/MainMirror029
+        weight: 1
+      - path: Monstre01/MainMirror030
+        weight: 1
+      - path: Monstre01/MainMirror031
+        weight: 1
+      - path: Monstre01/MainMirror032
+        weight: 1
+      - path: Monstre01/MainMirror033
+        weight: 1
+      - path: Monstre01/MainMirror034
+        weight: 1
+      - path: Monstre01/MainMirror035
+        weight: 1
+      - path: Monstre01/MainMirror036
+        weight: 1
+      - path: Monstre01/MainMirror037
+        weight: 1
+      - path: Monstre01/MainMirror038
+        weight: 1
+      - path: Monstre01/MainMirror039
+        weight: 1
+      - path: Monstre01/MainMirror040
+        weight: 1
+      - path: Monstre01/MainMirror041
+        weight: 1
+      - path: Monstre01/MainMirror042
+        weight: 1
+      - path: Monstre01/Point057
+        weight: 1
+      - path: Monstre01/Point057/Point058
+        weight: 1
+      - path: Monstre01/Point057/Point058/Point059
+        weight: 1
+      - path: Monstre01/Point057/Point058/Point059/Point060
+        weight: 1
+      - path: Monstre01/Sky001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

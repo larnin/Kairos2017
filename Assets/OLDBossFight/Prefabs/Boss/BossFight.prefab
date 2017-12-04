@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1944531277262942}
+  m_IsPrefabParent: 1
+--- !u!1 &1944531277262942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4261242973877816}
+  - component: {fileID: 114965524727942694}
+  m_Layer: 0
+  m_Name: BossFight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4261242973877816
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944531277262942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 630.088, y: 316.44138, z: 37.008972}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114965524727942694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944531277262942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d5cc1109e31a04ba814a3422ea3c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UI: {fileID: 0}
+  m_stages:
+  - cards:
+    - name: Billet de train
+      description: "Achet\xE9 r\xE9cemment. D\xE9chir\xE9 en deux puis rafistol\xE9
+        au scotch"
+    - name: "Dipl\xF4me de Doctorat"
+      description: "D\xE9cern\xE9e avec f\xE9licitation \xE0 la jeune femme"
+    - name: Bouteille de vin
+      description: "A moiti\xE9e vide, pourtant achet\xE9e hier"
+    - name: Ebauche de lettre
+      description: "Tr\xE8s ratur\xE9e. On y discerne, entre autre, le mot \"divorce\""
+    - name: Photo triste de la famille
+      description: "La femme a le regard \xE9teint. L'homme, le regard dur. Le b\xE9b\xE9
+        pleure"
+    rounds:
+    - sentenses:
+      - Je me sens juste un peu malade
+      - Tout va bien, on est heureux
+      rightSentenseindex: 1
+      rightCardName: Photo triste de la famille
+    - sentenses:
+      - "De toute fa\xE7on, je peux rien esp\xE9rer de mieux pour moi..."
+      - "C'est juste une dispute passag\xE8re, rien de grave !"
+      - "C'\xE9tait mon choix aussi de venir ici"
+      rightSentenseindex: 0
+      rightCardName: "Dipl\xF4me de Doctorat"
+    - sentenses:
+      - T'es juste jaloux de nous trois
+      - "C'est juste des petits probl\xE8mes, rien de \"s\xE9rieux\""
+      - "C'est la faute de ses parents \xE7a !"
+      - "J'ai juste besoin de m'adapter \xE0 cette nouvelle vie !"
+      rightSentenseindex: 1
+      rightCardName: Bouteille de vin
+    - sentenses:
+      - Mon mari m'aime, il m'aidera !
+      - "On a pas besoin que quelqu'un s'en m\xEAle !"
+      - 'Laisse nous juste tranquille ! '
+      - J'ai jamais vraiment voulu partir non plus....
+      - "Et fuir aidera, peut-\xEAtre ?"
+      - "Mais j'ai d\xE9j\xE0 trouv\xE9 des hobbys...des amis..."
+      rightSentenseindex: 3
+      rightCardName: Ebauche de lettre
+    - sentenses:
+      - "Mais... Il me faut du temps.. j'ai pas pris ma d\xE9cision... "
+      - Les abandonner ? Jamais !
+      rightSentenseindex: 0
+      rightCardName: Billet de train
+  - cards:
+    - name: Oui
+      description: "C'est dur. Mais c'est une bonne d\xE9cision"
+    rounds:
+    - sentenses:
+      - "Au fond de moi, j'ai d\xE9j\xE0 d\xE9cid\xE9 hein ? J'\xE9tais juste en train
+        de me mentir"
+      rightSentenseindex: 0
+      rightCardName: Oui
+  m_playerLife: 5
+  m_timerTime: 10
