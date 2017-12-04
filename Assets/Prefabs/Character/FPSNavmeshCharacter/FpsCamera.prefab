@@ -9,47 +9,48 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1987142631473010}
+  m_RootGameObject: {fileID: 1382201824570194}
   m_IsPrefabParent: 1
---- !u!1 &1987142631473010
+--- !u!1 &1382201824570194
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4356781521058466}
-  - component: {fileID: 20035656305860246}
-  - component: {fileID: 92874133570445638}
-  - component: {fileID: 124875889484123724}
-  - component: {fileID: 81586558891980032}
-  - component: {fileID: 114116046164100624}
+  - component: {fileID: 4913562854427484}
+  - component: {fileID: 20421321746575852}
+  - component: {fileID: 92738874422766896}
+  - component: {fileID: 124533845935740796}
+  - component: {fileID: 81427441709485420}
+  - component: {fileID: 114757701071277174}
+  - component: {fileID: 114666377758333438}
   m_Layer: 0
-  m_Name: FollowCamera
+  m_Name: FpsCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4356781521058466
+--- !u!4 &4913562854427484
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1987142631473010}
+  m_GameObject: {fileID: 1382201824570194}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 190.9636, y: 16.669338, z: 452.55283}
+  m_LocalPosition: {x: 191.26358, y: 17.62, z: 441.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &20035656305860246
+--- !u!20 &20421321746575852
 Camera:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1987142631473010}
+  m_GameObject: {fileID: 1382201824570194}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -62,7 +63,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -80,36 +81,49 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!81 &81586558891980032
+--- !u!81 &81427441709485420
 AudioListener:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1987142631473010}
+  m_GameObject: {fileID: 1382201824570194}
   m_Enabled: 1
---- !u!92 &92874133570445638
+--- !u!92 &92738874422766896
 Behaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1987142631473010}
+  m_GameObject: {fileID: 1382201824570194}
   m_Enabled: 1
---- !u!114 &114116046164100624
+--- !u!114 &114666377758333438
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1987142631473010}
+  m_GameObject: {fileID: 1382201824570194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3eb3cd4c5376a8458ff240dc8198671, type: 3}
+  m_Script: {fileID: 11500000, guid: 3768e5cdae49be44091a526140351f2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FPSMode: 0
-  m_FPSCameraHeight: 1.5
-  m_updateType: 2
+  m_interactableMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_maxRayDistance: 10
+--- !u!114 &114757701071277174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1382201824570194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be04affb12f9e0458f2dd3c650db101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_updateType: 0
   m_target: {fileID: 0}
-  m_inverseVerticalAxis: 1
+  m_cameraHeight: 1.5
   m_manualCameraSpeedMultiplier: 150
   m_manualCameraVerticalSpeedMultiplier: 80
   m_manualCameraDeadZone: 0.1
@@ -117,35 +131,21 @@ MonoBehaviour:
   m_mouseSensibility: 0.1
   m_mouseSmoothDeadzoneSpeed: 1
   m_mouseSmoothDeadzonePow: 2
-  m_minVerticaloffset: -0.8
   m_clampVerticalRotationTop: 85
-  m_clampVerticalRotationBottom: -45
-  m_clampVerticalRotationTopFPS: 85
-  m_clampVerticalRotationBottomFPS: -85
-  m_startSpeedRotationDecreaseDestance: 30
+  m_clampVerticalRotationBottom: -85
+  m_startSpeedRotationDecreaseDestance: 20
   m_distanceReduction: 5
-  m_cameraRotSpeed: 40
-  m_distanceMultiplierEffect: 1.5
-  m_distanceMultiplierSpeed: 1
-  m_distanceMultiplierTestCount: 16
-  m_distanceMultiplierMaxDistanceTest: 20
-  m_distanceMultiplierTestHeight: 1
-  m_distanceMultiplierPow: 0.8
   m_verticalRecenterSpeed: 1
   m_recenterMaxTime: 1.5
   m_recenterDelay: 0.5
-  m_groundAngleMultiplier: 0.5
-  m_cameraRayRadius: 0.3
-  m_blockedComeSpeed: 30
-  m_blockedBackSpeed: 4
-  m_recenterTime: 0.5
+  m_groundAngleMultiplier: 0.2
   m_raycastsMask:
     serializedVersion: 2
     m_Bits: 1
---- !u!124 &124875889484123724
+--- !u!124 &124533845935740796
 Behaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1987142631473010}
+  m_GameObject: {fileID: 1382201824570194}
   m_Enabled: 1
