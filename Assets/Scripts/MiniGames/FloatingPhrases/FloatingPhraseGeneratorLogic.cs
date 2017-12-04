@@ -32,7 +32,6 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
     [SerializeField]
     private float m_resetAfterLast = 1f;
     
-    private bool m_coroutineIsRunning = false;
     private List<FloatingPhraseLogic> m_spawnedFloatingPhrase = new List<FloatingPhraseLogic>();
 
     private RumorsOfShadowsManager m_rumorsOfShadowsManager;
@@ -40,14 +39,11 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
     {
         m_rumorsOfShadowsManager = rumorsOfShadowsManager;
     }
-    private Transform playerTransform;
     
     private bool m_pauseGenerator = false;
     
     void Start()
     {
-        playerTransform = GameObject.FindWithTag("Player").transform;
-
         foreach (SpokenPhrase e in m_spokenPhrases)
         {
             e.m_spawnPoint = e.m_shadow.Find("SpawnPoint");
@@ -92,8 +88,8 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             };
         
         // on set les delegates
-        spawned.onDestroyCallback += OnPhraseIsDestroy;
-        spawned.IsWholeAnimationOccuring += m_rumorsOfShadowsManager.globalAnimationOccuring;
+        spawned.m_onDestroy += OnPhraseIsDestroy;
+        spawned.m_isWholeAnimationOccuring += m_rumorsOfShadowsManager.globalAnimationOccuring;
         
         m_spawnedFloatingPhrase.Add(spawned);
     }
@@ -142,8 +138,6 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
 
     public IEnumerator SpawningFloatingPhraseInSequence()
     {
-        m_coroutineIsRunning = true;
-
         int currentIndex = 0;
         float elapsedTime = 0;
         float targetTime = m_spokenPhrases[currentIndex].m_SpawnAfterThePreviousOne;

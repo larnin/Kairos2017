@@ -8,56 +8,33 @@ using System;
  * cette classe sert a gérer le mini jeu
  * 
  * * */
-public class RumorsOfShadowsManager : MiniGameBaseLogic
+public class RumorsOfShadowsManager : MonoBehaviour
 {
-
+    [Serializable]
+    class MatchedShadow
+    {
+        public Transform shadowA;
+        public Transform shadowB;
+    }
+    
     [SerializeField]
     private IndiceGeneratorLogic indiceGeneratorLogic;
-
-    [SerializeField]
-    private float m_animationTime = 0.5f;
-    [SerializeField]
-    private int m_numberOfMatchNeeded = 2;
-
+    
     [SerializeField]
     private TextMeshProAttributes m_hoverAttributes;
-    public TextMeshProAttributes hoverAttributes
-    {
-        get
-        {
-            return m_hoverAttributes;
-        }
-    }
+    public TextMeshProAttributes hoverAttributes { get { return m_hoverAttributes; } }
 
     [SerializeField]
     private TextMeshProAttributes m_selectedAttributes;
-    public TextMeshProAttributes selectedAttributes
-    {
-        get
-        {
-            return m_selectedAttributes;
-        }
-    }
+    public TextMeshProAttributes selectedAttributes { get { return m_selectedAttributes; } }
 
     [SerializeField]
     private TextMeshProAttributes m_MatchedAttributes;
-    public TextMeshProAttributes matchedAttributes
-    {
-        get
-        {
-            return m_MatchedAttributes;
-        }
-    }
+    public TextMeshProAttributes matchedAttributes{ get{ return m_MatchedAttributes; }}
 
     [SerializeField]
     private TextMeshProAttributes m_unMtachedAttributes;
-    public TextMeshProAttributes UnMtachedAttributes
-    {
-        get
-        {
-            return m_unMtachedAttributes;
-        }
-    }
+    public TextMeshProAttributes UnMtachedAttributes{ get{ return m_unMtachedAttributes; }}
     
     [SerializeField]
     float  m_timeTransitionBetweenAttributes = 0.4f;
@@ -68,50 +45,32 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
             return m_timeTransitionBetweenAttributes;
         }
     }
-    
-    [SerializeField]
-    private List<ShadowMatched> shadowMatchedList;
-    
-    [System.Serializable]
-    class ShadowMatched
-    {
-        public Transform A;
-        public Transform B;
-    }
 
-    private bool m_activated = true;
+    [SerializeField]
+    private List<MatchedShadow> shadowMatchedList;
+
     private bool m_animationIsOccuring = false;
-    private int m_currentNumberOfMatch = 0;
 
     private FloatingPhraseGeneratorLogic[] m_generators;
-    private FloatingPhraseLogic m_firstSelected = null;
-
-    private FloatingPhraseLogic m_secondSelected = null;
 
     private Transform m_firstShadowSelected = null;
     private Transform m_secondShadowSelected = null;
     
-    public override void activate()
-    {
-
-    }
-    
     // Use this for initialization
     void Awake ()
     {
-        m_generators = FindObjectsOfType<FloatingPhraseGeneratorLogic>();
+        m_generators = gameObject.GetComponentsInParent<FloatingPhraseGeneratorLogic>();
         foreach(FloatingPhraseGeneratorLogic e in m_generators)
         {
             e.setRumorsOfShadowsManager(this);
         }
     }
 	
-
-    private bool canMatch(Transform shadow1,Transform shadow2)
+    private bool canMatch(Transform shadowA,Transform shadowB)
     {
-        foreach (ShadowMatched e in shadowMatchedList)
+        foreach (MatchedShadow e in shadowMatchedList)
         {
-            if ( (e.A == shadow1 && e.B == shadow2) || (e.B == shadow1 && e.A == shadow2) )
+            if ( (e.shadowA == shadowA && e.shadowB == shadowB) || (e.shadowB == shadowA && e.shadowA == shadowB) )
             {
                 return true;
             }
@@ -220,8 +179,8 @@ public class RumorsOfShadowsManager : MiniGameBaseLogic
         shadow2.GetComponent<ShadowTriggerSelectionLogic>().shadowIsMatched = true;
 
         yield return null;
-        m_firstSelected = null;
-        m_secondSelected = null;
+        m_firstShadowSelected = null;
+        m_secondShadowSelected = null;
 
         m_animationIsOccuring = false;
     }
