@@ -2653,7 +2653,6 @@ MonoBehaviour:
     m_GoToRestSpot: 1
     m_RestBeforeDissapear: 1
   m_resetAfterLast: 4
-  m_stack: 1
 --- !u!4 &1013920618
 Transform:
   m_ObjectHideFlags: 0
@@ -4332,7 +4331,6 @@ MonoBehaviour:
     m_GoToRestSpot: 0
     m_RestBeforeDissapear: 0
   m_resetAfterLast: 4
-  m_stack: 1
 --- !u!4 &1322508464
 Transform:
   m_ObjectHideFlags: 0
@@ -7185,10 +7183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66dc80633a7efd047bde6ee628b8be7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraTransformUsed: {fileID: 0}
   indiceGeneratorLogic: {fileID: 396603463}
-  m_animationTime: 0.5
-  m_numberOfMatchNeeded: 2
   m_hoverAttributes: {fileID: 11400000, guid: 243d94fb4f3af304c8cb02f521776e00, type: 2}
   m_selectedAttributes: {fileID: 11400000, guid: 9dfab4dcbb75881498a3167477d5ccf7,
     type: 2}
@@ -7198,8 +7193,8 @@ MonoBehaviour:
     type: 2}
   m_timeTransitionBetweenAttributes: 0.4
   shadowMatchedList:
-  - A: {fileID: 1633868113}
-    B: {fileID: 1502992005}
+  - shadowA: {fileID: 1633868113}
+    shadowB: {fileID: 1502992005}
 --- !u!4 &1954880454
 Transform:
   m_ObjectHideFlags: 0

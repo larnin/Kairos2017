@@ -59,7 +59,7 @@ public class RumorsOfShadowsManager : MonoBehaviour
     // Use this for initialization
     void Awake ()
     {
-        m_generators = gameObject.GetComponentsInParent<FloatingPhraseGeneratorLogic>();
+        m_generators = gameObject.GetComponentsInChildren<FloatingPhraseGeneratorLogic>();
         foreach(FloatingPhraseGeneratorLogic e in m_generators)
         {
             e.setRumorsOfShadowsManager(this);
