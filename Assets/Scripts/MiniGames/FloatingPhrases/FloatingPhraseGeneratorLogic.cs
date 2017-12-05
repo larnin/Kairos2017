@@ -9,7 +9,7 @@ using DG.Tweening;
  * */
 public class FloatingPhraseGeneratorLogic : MonoBehaviour
 {
-    [System.Serializable]
+    [Serializable]
     public class SpokenPhrase
     {
         public FloatingPhraseLogic m_floatingPhrasePrebabs = null;

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActivateGameObjectOnEnter : TriggerBaseLogic {
-
+public class ActivateGameObjectOnEnter : TriggerBaseLogic
+{
     [SerializeField]
     private FloatingPhraseGeneratorLogic m_toActivate = null;
     [SerializeField]

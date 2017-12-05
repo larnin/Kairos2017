@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using DG.Tweening;
 
 public class IndiceGeneratorLogic : MonoBehaviour {
 
-    [System.Serializable]
+    [Serializable]
     public class SpawnIndiceAtNumber
     {
         public GameObject m_phraseIndice = null;
@@ -16,7 +17,7 @@ public class IndiceGeneratorLogic : MonoBehaviour {
     private SpawnIndiceAtNumber[] m_phraseIndices;
     
     int m_indiceNumber = 0; // collected
-    int m_phraseAppearNumber = 0;// appeared
+    int m_phraseAppearNumber = 0; // appeared
 
     Transform m_goToPoints;
     Transform m_spawnPoint;

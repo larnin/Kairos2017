@@ -13,9 +13,6 @@ using System.Reflection;
 public class FloatingPhraseLogic : MonoBehaviour
 {
     private TextMeshProAttributes m_baseAttributes;
-    
-    public delegate void destroyedDelegate(FloatingPhraseLogic floatingPhrase);
-    public delegate bool isWholeAnimationOccuringDelegate();
 
     private Camera m_camera;
     private TextMeshPro m_textToChange;
@@ -33,7 +30,6 @@ public class FloatingPhraseLogic : MonoBehaviour
     [NonSerialized] public Action<FloatingPhraseLogic> m_onDestroy;
     [NonSerialized] public Func<bool> m_isWholeAnimationOccuring;
     
-    // Use this for initialization
     void Awake ()
     {
         m_camera = Camera.main;
@@ -46,8 +42,7 @@ public class FloatingPhraseLogic : MonoBehaviour
     {  
         Init();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {        
         transform.LookAt(m_camera.transform);
