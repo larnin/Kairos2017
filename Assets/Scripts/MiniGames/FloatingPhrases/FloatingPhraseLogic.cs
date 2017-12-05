@@ -12,8 +12,8 @@ using System.Reflection;
  * */
 public class FloatingPhraseLogic : MonoBehaviour
 {
-    private TextMeshProAttributes m_baseAttributes;
-
+    private TextMeshProAttributes m_baseAttributes = null;
+    
     private Camera m_camera;
     private TextMeshPro m_textToChange;
     
@@ -73,12 +73,12 @@ public class FloatingPhraseLogic : MonoBehaviour
            DOTween.To(() => m_textToChange.color,
                 x => { m_textToChange.color = x; m_textToChange.faceColor = x;},
                 value.m_faceSettingColor,
-                m_timeTransitionBetweenAttributes);
+                value.m_timeToApply);
 
            DOTween.To( () => m_textToChange.outlineColor, 
                 x => m_textToChange.outlineColor = x, 
-                value.m_outlineColor, 
-                m_timeTransitionBetweenAttributes);
+                value.m_outlineColor,
+                value.m_timeToApply);
         }
     }
 
@@ -87,6 +87,7 @@ public class FloatingPhraseLogic : MonoBehaviour
         value.m_fontStyle = m_textToChange.fontStyle;
         value.m_faceSettingColor = m_textToChange.color;
         value.m_outlineColor = m_textToChange.outlineColor;
+        value.m_timeToApply = 0.4f;
     }
 
     private void Init()

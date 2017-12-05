@@ -7183,7 +7183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66dc80633a7efd047bde6ee628b8be7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indiceGeneratorLogic: {fileID: 396603463}
+  m_indiceGeneratorLogic: {fileID: 396603463}
   m_hoverAttributes: {fileID: 11400000, guid: 243d94fb4f3af304c8cb02f521776e00, type: 2}
   m_selectedAttributes: {fileID: 11400000, guid: 9dfab4dcbb75881498a3167477d5ccf7,
     type: 2}
@@ -7192,7 +7192,7 @@ MonoBehaviour:
   m_unMtachedAttributes: {fileID: 11400000, guid: 90086c78ec1fd6f46a67400be7180d39,
     type: 2}
   m_timeTransitionBetweenAttributes: 0.4
-  shadowMatchedList:
+  m_shadowMatchedList:
   - shadowA: {fileID: 1633868113}
     shadowB: {fileID: 1502992005}
 --- !u!4 &1954880454

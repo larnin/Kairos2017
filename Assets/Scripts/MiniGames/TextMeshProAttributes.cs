@@ -10,5 +10,6 @@ public class TextMeshProAttributes : ScriptableObject
     public FontStyles m_fontStyle;
     public Color m_faceSettingColor;
     public Color m_outlineColor;
+    public float m_timeToApply = 0.4f; 
 }
 

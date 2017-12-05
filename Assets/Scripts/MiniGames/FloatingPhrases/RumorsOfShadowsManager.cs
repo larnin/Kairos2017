@@ -186,16 +186,15 @@ public class RumorsOfShadowsManager : MonoBehaviour
 
         ShadowTrigger1.m_selected = false;
         ShadowTrigger2.m_selected = false;
-
+        
         FloatingPhraseGeneratorLogic G2 = shadow2.parent.parent.gameObject.GetComponentInChildren<FloatingPhraseGeneratorLogic>();
+
         G2.StopAllCoroutines();
-
-        float time = m_timeTransitionBetweenAttributes + 0.001f;
         
-        G2.destroyAllPhrase(time, m_unMtachedAttributes);
+        G2.destroyAllPhrase(m_unMtachedAttributes.m_timeToApply, m_unMtachedAttributes);
         
 
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(m_unMtachedAttributes.m_timeToApply);
         m_firstShadowSelected = null;
         m_firstShadowSelected = null;
         ShadowTrigger1.m_selected = false;
