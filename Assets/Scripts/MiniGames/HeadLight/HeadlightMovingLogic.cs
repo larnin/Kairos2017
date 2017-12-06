@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeadlightMovingLogic : MonoBehaviour {
-
+public class HeadlightMovingLogic : MonoBehaviour
+{
     [SerializeField]
     private Material[] m_materials;
 

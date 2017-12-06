@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using DG.Tweening;
 
 /*
@@ -9,7 +10,7 @@ using DG.Tweening;
  * */
 public class FloatingPhraseGeneratorLogic : MonoBehaviour
 {
-    [System.Serializable]
+    [Serializable]
     public class SpokenPhrase
     {
         public FloatingPhraseLogic m_floatingPhrasePrebabs = null;
@@ -81,6 +82,10 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         }
 
         // on les fait allez au spot 
+        TextMeshPro textMesh = spawned.GetComponent<TextMeshPro>();
+        textMesh.alpha = 0f;
+        textMesh.DOFade(1f, spokenPhrase.m_GoToRestSpot);
+
         spawned.transform.DOMove(spokenPhrase.m_goPoints.GetChild(spokenPhrase.m_indiceOfTheGoPoint).position,
             spokenPhrase.m_GoToRestSpot).onComplete = () =>
             {

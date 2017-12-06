@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5493f64ab56330d4aa065b7e21771740, type: 3}
   m_Name: Matched
   m_EditorClassIdentifier: 
-  m_fontStyle: 1
-  m_faceSettingColor: {r: 0.862069, g: 1, b: 0, a: 1}
-  m_outlineColor: {r: 0.2827587, g: 0, b: 1, a: 1}
+  m_fontStyle: 0
+  m_faceSettingColor: {r: 0.88356996, g: 0.9705882, b: 0.4852941, a: 1}
+  m_outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  m_timeToApply: 0.4

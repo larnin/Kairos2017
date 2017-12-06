@@ -4,21 +4,20 @@ using UnityEngine;
 using DG.Tweening;
 using System;
 
-/*
- * cette classe sert a gérer le mini jeu
- * 
- * * */
+/// <summary>
+/// cette classe sert a gérer le mini jeu
+/// </summary>
 public class RumorsOfShadowsManager : MonoBehaviour
 {
     [Serializable]
     class MatchedShadow
     {
-        public Transform shadowA;
-        public Transform shadowB;
+        public Transform shadowA = null;
+        public Transform shadowB = null;
     }
-    
+
     [SerializeField]
-    private IndiceGeneratorLogic indiceGeneratorLogic;
+    private IndiceGeneratorLogic m_indiceGeneratorLogic;
     
     [SerializeField]
     private TextMeshProAttributes m_hoverAttributes;
@@ -42,7 +41,7 @@ public class RumorsOfShadowsManager : MonoBehaviour
 
 
     [SerializeField]
-    private List<MatchedShadow> shadowMatchedList;
+    private List<MatchedShadow> m_shadowMatchedList;
 
     private bool m_animationIsOccuring = false;
 
@@ -51,7 +50,6 @@ public class RumorsOfShadowsManager : MonoBehaviour
     private Transform m_firstShadowSelected = null;
     private Transform m_secondShadowSelected = null;
     
-    // Use this for initialization
     void Awake ()
     {
         m_generators = gameObject.GetComponentsInChildren<FloatingPhraseGeneratorLogic>();
@@ -63,7 +61,7 @@ public class RumorsOfShadowsManager : MonoBehaviour
 	
     private bool canMatch(Transform shadowA,Transform shadowB)
     {
-        foreach (MatchedShadow e in shadowMatchedList)
+        foreach (MatchedShadow e in m_shadowMatchedList)
         {
             if ( (e.shadowA == shadowA && e.shadowB == shadowB) || (e.shadowB == shadowA && e.shadowA == shadowB) )
             {
@@ -111,7 +109,6 @@ public class RumorsOfShadowsManager : MonoBehaviour
             }
             return true;
         }
-
         else if (m_firstShadowSelected == transformShadow)
         {
             foreach (Transform e in transformShadow)
@@ -127,15 +124,17 @@ public class RumorsOfShadowsManager : MonoBehaviour
 
             if (canMatch(m_firstShadowSelected, m_secondShadowSelected))
             {
-                indiceGeneratorLogic.unlockOneIndice();
+                m_indiceGeneratorLogic.unlockOneIndice();
                 StartCoroutine(animationForCorrectPhrase(m_firstShadowSelected, m_secondShadowSelected));
+                return false;
             }
             else
             {
                 StartCoroutine(animationForWrongPhrase(m_firstShadowSelected, m_secondShadowSelected));
+                return false;
             }
             
-            return true;
+            
         }
     }
 
@@ -151,7 +150,7 @@ public class RumorsOfShadowsManager : MonoBehaviour
     public  IEnumerator animationForCorrectPhrase(Transform shadow1, Transform shadow2)
     {
         m_animationIsOccuring = true;
-
+        
         foreach (Transform e in shadow1)
         {
             FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
@@ -170,13 +169,18 @@ public class RumorsOfShadowsManager : MonoBehaviour
             }
         }
 
-        shadow1.GetComponent<ShadowTriggerSelectionLogic>().m_matched = true;
-        shadow2.GetComponent<ShadowTriggerSelectionLogic>().m_matched = true;
+        ShadowTriggerSelectionLogic ShadowTrigger1 = shadow1.GetComponent<ShadowTriggerSelectionLogic>();
+        ShadowTriggerSelectionLogic ShadowTrigger2 = shadow2.GetComponent<ShadowTriggerSelectionLogic>();
+
+        ShadowTrigger1.m_matched = true;
+        ShadowTrigger1.updateFeedback();
+        ShadowTrigger2.m_matched = true;
+        ShadowTrigger2.updateFeedback();
+
 
         yield return null;
         m_firstShadowSelected = null;
         m_secondShadowSelected = null;
-
         m_animationIsOccuring = false;
     }
 
@@ -186,19 +190,18 @@ public class RumorsOfShadowsManager : MonoBehaviour
 
         ShadowTriggerSelectionLogic ShadowTrigger1 = shadow1.GetComponent<ShadowTriggerSelectionLogic>();
         ShadowTriggerSelectionLogic ShadowTrigger2 = shadow2.GetComponent<ShadowTriggerSelectionLogic>();
-
+        
         ShadowTrigger1.m_selected = false;
-        ShadowTrigger2.m_selected = false;
-
+        ShadowTrigger1.updateFeedback();
+        
         FloatingPhraseGeneratorLogic G2 = shadow2.parent.parent.gameObject.GetComponentInChildren<FloatingPhraseGeneratorLogic>();
+
         G2.StopAllCoroutines();
-
-        float time = m_timeTransitionBetweenAttributes + 0.001f;
         
-        G2.destroyAllPhrase(time, m_unMtachedAttributes);
+        G2.destroyAllPhrase(m_unMtachedAttributes.m_timeToApply, m_unMtachedAttributes);
         
 
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(m_unMtachedAttributes.m_timeToApply);
         m_firstShadowSelected = null;
         m_firstShadowSelected = null;
         ShadowTrigger1.m_selected = false;

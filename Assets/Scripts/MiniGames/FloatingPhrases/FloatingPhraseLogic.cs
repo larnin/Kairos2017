@@ -12,11 +12,8 @@ using System.Reflection;
  * */
 public class FloatingPhraseLogic : MonoBehaviour
 {
-    private TextMeshProAttributes m_baseAttributes;
+    private TextMeshProAttributes m_baseAttributes = null;
     
-    public delegate void destroyedDelegate(FloatingPhraseLogic floatingPhrase);
-    public delegate bool isWholeAnimationOccuringDelegate();
-
     private Camera m_camera;
     private TextMeshPro m_textToChange;
     
@@ -33,7 +30,6 @@ public class FloatingPhraseLogic : MonoBehaviour
     [NonSerialized] public Action<FloatingPhraseLogic> m_onDestroy;
     [NonSerialized] public Func<bool> m_isWholeAnimationOccuring;
     
-    // Use this for initialization
     void Awake ()
     {
         m_camera = Camera.main;
@@ -46,8 +42,7 @@ public class FloatingPhraseLogic : MonoBehaviour
     {  
         Init();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {        
         transform.LookAt(m_camera.transform);
@@ -78,12 +73,12 @@ public class FloatingPhraseLogic : MonoBehaviour
            DOTween.To(() => m_textToChange.color,
                 x => { m_textToChange.color = x; m_textToChange.faceColor = x;},
                 value.m_faceSettingColor,
-                m_timeTransitionBetweenAttributes);
+                value.m_timeToApply);
 
            DOTween.To( () => m_textToChange.outlineColor, 
                 x => m_textToChange.outlineColor = x, 
-                value.m_outlineColor, 
-                m_timeTransitionBetweenAttributes);
+                value.m_outlineColor,
+                value.m_timeToApply);
         }
     }
 
@@ -92,6 +87,7 @@ public class FloatingPhraseLogic : MonoBehaviour
         value.m_fontStyle = m_textToChange.fontStyle;
         value.m_faceSettingColor = m_textToChange.color;
         value.m_outlineColor = m_textToChange.outlineColor;
+        value.m_timeToApply = 0.4f;
     }
 
     private void Init()
