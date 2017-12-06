@@ -186,7 +186,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: lorem ipsum bla bla bla bla bla bla bla bla bla bla
+  m_text: <size=10%>b
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
@@ -290,12 +290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c431ae9b6a14a42807e3b053b6b658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BeginningScale: {x: 0.2, y: 0.5, z: 1.5}
-  m_BeginningColor: {r: 0, g: 0, b: 0, a: 1}
-  m_heightWhenPhraseDisappear: 5.4
-  m_speedUP: 0.5
-  m_shadow: {fileID: 0}
-  m_matchingIndex: 7
 --- !u!222 &222075104976666700
 CanvasRenderer:
   m_ObjectHideFlags: 1
