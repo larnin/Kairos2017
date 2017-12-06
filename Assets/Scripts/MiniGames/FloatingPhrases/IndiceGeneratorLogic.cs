@@ -40,5 +40,7 @@ public class IndiceGeneratorLogic : MonoBehaviour {
     {
         m_spawnPoint = transform.Find("SpawnPoint");
         m_goToPoints = transform.Find("GoPoints");
+
+        unlockOneIndice();
     }
 }
