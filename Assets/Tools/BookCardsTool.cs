@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 [Serializable]
@@ -53,6 +55,7 @@ public class CardsSerializer
     public List<CardData> cards;
 }
 
+#if UNITY_EDITOR
 public class BookCardsTool : EditorWindow
 {
     string assetPath = "Assets/Resources/InventoryBook/";
@@ -212,3 +215,4 @@ public class AddCardWindow : ScriptableWizard
         Close();
     }
 }
+#endif

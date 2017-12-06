@@ -58,6 +58,14 @@ public class GameManagerLogic : MonoBehaviour
     {
         while (!operation.isDone)
             yield return new WaitForEndOfFrame();
+
+#if UNITY_EDITOR //rebuild the lights in the editor
+        if (UnityEditor.Lightmapping.giWorkflowMode == UnityEditor.Lightmapping.GIWorkflowMode.Iterative)
+        {
+            DynamicGI.UpdateEnvironment();
+        }
+#endif
+
         if (callback != null)
             callback();
     }

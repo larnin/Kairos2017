@@ -14,6 +14,8 @@ class TriggerChangeSceneInputLogic : TriggerBaseLogic
     [SerializeField] string m_validInputText;
     [SerializeField] string m_scenename;
     [SerializeField] float m_fadeTime;
+    [SerializeField] string m_newScenePlayerTag;
+    [SerializeField] string m_newScenePlayerSpawnTag;
 
     bool m_validatedInput = false;
     bool m_isOnTrigger = false;
@@ -56,7 +58,22 @@ class TriggerChangeSceneInputLogic : TriggerBaseLogic
 
     void onSceneLoaded()
     {
+        movePlayerToNewLocation();
         Event<FadeEvent>.Broadcast(new FadeEvent(Color.black));
         Event<FadeEvent>.Broadcast(new FadeEvent(new Color(0, 0, 0, 0), m_fadeTime));
+    }
+
+    void movePlayerToNewLocation()
+    {
+        var p = GameObject.FindGameObjectWithTag(m_newScenePlayerTag);
+        var spawn = GameObject.FindGameObjectWithTag(m_newScenePlayerSpawnTag);
+
+        Debug.Log(p + " * " + spawn);
+
+        if (p == null || spawn == null)
+            return;
+        Debug.Log("Poop");
+        p.transform.position = spawn.transform.position;
+        p.transform.rotation = spawn.transform.rotation;
     }
 }

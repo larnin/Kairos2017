@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Blockout/Ile01/Ile01.unity
     guid: e644d08503139dc4889883bf7e3f7296
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Toto.unity
     guid: b8aa0057698f6924bbf17577f7876253
+  - enabled: 1
+    path: Assets/Blockout/Ile01/Ile02.unity
+    guid: c14553d25f6d2fe48930dc84311d2ca1

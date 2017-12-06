@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System.IO;
 
 [Serializable]
@@ -101,6 +103,7 @@ public class StorySerializer
     public List<StoryCategory> categories;
 }
 
+#if UNITY_EDITOR
 public class BookStoryTool : EditorWindow
 {
     string assetPath = "Assets/Resources/InventoryBook/";
@@ -331,3 +334,4 @@ public class AddStoryEntryWindow : ScriptableWizard
         Close();
     }
 }
+#endif
