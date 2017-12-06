@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class GameManagerLogic : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class GameManagerLogic : MonoBehaviour
     string inventoryButton = "Inventory";
 
     [SerializeField] GameObject m_inventory;
+    [SerializeField] GameObject m_cardPrefab;
 
     SubscriberList m_subscriberlist = new SubscriberList();
     bool m_paused = false;
@@ -29,7 +31,9 @@ public class GameManagerLogic : MonoBehaviour
 
         m_subscriberlist.Add(new Event<LoadSceneEvent>.Subscriber(onLoadScene));
         m_subscriberlist.Add(new Event<PauseEvent>.Subscriber(onPauseEnd));
+        m_subscriberlist.Add(new Event<FindCardEvent>.Subscriber(onCardFind));
         m_subscriberlist.Subscribe();
+        DOVirtual.DelayedCall(10, () => { Event<FindCardEvent>.Broadcast(new FindCardEvent("fdg")); });
     }
 
     private void Update()
@@ -79,5 +83,29 @@ public class GameManagerLogic : MonoBehaviour
         m_paused = false;
 
         Event<FadeEvent>.Broadcast(new FadeEvent(new Color(0, 0, 0, 0), 1));
+    }
+
+    void onCardFind(FindCardEvent e)
+    {
+        G.sys.saveSystem.set(e.name, (int)CardData.VisibilityState.VISIBLE);
+        var card = Instantiate(m_cardPrefab);
+        var comp = card.GetComponent<BigCardLogic>();
+
+        string assetName = "InventoryBook/Cards";
+
+        var text = Resources.Load<TextAsset>(assetName);
+        if (text != null)
+        {
+            var items = JsonUtility.FromJson<CardsSerializer>(text.text);
+            if (items != null)
+            {
+                foreach(var c in items.cards)
+                    if(c.name == e.name)
+                    {
+                        comp.set((c.fancyName.Length == 0 ? c.name : c.fancyName), c.textureName, c.description);
+                        break;
+                    }
+            }
+        }
     }
 }
