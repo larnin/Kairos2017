@@ -6,10 +6,19 @@ ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Box032
+    100004: vitre
     400000: //RootNode
+    400002: Box032
+    400004: vitre
     2300000: //RootNode
+    2300002: Box032
+    2300004: vitre
     3300000: //RootNode
+    3300002: Box032
+    3300004: vitre
     4300000: Box032
+    4300002: vitre
     9500000: //RootNode
   materials:
     importMaterials: 1
