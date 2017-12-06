@@ -90,21 +90,8 @@ public class GameManagerLogic : MonoBehaviour
         var card = Instantiate(m_cardPrefab);
         var comp = card.GetComponent<BigCardLogic>();
 
-        string assetName = "InventoryBook/Cards";
-
-        var text = Resources.Load<TextAsset>(assetName);
-        if (text != null)
-        {
-            var items = JsonUtility.FromJson<CardsSerializer>(text.text);
-            if (items != null)
-            {
-                foreach(var c in items.cards)
-                    if(c.name == e.name)
-                    {
-                        comp.set((c.fancyName.Length == 0 ? c.name : c.fancyName), c.textureName, c.description);
-                        break;
-                    }
-            }
-        }
+        var cardItem = G.sys.getCard(e.name);
+        if (cardItem != null)
+            comp.set(cardItem.fancyName.Length > 0 ? cardItem.fancyName : cardItem.name, cardItem.textureName, cardItem.description);
     }
 }
