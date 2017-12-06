@@ -15,6 +15,9 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
     string inputJoyY = "Vertical";
     string inputValidate = "Interact";
 
+    string sensibilityMouseProperty = "CursorMouse";
+    string sensibilityControlerProperty = "CursorControler";
+
     [SerializeField] float m_mouseSensibility = 1;
     [SerializeField] float m_controlerSensibility = 1;
     [SerializeField] Vector2 m_mouseArea = new Vector2(1900, 1060);
@@ -38,6 +41,9 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
 
     Vector3 m_oldPosition;
 
+    float m_sensibilityMousePropertyValue = 1;
+    float m_sensibilityControlerPropertyValue = 1;
+
     private void Awake()
     {
         m_rectTransform = GetComponent<RectTransform>();
@@ -49,12 +55,18 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
 
         m_subscriberList.Add(new Event<EnableCursorEvent>.Subscriber(onEnableEvent));
         m_subscriberList.Add(new Event<ChangeCursorTextureEvent>.Subscriber(onChangeTextureEvent));
+        m_subscriberList.Add(new Event<PauseEvent>.Subscriber(onPause));
         m_subscriberList.Subscribe();
     }
 
     private void Start()
     {
         gameObject.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        updateSavedProperties();
     }
 
     private void OnDestroy()
@@ -64,8 +76,8 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
     
     private void Update()
     {
-        var dir = new Vector2(Input.GetAxisRaw(inputMouseX), Input.GetAxisRaw(inputMouseY)) * m_mouseSensibility
-            + new Vector2(Input.GetAxis(inputJoyX), Input.GetAxis(inputJoyY)) * m_controlerSensibility;
+        var dir = new Vector2(Input.GetAxisRaw(inputMouseX), Input.GetAxisRaw(inputMouseY)) * m_mouseSensibility * m_sensibilityMousePropertyValue
+            + new Vector2(Input.GetAxis(inputJoyX), Input.GetAxis(inputJoyY)) * m_controlerSensibility * m_sensibilityControlerPropertyValue;
 
         m_oldPosition = m_rectTransform.position;
 
@@ -228,5 +240,24 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
 
         var dir = m_rectTransform.position - m_oldPosition;
         m_selectedInteractable.onDrag(new InteractableBaseLogic.DragData(dir,  d1 - d2, m_camera.transform), InteractableBaseLogic.OrigineType.CURSOR);
+    }
+
+    void onPause(PauseEvent e)
+    {
+        if (e.paused)
+            return;
+        updateSavedProperties();
+    }
+
+    void updateSavedProperties()
+    {
+        float maxValue = 100;
+        float maxmultiplier = 5;
+
+        m_sensibilityMousePropertyValue = G.sys.saveSystem.getFloat(sensibilityMouseProperty, 0);
+        m_sensibilityControlerPropertyValue = G.sys.saveSystem.getFloat(sensibilityControlerProperty, 0);
+
+        m_sensibilityMousePropertyValue = m_sensibilityMousePropertyValue > 0 ? (maxmultiplier - 1) * m_sensibilityMousePropertyValue / maxValue + 1 : m_sensibilityMousePropertyValue / (maxValue * (1 + 1 / (maxmultiplier - 1))) + 1;
+        m_sensibilityControlerPropertyValue = m_sensibilityControlerPropertyValue > 0 ? (maxmultiplier - 1) * m_sensibilityControlerPropertyValue / maxValue + 1 : m_sensibilityControlerPropertyValue / (maxValue * (1 + 1 / (maxmultiplier - 1))) + 1;
     }
 }

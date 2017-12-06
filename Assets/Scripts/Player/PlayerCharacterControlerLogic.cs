@@ -1,15 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterBase))]
-class PlayerCharacterControler : MonoBehaviour
+[RequireComponent(typeof(BaseCharacterLogic))]
+class PlayerCharacterControlerLogic : MonoBehaviour
 {
-    [SerializeField] List<MeshRenderer> m_renderers = new List<MeshRenderer>();
-
     const string moveXAxis = "Horizontal";
     const string moveYAxis = "Vertical";
 
-    CharacterBase m_character;
+    BaseCharacterLogic m_character;
     Transform m_camera;
 
     SubscriberList m_subscriberList = new SubscriberList();
@@ -18,11 +16,12 @@ class PlayerCharacterControler : MonoBehaviour
 
     private void Awake()
     {
-        m_character = GetComponent<CharacterBase>();
+        m_character = GetComponent<BaseCharacterLogic>();
         m_camera = Camera.main.transform;
 
         m_subscriberList.Add(new Event<LockPlayerControlesEvent>.Subscriber(onLockControles));
         m_subscriberList.Add(new Event<ChangeControlerViewEvent>.Subscriber(onChangeControlerView));
+        m_subscriberList.Add(new Event<PauseEvent>.Subscriber(onPause));
         m_subscriberList.Subscribe();
     }
 
@@ -53,8 +52,11 @@ class PlayerCharacterControler : MonoBehaviour
 
     void onChangeControlerView(ChangeControlerViewEvent e)
     {
-        bool enable = e.viewType == ChangeControlerViewEvent.ControlerViewType.THIRD_VIEW;
-        foreach (var r in m_renderers)
-            r.enabled = enable;
+
+    }
+
+    void onPause(PauseEvent e)
+    {
+        onLockControles(new LockPlayerControlesEvent(e.paused));
     }
 }

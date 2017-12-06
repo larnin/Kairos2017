@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Animator))]
-public class NavMeshCharacter : CharacterBase
+public class NavMeshCharacterLogic : BaseCharacterLogic
 {
     [SerializeField] float m_moveSpeed = 1f;
     [SerializeField] float m_movingTurnSpeed = 360f;
