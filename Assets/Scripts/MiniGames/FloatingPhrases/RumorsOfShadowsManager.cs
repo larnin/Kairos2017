@@ -126,13 +126,15 @@ public class RumorsOfShadowsManager : MonoBehaviour
             {
                 m_indiceGeneratorLogic.unlockOneIndice();
                 StartCoroutine(animationForCorrectPhrase(m_firstShadowSelected, m_secondShadowSelected));
+                return false;
             }
             else
             {
                 StartCoroutine(animationForWrongPhrase(m_firstShadowSelected, m_secondShadowSelected));
+                return false;
             }
             
-            return true;
+            
         }
     }
 
@@ -165,15 +167,20 @@ public class RumorsOfShadowsManager : MonoBehaviour
             {
                 floatingPhrase.applyTextMeshProAttributes(m_MatchedAttributes, false);
             }
-        } 
+        }
 
-        shadow1.GetComponent<ShadowTriggerSelectionLogic>().m_matched = true;
-        shadow2.GetComponent<ShadowTriggerSelectionLogic>().m_matched = true;
+        ShadowTriggerSelectionLogic ShadowTrigger1 = shadow1.GetComponent<ShadowTriggerSelectionLogic>();
+        ShadowTriggerSelectionLogic ShadowTrigger2 = shadow2.GetComponent<ShadowTriggerSelectionLogic>();
+
+        ShadowTrigger1.m_matched = true;
+        ShadowTrigger1.updateFeedback();
+        ShadowTrigger2.m_matched = true;
+        ShadowTrigger2.updateFeedback();
+
 
         yield return null;
         m_firstShadowSelected = null;
         m_secondShadowSelected = null;
-
         m_animationIsOccuring = false;
     }
 
@@ -183,9 +190,9 @@ public class RumorsOfShadowsManager : MonoBehaviour
 
         ShadowTriggerSelectionLogic ShadowTrigger1 = shadow1.GetComponent<ShadowTriggerSelectionLogic>();
         ShadowTriggerSelectionLogic ShadowTrigger2 = shadow2.GetComponent<ShadowTriggerSelectionLogic>();
-
+        
         ShadowTrigger1.m_selected = false;
-        ShadowTrigger2.m_selected = false;
+        ShadowTrigger1.updateFeedback();
         
         FloatingPhraseGeneratorLogic G2 = shadow2.parent.parent.gameObject.GetComponentInChildren<FloatingPhraseGeneratorLogic>();
 

@@ -21,6 +21,8 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
     ShadowParameters m_hoverParam = new ShadowParameters(Color.grey);
     [SerializeField]
     ShadowParameters m_selectedParam = new ShadowParameters(Color.white, 0.75f);
+    [SerializeField]
+    ShadowParameters m_matchedParam = new ShadowParameters(Color.white, 0.9f);
 
     [SerializeField]
     private float m_normalTransitionTime = 0.4f;
@@ -80,16 +82,31 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
         if (m_playerIsInside && Input.GetButtonDown("Interact") && !m_matched)
         {
             m_selected = m_rumorsOfShadowsManager.selectShadow(transform);
-            if (m_selected)
-            {
-                applyEffect(m_selectedParam, m_normalTransitionTime);
-            }
-            else
-            {
-                applyEffect(m_hoverParam, m_normalTransitionTime);
-            }
+            updateFeedback();
         }
             
+    }
+
+    public void updateFeedback()
+    {
+        if(m_matched)
+        {
+            applyEffect(m_matchedParam, m_normalTransitionTime);
+        }
+
+        else if (m_selected)
+        {
+            applyEffect(m_selectedParam, m_normalTransitionTime);
+        }
+
+        else if(m_playerIsInside)
+        {
+            applyEffect(m_hoverParam, m_normalTransitionTime);
+        }
+        else
+        {
+            applyEffect(m_baseParam, m_normalTransitionTime);
+        }
     }
 
     void applyEffect(ShadowParameters shadowParameters, float applyTime)
