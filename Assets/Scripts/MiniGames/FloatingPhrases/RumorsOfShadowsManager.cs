@@ -37,7 +37,7 @@ public class RumorsOfShadowsManager : MonoBehaviour
     
     [SerializeField]
     float  m_timeTransitionBetweenAttributes = 0.4f;
-    public float timeTransitionBetweenAttribute { get { return m_timeTransitionBetweenAttributes; } }
+    public float timeTransitionBetweenAttribute { get { return m_timeTransitionBetweenAttributes; }}
 
 
     [SerializeField]

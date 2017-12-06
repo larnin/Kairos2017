@@ -2182,8 +2182,8 @@ MonoBehaviour:
     baseColor: {r: 0.375, g: 0.40517232, b: 1, a: 1}
     alpha: 0.5
   m_matchedParam:
-    baseColor: {r: 0.1102941, g: 0.74229205, b: 1, a: 1}
-    alpha: 0.2
+    baseColor: {r: 0, g: 0, b: 0, a: 1}
+    alpha: 0
   m_normalTransitionTime: 0.6
   m_disappearTransitionTime: 2
 --- !u!65 &695357481
@@ -5278,8 +5278,8 @@ MonoBehaviour:
     baseColor: {r: 0.375, g: 0.40517232, b: 1, a: 1}
     alpha: 0.5
   m_matchedParam:
-    baseColor: {r: 0.1102941, g: 0.74229205, b: 1, a: 1}
-    alpha: 0.2
+    baseColor: {r: 0, g: 0, b: 0, a: 1}
+    alpha: 0
   m_normalTransitionTime: 0.6
   m_disappearTransitionTime: 2
 --- !u!65 &1502992007
@@ -5709,8 +5709,8 @@ MonoBehaviour:
     baseColor: {r: 0.375, g: 0.40517232, b: 1, a: 1}
     alpha: 0.5
   m_matchedParam:
-    baseColor: {r: 0.1102941, g: 0.74229205, b: 1, a: 1}
-    alpha: 0.2
+    baseColor: {r: 0, g: 0, b: 0, a: 1}
+    alpha: 0
   m_normalTransitionTime: 0.6
   m_disappearTransitionTime: 2
 --- !u!65 &1610097891
