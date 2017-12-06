@@ -1078,7 +1078,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bf2e8262257340942a618422a9d6a3b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2201,7 +2201,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bf2e8262257340942a618422a9d6a3b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3099,7 +3099,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bf2e8262257340942a618422a9d6a3b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3261,6 +3261,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c9c8782edc0b54babf68560b6d7bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_hoverParam:
+    baseColor: {r: 0, g: 0, b: 0, a: 0}
+    alpha: 0
+  m_selectedParam:
+    baseColor: {r: 0, g: 0, b: 0, a: 0}
+    alpha: 0
+  m_normalTransitionTime: 0.4
+  m_disappearTransitionTime: 1
 --- !u!65 &1114420201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4187,7 +4195,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bf2e8262257340942a618422a9d6a3b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4514,6 +4522,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c9c8782edc0b54babf68560b6d7bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_hoverParam:
+    baseColor: {r: 0, g: 0, b: 0, a: 0}
+    alpha: 0
+  m_selectedParam:
+    baseColor: {r: 0, g: 0, b: 0, a: 0}
+    alpha: 0
+  m_normalTransitionTime: 0.4
+  m_disappearTransitionTime: 1
 --- !u!65 &1359391588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4774,6 +4790,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c9c8782edc0b54babf68560b6d7bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_hoverParam:
+    baseColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+    alpha: 0.8
+  m_selectedParam:
+    baseColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+    alpha: 0.8
+  m_normalTransitionTime: 0.6
+  m_disappearTransitionTime: 2
 --- !u!65 &1502992007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5087,7 +5111,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4356781521058466, guid: dc9cd405a9253154ba9e3840dd1eb18c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -11.6
+      value: -9.88
       objectReference: {fileID: 0}
     - target: {fileID: 4356781521058466, guid: dc9cd405a9253154ba9e3840dd1eb18c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5095,7 +5119,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4356781521058466, guid: dc9cd405a9253154ba9e3840dd1eb18c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.34
+      value: -8.18
       objectReference: {fileID: 0}
     - target: {fileID: 4356781521058466, guid: dc9cd405a9253154ba9e3840dd1eb18c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5194,6 +5218,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c9c8782edc0b54babf68560b6d7bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_hoverParam:
+    baseColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+    alpha: 0.8
+  m_selectedParam:
+    baseColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+    alpha: 0.8
+  m_normalTransitionTime: 0.6
+  m_disappearTransitionTime: 2
 --- !u!65 &1610097891
 BoxCollider:
   m_ObjectHideFlags: 0

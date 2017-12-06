@@ -148,7 +148,7 @@ public class RumorsOfShadowsManager : MonoBehaviour
     public  IEnumerator animationForCorrectPhrase(Transform shadow1, Transform shadow2)
     {
         m_animationIsOccuring = true;
-
+        
         foreach (Transform e in shadow1)
         {
             FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
@@ -165,7 +165,7 @@ public class RumorsOfShadowsManager : MonoBehaviour
             {
                 floatingPhrase.applyTextMeshProAttributes(m_MatchedAttributes, false);
             }
-        }
+        } 
 
         shadow1.GetComponent<ShadowTriggerSelectionLogic>().m_matched = true;
         shadow2.GetComponent<ShadowTriggerSelectionLogic>().m_matched = true;
