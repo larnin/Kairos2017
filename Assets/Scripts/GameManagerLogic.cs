@@ -33,7 +33,6 @@ public class GameManagerLogic : MonoBehaviour
         m_subscriberlist.Add(new Event<PauseEvent>.Subscriber(onPauseEnd));
         m_subscriberlist.Add(new Event<FindCardEvent>.Subscriber(onCardFind));
         m_subscriberlist.Subscribe();
-        DOVirtual.DelayedCall(10, () => { Event<FindCardEvent>.Broadcast(new FindCardEvent("fdg")); });
     }
 
     private void Update()
