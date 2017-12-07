@@ -3176,27 +3176,27 @@ MonoBehaviour:
     m_indiceOfTheGoPoint: 0
     m_SpawnAfterThePreviousOne: 0
     m_GoToRestSpot: 1
-    m_RestBeforeDissapear: 1
+    m_RestBeforeDissapear: 2
   - m_floatingPhrasePrebabs: {fileID: 114835051819064730, guid: 2489cdf2556d6f449b75fc2ae13b0267,
       type: 2}
     m_shadow: {fileID: 1502992005}
     m_indiceOfTheGoPoint: 1
     m_SpawnAfterThePreviousOne: 0.1
     m_GoToRestSpot: 1
-    m_RestBeforeDissapear: 1
+    m_RestBeforeDissapear: 2
   - m_floatingPhrasePrebabs: {fileID: 114835051819064730, guid: 2489cdf2556d6f449b75fc2ae13b0267,
       type: 2}
     m_shadow: {fileID: 1633868113}
     m_indiceOfTheGoPoint: 0
-    m_SpawnAfterThePreviousOne: 2
+    m_SpawnAfterThePreviousOne: 3
     m_GoToRestSpot: 1
-    m_RestBeforeDissapear: 1
+    m_RestBeforeDissapear: 2
   - m_floatingPhrasePrebabs: {fileID: 114835051819064730, guid: 2489cdf2556d6f449b75fc2ae13b0267,
       type: 2}
     m_shadow: {fileID: 1502992005}
     m_indiceOfTheGoPoint: 0
-    m_SpawnAfterThePreviousOne: 2
-    m_GoToRestSpot: 1
+    m_SpawnAfterThePreviousOne: 3
+    m_GoToRestSpot: 2
     m_RestBeforeDissapear: 1
   m_resetAfterLast: 4
 --- !u!4 &1013920618
