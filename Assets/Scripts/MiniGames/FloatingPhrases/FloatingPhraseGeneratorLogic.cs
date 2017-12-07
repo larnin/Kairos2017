@@ -57,20 +57,25 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         SpokenPhrase spokenPhrase = m_spokenPhrases[index];
 
         Vector3 positionForSpawn = spokenPhrase.m_spawnPoint.position;
+
+        Transform pivot = (new GameObject()).transform;
+        pivot.SetParent(spokenPhrase.m_shadow, true);
+        pivot.position = positionForSpawn;
+        pivot.rotation = spokenPhrase.m_spawnPoint.rotation;
+
         FloatingPhraseLogic spawned = Instantiate(spokenPhrase.m_floatingPhrasePrebabs, 
-            positionForSpawn, 
-            Quaternion.identity);
+            positionForSpawn,
+            spokenPhrase.m_spawnPoint.rotation);
         
         spawned.m_index = index;
 
         // place the script in another transform; 
-        Transform pivot = (new GameObject()).transform;
-        pivot.SetParent(spokenPhrase.m_shadow, true);
-        pivot.position = positionForSpawn;
+
         spawned.transform.SetParent(pivot, true);
         spawned.transform.localPosition = Vector3.zero;
-        pivot.gameObject.AddComponent<LookAtCameraLogic>();
+        // pivot.gameObject.AddComponent<LookAtCameraLogic>();
         // spawned.transform.SetParent(spokenPhrase.m_shadow, true);
+        spawned.transform.Rotate(Vector3.up, 180f);
 
         ShadowTriggerSelectionLogic shadowTriggerSelection = spokenPhrase.m_shadow.GetComponent<ShadowTriggerSelectionLogic>();
 
