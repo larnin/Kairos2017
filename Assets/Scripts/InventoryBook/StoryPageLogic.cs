@@ -61,7 +61,7 @@ public class StoryPageLogic : MonoBehaviour
 
     void createCategories()
     {
-        var categories = G.sys.getDefaultStory();
+        var categories = G.sys.ressourcesData.defaultStory;
 
         if (categories.Count == 0)
             return;
@@ -132,7 +132,7 @@ public class StoryPageLogic : MonoBehaviour
     void createCategoryPage(string categoryName)
     {
         StoryCategory c = null;
-        foreach(var cat in G.sys.getDefaultStory())
+        foreach(var cat in G.sys.ressourcesData.defaultStory)
             if(cat.categoryName == categoryName)
             {
                 c = cat;
@@ -149,7 +149,7 @@ public class StoryPageLogic : MonoBehaviour
             if (item.contentAlignement == StoryItem.ContentAlignement.TOP_LEFT)
                 pos = new Vector2(m_storyArea.x + m_storyArea.width + item.shift, m_storyArea.y);
 
-            var visibility = G.sys.getStoryItemState(c.categoryName, item.name, item.visibility);
+            var visibility = SaveAttributes.getStoryItemState(c.categoryName, item.name, item.visibility);
 
             if(visibility != StoryItem.VisibilityState.HIDDEN)
             {

@@ -65,7 +65,7 @@ public class BookCardsTool : EditorWindow
 
     Vector2 m_scrollPosition = Vector2.zero;
 
-    [MenuItem("Tools/InventoryBook/Cards")]
+    [MenuItem("Tools/Kairos/InventoryBook/Cards")]
     static void Init()
     {
         BookCardsTool window = (BookCardsTool)EditorWindow.GetWindow(typeof(BookCardsTool));

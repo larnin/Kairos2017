@@ -28,6 +28,7 @@ public class GameManagerLogic : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+        G.sys.gameManager = this;
 
         m_subscriberlist.Add(new Event<LoadSceneEvent>.Subscriber(onLoadScene));
         m_subscriberlist.Add(new Event<PauseEvent>.Subscriber(onPauseEnd));
@@ -98,7 +99,7 @@ public class GameManagerLogic : MonoBehaviour
         var card = Instantiate(m_cardPrefab);
         var comp = card.GetComponent<BigCardLogic>();
 
-        var cardItem = G.sys.getCard(e.name);
+        var cardItem = G.sys.ressourcesData.getCard(e.name);
         if (cardItem != null)
             comp.set(cardItem.fancyName.Length > 0 ? cardItem.fancyName : cardItem.name, cardItem.textureName, cardItem.description);
     }

@@ -112,7 +112,7 @@ public class BookStoryTool : EditorWindow
     List<StoryCategory> m_categories = new List<StoryCategory>();
     Vector2 m_scrollPosition = Vector2.zero;
 
-    [MenuItem("Tools/InventoryBook/Story")]
+    [MenuItem("Tools/Kairos/InventoryBook/Story")]
     static void Init()
     {
         BookStoryTool window = (BookStoryTool)EditorWindow.GetWindow(typeof(BookStoryTool));
