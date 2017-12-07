@@ -62,7 +62,15 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             Quaternion.identity);
         
         spawned.m_index = index;
-        spawned.transform.SetParent(spokenPhrase.m_shadow, true);
+
+        // place the script in another transform; 
+        Transform pivot = (new GameObject()).transform;
+        pivot.SetParent(spokenPhrase.m_shadow, true);
+        pivot.position = positionForSpawn;
+        spawned.transform.SetParent(pivot, true);
+        spawned.transform.localPosition = Vector3.zero;
+        pivot.gameObject.AddComponent<LookAtCameraLogic>();
+        // spawned.transform.SetParent(spokenPhrase.m_shadow, true);
 
         ShadowTriggerSelectionLogic shadowTriggerSelection = spokenPhrase.m_shadow.GetComponent<ShadowTriggerSelectionLogic>();
 
@@ -86,7 +94,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         textMesh.alpha = 0f;
         textMesh.DOFade(1f, spokenPhrase.m_GoToRestSpot);
 
-        spawned.transform.DOMove(spokenPhrase.m_goPoints.GetChild(spokenPhrase.m_indiceOfTheGoPoint).position,
+        pivot.transform.DOMove(spokenPhrase.m_goPoints.GetChild(spokenPhrase.m_indiceOfTheGoPoint).position,
             spokenPhrase.m_GoToRestSpot).onComplete = () =>
             {
                StartCoroutine(deathAnimationForFloatingPhrase(spokenPhrase.m_RestBeforeDissapear, spawned));   
@@ -112,11 +120,11 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             {
                 e.m_beingDestroy = true;
 
-                if(!e.transform.parent.GetComponent<ShadowTriggerSelectionLogic>().m_matched)
+                if(!e.GetComponentInParent<ShadowTriggerSelectionLogic>().m_matched)
                 {
                     e.applyTextMeshProAttributes(effect, false);
                 }
-                Destroy(e.gameObject, timeToDoIt);
+                Destroy(e.transform.parent.gameObject, timeToDoIt);
             }
         }
         m_spawnedFloatingPhrase.Clear();
@@ -141,12 +149,12 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         {
             floatingPhrase.m_beingDestroy = true;
 
-            if(! floatingPhrase.transform.parent.GetComponent<ShadowTriggerSelectionLogic>().m_matched )
+            if(! floatingPhrase.GetComponentInParent< ShadowTriggerSelectionLogic>().m_matched )
             {
                 floatingPhrase.applyTextMeshProAttributes(m_rumorsOfShadowsManager.UnMtachedAttributes, false);
             }
             
-            Destroy(floatingPhrase.gameObject, m_rumorsOfShadowsManager.timeTransitionBetweenAttribute);
+            Destroy(floatingPhrase.transform.parent.gameObject, m_rumorsOfShadowsManager.timeTransitionBetweenAttribute);
         }
     }
 
