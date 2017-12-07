@@ -87,4 +87,24 @@ public sealed class G
             return null;
         return c.items.Find(x => { return x.name == item; });
     }
+
+    public StoryItem.VisibilityState getStoryItemState(string category, string itemName, StoryItem.VisibilityState defaultValue = StoryItem.VisibilityState.HIDDEN)
+    {
+        return (StoryItem.VisibilityState)saveSystem.getInt("Story." + category + "." + itemName, (int)defaultValue);
+    }
+
+    public void setStoryItemState(string category, string itemName, StoryItem.VisibilityState state)
+    {
+        saveSystem.set("Story." + category + "." + itemName, (int)state);
+    }
+
+    public CardData.VisibilityState getCardState(string cardName, CardData.VisibilityState defaultValue = CardData.VisibilityState.HIDDEN)
+    {
+        return (CardData.VisibilityState)saveSystem.getInt("Card." + cardName, (int)defaultValue);
+    }
+
+    public void setCardState(string cardName, CardData.VisibilityState state)
+    {
+        saveSystem.set("Card." + cardName, (int)state);
+    }
 }
