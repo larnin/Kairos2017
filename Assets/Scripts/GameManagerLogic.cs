@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class GameManagerLogic : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class GameManagerLogic : MonoBehaviour
     string inventoryButton = "Inventory";
 
     [SerializeField] GameObject m_inventory;
+    [SerializeField] GameObject m_cardPrefab;
 
     SubscriberList m_subscriberlist = new SubscriberList();
     bool m_paused = false;
@@ -29,6 +31,7 @@ public class GameManagerLogic : MonoBehaviour
 
         m_subscriberlist.Add(new Event<LoadSceneEvent>.Subscriber(onLoadScene));
         m_subscriberlist.Add(new Event<PauseEvent>.Subscriber(onPauseEnd));
+        m_subscriberlist.Add(new Event<FindCardEvent>.Subscriber(onCardFind));
         m_subscriberlist.Subscribe();
     }
 
@@ -87,5 +90,16 @@ public class GameManagerLogic : MonoBehaviour
         m_paused = false;
 
         Event<FadeEvent>.Broadcast(new FadeEvent(new Color(0, 0, 0, 0), 1));
+    }
+
+    void onCardFind(FindCardEvent e)
+    {
+        G.sys.saveSystem.set(e.name, (int)CardData.VisibilityState.VISIBLE);
+        var card = Instantiate(m_cardPrefab);
+        var comp = card.GetComponent<BigCardLogic>();
+
+        var cardItem = G.sys.getCard(e.name);
+        if (cardItem != null)
+            comp.set(cardItem.fancyName.Length > 0 ? cardItem.fancyName : cardItem.name, cardItem.textureName, cardItem.description);
     }
 }
