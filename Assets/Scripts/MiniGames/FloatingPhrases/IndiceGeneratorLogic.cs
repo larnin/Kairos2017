@@ -13,8 +13,8 @@ public class IndiceGeneratorLogic : MonoBehaviour {
         public int m_atWhatNumberToHappen = 0;
     }
 
-    [SerializeField]
-    private SpawnIndiceAtNumber[] m_phraseIndices;
+    [SerializeField] private string cardName = "TEST";
+    [SerializeField] private SpawnIndiceAtNumber[] m_phraseIndices;
     
     int m_indiceNumber = 0; // collected
     int m_phraseAppearNumber = 0; // appeared
@@ -31,6 +31,12 @@ public class IndiceGeneratorLogic : MonoBehaviour {
                 Transform P = (Instantiate(e.m_phraseIndice, m_spawnPoint.position, Quaternion.identity) as GameObject).transform;
                 P.DOMove(m_goToPoints.GetChild(m_phraseAppearNumber).position, 1.0f);
                 m_phraseAppearNumber++;
+
+                if(m_phraseAppearNumber == m_phraseIndices.Length)
+                {
+                    //event<FindCardEvent>.
+                    Event<FindCardEvent>.Broadcast(new FindCardEvent(cardName));
+                }
             }
         }
         m_indiceNumber++;
