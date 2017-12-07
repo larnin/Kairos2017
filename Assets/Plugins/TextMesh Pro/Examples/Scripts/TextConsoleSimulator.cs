@@ -6,6 +6,9 @@ namespace TMPro.Examples
 {
     public class TextConsoleSimulator : MonoBehaviour
     {
+        [SerializeField]
+        float TimeBetweenChar = 0.01f;
+
         private TMP_Text m_TextComponent;
         private bool hasTextChanged;
 
@@ -64,15 +67,15 @@ namespace TMPro.Examples
 
                 if (visibleCount > totalVisibleCharacters)
                 {
-                    yield return new WaitForSeconds(1.0f);
-                    visibleCount = 0;
+                    break;
                 }
+                
 
                 textComponent.maxVisibleCharacters = visibleCount; // How many characters should TextMeshPro display?
 
                 visibleCount += 1;
 
-                yield return new WaitForSeconds(0.0f);
+                yield return new WaitForSeconds(TimeBetweenChar);
             }
         }
 
