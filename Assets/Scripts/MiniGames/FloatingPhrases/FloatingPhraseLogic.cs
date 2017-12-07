@@ -45,8 +45,8 @@ public class FloatingPhraseLogic : MonoBehaviour
     
     void Update()
     {        
-        transform.LookAt(m_camera.transform);
-        transform.Rotate(Vector3.up, 180f);
+       // transform.LookAt(m_camera.transform);
+       // transform.Rotate(Vector3.up, 180f);
     }
 
     void OnDestroy()
