@@ -59,14 +59,14 @@ public class VirtualCursorLogic : SerializedMonoBehaviour
         m_subscriberList.Subscribe();
     }
 
-    private void OnEnable()
-    {
-        updateSavedProperties();
-    }
-
     private void Start()
     {
         gameObject.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        updateSavedProperties();
     }
 
     private void OnDestroy()

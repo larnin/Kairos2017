@@ -111,7 +111,11 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             if(e && !e.m_beingDestroy)
             {
                 e.m_beingDestroy = true;
-                e.applyTextMeshProAttributes(effect, false);
+
+                if(!e.transform.parent.GetComponent<ShadowTriggerSelectionLogic>().m_matched)
+                {
+                    e.applyTextMeshProAttributes(effect, false);
+                }
                 Destroy(e.gameObject, timeToDoIt);
             }
         }
@@ -136,7 +140,12 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         if(floatingPhrase)
         {
             floatingPhrase.m_beingDestroy = true;
-            floatingPhrase.applyTextMeshProAttributes(m_rumorsOfShadowsManager.UnMtachedAttributes, false);
+
+            if(! floatingPhrase.transform.parent.GetComponent<ShadowTriggerSelectionLogic>().m_matched )
+            {
+                floatingPhrase.applyTextMeshProAttributes(m_rumorsOfShadowsManager.UnMtachedAttributes, false);
+            }
+            
             Destroy(floatingPhrase.gameObject, m_rumorsOfShadowsManager.timeTransitionBetweenAttribute);
         }
     }
