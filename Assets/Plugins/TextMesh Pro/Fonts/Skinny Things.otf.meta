@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: fdee8f83aa17fc04681efb9770b6a64f
+timeCreated: 1512579261
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Skinny Things
+  fontNames:
+  - Skinny Things
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
