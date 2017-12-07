@@ -54,6 +54,12 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
 
     void SpawnFloatingPhrase(int index = 0)
     {
+        foreach (SpokenPhrase e in m_spokenPhrases)
+        {
+            e.m_spawnPoint = e.m_shadow.Find("SpawnPoint");
+            e.m_goPoints = e.m_shadow.Find("GoPoints");
+        }
+
         SpokenPhrase spokenPhrase = m_spokenPhrases[index];
 
         Vector3 positionForSpawn = spokenPhrase.m_spawnPoint.position;
@@ -195,5 +201,11 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+
+    public List<SpokenPhrase> getList()
+    {
+        return m_spokenPhrases;
     }
 }
