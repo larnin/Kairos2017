@@ -122,7 +122,10 @@ GameObject:
   - component: {fileID: 82427837}
   - component: {fileID: 82427836}
   - component: {fileID: 82427835}
+  - component: {fileID: 82427842}
+  - component: {fileID: 82427841}
   - component: {fileID: 82427840}
+  - component: {fileID: 82427843}
   m_Layer: 0
   m_Name: TextMeshPro
   m_TagString: Untagged
@@ -311,16 +314,58 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 82427834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a3137e2d3084894db34769f08cb2ff2, type: 3}
+  m_Script: {fileID: 11500000, guid: 32c83a5d3ba42b84aa26386eac47566b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 10
-  m_amplitude: 1.5
-  m_randomnessAmplitude: 0.2
-  m_directionUsed: 2
-  m_spaceUsed: 0
+  AngleMultiplier: 1
+  SpeedMultiplier: 1
+  CurveScale: 1
+--- !u!114 &82427841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82427834}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa12d191e718c945ac55da73fa469db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AngleMultiplier: 1
+  SpeedMultiplier: 1
+  ScaleMultiplier: 1
+  RotationMultiplier: 1
+--- !u!114 &82427842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82427834}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4769cb37968ea948a763a9a89f9e583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AngleMultiplier: 1
+  SpeedMultiplier: 1
+  CurveScale: 1
+--- !u!114 &82427843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82427834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f775a1009084db4e892af64e5cbf25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AngleMultiplier: 1
+  SpeedMultiplier: 1
+  CurveScale: 1
+  m_speedUsedForSmooth: 1
 --- !u!1 &129402245
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,11 +541,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1790927770}
-  m_LocalRotation: {x: -0, y: 0.19812252, z: -0, w: 0.9801773}
-  m_LocalPosition: {x: -0.033524632, y: 0, z: 10.210851}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 9.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 82427839}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 22.854002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
