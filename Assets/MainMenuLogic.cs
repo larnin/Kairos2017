@@ -15,12 +15,19 @@ public class MainMenuLogic : MonoBehaviour
 
     public void onStart()
     {
-        //todo start game
+        G.sys.loopSystem.startLoop(1);
     }
 
     public void onContinue()
     {
-        //todo continue game
+        G.sys.loopSystem.startLoop(SaveAttributes.getCurrentLoopIndex());
+    }
+
+    public void onReset()
+    {
+        G.sys.saveSystem.reset();
+        if (SaveAttributes.getCurrentLoopIndex() <= 0)
+            transform.Find("ContinueButton").gameObject.SetActive(false);
     }
 
     public void onQuit()

@@ -33,6 +33,7 @@ public class GameManagerLogic : MonoBehaviour
         m_subscriberlist.Add(new Event<LoadSceneEvent>.Subscriber(onLoadScene));
         m_subscriberlist.Add(new Event<PauseEvent>.Subscriber(onPauseEnd));
         m_subscriberlist.Add(new Event<FindCardEvent>.Subscriber(onCardFind));
+        m_subscriberlist.Add(new Event<EndLoopEvent>.Subscriber(onEndLoop));
         m_subscriberlist.Subscribe();
     }
 
@@ -95,12 +96,17 @@ public class GameManagerLogic : MonoBehaviour
 
     void onCardFind(FindCardEvent e)
     {
-        G.sys.saveSystem.set(e.name, (int)CardData.VisibilityState.VISIBLE);
+        SaveAttributes.setCardState(e.name, CardData.VisibilityState.VISIBLE);
         var card = Instantiate(m_cardPrefab);
         var comp = card.GetComponent<BigCardLogic>();
 
         var cardItem = G.sys.ressourcesData.getCard(e.name);
         if (cardItem != null)
             comp.set(cardItem.fancyName.Length > 0 ? cardItem.fancyName : cardItem.name, cardItem.textureName, cardItem.description);
+    }
+
+    void onEndLoop(EndLoopEvent e)
+    {
+        G.sys.loopSystem.startNextLoop();
     }
 }
