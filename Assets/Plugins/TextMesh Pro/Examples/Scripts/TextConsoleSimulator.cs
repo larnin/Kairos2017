@@ -1,10 +1,9 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
 
-
-namespace TMPro.Examples
-{
-    public class TextConsoleSimulator : MonoBehaviour
+public class TextConsoleSimulator : MonoBehaviour
     {
         [SerializeField]
         float TimeBetweenChar = 0.01f;
@@ -24,7 +23,7 @@ namespace TMPro.Examples
             //StartCoroutine(RevealWords(m_TextComponent));
         }
 
-
+        /*
         void OnEnable()
         {
             // Subscribe to event fired when text object has been regenerated.
@@ -35,7 +34,7 @@ namespace TMPro.Examples
         {
             TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(ON_TEXT_CHANGED);
         }
-
+        */
 
         // Event received when the text object has changed.
         void ON_TEXT_CHANGED(Object obj)
@@ -50,7 +49,7 @@ namespace TMPro.Examples
         /// <returns></returns>
         IEnumerator RevealCharacters(TMP_Text textComponent)
         {
-            textComponent.ForceMeshUpdate();
+           // textComponent.ForceMeshUpdate();
 
             TMP_TextInfo textInfo = textComponent.textInfo;
 
@@ -67,6 +66,8 @@ namespace TMPro.Examples
 
                 if (visibleCount > totalVisibleCharacters)
                 {
+                    enabled = false;
+                    gameObject.SendMessage("activateThatScript");
                     break;
                 }
                 
@@ -121,4 +122,3 @@ namespace TMPro.Examples
         }
 
     }
-}

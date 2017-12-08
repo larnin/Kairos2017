@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+ 
 public class VertexJitterSmooth : MonoBehaviour
 {
 
     public float AngleMultiplier = 1.0f;
     public float SpeedMultiplier = 1.0f;
     public float CurveScale = 1.0f;
+    public float valueWait = 2f;
 
     public float m_speedUsedForSmooth = 5;
 
@@ -63,12 +64,12 @@ public class VertexJitterSmooth : MonoBehaviour
     void OnEnable()
     {
         // Subscribe to event fired when text object has been regenerated.
-        TMPro_EventManager.TEXT_CHANGED_EVENT.Add(ON_TEXT_CHANGED);
+       // TMPro_EventManager.TEXT_CHANGED_EVENT.Add(ON_TEXT_CHANGED);
     }
 
     void OnDisable()
     {
-        TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(ON_TEXT_CHANGED);
+      //  TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(ON_TEXT_CHANGED);
     }
 
 
@@ -206,6 +207,9 @@ public class VertexJitterSmooth : MonoBehaviour
 
     IEnumerator updateValueOfLetterOne()
     {
+        yield return new WaitForSeconds(valueWait);
+
+
         int currentLetterIndex = 0;
 
         
@@ -243,8 +247,14 @@ public class VertexJitterSmooth : MonoBehaviour
 
         while (true)
         {
+            
+
             for(currentLetterIndex = 0; currentLetterIndex < textInfo.characterCount; currentLetterIndex++)
             {
+
+                if (!textInfo.characterInfo[currentLetterIndex].isVisible)
+                    continue;
+
                 // Retrieve the pre-computed animation data for the given character.
                 VertexAnim vertAnim = vertexAnim[currentLetterIndex];
 
@@ -296,7 +306,10 @@ public class VertexJitterSmooth : MonoBehaviour
 
     }
 
-
+    void activateThatScript()
+    {
+        enabled = true;
+    }
 
     void ON_TEXT_CHANGED(Object obj)
     {
@@ -352,7 +365,7 @@ public class VertexJitterSmooth : MonoBehaviour
             if (characterCount == 0)
             {
                 yield return new WaitForSeconds(0.25f);
-                //continue;
+                continue;
             }
 
 

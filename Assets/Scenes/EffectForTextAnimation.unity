@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 82427841}
   - component: {fileID: 82427840}
   - component: {fileID: 82427843}
+  - component: {fileID: 82427844}
   m_Layer: 0
   m_Name: TextMeshPro
   m_TagString: Untagged
@@ -357,7 +358,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 82427834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f775a1009084db4e892af64e5cbf25b, type: 3}
   m_Name: 
@@ -365,7 +366,20 @@ MonoBehaviour:
   AngleMultiplier: 1
   SpeedMultiplier: 1
   CurveScale: 1
-  m_speedUsedForSmooth: 1
+  valueWait: 0
+  m_speedUsedForSmooth: 0.25
+--- !u!114 &82427844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82427834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45757dcc8f119454dac6365e8fd15e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeBetweenChar: 0.1
 --- !u!1 &129402245
 GameObject:
   m_ObjectHideFlags: 0
