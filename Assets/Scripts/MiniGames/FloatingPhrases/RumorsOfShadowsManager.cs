@@ -190,16 +190,21 @@ public class RumorsOfShadowsManager : MonoBehaviour
 
         ShadowTriggerSelectionLogic ShadowTrigger1 = shadow1.GetComponent<ShadowTriggerSelectionLogic>();
         ShadowTriggerSelectionLogic ShadowTrigger2 = shadow2.GetComponent<ShadowTriggerSelectionLogic>();
-        
+
+
         ShadowTrigger1.m_selected = false;
-        ShadowTrigger1.updateFeedback();
-        
+        ShadowTrigger2.m_selected = false;
+
         FloatingPhraseGeneratorLogic G2 = shadow2.parent.parent.gameObject.GetComponentInChildren<FloatingPhraseGeneratorLogic>();
 
         G2.StopAllCoroutines();
         
         G2.destroyAllPhrase(m_unMtachedAttributes.m_timeToApply, m_unMtachedAttributes);
+
         
+        ShadowTrigger1.StartCoroutine(ShadowTrigger1.shadowNotMatchedFeedback());
+        ShadowTrigger2.StartCoroutine(ShadowTrigger2.shadowNotMatchedFeedback());
+
 
         yield return new WaitForSeconds(m_unMtachedAttributes.m_timeToApply);
         m_firstShadowSelected = null;
