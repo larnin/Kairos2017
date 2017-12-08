@@ -15,6 +15,7 @@ public class MainMenuLogic : MonoBehaviour
 
     public void onStart()
     {
+        G.sys.saveSystem.reset();
         G.sys.loopSystem.startLoop(1);
     }
 
