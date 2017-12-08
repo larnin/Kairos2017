@@ -42,6 +42,11 @@ public class IndiceGeneratorLogic : MonoBehaviour {
                 m_phraseAppearNumber++;
             }
         }
+
+        if (m_phraseAppearNumber == m_phraseIndices.Length)
+        {
+            Event<FindCardEvent>.Broadcast(new FindCardEvent(cardName));
+        }
     }
 
     void Start()
