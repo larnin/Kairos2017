@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: UnMatched
   m_EditorClassIdentifier: 
   m_fontStyle: 0
-  m_faceSettingColor: {r: 0, g: 0, b: 0, a: 0}
-  m_outlineColor: {r: 0, g: 0, b: 0, a: 0}
-  m_timeToApply: 1
+  m_faceSettingColor: {r: 0.14117648, g: 0.5411765, b: 0.7411765, a: 0}
+  m_outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  m_timeToApply: 0.2

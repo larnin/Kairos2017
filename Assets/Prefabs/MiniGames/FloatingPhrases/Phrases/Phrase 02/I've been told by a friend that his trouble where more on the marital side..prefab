@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 114374461524192128}
   - component: {fileID: 114157023227486278}
   - component: {fileID: 114847038894412354}
+  - component: {fileID: 114590780874910512}
   m_Layer: 9
   m_Name: I've been told by a friend that his trouble where more on the marital side.
   m_TagString: Untagged
@@ -294,6 +295,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
+--- !u!114 &114590780874910512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578710452520986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4769cb37968ea948a763a9a89f9e583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AngleMultiplier: 0.01
+  SpeedMultiplier: 0.09
+  CurveScale: 0.01
 --- !u!114 &114835051819064730
 MonoBehaviour:
   m_ObjectHideFlags: 1
