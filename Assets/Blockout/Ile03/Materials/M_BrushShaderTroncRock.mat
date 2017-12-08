@@ -185,7 +185,7 @@ Material:
     - _Metalness: 0
     - _Mode: 0
     - _MouvSpeed: 0.02
-    - _NormalIntensity: 0.5
+    - _NormalIntensity: 0.105
     - _Occlusion: 0.613
     - _OcclusionStrength: 1
     - _Parallax: 0.02

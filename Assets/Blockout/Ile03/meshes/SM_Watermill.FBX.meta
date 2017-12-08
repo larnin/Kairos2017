@@ -8,15 +8,38 @@ ModelImporter:
     100000: SM_Moulin_MeshPart0
     100002: SM_Moulin_MeshPart1
     100004: //RootNode
+    100006: Sky001
+    100008: SM_WaterMill_BigHouse
+    100010: SM_WaterMill_Bridge
+    100012: SM_WaterMill_Smallhouse
+    100014: SM_WaterMill_Wheel
     400000: SM_Moulin_MeshPart0
     400002: SM_Moulin_MeshPart1
     400004: //RootNode
+    400006: Sky001
+    400008: SM_WaterMill_BigHouse
+    400010: SM_WaterMill_Bridge
+    400012: SM_WaterMill_Smallhouse
+    400014: SM_WaterMill_Wheel
     2300000: SM_Moulin_MeshPart0
     2300002: SM_Moulin_MeshPart1
+    2300004: SM_WaterMill_BigHouse
+    2300006: SM_WaterMill_Bridge
+    2300008: SM_WaterMill_Smallhouse
+    2300010: SM_WaterMill_Wheel
     3300000: SM_Moulin_MeshPart0
     3300002: SM_Moulin_MeshPart1
+    3300004: SM_WaterMill_BigHouse
+    3300006: SM_WaterMill_Bridge
+    3300008: SM_WaterMill_Smallhouse
+    3300010: SM_WaterMill_Wheel
     4300000: SM_Moulin_MeshPart0
     4300002: SM_Moulin_MeshPart1
+    4300004: SM_WaterMill_BigHouse
+    4300006: SM_WaterMill_Wheel
+    4300008: SM_WaterMill_Smallhouse
+    4300010: SM_WaterMill_Bridge
+    10800000: Sky001
   materials:
     importMaterials: 1
     materialName: 0

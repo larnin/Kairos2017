@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: M_River
+  m_Shader: {fileID: 4800000, guid: c7054b6ba24e1b944ab9533671fb9d0a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Foam:
+        m_Texture: {fileID: 2800000, guid: 5522ab34b76afdb459f8d92c0e6ffd21, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _T_GradientLinear:
+        m_Texture: {fileID: 2800000, guid: 86f1ecde25476c34daba1565dc9da823, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _T_PaintMask02:
+        m_Texture: {fileID: 2800000, guid: 0b73d1bfb18df7c46acf3e9444f02ebc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _T_PerlinNoise1:
+        m_Texture: {fileID: 2800000, guid: 2b20e4cd2f7b2df40a87dc236bef5c7a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture0:
+        m_Texture: {fileID: 2800000, guid: 200aa7f1a8b4a2d4ebf4863b03e92b3d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2:
+        m_Texture: {fileID: 2800000, guid: 2fd63d8ad20ac0c4187806f0bc1019f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ua5Mn_edited:
+        m_Texture: {fileID: 2800000, guid: 5522ab34b76afdb459f8d92c0e6ffd21, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0.2
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DeformationStrength: 0
+    - _Depth: 1.63
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Float0: 0.18
+    - _Float1: 0
+    - _Float5: 0
+    - _Foam: 0.149
+    - _FoamBorderDeformation: 0.4
+    - _FoamContrast: 0.2
+    - _FoamEffectIntensity: 0.22
+    - _FoamOffset: 0.35
+    - _FoamStep: 0.865
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Offset: -2.04
+    - _Parallax: 0.02
+    - _Scale: 2.88
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    - __dirty: 0
+    m_Colors:
+    - _BaseColor: {r: 0.20436832, g: 0.43765643, b: 0.5147058, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 0.33185554, g: 0.3181769, b: 0.4044118, a: 0}
+    - _Color1: {r: 0.055471454, g: 0.19340622, b: 0.41911763, a: 0}
+    - _Color2: {r: 0.06098615, g: 0.23959838, b: 0.3455882, a: 0}
+    - _Color3: {r: 0.075367644, g: 0.23554766, b: 0.25, a: 0}
+    - _DepthColor: {r: 0.1996105, g: 0.35338876, b: 0.38235274, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FoamMouvSpeed: {r: -0.1, g: 0.1, b: 0, a: 0}
+    - _FoamTiling: {r: 3, g: 3, b: 0, a: 0}
+    - _MouvSpeed: {r: 0, g: -0.2, b: 0, a: 0}
+    - _Tiling: {r: 2, g: 20, b: 0, a: 0}
+    - _Vector1: {r: 0, g: 0, b: 0, a: 0}
+    - _Vector3: {r: 0, g: 0, b: 0, a: 0}
