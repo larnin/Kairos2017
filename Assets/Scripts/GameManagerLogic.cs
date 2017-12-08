@@ -107,6 +107,6 @@ public class GameManagerLogic : MonoBehaviour
 
     void onEndLoop(EndLoopEvent e)
     {
-        G.sys.loopSystem.startNextLoop();
+        G.sys.loopSystem.startNextLoop(); 
     }
 }

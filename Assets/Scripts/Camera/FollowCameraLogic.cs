@@ -71,8 +71,6 @@ public class FollowCameraLogic : MonoBehaviour
     //Camera m_camera;
 
     Vector3 m_targetOldposition;
-    bool m_targetMoving = false;
-    bool m_targetOldMoving = false;
 
     Vector3 m_originalOffset;
     Vector3 m_originalOrientation;
@@ -193,9 +191,6 @@ public class FollowCameraLogic : MonoBehaviour
 
     void updateTargetinformations()
     {
-        m_targetOldMoving = m_targetMoving;
-        m_targetMoving = (m_target.position - m_targetOldposition).magnitude > 0.01f;
-
         m_currentCenter += m_targetOldposition - m_target.position;
     }
 
