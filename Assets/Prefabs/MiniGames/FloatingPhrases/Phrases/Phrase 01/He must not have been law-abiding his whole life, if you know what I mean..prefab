@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 114313480377843004}
   - component: {fileID: 114110435708619510}
   - component: {fileID: 114293878645627630}
+  - component: {fileID: 114592287931255446}
   m_Layer: 9
   m_Name: He must not have been law-abiding his whole life, if you know what I mean.
   m_TagString: Untagged
@@ -189,7 +190,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1578710452520986}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4769cb37968ea948a763a9a89f9e583, type: 3}
   m_Name: 
@@ -322,6 +323,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
+--- !u!114 &114592287931255446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578710452520986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f775a1009084db4e892af64e5cbf25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AngleMultiplier: 0.1
+  SpeedMultiplier: 0.09
+  CurveScale: 0.01
+  m_speedUsedForSmooth: 0.02
 --- !u!114 &114835051819064730
 MonoBehaviour:
   m_ObjectHideFlags: 1
