@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 [Serializable]
@@ -53,6 +55,7 @@ public class CardsSerializer
     public List<CardData> cards;
 }
 
+#if UNITY_EDITOR
 public class BookCardsTool : EditorWindow
 {
     string assetPath = "Assets/Resources/InventoryBook/";
@@ -62,7 +65,7 @@ public class BookCardsTool : EditorWindow
 
     Vector2 m_scrollPosition = Vector2.zero;
 
-    [MenuItem("Tools/InventoryBook/Cards")]
+    [MenuItem("Tools/Kairos/InventoryBook/Cards")]
     static void Init()
     {
         BookCardsTool window = (BookCardsTool)EditorWindow.GetWindow(typeof(BookCardsTool));
@@ -212,3 +215,4 @@ public class AddCardWindow : ScriptableWizard
         Close();
     }
 }
+#endif

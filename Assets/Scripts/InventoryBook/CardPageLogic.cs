@@ -94,9 +94,9 @@ class CardPageLogic : MonoBehaviour
 
     void instanciateAllCards()
     {
-        foreach(var c in G.sys.getDefaultCardsList())
+        foreach(var c in G.sys.ressourcesData.defaultCardsList)
         {
-            if (G.sys.getCardState(c.name, c.visibility) == CardData.VisibilityState.HIDDEN)
+            if (SaveAttributes.getCardState(c.name, c.visibility) == CardData.VisibilityState.HIDDEN)
                 continue;
 
             var card = Instantiate(m_cardPrefab, transform);
@@ -179,7 +179,7 @@ class CardPageLogic : MonoBehaviour
                 m_currentCardIndex = i;
                 card.selected = true;
 
-                foreach (var c in G.sys.getDefaultCardsList())
+                foreach (var c in G.sys.ressourcesData.defaultCardsList)
                     if (c.name == cardName)
                         updateBigCardRender(c, card);
             }

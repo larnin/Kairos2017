@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System.IO;
 
 [Serializable]
@@ -101,6 +103,7 @@ public class StorySerializer
     public List<StoryCategory> categories;
 }
 
+#if UNITY_EDITOR
 public class BookStoryTool : EditorWindow
 {
     string assetPath = "Assets/Resources/InventoryBook/";
@@ -109,7 +112,7 @@ public class BookStoryTool : EditorWindow
     List<StoryCategory> m_categories = new List<StoryCategory>();
     Vector2 m_scrollPosition = Vector2.zero;
 
-    [MenuItem("Tools/InventoryBook/Story")]
+    [MenuItem("Tools/Kairos/InventoryBook/Story")]
     static void Init()
     {
         BookStoryTool window = (BookStoryTool)EditorWindow.GetWindow(typeof(BookStoryTool));
@@ -331,3 +334,4 @@ public class AddStoryEntryWindow : ScriptableWizard
         Close();
     }
 }
+#endif
