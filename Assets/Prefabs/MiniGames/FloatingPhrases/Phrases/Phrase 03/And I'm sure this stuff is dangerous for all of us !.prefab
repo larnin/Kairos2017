@@ -57,7 +57,6 @@ GameObject:
   - component: {fileID: 23982816719063942}
   - component: {fileID: 222075104976666700}
   - component: {fileID: 114374461524192128}
-  - component: {fileID: 114529107184463308}
   - component: {fileID: 114332470567708042}
   m_Layer: 9
   m_Name: And I'm sure this stuff is dangerous for all of us !
@@ -175,7 +174,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1578710452520986}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f775a1009084db4e892af64e5cbf25b, type: 3}
   m_Name: 
@@ -184,6 +183,7 @@ MonoBehaviour:
   SpeedMultiplier: 0.01
   CurveScale: 0.01
   valueWait: 0
+  timeBetweenAppearingLetter: 0.25
   m_speedUsedForSmooth: 0.02
 --- !u!114 &114374461524192128
 MonoBehaviour:
@@ -298,18 +298,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
---- !u!114 &114529107184463308
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1578710452520986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45757dcc8f119454dac6365e8fd15e8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeBetweenChar: 0.03
 --- !u!114 &114835051819064730
 MonoBehaviour:
   m_ObjectHideFlags: 1
