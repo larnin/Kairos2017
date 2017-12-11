@@ -294,10 +294,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AngleMultiplier: 0.1
   SpeedMultiplier: 0.01
-  CurveScale: 0.01
+  CurveScale: 0.015
   valueWait: 0
-  timeBetweenAppearingLetter: 0.25
-  m_speedUsedForSmooth: 0.02
+  timeBetweenAppearingLetter: 0.03
+  m_speedUsedForSmooth: 0.025
 --- !u!114 &114835051819064730
 MonoBehaviour:
   m_ObjectHideFlags: 1

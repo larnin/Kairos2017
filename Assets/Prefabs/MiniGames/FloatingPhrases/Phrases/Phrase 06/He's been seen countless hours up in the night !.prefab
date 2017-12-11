@@ -292,12 +292,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f775a1009084db4e892af64e5cbf25b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AngleMultiplier: 0.01
+  AngleMultiplier: 0.1
   SpeedMultiplier: 0.01
-  CurveScale: 0.01
+  CurveScale: 0.015
   valueWait: 0
-  timeBetweenAppearingLetter: 0.25
-  m_speedUsedForSmooth: 0.02
+  timeBetweenAppearingLetter: 0.03
+  m_speedUsedForSmooth: 0.025
 --- !u!114 &114835051819064730
 MonoBehaviour:
   m_ObjectHideFlags: 1
