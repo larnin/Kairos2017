@@ -97,7 +97,7 @@ Material:
     - _Float0: 0.18
     - _Float1: 0
     - _Float5: 0
-    - _Foam: 0.149
+    - _Foam: 0.326
     - _FoamBorderDeformation: 0.4
     - _FoamContrast: 0.2
     - _FoamEffectIntensity: 0.22
