@@ -9,7 +9,9 @@ public class VertexJitterSmooth : MonoBehaviour
     public float AngleMultiplier = 1.0f;
     public float SpeedMultiplier = 1.0f;
     public float CurveScale = 1.0f;
-    public float valueWait = 2f;
+    public float valueWait = 0;
+
+    public float timeBetweenAppearingLetter = 0.25f;
 
     public float m_speedUsedForSmooth = 5;
 
@@ -25,6 +27,11 @@ public class VertexJitterSmooth : MonoBehaviour
     Vector3[] target1;
     Vector3[] target2;
     Vector3[] target3;
+
+    Vector3[] step0;
+    Vector3[] step1;
+    Vector3[] step2;
+    Vector3[] step3;
 
     // Create an Array which contains pre-computed Angle Ranges and Speeds for a bunch of characters.
     VertexAnim[] vertexAnim = new VertexAnim[1024];
@@ -49,6 +56,8 @@ public class VertexJitterSmooth : MonoBehaviour
         public float angle;
         public float speed;
     }
+
+    private int visibleCharacters = 0;
 
     void Awake()
     {
@@ -80,7 +89,7 @@ public class VertexJitterSmooth : MonoBehaviour
         //Compute  start Pos
         //#####################################################################################
         textInfo = m_TextComponent.textInfo;
-
+        
         base0 = new Vector3[textInfo.characterCount];
         base1 = new Vector3[textInfo.characterCount];
         base2 = new Vector3[textInfo.characterCount];
@@ -207,18 +216,15 @@ public class VertexJitterSmooth : MonoBehaviour
 
     IEnumerator updateValueOfLetterOne()
     {
-        yield return new WaitForSeconds(valueWait);
-
-
         int currentLetterIndex = 0;
 
         
         TMP_TextInfo textInfo = m_TextComponent.textInfo;
 
-        Vector3[] step0 = new Vector3[textInfo.characterCount];
-        Vector3[] step1 = new Vector3[textInfo.characterCount];
-        Vector3[] step2 = new Vector3[textInfo.characterCount];
-        Vector3[] step3 = new Vector3[textInfo.characterCount];
+        step0 = new Vector3[textInfo.characterCount];
+        step1 = new Vector3[textInfo.characterCount];
+        step2 = new Vector3[textInfo.characterCount];
+        step3 = new Vector3[textInfo.characterCount];
         
         for (currentLetterIndex = 0; currentLetterIndex < textInfo.characterCount; currentLetterIndex++)
         {
@@ -266,10 +272,20 @@ public class VertexJitterSmooth : MonoBehaviour
 
                 Vector3[] destinationVertices = textInfo.meshInfo[materialIndex].vertices;
                 
-                step0[currentLetterIndex] = Vector3.MoveTowards(step0[currentLetterIndex], target0[currentLetterIndex], m_speedUsedForSmooth * Time.deltaTime);
-                step1[currentLetterIndex] = Vector3.MoveTowards(step1[currentLetterIndex], target1[currentLetterIndex], m_speedUsedForSmooth * Time.deltaTime);
-                step2[currentLetterIndex] = Vector3.MoveTowards(step2[currentLetterIndex], target2[currentLetterIndex], m_speedUsedForSmooth * Time.deltaTime);
-                step3[currentLetterIndex] = Vector3.MoveTowards(step3[currentLetterIndex], target3[currentLetterIndex], m_speedUsedForSmooth * Time.deltaTime);
+                if(visibleCharacters > currentLetterIndex)
+                {
+                    step0[currentLetterIndex] = Vector3.MoveTowards(step0[currentLetterIndex], target0[currentLetterIndex], m_speedUsedForSmooth * Time.deltaTime);
+                    step1[currentLetterIndex] = Vector3.MoveTowards(step1[currentLetterIndex], target1[currentLetterIndex], m_speedUsedForSmooth * Time.deltaTime);
+                    step2[currentLetterIndex] = Vector3.MoveTowards(step2[currentLetterIndex], target2[currentLetterIndex], m_speedUsedForSmooth * Time.deltaTime);
+                    step3[currentLetterIndex] = Vector3.MoveTowards(step3[currentLetterIndex], target3[currentLetterIndex], m_speedUsedForSmooth * Time.deltaTime);
+                }
+                else
+                {
+                    step0[currentLetterIndex] = Vector3.zero;
+                    step1[currentLetterIndex] = Vector3.zero;
+                    step2[currentLetterIndex] = Vector3.zero;
+                    step3[currentLetterIndex] = Vector3.zero;
+                }
 
                 destinationVertices[vertexIndex + 0] = step0[currentLetterIndex];
                 destinationVertices[vertexIndex + 1] = step1[currentLetterIndex];
@@ -283,12 +299,6 @@ public class VertexJitterSmooth : MonoBehaviour
                     step2[currentLetterIndex] == target2[currentLetterIndex] &&
                     step3[currentLetterIndex] == target3[currentLetterIndex])
                 {
-                    /*
-                    step0[currentLetterIndex] = target0[currentLetterIndex];
-                    step1[currentLetterIndex] = target1[currentLetterIndex];
-                    step2[currentLetterIndex] = target2[currentLetterIndex];
-                    step3[currentLetterIndex] = target3[currentLetterIndex];
-                    */
                     ComputeNewTarget(currentLetterIndex, out target0[currentLetterIndex], out target1[currentLetterIndex], out target2[currentLetterIndex], out target3[currentLetterIndex]);
                 }
 
@@ -306,6 +316,27 @@ public class VertexJitterSmooth : MonoBehaviour
 
     }
 
+    private float timerLetter = 0;
+    void Update()
+    {
+        if(timerLetter > timeBetweenAppearingLetter)
+        {
+            timerLetter = 0f;
+
+            if(visibleCharacters != textInfo.characterCount)
+            {
+                visibleCharacters++;
+                int index = visibleCharacters - 1;
+                step0[index] = base0[index];
+                step1[index] = base1[index];
+                step2[index] = base2[index];
+                step3[index] = base3[index];
+
+            }
+        }
+        timerLetter += Time.deltaTime;
+    }
+
     void activateThatScript()
     {
         enabled = true;
@@ -317,127 +348,5 @@ public class VertexJitterSmooth : MonoBehaviour
             hasTextChanged = true;
     }    
 
-    /// <summary>
-    /// Method to animate vertex colors of a TMP Text object.
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator AnimateVertexColors()
-    {
-
-        // We force an update of the text object since it would only be updated at the end of the frame. Ie. before this code is executed on the first frame.
-        // Alternatively, we could yield and wait until the end of the frame when the text object will be generated.
-        //m_TextComponent.ForceMeshUpdate();
-
-        TMP_TextInfo textInfo = m_TextComponent.textInfo;
-
-        Matrix4x4 matrix;
-
-        int loopCount = 0;
-        hasTextChanged = true;
-
-        // Create an Array which contains pre-computed Angle Ranges and Speeds for a bunch of characters.
-        /*
-        VertexAnim[] vertexAnim = new VertexAnim[1024];
-        for (int i = 0; i < 1024; i++)
-        {
-            vertexAnim[i].angleRange = Random.Range(10f, 25f);
-            vertexAnim[i].speed = Random.Range(1f, 3f);
-        }
-        */
-
-        // Cache the vertex data of the text object as the Jitter FX is applied to the original position of the characters.
-        TMP_MeshInfo[] cachedMeshInfo = textInfo.CopyMeshInfoVertexData();
-
-        while (true)
-        {
-            // Get new copy of vertex data if the text has changed.
-            if (hasTextChanged)
-            {
-                // Update the copy of the vertex data for the text object.
-                cachedMeshInfo = textInfo.CopyMeshInfoVertexData();
-
-                hasTextChanged = false;
-            }
-
-            int characterCount = textInfo.characterCount;
-
-            // If No Characters then just yield and wait for some text to be added
-            if (characterCount == 0)
-            {
-                yield return new WaitForSeconds(0.25f);
-                continue;
-            }
-
-
-            for (int i = 0; i < 1; i++)
-            {
-                TMP_CharacterInfo charInfo = textInfo.characterInfo[i];
-
-                // Skip characters that are not visible and thus have no geometry to manipulate.
-                if (!charInfo.isVisible)
-                    continue;
-
-                // Retrieve the pre-computed animation data for the given character.
-                VertexAnim vertAnim = vertexAnim[i];
-
-                // Get the index of the material used by the current character.
-                int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
-
-                // Get the index of the first vertex used by this text element.
-                int vertexIndex = textInfo.characterInfo[i].vertexIndex;
-
-                // Get the cached vertices of the mesh used by this text element (character or sprite).
-                Vector3[] sourceVertices = cachedMeshInfo[materialIndex].vertices;
-
-                // Determine the center point of each character at the baseline.
-                //Vector2 charMidBasline = new Vector2((sourceVertices[vertexIndex + 0].x + sourceVertices[vertexIndex + 2].x) / 2, charInfo.baseLine);
-                // Determine the center point of each character.
-                Vector2 charMidBasline = (sourceVertices[vertexIndex + 0] + sourceVertices[vertexIndex + 2]) / 2;
-
-                // Need to translate all 4 vertices of each quad to aligned with middle of character / baseline.
-                // This is needed so the matrix TRS is applied at the origin for each character.
-                Vector3 offset = charMidBasline;
-
-                Vector3[] destinationVertices = textInfo.meshInfo[materialIndex].vertices;
-
-                destinationVertices[vertexIndex + 0] = sourceVertices[vertexIndex + 0] - offset;
-                destinationVertices[vertexIndex + 1] = sourceVertices[vertexIndex + 1] - offset;
-                destinationVertices[vertexIndex + 2] = sourceVertices[vertexIndex + 2] - offset;
-                destinationVertices[vertexIndex + 3] = sourceVertices[vertexIndex + 3] - offset;
-
-                vertAnim.angle = Mathf.SmoothStep(-vertAnim.angleRange, vertAnim.angleRange, Mathf.PingPong(loopCount / 25f * vertAnim.speed, 1f));
-                Vector3 jitterOffset = new Vector3(Random.Range(-.25f, .25f), Random.Range(-.25f, .25f), 0);
-
-                matrix = Matrix4x4.TRS(jitterOffset * CurveScale, Quaternion.Euler(0, 0, Random.Range(-5f, 5f) * AngleMultiplier), Vector3.one);
-
-                
-                destinationVertices[vertexIndex + 0] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 0]);
-                destinationVertices[vertexIndex + 1] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 1]);
-                destinationVertices[vertexIndex + 2] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 2]);
-                destinationVertices[vertexIndex + 3] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 3]);
-                
-
-                destinationVertices[vertexIndex + 0] += offset;
-                destinationVertices[vertexIndex + 1] += offset;
-                destinationVertices[vertexIndex + 2] += offset;
-                destinationVertices[vertexIndex + 3] += offset;
-
-                vertexAnim[i] = vertAnim;
-            }
-
-
-
-            // Push changes into meshes
-            for (int i = 0; i < textInfo.meshInfo.Length; i++)
-            {
-                textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
-                m_TextComponent.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
-            }
-
-            loopCount += 1;
-
-            yield return null; //new WaitForSeconds(0.1f);
-        }
-    }
-
+    
 }
