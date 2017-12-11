@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33362077414454348}
   - component: {fileID: 23895854389551868}
   - component: {fileID: 95567310851418458}
+  - component: {fileID: 65188858294540486}
   m_Layer: 0
   m_Name: SM_WaterMill_Planche
   m_TagString: Untagged
@@ -81,6 +82,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1700893220172732}
   m_Mesh: {fileID: 4300000, guid: 00f38cabd42870d469a554e8facd493a, type: 3}
+--- !u!65 &65188858294540486
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1700893220172732}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0598757, y: 0.05580404, z: 0.028150646}
+  m_Center: {x: 0.38721445, y: 0.00078062667, z: 0.000015288868}
 --- !u!95 &95567310851418458
 Animator:
   serializedVersion: 3

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33750294802970274}
   - component: {fileID: 23751101581599342}
   - component: {fileID: 95969711560443402}
+  - component: {fileID: 65917526488151632}
   m_Layer: 0
   m_Name: SM_WaterMill_Echeylle
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060565860600794}
   m_Mesh: {fileID: 4300000, guid: 3d2cb0ba74745f44cbe3fb99e7c175d4, type: 3}
+--- !u!65 &65917526488151632
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060565860600794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.501074, y: 0.23074412, z: 0.7409193}
+  m_Center: {x: -2.761804, y: 0, z: -0.33106735}
 --- !u!95 &95969711560443402
 Animator:
   serializedVersion: 3

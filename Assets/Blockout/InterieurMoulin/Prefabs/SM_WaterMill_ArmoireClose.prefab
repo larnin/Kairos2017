@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33863346131287828}
   - component: {fileID: 23990249540390876}
   - component: {fileID: 95878495922885596}
+  - component: {fileID: 64280847817800456}
   m_Layer: 0
   m_Name: SM_WaterMill_ArmoireClose
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1336294511527408}
+  m_Mesh: {fileID: 4300000, guid: 4070e89a3332dd546a547d956c4ed3c1, type: 3}
+--- !u!64 &64280847817800456
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1336294511527408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 4070e89a3332dd546a547d956c4ed3c1, type: 3}
 --- !u!95 &95878495922885596
 Animator:

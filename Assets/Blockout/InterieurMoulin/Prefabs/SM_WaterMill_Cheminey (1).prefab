@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33623102613599032}
   - component: {fileID: 23173119009157526}
   - component: {fileID: 95862765723203884}
+  - component: {fileID: 64757058712588822}
   m_Layer: 0
   m_Name: SM_WaterMill_Cheminey (1)
   m_TagString: Untagged
@@ -87,6 +88,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1329040444557180}
+  m_Mesh: {fileID: 4300000, guid: d61827a1269e4a64998ee8775e029500, type: 3}
+--- !u!64 &64757058712588822
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329040444557180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d61827a1269e4a64998ee8775e029500, type: 3}
 --- !u!95 &95862765723203884
 Animator:

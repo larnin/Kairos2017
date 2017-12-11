@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33940713811472016}
   - component: {fileID: 23406499929199048}
   - component: {fileID: 95288823361104872}
+  - component: {fileID: 65261187273678520}
   m_Layer: 0
   m_Name: SM_WaterMill_PoutreHorizontale01
   m_TagString: Untagged
@@ -81,6 +82,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1922533361999888}
   m_Mesh: {fileID: 4300000, guid: 951d79534a0e7484e80f1df043b3abac, type: 3}
+--- !u!65 &65261187273678520
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1922533361999888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.25, z: 18.4275}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95288823361104872
 Animator:
   serializedVersion: 3

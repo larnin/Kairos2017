@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33886082540575366}
   - component: {fileID: 23177849979930622}
   - component: {fileID: 95789473223271448}
+  - component: {fileID: 65469908771069994}
+  - component: {fileID: 65812391352647294}
   m_Layer: 0
   m_Name: SM_WaterMill_PoutreVerticale01
   m_TagString: Untagged
@@ -81,6 +83,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005627507402670}
   m_Mesh: {fileID: 4300000, guid: 03ba93d6f797796428be2962c6c15e13, type: 3}
+--- !u!65 &65469908771069994
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005627507402670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.25, z: 18.4275}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65812391352647294
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005627507402670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.25, z: 18.4275}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95789473223271448
 Animator:
   serializedVersion: 3
