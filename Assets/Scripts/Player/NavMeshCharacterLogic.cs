@@ -83,6 +83,8 @@ public class NavMeshCharacterLogic : BaseCharacterLogic
 
     void updateAnimator(Vector3 move)
     {
+		m_animator.SetBool("Run", move.magnitude > 0.01f);
+		/*
         m_animator.SetFloat("Forward", m_forwardAmount, 0.1f, Time.deltaTime);
         m_animator.SetFloat("Turn", m_turnAmount, 0.1f, Time.deltaTime);
         m_animator.SetBool("OnGround", true);
@@ -90,7 +92,7 @@ public class NavMeshCharacterLogic : BaseCharacterLogic
         if (move.sqrMagnitude > 0)
             m_animator.speed = m_animSpeedMultiplier;
         else
-            m_animator.speed = 1;
+            m_animator.speed = 1;*/
     }
 
     public void OnAnimatorMove()
