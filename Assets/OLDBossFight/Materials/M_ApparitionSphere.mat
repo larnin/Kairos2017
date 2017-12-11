@@ -70,7 +70,7 @@ Material:
     - _Mode: 0
     - _MouvSpeed: -2
     - _OcclusionStrength: 1
-    - _Opacity: 0
+    - _Opacity: 0.40030435
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

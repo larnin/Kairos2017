@@ -18,7 +18,7 @@ public class BossUILogic : MonoBehaviour
 
     private void Awake()
     {
-        m_timer = transform.Find("Timer").GetComponent<TimerLogic>();
+        //m_timer = transform.Find("Timer").GetComponent<TimerLogic>();
         m_pow = transform.Find("Feedback").GetComponent<PowFeedbackLogic>();
         m_bossLifeText = transform.Find("BossLife").GetComponent<Text>();
         m_playerLifeText = transform.Find("PlayerLife").GetComponent<Text>();
@@ -41,7 +41,7 @@ public class BossUILogic : MonoBehaviour
 
     public void setTimer(float time)
     {
-        m_timer.startTimer(time);
+        //m_timer.startTimer(time);
     }
 
     public void showFeedback(PowFeedbackLogic.FeedbackType type)
@@ -56,7 +56,7 @@ public class BossUILogic : MonoBehaviour
             setTimer(e.timerTime);
         if (e.showFeedback)
             showFeedback(e.feedbackType);
-        if (e.stopTimer)
-            m_timer.started = false;
+        //if (e.stopTimer)
+        //    m_timer.started = false;
     }
 }
