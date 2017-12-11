@@ -136,6 +136,13 @@ public class VertexJitterSmooth : MonoBehaviour
             base2[ithatGoAll] = destinationVertices[vertexIndex + 2];
             base3[ithatGoAll] = destinationVertices[vertexIndex + 3];
 
+            /*
+            destinationVertices[vertexIndex + 0] = Vector3.zero;
+            destinationVertices[vertexIndex + 1] = Vector3.zero;
+            destinationVertices[vertexIndex + 2] = Vector3.zero;
+            destinationVertices[vertexIndex + 3] = Vector3.zero;
+            */
+
 
             //Compute  dest Pos
             //################################################################
@@ -150,6 +157,16 @@ public class VertexJitterSmooth : MonoBehaviour
                  */
 
         }
+
+        /*
+        // Push changes into meshes
+        for (int j = 0; j < textInfo.meshInfo.Length; j++)
+        {
+            textInfo.meshInfo[j].mesh.vertices = textInfo.meshInfo[j].vertices;
+            m_TextComponent.UpdateGeometry(textInfo.meshInfo[j].mesh, j);
+        }
+        */
+
 
         StartCoroutine(updateValueOfLetterOne());
 
