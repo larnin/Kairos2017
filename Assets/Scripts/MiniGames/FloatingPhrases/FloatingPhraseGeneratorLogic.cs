@@ -62,7 +62,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
 
         SpokenPhrase spokenPhrase = m_spokenPhrases[index];
 
-        Vector3 positionForSpawn = spokenPhrase.m_spawnPoint.position;
+        Vector3 positionForSpawn = spokenPhrase.m_goPoints.GetChild(spokenPhrase.m_indiceOfTheGoPoint).position;
 
         Transform pivot = (new GameObject()).transform;
         pivot.SetParent(spokenPhrase.m_shadow, true);
@@ -102,14 +102,14 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
 
         // on les fait allez au spot 
         TextMeshPro textMesh = spawned.GetComponent<TextMeshPro>();
-        textMesh.alpha = 0f;
-        textMesh.DOFade(1f, spokenPhrase.m_GoToRestSpot);
+        //textMesh.alpha = 0f;
+        //textMesh.DOFade(1f, spokenPhrase.m_GoToRestSpot);
 
-        pivot.transform.DOMove(spokenPhrase.m_goPoints.GetChild(spokenPhrase.m_indiceOfTheGoPoint).position,
-            spokenPhrase.m_GoToRestSpot).onComplete = () =>
-            {
+       // pivot.transform.DOMove(spokenPhrase.m_goPoints.GetChild(spokenPhrase.m_indiceOfTheGoPoint).position,
+       //     spokenPhrase.m_GoToRestSpot).onComplete = () =>
+       //     {
                StartCoroutine(deathAnimationForFloatingPhrase(spokenPhrase.m_RestBeforeDissapear, spawned));   
-            };
+       //     };
         
         // on set les delegates
         spawned.m_onDestroy += OnPhraseIsDestroy;
