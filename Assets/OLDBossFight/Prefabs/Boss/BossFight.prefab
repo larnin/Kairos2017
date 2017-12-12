@@ -54,59 +54,60 @@ MonoBehaviour:
   m_UI: {fileID: 0}
   m_stages:
   - cards:
-    - name: Billet de train
-      description: "Achet\xE9 r\xE9cemment. D\xE9chir\xE9 en deux puis rafistol\xE9
-        au scotch"
-    - name: "Dipl\xF4me de Doctorat"
-      description: "D\xE9cern\xE9e avec f\xE9licitation \xE0 la jeune femme"
-    - name: Bouteille de vin
-      description: "A moiti\xE9e vide, pourtant achet\xE9e hier"
-    - name: Ebauche de lettre
-      description: "Tr\xE8s ratur\xE9e. On y discerne, entre autre, le mot \"divorce\""
-    - name: Photo triste de la famille
-      description: "La femme a le regard \xE9teint. L'homme, le regard dur. Le b\xE9b\xE9
-        pleure"
+    - folded: 0
+      visibility: 0
+      name: Hate and Rumors
+      fancyName: 
+      textureName: 
+      description: He was a good man, driven away by the anger of Isaac's Mother.
+    - folded: 0
+      visibility: 0
+      name: A Solid Chain
+      fancyName: 
+      textureName: 
+      description: Left in the Parent's house
+    - folded: 0
+      visibility: 0
+      name: The Beginning of a Path
+      fancyName: 
+      textureName: 
+      description: Isaac's first letter about becoming a teacher
+    - folded: 0
+      visibility: 0
+      name: The Old Man in the Mill
+      fancyName: 
+      textureName: 
+      description: A man that Isaac used to visit
     rounds:
     - sentenses:
-      - Je me sens juste un peu malade
-      - Tout va bien, on est heureux
+      - There never was a Light on the Island
+      rightSentenseindex: 0
+      rightCardName: The Old Man in the Mill
+      rightSentenseAnswer: '----'
+      wrongSentenseAnswer: '*****'
+    - sentenses:
+      - 'His help was hopeless. He was too soft. Too nice '
+      - I couldn't achieve what he wanted. I disappointed him, among others
+      - He used to teach me about this World over the borders
+      rightSentenseindex: 2
+      rightCardName: The Beginning of a Path
+      rightSentenseAnswer: 
+      wrongSentenseAnswer: 
+    - sentenses:
+      - It's pointless. I came back here to die.
+      - He is long gone. The Light left when I had just found it.
+      - He was a good man. But I can't be like him.
+      - The will isn't lost, but I have no say in what I become
+      - I loved him. And my love destroy what it touches
       rightSentenseindex: 1
-      rightCardName: Photo triste de la famille
+      rightCardName: Hate and Rumors
+      rightSentenseAnswer: 
+      wrongSentenseAnswer: 
     - sentenses:
-      - "De toute fa\xE7on, je peux rien esp\xE9rer de mieux pour moi..."
-      - "C'est juste une dispute passag\xE8re, rien de grave !"
-      - "C'\xE9tait mon choix aussi de venir ici"
+      - Hate and Rumors
       rightSentenseindex: 0
-      rightCardName: "Dipl\xF4me de Doctorat"
-    - sentenses:
-      - T'es juste jaloux de nous trois
-      - "C'est juste des petits probl\xE8mes, rien de \"s\xE9rieux\""
-      - "C'est la faute de ses parents \xE7a !"
-      - "J'ai juste besoin de m'adapter \xE0 cette nouvelle vie !"
-      rightSentenseindex: 1
-      rightCardName: Bouteille de vin
-    - sentenses:
-      - Mon mari m'aime, il m'aidera !
-      - "On a pas besoin que quelqu'un s'en m\xEAle !"
-      - 'Laisse nous juste tranquille ! '
-      - J'ai jamais vraiment voulu partir non plus....
-      - "Et fuir aidera, peut-\xEAtre ?"
-      - "Mais j'ai d\xE9j\xE0 trouv\xE9 des hobbys...des amis..."
-      rightSentenseindex: 3
-      rightCardName: Ebauche de lettre
-    - sentenses:
-      - "Mais... Il me faut du temps.. j'ai pas pris ma d\xE9cision... "
-      - Les abandonner ? Jamais !
-      rightSentenseindex: 0
-      rightCardName: Billet de train
-  - cards:
-    - name: Oui
-      description: "C'est dur. Mais c'est une bonne d\xE9cision"
-    rounds:
-    - sentenses:
-      - "Au fond de moi, j'ai d\xE9j\xE0 d\xE9cid\xE9 hein ? J'\xE9tais juste en train
-        de me mentir"
-      rightSentenseindex: 0
-      rightCardName: Oui
+      rightCardName: A Solid Chain
+      rightSentenseAnswer: 
+      wrongSentenseAnswer: 
   m_playerLife: 5
   m_timerTime: 10

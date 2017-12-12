@@ -44,9 +44,9 @@ public class BossUILogic : MonoBehaviour
         //m_timer.startTimer(time);
     }
 
-    public void showFeedback(PowFeedbackLogic.FeedbackType type)
+    public void showFeedback(PowFeedbackLogic.FeedbackType type, string text)
     {
-        m_pow.show(type, m_feedbackTimer);
+        m_pow.show(type, m_feedbackTimer, text);
     }
 
     void onUpdateUI(UpdateBossUIEvent e)
@@ -55,7 +55,7 @@ public class BossUILogic : MonoBehaviour
         if (e.startTimer)
             setTimer(e.timerTime);
         if (e.showFeedback)
-            showFeedback(e.feedbackType);
+            showFeedback(e.feedbackType, e.feedbackText);
         //if (e.stopTimer)
         //    m_timer.started = false;
     }

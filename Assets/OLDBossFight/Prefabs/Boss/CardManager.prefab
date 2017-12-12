@@ -72,7 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_cardTemplate: {fileID: 1305287819968820, guid: fc45b94da5a1a8d49b2d8c6928222bd6,
     type: 2}
-  m_bossTextTemplate: {fileID: 1561593057464974, guid: d895a53543e8c63469c7f50cb73eb322,
+  m_bossTextTemplate: {fileID: 1450731900651014, guid: d1b9d15dc1e870a46ac71edb5766be75,
     type: 2}
   m_maxCardDelta: 400
   m_maxCardWidth: 1500

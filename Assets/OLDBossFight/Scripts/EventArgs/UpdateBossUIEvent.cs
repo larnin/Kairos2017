@@ -24,7 +24,7 @@ public class UpdateBossUIEvent : EventArgs
         stopTimer = false;
     }
 
-    public UpdateBossUIEvent(int _playerLife, int _bossLife, PowFeedbackLogic.FeedbackType _type, bool _stopTimer = false)
+    public UpdateBossUIEvent(int _playerLife, int _bossLife, PowFeedbackLogic.FeedbackType _type, bool _stopTimer = false, string _text = "")
     {
         playerLife = _playerLife;
         bossLife = _bossLife;
@@ -32,9 +32,10 @@ public class UpdateBossUIEvent : EventArgs
         showFeedback = true;
         feedbackType = _type;
         stopTimer = _stopTimer;
+        feedbackText = _text;
     }
 
-    public UpdateBossUIEvent(int _playerLife, int _bossLife, float _timer, PowFeedbackLogic.FeedbackType _type)
+    public UpdateBossUIEvent(int _playerLife, int _bossLife, float _timer, PowFeedbackLogic.FeedbackType _type, string _text = "")
     {
         playerLife = _playerLife;
         bossLife = _bossLife;
@@ -43,6 +44,7 @@ public class UpdateBossUIEvent : EventArgs
         showFeedback = true;
         feedbackType = _type;
         stopTimer = false;
+        feedbackText = _text;
     }
 
     public int playerLife;
@@ -52,4 +54,5 @@ public class UpdateBossUIEvent : EventArgs
     public bool stopTimer;
     public bool showFeedback;
     public PowFeedbackLogic.FeedbackType feedbackType;
+    public string feedbackText;
 }

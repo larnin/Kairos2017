@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BossTextLogic : Interactable
 {
@@ -15,6 +16,8 @@ public class BossTextLogic : Interactable
 
     bool m_hovered = false;
     Text m_textComp = null;
+    TextMeshProUGUI m_textTMPComp = null;
+
     bool m_selected = false;
 
     public bool hovered
@@ -23,10 +26,14 @@ public class BossTextLogic : Interactable
         set
         {
             m_hovered = value;
-            if (m_textComp != null && !m_selected)
+            if (!m_selected)
             {
-                m_textComp.color = value ? m_hoveredColor : m_basicColor;
+                if (m_textComp != null)
+                    m_textComp.color = m_hovered ? m_hoveredColor : m_basicColor;
+                if (m_textTMPComp != null)
+                    m_textTMPComp.color = m_hovered ? m_hoveredColor : m_basicColor;
             }
+
         }
     }
 
@@ -38,8 +45,10 @@ public class BossTextLogic : Interactable
             m_selected = value;
             if (m_textComp != null)
                 m_textComp.color = m_selected ? m_selectedColor : hovered ? m_hoveredColor : m_basicColor ;
+            if (m_textTMPComp != null)
+                m_textTMPComp.color = m_selected ? m_selectedColor : hovered ? m_hoveredColor : m_basicColor;
 
-            if(m_selected)
+            if (m_selected)
                 Event<SelectSentenseEvent>.Broadcast(new SelectSentenseEvent(this));
         }
     }
@@ -52,6 +61,8 @@ public class BossTextLogic : Interactable
             m_text = value;
             if (m_textComp != null)
                 m_textComp.text = m_text;
+            else if (m_textTMPComp != null)
+                m_textTMPComp.text = m_text;
         }
     }
 
@@ -73,7 +84,11 @@ public class BossTextLogic : Interactable
     void Awake()
     {
         m_textComp = transform.GetComponent<Text>();
-        m_textComp.text = m_text;
+        m_textTMPComp = GetComponent<TextMeshProUGUI>();
+        if (m_textComp != null)
+            m_textComp.text = m_text;
+        else if(m_textTMPComp != null)
+            m_textTMPComp.text = m_text;
     }
 
     private void OnValidate()
@@ -81,5 +96,11 @@ public class BossTextLogic : Interactable
         var textComp = transform.GetComponent<Text>();
         if (textComp != null)
             textComp.text = m_text;
+        else
+        {
+            var textComp2 = transform.GetComponent<TextMeshProUGUI>();
+            if (textComp2 != null)
+                textComp2.text = m_text;
+        }
     }
 }
