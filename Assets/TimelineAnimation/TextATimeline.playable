@@ -9,19 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 337831424, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
-  m_Name: pivotTimeline
+  m_Name: TextATimeline
   m_EditorClassIdentifier: 
   m_Id: 0
   m_NextId: 0
   m_Tracks:
-  - {fileID: 114378435031597688}
+  - {fileID: 114402712390056300}
   m_FixedDuration: 0
   m_EditorSettings:
     fps: 60
   m_UpdateMode: 0
   m_ParameterName: 
   m_DurationMode: 0
---- !u!114 &114378435031597688
+--- !u!114 &114402712390056300
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
