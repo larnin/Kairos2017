@@ -9,45 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1402175709564692}
+  m_RootGameObject: {fileID: 1190442360778452}
   m_IsPrefabParent: 1
---- !u!1 &1402175709564692
+--- !u!1 &1190442360778452
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4316777574557002}
-  - component: {fileID: 33531579604679228}
-  - component: {fileID: 23012279294945818}
-  - component: {fileID: 95844229406273170}
+  - component: {fileID: 4918444793033356}
+  - component: {fileID: 33994559385900004}
+  - component: {fileID: 23472911780174556}
+  - component: {fileID: 95814724233125980}
   m_Layer: 0
-  m_Name: SM_WaterMill_Book04
+  m_Name: SM_WaterMill_Cadre01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4316777574557002
+--- !u!4 &4918444793033356
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1402175709564692}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1190442360778452}
+  m_LocalRotation: {x: -0.50206697, y: 0.50206643, z: 0.49792498, w: -0.49792457}
+  m_LocalPosition: {x: -340.95135, y: 19.196, z: -440.76367}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23012279294945818
+  m_LocalEulerAnglesHint: {x: 0, y: 269.525, z: -90.00001}
+--- !u!23 &23472911780174556
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1402175709564692}
+  m_GameObject: {fileID: 1190442360778452}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -55,7 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 11e5d93e3554e49478416786697698c3, type: 2}
+  - {fileID: 2100000, guid: 6f45a396f1fdf7c4ca1820814dd40d7c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,22 +74,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33531579604679228
+--- !u!33 &33994559385900004
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1402175709564692}
-  m_Mesh: {fileID: 4300000, guid: 3a451369bfa792a4cad3731b242756f1, type: 3}
---- !u!95 &95844229406273170
+  m_GameObject: {fileID: 1190442360778452}
+  m_Mesh: {fileID: 4300000, guid: c022763660568314ab94e6712cf64f17, type: 3}
+--- !u!95 &95814724233125980
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1402175709564692}
+  m_GameObject: {fileID: 1190442360778452}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 3a451369bfa792a4cad3731b242756f1, type: 3}
+  m_Avatar: {fileID: 9000000, guid: c022763660568314ab94e6712cf64f17, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
