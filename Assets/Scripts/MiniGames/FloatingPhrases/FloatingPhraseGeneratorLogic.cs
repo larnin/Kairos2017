@@ -180,8 +180,8 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             if (elapsedTime >= targetTime)
             {
                 elapsedTime = 0f;
-
                 SpawnFloatingPhrase(currentIndex);
+                
                 currentIndex++;
 
                 if (currentIndex == m_spokenPhrases.Count)
