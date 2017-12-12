@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e9e1dfd5236238744835c158728a114a
+timeCreated: 1513092216
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: What is this - some kind of joke?
+  fontNames:
+  - What is this - some kind of joke?
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

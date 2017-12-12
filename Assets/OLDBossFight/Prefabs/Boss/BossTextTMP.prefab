@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 222618883041279012}
   - component: {fileID: 114594037329885146}
   - component: {fileID: 114791114916206036}
+  - component: {fileID: 114582383210619822}
+  - component: {fileID: 114570440651348024}
   m_Layer: 8
   m_Name: BossTextTMP
   m_TagString: Untagged
@@ -29,6 +31,46 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114570440651348024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450731900651014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b823b9e301d384a4ba628c95df3a63d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_behavior: {fileID: 114582383210619822}
+  m_datas:
+  - attributeName: AngleMultiplier
+    privateAttribute: 0
+    startValue: 300
+    endValue: 3
+    time: 1
+  - attributeName: m_speedUsedForSmooth
+    privateAttribute: 0
+    startValue: 200
+    endValue: 10
+    time: 3
+--- !u!114 &114582383210619822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450731900651014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f775a1009084db4e892af64e5cbf25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AngleMultiplier: 3
+  SpeedMultiplier: 1
+  CurveScale: 1
+  valueWait: 0
+  timeBetweenAppearingLetter: 0
+  m_speedUsedForSmooth: 5
 --- !u!114 &114594037329885146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,8 +107,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1911f19a53ab8e648b2581806680cb52, type: 2}
-  m_sharedMaterial: {fileID: 21078926720984486, guid: 1911f19a53ab8e648b2581806680cb52,
+  m_fontAsset: {fileID: 11400000, guid: 4fc27cbf09b7d6d48a8192150a2f266e, type: 2}
+  m_sharedMaterial: {fileID: 21078926720984486, guid: 4fc27cbf09b7d6d48a8192150a2f266e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -74,7 +116,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -91,8 +133,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
