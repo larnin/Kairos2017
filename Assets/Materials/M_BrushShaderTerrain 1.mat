@@ -219,7 +219,7 @@ Material:
     - _Parallax: 0.02
     - _Position: 0.48
     - _Roughness: 0.9
-    - _ShadowOpacity: 0.818
+    - _ShadowOpacity: 0.95
     - _ShadowSoftStep: 0.42
     - _ShadowSoftStrokeStep: 0.492
     - _ShadowStep: 0.03
