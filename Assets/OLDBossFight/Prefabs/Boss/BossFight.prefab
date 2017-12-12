@@ -83,15 +83,15 @@ MonoBehaviour:
       - There never was a Light on the Island
       rightSentenseindex: 0
       rightCardName: The Old Man in the Mill
-      rightSentenseAnswer: '----'
-      wrongSentenseAnswer: '*****'
+      rightSentenseAnswer: I remember him. He shined bright atop the lake.
+      wrongSentenseAnswer: No light shone. No man helped.
     - sentenses:
       - 'His help was hopeless. He was too soft. Too nice '
       - I couldn't achieve what he wanted. I disappointed him, among others
       - He used to teach me about this World over the borders
       rightSentenseindex: 2
       rightCardName: The Beginning of a Path
-      rightSentenseAnswer: 
+      rightSentenseAnswer: You're right. He first showed me what I wanted to be.
       wrongSentenseAnswer: 
     - sentenses:
       - It's pointless. I came back here to die.
@@ -101,13 +101,29 @@ MonoBehaviour:
       - I loved him. And my love destroy what it touches
       rightSentenseindex: 1
       rightCardName: Hate and Rumors
-      rightSentenseAnswer: 
+      rightSentenseAnswer: No. It can't be right. He abandoned me.
       wrongSentenseAnswer: 
     - sentenses:
-      - Hate and Rumors
+      - They hated me. I was their bane. Why would they make me come back ?
+      - Father hated me ! He was why I fled !
+      - 'Mother hated me ! She wanted me gone ! '
       rightSentenseindex: 0
       rightCardName: A Solid Chain
-      rightSentenseAnswer: 
+      rightSentenseAnswer: I see...
+      wrongSentenseAnswer: 
+  - cards:
+    - folded: 0
+      visibility: 0
+      name: Hate & Displacement
+      fancyName: 
+      textureName: 
+      description: Hating someone else prevent you hating yourselves.
+    rounds:
+    - sentenses:
+      - You're right. They always tried to keep me home..... because... I....
+      rightSentenseindex: 0
+      rightCardName: Hate & Displacement
+      rightSentenseAnswer: .. I need to do something. To leave that circle
       wrongSentenseAnswer: 
   m_playerLife: 5
-  m_timerTime: 10
+  m_answerTime: 5
