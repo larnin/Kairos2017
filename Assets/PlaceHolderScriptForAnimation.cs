@@ -23,14 +23,18 @@ public class PlaceHolderScriptForAnimation : MonoBehaviour
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            // ib recupere la timeLine utilisé
             TimelineAsset PA = director.playableAsset as TimelineAsset;
-            // AnimationTrack AT = PA.GetOutputTrack(0) as AnimationTrack;
-            var sourceObject = (PA.outputs.ElementAt(0).sourceObject);
-            print (director.GetGenericBinding(sourceObject) );
+            
+                       //  le sourceObjet est une sorte d'identifiant (key) 
+            var track = (PA.outputs.ElementAt(0).sourceObject);  // ceci correspond en fait a la premiere track
+
+            print (director.GetGenericBinding(track) ); // ici on recupere l'objet associété a cette track
 
             Current = (Current + 1) % 3;
-            ((GameObject)director.GetGenericBinding(sourceObject)).transform.Translate(Vector3.up * 1000f);
-            director.SetGenericBinding(sourceObject, m_Gobject[Current]);
+            ((GameObject)director.GetGenericBinding(track)).transform.Translate(Vector3.up * 1000f);
+
+            director.SetGenericBinding(track, m_Gobject[Current]); // on rebind la track a un nouvelle objet. 
         }
 	}
 }
