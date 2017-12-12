@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.7352941, g: 0.67056435, b: 0.4000865, a: 1}
   m_FogMode: 2
   m_FogDensity: 0.02
@@ -1161,6 +1161,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -1570,6 +1575,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -1941,7 +1951,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 365c1fa890dab58438d83f7f37e0778a, type: 2}
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
   m_IsPrefabParent: 0
@@ -3230,6 +3240,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 118
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &306967592
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1910627396}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05836091
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10673843
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.765518
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_RootOrder
+      value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.29401
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Name
+      value: SM_WaterMill_Book01 (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1589278
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1589284
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1589279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11e5d93e3554e49478416786697698c3, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &306967593 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_PrefabInternal: {fileID: 306967592}
 --- !u!1001 &316340602
 Prefab:
   m_ObjectHideFlags: 0
@@ -4048,6 +4136,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -4090,6 +4183,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 59
       objectReference: {fileID: 0}
+    - target: {fileID: 23399311873571130, guid: de355c02cc6cde846b467faf0e38f36c,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5ac546b315674d45ab56c0517a35b1b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de355c02cc6cde846b467faf0e38f36c, type: 2}
   m_IsPrefabParent: 0
@@ -4564,6 +4662,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 450
       objectReference: {fileID: 0}
+    - target: {fileID: 23895854389551868, guid: 07c39f778d0649f4e8d46147718460dc,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07c39f778d0649f4e8d46147718460dc, type: 2}
   m_IsPrefabParent: 0
@@ -5123,6 +5226,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -5221,6 +5329,84 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 3a451369bfa792a4cad3731b242756f1, type: 3}
   m_PrefabInternal: {fileID: 1663506217}
+--- !u!1001 &532756282
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1910627396}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.056348998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.096656635
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.6026497
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_RootOrder
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.29401
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Name
+      value: SM_WaterMill_Book01 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1589278
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1589284
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1589279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5ac546b315674d45ab56c0517a35b1b, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &532756283 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_PrefabInternal: {fileID: 532756282}
 --- !u!4 &533057163 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 3a451369bfa792a4cad3731b242756f1, type: 3}
@@ -5436,6 +5622,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Planche (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 23895854389551868, guid: 07c39f778d0649f4e8d46147718460dc,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07c39f778d0649f4e8d46147718460dc, type: 2}
   m_IsPrefabParent: 0
@@ -5576,6 +5767,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07c39f778d0649f4e8d46147718460dc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &556784352
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1910627396}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.115
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.899
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_RootOrder
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.29401
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Name
+      value: SM_WaterMill_Book01 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1589278
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1589284
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1589279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &556784353 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_PrefabInternal: {fileID: 556784352}
 --- !u!1001 &561748076
 Prefab:
   m_ObjectHideFlags: 0
@@ -6186,7 +6455,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4575982243800600, guid: e778f9a75ba6e7b4e9caec0d393d4164, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.5274353
+      value: -1.542
       objectReference: {fileID: 0}
     - target: {fileID: 4575982243800600, guid: e778f9a75ba6e7b4e9caec0d393d4164, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6194,7 +6463,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4575982243800600, guid: e778f9a75ba6e7b4e9caec0d393d4164, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.55462646
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4575982243800600, guid: e778f9a75ba6e7b4e9caec0d393d4164, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6629,6 +6898,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -6985,6 +7259,21 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -87.343
       objectReference: {fileID: 0}
+    - target: {fileID: 23551904313040076, guid: 79cbb598134e17d42bbb2f8f44cedf8e,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
+    - target: {fileID: 23551904313040076, guid: 79cbb598134e17d42bbb2f8f44cedf8e,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
+    - target: {fileID: 23551904313040076, guid: 79cbb598134e17d42bbb2f8f44cedf8e,
+        type: 2}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79cbb598134e17d42bbb2f8f44cedf8e, type: 2}
   m_IsPrefabParent: 0
@@ -7046,7 +7335,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 951d79534a0e7484e80f1df043b3abac, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 415cc2b5185b7e541ba97e1266ea1987, type: 2}
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 951d79534a0e7484e80f1df043b3abac, type: 3}
   m_IsPrefabParent: 0
@@ -8005,7 +8294,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 1fb9aa654ba799d48825e48c7a213d0a, type: 3}
       propertyPath: m_Materials.Array.data[4]
       value: 
-      objectReference: {fileID: 2100000, guid: d785c302e6f56c64eb01a7cc6e6a17f5, type: 2}
+      objectReference: {fileID: 2100000, guid: a5ac546b315674d45ab56c0517a35b1b, type: 2}
     - target: {fileID: 2300000, guid: 1fb9aa654ba799d48825e48c7a213d0a, type: 3}
       propertyPath: m_Materials.Array.data[6]
       value: 
@@ -8700,6 +8989,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Chair01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 23768925591636362, guid: a9f1d647a14f0a94282209cfd6d2a8ae,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9f1d647a14f0a94282209cfd6d2a8ae, type: 2}
   m_IsPrefabParent: 0
@@ -9146,6 +9440,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -9885,6 +10184,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -11230,7 +11534,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a5ac546b315674d45ab56c0517a35b1b, type: 2}
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
   m_IsPrefabParent: 0
@@ -12152,7 +12456,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 951d79534a0e7484e80f1df043b3abac, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 415cc2b5185b7e541ba97e1266ea1987, type: 2}
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 951d79534a0e7484e80f1df043b3abac, type: 3}
   m_IsPrefabParent: 0
@@ -13627,6 +13931,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e778f9a75ba6e7b4e9caec0d393d4164, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1298579368
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1910627396}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.007367585
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09933965
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.6459928
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_RootOrder
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.29401
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Name
+      value: SM_WaterMill_Book01 (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1589278
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1589284
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1589279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1298579369 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_PrefabInternal: {fileID: 1298579368}
 --- !u!1001 &1300653622
 Prefab:
   m_ObjectHideFlags: 0
@@ -14394,6 +14776,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -14755,6 +15142,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 23708927275905878, guid: 6723525e8234d5846aa47df1f82085b0,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
+    - target: {fileID: 23708927275905878, guid: 6723525e8234d5846aa47df1f82085b0,
+        type: 2}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
+    - target: {fileID: 23708927275905878, guid: 6723525e8234d5846aa47df1f82085b0,
+        type: 2}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6723525e8234d5846aa47df1f82085b0, type: 2}
   m_IsPrefabParent: 0
@@ -14783,9 +15185,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0.7900609, b: 0.33823532, a: 1}
+  m_Color: {r: 1, g: 0.694929, b: 0.30882353, a: 1}
   m_Intensity: 1
-  m_Range: 9.89
+  m_Range: 33
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -14817,7 +15219,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1378022896}
   m_LocalRotation: {x: -0, y: -0.99716866, z: -0, w: -0.07519871}
-  m_LocalPosition: {x: -341.67, y: 18.234, z: -436.712}
+  m_LocalPosition: {x: -342.74, y: 18.329, z: -437.511}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15005,6 +15407,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
   m_IsPrefabParent: 0
+--- !u!1001 &1390834682
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1910627396}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06083458
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11913253
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.965743
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_RootOrder
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.29401
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Name
+      value: SM_WaterMill_Book01 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1589278
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1589284
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1589279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1390834683 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_PrefabInternal: {fileID: 1390834682}
 --- !u!1001 &1394264244
 Prefab:
   m_ObjectHideFlags: 0
@@ -16056,6 +16536,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e778f9a75ba6e7b4e9caec0d393d4164, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1506583950
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1910627396}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05918525
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.110868916
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.8322463
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_RootOrder
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.29401
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Name
+      value: SM_WaterMill_Book01 (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1589278
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1589284
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1589279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 365c1fa890dab58438d83f7f37e0778a, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1506583951 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_PrefabInternal: {fileID: 1506583950}
 --- !u!1001 &1507933600
 Prefab:
   m_ObjectHideFlags: 0
@@ -16503,7 +17061,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 415cc2b5185b7e541ba97e1266ea1987, type: 2}
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     - target: {fileID: 1005627507402670, guid: 0f1ba23573b344d40b0cc77bf2f2bb1d, type: 2}
       propertyPath: m_Name
       value: SM_WaterMill_PoutreVerticale01 (3)
@@ -16748,7 +17306,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 365c1fa890dab58438d83f7f37e0778a, type: 2}
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
   m_IsPrefabParent: 0
@@ -17208,7 +17766,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 415cc2b5185b7e541ba97e1266ea1987, type: 2}
+  - {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18448,6 +19006,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -18645,6 +19208,21 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -87.343
       objectReference: {fileID: 0}
+    - target: {fileID: 23551904313040076, guid: 79cbb598134e17d42bbb2f8f44cedf8e,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
+    - target: {fileID: 23551904313040076, guid: 79cbb598134e17d42bbb2f8f44cedf8e,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
+    - target: {fileID: 23551904313040076, guid: 79cbb598134e17d42bbb2f8f44cedf8e,
+        type: 2}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79cbb598134e17d42bbb2f8f44cedf8e, type: 2}
   m_IsPrefabParent: 0
@@ -18695,6 +19273,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -19050,6 +19633,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 62
       objectReference: {fileID: 0}
+    - target: {fileID: 23144797498399324, guid: 205c53684de39a24f854e2ed1cf0004a,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 205c53684de39a24f854e2ed1cf0004a, type: 2}
   m_IsPrefabParent: 0
@@ -19107,6 +19695,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9f1d647a14f0a94282209cfd6d2a8ae, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1837352760
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1910627396}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.057536565
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10260786
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.69879
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_RootOrder
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.29401
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Name
+      value: SM_WaterMill_Book01 (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1589278
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1589284
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1589279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 365c1fa890dab58438d83f7f37e0778a, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1837352761 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_PrefabInternal: {fileID: 1837352760}
 --- !u!1 &1838989132
 GameObject:
   m_ObjectHideFlags: 0
@@ -19468,6 +20134,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 63
       objectReference: {fileID: 0}
+    - target: {fileID: 23625407226676386, guid: a9d1a31b8fcf17046b2a0ca1b0b0888e,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9d1a31b8fcf17046b2a0ca1b0b0888e, type: 2}
   m_IsPrefabParent: 0
@@ -19820,6 +20491,14 @@ Transform:
   - {fileID: 1358494242}
   - {fileID: 1243212271}
   - {fileID: 1671892997}
+  - {fileID: 532756283}
+  - {fileID: 1390834683}
+  - {fileID: 556784353}
+  - {fileID: 1506583951}
+  - {fileID: 306967593}
+  - {fileID: 1837352761}
+  - {fileID: 1298579369}
+  - {fileID: 2008518497}
   m_Father: {fileID: 0}
   m_RootOrder: 103
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20225,6 +20904,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -20798,6 +21482,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 88
   m_LocalEulerAnglesHint: {x: 0, y: -91.287, z: 0}
+--- !u!1001 &2008518496
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1910627396}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.093
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_RootOrder
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.29401
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Name
+      value: SM_WaterMill_Book01 (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1589278
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1589284
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1589279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &2008518497 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 14d65101474c7aa438203373e064b277, type: 3}
+  m_PrefabInternal: {fileID: 2008518496}
 --- !u!1001 &2014524601
 Prefab:
   m_ObjectHideFlags: 0
@@ -21618,12 +22380,12 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 365c1fa890dab58438d83f7f37e0778a, type: 2}
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     - target: {fileID: 23323237870324550, guid: ef8d6402b4613424cbd20871ec3d6ee0,
         type: 2}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 365c1fa890dab58438d83f7f37e0778a, type: 2}
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef8d6402b4613424cbd20871ec3d6ee0, type: 2}
   m_IsPrefabParent: 0
@@ -21775,6 +22537,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_WaterMill_Book01 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0
@@ -22051,7 +22818,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 14d65101474c7aa438203373e064b277, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 365c1fa890dab58438d83f7f37e0778a, type: 2}
+      objectReference: {fileID: 2100000, guid: 902bf50961f0df042b7dd813742c3686, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14d65101474c7aa438203373e064b277, type: 3}
   m_IsPrefabParent: 0
@@ -22169,6 +22936,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23312206449446156, guid: b6e49c7fdfaacec4ba83358020b34992,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1eb677a61f3076c488c833583f0b1276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6e49c7fdfaacec4ba83358020b34992, type: 2}
   m_IsPrefabParent: 0

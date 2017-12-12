@@ -20,7 +20,7 @@ Material:
     m_TexEnvs:
     - _Albedo:
         m_Texture: {fileID: 2800000, guid: b49465a16447f9343b151a6c6288a607, type: 3}
-        m_Scale: {x: 10, y: 10}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BrushStrokeTexture:
         m_Texture: {fileID: 2800000, guid: 98d9e6ad0c375c34b9a159cddeb180bf, type: 3}
@@ -190,7 +190,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Position: 0.4
-    - _Roughness: 0.809
+    - _Roughness: 0.952
     - _ShadowOpacity: 1
     - _ShadowSoftStep: 0.42
     - _ShadowSoftStrokeStep: 0.492

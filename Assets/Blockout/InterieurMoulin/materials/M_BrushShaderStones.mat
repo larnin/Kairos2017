@@ -190,7 +190,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Position: 0.4
-    - _Roughness: 0.7
+    - _Roughness: 1
     - _ShadowOpacity: 1
     - _ShadowSoftStep: 0.42
     - _ShadowSoftStrokeStep: 0.492
