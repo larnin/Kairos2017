@@ -1,9 +1,11 @@
 fileFormatVersion: 2
 guid: a3bab524d26cf5c4599c98af548808f1
-timeCreated: 1512136318
+timeCreated: 1513015349
 licenseType: Pro
 ShaderImporter:
-  defaultTextures: []
+  defaultTextures:
+  - _sf_noise_clouds_01: {fileID: 2800000, guid: ba37349d2e148c743a23954dcb764e72,
+      type: 3}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

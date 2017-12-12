@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: SHDF_RampRemap
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity Asset
+    Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=13201\n1953;98;1684;906;1777.047;546.8353;1.679872;True;False\nNode;AmplifyShaderEditor.FunctionInput;10;-1163.432,-102.1883;Float;False;Input;1;0;False;1;0;FLOAT;0.0;False;1;FLOAT\nNode;AmplifyShaderEditor.FunctionInput;8;-1157.432,-4.188263;Float;False;Scale;1;2;False;1;0;FLOAT;0.5;False;1;FLOAT\nNode;AmplifyShaderEditor.FunctionInput;9;-1155.432,93.81174;Float;False;Offset;1;3;False;1;0;FLOAT;0.5;False;1;FLOAT\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;3;-981.3954,9.489105;Float;False;3;0;FLOAT;0.0;False;1;FLOAT;1.0;False;2;FLOAT;0.0;False;1;FLOAT\nNode;AmplifyShaderEditor.SaturateNode;4;-742.1972,10.28915;Float;False;1;0;FLOAT;0.0;False;1;FLOAT\nNode;AmplifyShaderEditor.DynamicAppendNode;5;-548.8729,4.662037;Float;False;FLOAT4;4;0;FLOAT;0.0;False;1;FLOAT;0.0;False;2;FLOAT;0.0;False;3;FLOAT;0.0;False;1;FLOAT4\nNode;AmplifyShaderEditor.FunctionInput;11;-547.4325,-97.18826;Float;False;Ramp;9;1;False;1;0;SAMPLER2D;0.0;False;1;SAMPLER2D\nNode;AmplifyShaderEditor.SamplerNode;6;-322.4866,-4.962963;Float;True;Property;_TextureSample1;Texture
+    Sample 1;0;0;Assets/Textures/T_PaintMask02.png;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0.0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1.0;False;5;COLOR;FLOAT;FLOAT;FLOAT;FLOAT\nNode;AmplifyShaderEditor.FunctionOutput;0;0,0;Float;False;True;Output;0;1;0;COLOR;0.0;False;0\nWireConnection;3;0;10;0\nWireConnection;3;1;8;0\nWireConnection;3;2;9;0\nWireConnection;4;0;3;0\nWireConnection;5;0;4;0\nWireConnection;5;1;4;0\nWireConnection;6;0;11;0\nWireConnection;6;1;5;0\nWireConnection;0;0;6;0\nASEEND*/\n//CHKSM=451738DBFC023AB4C145BF699637D19DFEF18E3C"
+  m_functionName: 
+  m_description: 
