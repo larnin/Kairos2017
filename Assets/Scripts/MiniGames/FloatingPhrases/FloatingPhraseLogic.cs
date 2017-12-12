@@ -22,6 +22,8 @@ public class FloatingPhraseLogic : MonoBehaviour
 
     private float m_timeTransitionBetweenAttributes = 0.4f;
     public float timeTransitionBetweenAttributes {set { m_timeTransitionBetweenAttributes = value; }}
+
+    private float m_lastTimeUsed = 0.4f;
     
     [NonSerialized] public bool m_beingDestroy = false;
 
@@ -80,6 +82,8 @@ public class FloatingPhraseLogic : MonoBehaviour
                 value.m_outlineColor,
                 value.m_timeToApply);
         }
+
+        m_lastTimeUsed = value.m_timeToApply;
     }
 
     public void saveTextMeshProAttributes(TextMeshProAttributes value)
@@ -94,5 +98,13 @@ public class FloatingPhraseLogic : MonoBehaviour
     {
         m_textToChange.enabled = true;
         transform.localScale = new Vector3(1f, 1f, 1f);
+    }
+
+    public  void animFade(float value = 0f)
+    {
+        DOTween.To(() => m_textToChange.alpha,
+             x => m_textToChange.alpha = x,
+             value,
+             m_lastTimeUsed);
     }
 }
