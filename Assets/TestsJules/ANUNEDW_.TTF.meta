@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b4d32f395d7c3f54aaf27d3c12b0d022
+timeCreated: 1513096121
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: An Unfortunate Event DeWarped
+  fontNames:
+  - An Unfortunate Event DeWarped
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

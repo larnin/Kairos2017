@@ -20466,6 +20466,28 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+--- !u!1 &480835989 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1671654198632096, guid: 421b2e50570a06f408ccb45c641a9b2c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1316029552}
+--- !u!114 &480835993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480835989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f775a1009084db4e892af64e5cbf25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AngleMultiplier: 3
+  SpeedMultiplier: 1
+  CurveScale: 1
+  valueWait: 0
+  timeBetweenAppearingLetter: 0
+  m_speedUsedForSmooth: 5
 --- !u!1 &481091538
 GameObject:
   m_ObjectHideFlags: 0
@@ -42181,6 +42203,83 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114802686174776252, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 713901de0c490e8469c58c484f5ea9b5,
+        type: 2}
+    - target: {fileID: 114802686174776252, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 21623066714804588, guid: 713901de0c490e8469c58c484f5ea9b5,
+        type: 2}
+    - target: {fileID: 224575606915309976, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 342
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802686174776252, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_fontSize
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802686174776252, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_fontSizeBase
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 224700014256590264, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114905069473061200, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857430345299062, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114795602446344926, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114353612838529334, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114905069473061200, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114795602446344926, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857430345299062, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114353612838529334, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802686174776252, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 421b2e50570a06f408ccb45c641a9b2c, type: 2}
   m_IsPrefabParent: 0
@@ -43107,6 +43206,11 @@ Prefab:
       propertyPath: m_UI
       value: 
       objectReference: {fileID: 1307250004}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[0].sentenses.Array.data[0]
+      value: I had no one. There was no Light. Not on the Island.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 643e6645a6d797845aecd3bcc5e76124, type: 2}
   m_IsPrefabParent: 0

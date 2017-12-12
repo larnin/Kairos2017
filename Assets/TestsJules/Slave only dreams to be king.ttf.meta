@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e348d6b0966980841bb264e164abddd0
+timeCreated: 1513094760
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Slave only dreams to be king
+  fontNames:
+  - Slave only dreams to be king
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
