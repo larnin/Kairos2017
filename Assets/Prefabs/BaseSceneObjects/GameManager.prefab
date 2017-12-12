@@ -53,3 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_inventory: {fileID: 1478339732211602, guid: 7c700dea1e480424580af6a75bac6bcb,
     type: 2}
+  m_cardPrefab: {fileID: 1123216474223220, guid: c88c03f9e84040745a275b942e7bae28,
+    type: 2}

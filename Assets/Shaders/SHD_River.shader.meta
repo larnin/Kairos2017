@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: c7054b6ba24e1b944ab9533671fb9d0a
+timeCreated: 1512745521
+licenseType: Pro
+ShaderImporter:
+  defaultTextures:
+  - _Texture0: {fileID: 2800000, guid: 5522ab34b76afdb459f8d92c0e6ffd21, type: 3}
+  - _T_PaintMask02: {fileID: 2800000, guid: 0b73d1bfb18df7c46acf3e9444f02ebc, type: 3}
+  - _T_GradientLinear: {fileID: 2800000, guid: 86f1ecde25476c34daba1565dc9da823, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

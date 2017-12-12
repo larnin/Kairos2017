@@ -42,8 +42,8 @@ class CameraCursorLogic : MonoBehaviour
         m_subscriberList.Subscribe();
 
         m_oldPosition = transform.position;
-        m_oldRotation = transform.rotation;
-        m_targetOldPosition = m_followCamera.target.position;
+		m_oldRotation = transform.rotation;
+		m_targetOldPosition = m_followCamera.target.position;
     }
 
     private void OnDestroy()
