@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: M_BrushShaderTroncRock
-  m_Shader: {fileID: 4800000, guid: 0903cf11f0dc084479752b2ce1df0f2c, type: 3}
+  m_Shader: {fileID: 4800000, guid: cb1cb5e2edae80b4fa6948b3f842be7d, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -190,8 +190,8 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Position: 0.4
-    - _Roughness: 0.7
-    - _ShadowOpacity: 1
+    - _Roughness: 1
+    - _ShadowOpacity: 0.95
     - _ShadowSoftStep: 0.42
     - _ShadowSoftStrokeStep: 0.492
     - _ShadowStep: 0.03
@@ -204,6 +204,10 @@ Material:
     - _Tiling: 0.5
     - _Tiling2: 2.16
     - _UVSec: 0
+    - _VertexOffsetContrast: -0.91
+    - _VertexOffsetPosition: 8.47
+    - _VertexOffsetSpeed: 2.15
+    - _VertexOffsetStrength: 0.15
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
