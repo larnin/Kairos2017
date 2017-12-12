@@ -99,17 +99,10 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
         {
             spawned.applyTextMeshProAttributes(m_rumorsOfShadowsManager.hoverAttributes);
         }
-
-        // on les fait allez au spot 
+        
         TextMeshPro textMesh = spawned.GetComponent<TextMeshPro>();
-        //textMesh.alpha = 0f;
-        //textMesh.DOFade(1f, spokenPhrase.m_GoToRestSpot);
+        StartCoroutine(deathAnimationForFloatingPhrase(spokenPhrase.m_RestBeforeDissapear, spawned));   
 
-       // pivot.transform.DOMove(spokenPhrase.m_goPoints.GetChild(spokenPhrase.m_indiceOfTheGoPoint).position,
-       //     spokenPhrase.m_GoToRestSpot).onComplete = () =>
-       //     {
-               StartCoroutine(deathAnimationForFloatingPhrase(spokenPhrase.m_RestBeforeDissapear, spawned));   
-       //     };
         
         // on set les delegates
         spawned.m_onDestroy += OnPhraseIsDestroy;
@@ -134,6 +127,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
                 if(!e.GetComponentInParent<ShadowTriggerSelectionLogic>().m_matched)
                 {
                     e.applyTextMeshProAttributes(effect, false);
+                    e.animFade();
                 }
                 Destroy(e.transform.parent.gameObject, timeToDoIt);
             }
@@ -163,6 +157,7 @@ public class FloatingPhraseGeneratorLogic : MonoBehaviour
             if(! floatingPhrase.GetComponentInParent< ShadowTriggerSelectionLogic>().m_matched )
             {
                 floatingPhrase.applyTextMeshProAttributes(m_rumorsOfShadowsManager.UnMtachedAttributes, false);
+                floatingPhrase.animFade();
             }
             
             Destroy(floatingPhrase.transform.parent.gameObject, m_rumorsOfShadowsManager.timeTransitionBetweenAttribute);
