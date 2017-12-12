@@ -145,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_text: Name
   m_description: 
+  selectedColor: {r: 0, g: 1, b: 0, a: 1}
+  hoveredColor: {r: 1, g: 0.5, b: 0, a: 1}
 --- !u!114 &114964673361049696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,7 +214,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 100}
+  m_SizeDelta: {x: 200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224313673963411164
 RectTransform:

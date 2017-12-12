@@ -2202,6 +2202,11 @@ Transform:
   m_Father: {fileID: 1528191216}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &117711204 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+    type: 2}
+  m_PrefabInternal: {fileID: 590111711}
 --- !u!1 &124861542
 GameObject:
   m_ObjectHideFlags: 0
@@ -22101,6 +22106,106 @@ Transform:
   m_Father: {fileID: 1828991893}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &590111711
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1113444874}
+    m_Modifications:
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224201889066938532, guid: d895a53543e8c63469c7f50cb73eb322,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d895a53543e8c63469c7f50cb73eb322, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &597702960
 GameObject:
   m_ObjectHideFlags: 0
@@ -29088,6 +29193,7 @@ RectTransform:
   - {fileID: 37100025}
   - {fileID: 540549761}
   - {fileID: 1733874322}
+  - {fileID: 117711204}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43117,6 +43223,56 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[1].cards.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[1].rounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[0].sentenses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[3].sentenses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[1].rounds.Array.data[0].sentenses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[4].sentenses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[2].sentenses.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4261242973877816, guid: 643e6645a6d797845aecd3bcc5e76124, type: 2}
       propertyPath: m_LocalPosition.x
       value: 630.088
@@ -43154,6 +43310,208 @@ Prefab:
       propertyPath: m_UI
       value: 
       objectReference: {fileID: 1307250004}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.data[0].name
+      value: Hate and Rumors
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.data[0].description
+      value: He was a good man, driven away by the anger of Isaac's Mother.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.data[1].name
+      value: A Solid Chain
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.data[1].description
+      value: Left in the Parent's house
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.data[2].name
+      value: The Beginning of a Path
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.data[2].description
+      value: Isaac's first letter about becoming a teacher
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.data[3].name
+      value: The Old Man in the Mill
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.data[3].description
+      value: A man that Isaac used to visit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.data[4].name
+      value: Photo triste de la famille
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].cards.Array.data[4].description
+      value: "La femme a le regard \xE9teint. L'homme, le regard dur. Le b\xE9b\xE9
+        pleure"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[0].sentenses.Array.data[1]
+      value: Tout va bien, on est heureux
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[0].sentenses.Array.data[0]
+      value: There never was a Light on the Island
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[0].rightSentenseindex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[0].rightCardName
+      value: The Old Man in the Mill
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[1].sentenses.Array.data[0]
+      value: 'His help was hopeless. He was too soft. Too nice '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[1].sentenses.Array.data[1]
+      value: I couldn't achieve what he wanted. I disappointed him, among others
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[1].sentenses.Array.data[2]
+      value: He used to teach me about this World over the borders
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[1].rightSentenseindex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[1].rightCardName
+      value: The Beginning of a Path
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[3].sentenses.Array.data[0]
+      value: Hate and Rumors
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[3].sentenses.Array.data[1]
+      value: He is long gone. The Light left when I had just found it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[3].sentenses.Array.data[2]
+      value: He was a good man. But I can't be like him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[3].sentenses.Array.data[3]
+      value: The will isn't lost, but I have no say in what I become
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[3].sentenses.Array.data[4]
+      value: I loved him. And my love destroy what it touches
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[3].sentenses.Array.data[5]
+      value: "Mais j'ai d\xE9j\xE0 trouv\xE9 des hobbys...des amis..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[3].rightSentenseindex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[3].rightCardName
+      value: A Solid Chain
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[1].cards.Array.data[0].name
+      value: Oui
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[1].cards.Array.data[0].description
+      value: "C'est dur. Mais c'est une bonne d\xE9cision"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[1].rounds.Array.data[0].sentenses.Array.data[0]
+      value: "Au fond de moi, j'ai d\xE9j\xE0 d\xE9cid\xE9 hein ? J'\xE9tais juste
+        en train de me mentir"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[1].rounds.Array.data[0].rightCardName
+      value: Oui
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[4].sentenses.Array.data[1]
+      value: Les abandonner ? Jamais !
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[4].sentenses.Array.data[0]
+      value: Hate and Rumors
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[4].rightCardName
+      value: A Solid Chain
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[2].sentenses.Array.data[0]
+      value: It's pointless. I came back here to die.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[2].sentenses.Array.data[1]
+      value: He is long gone. The Light left when I had just found it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[2].sentenses.Array.data[2]
+      value: He was a good man. But I can't be like him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[2].sentenses.Array.data[3]
+      value: The will isn't lost, but I have no say in what I become
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[2].sentenses.Array.data[4]
+      value: I loved him. And my love destroy what it touches
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
+        type: 2}
+      propertyPath: m_stages.Array.data[0].rounds.Array.data[2].rightCardName
+      value: Hate and Rumors
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 643e6645a6d797845aecd3bcc5e76124, type: 2}
   m_IsPrefabParent: 0
