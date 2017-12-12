@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-[RequireComponent(typeof(FollowCamera))]
+[RequireComponent(typeof(BaseCameraLogic))]
 
 class CameraCursorLogic : MonoBehaviour
 {
@@ -15,7 +15,7 @@ class CameraCursorLogic : MonoBehaviour
     
     SubscriberList m_subscriberList = new SubscriberList();
 
-    FollowCamera m_followCamera;
+    BaseCameraLogic m_followCamera;
     Camera m_camera;
 
     bool m_controlesLocked = false;
@@ -35,15 +35,15 @@ class CameraCursorLogic : MonoBehaviour
 
     private void Awake()
     {
-        m_followCamera = GetComponent<FollowCamera>();
+        m_followCamera = GetComponent<BaseCameraLogic>();
         m_camera = Camera.main;
 
         m_subscriberList.Add(new Event<LockPlayerControlesEvent>.Subscriber(onControlesLock));
         m_subscriberList.Subscribe();
 
         m_oldPosition = transform.position;
-        m_oldRotation = transform.rotation;
-        m_targetOldPosition = m_followCamera.target.position;
+		m_oldRotation = transform.rotation;
+		m_targetOldPosition = m_followCamera.target.position;
     }
 
     private void OnDestroy()
