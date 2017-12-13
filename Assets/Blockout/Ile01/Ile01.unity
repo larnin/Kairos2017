@@ -372,8 +372,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_validInputName: Submit
   m_validInputText: Entrer
-  m_scenename: Toto
+  m_scenename: Ile02
   m_fadeTime: 1
+  m_newScenePlayerTag: Player
+  m_newScenePlayerSpawnTag: Spawn
 --- !u!23 &637608300
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -843,6 +845,10 @@ Prefab:
     - target: {fileID: 4972480697397698, guid: ac322d0ea23b17c40822ef60ec64b276, type: 2}
       propertyPath: m_LocalRotation.w
       value: -0.11041513
+      objectReference: {fileID: 0}
+    - target: {fileID: 1587392391475236, guid: ac322d0ea23b17c40822ef60ec64b276, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac322d0ea23b17c40822ef60ec64b276, type: 2}

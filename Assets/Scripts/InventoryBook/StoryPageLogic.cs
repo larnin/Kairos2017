@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-class StoryPageLogic : MonoBehaviour
+public class StoryPageLogic : MonoBehaviour
 {
     string verticalAxis = "Vertical";
     float axisThreshold = 0.6f;
@@ -21,7 +21,7 @@ class StoryPageLogic : MonoBehaviour
 
     float m_oldVerticalAxisValue = 0;
 
-    List<StoryCategory> m_categories = new List<StoryCategory>();
+    //List<StoryCategory> m_categories = new List<StoryCategory>();
 
     List<StoryCategoryTextLogic> m_categoryTexts = new List<StoryCategoryTextLogic>();
 
@@ -29,7 +29,6 @@ class StoryPageLogic : MonoBehaviour
 
     private void Awake()
     {
-        loadStoryData();
         createCategories();
         if(m_categoryTexts.Count > 0)
         {
@@ -60,34 +59,17 @@ class StoryPageLogic : MonoBehaviour
         return 0;
     }
 
-    void loadStoryData()
-    {
-        string assetName = "InventoryBook/Story";
-
-        var text = Resources.Load<TextAsset>(assetName);
-        if (text != null)
-        {
-            var items = JsonUtility.FromJson<StorySerializer>(text.text);
-            if (items != null)
-                m_categories = items.categories;
-            else Debug.LogError("Can't parse story asset !");
-        }
-        else Debug.LogError("Can't load story asset !");
-
-        foreach (var c in m_categories)
-            foreach (var i in c.items)
-                i.visibility = (StoryItem.VisibilityState)G.sys.saveSystem.getInt("Story." + c.categoryName + "." + i.name, (int)i.visibility);
-    }
-
     void createCategories()
     {
-        if (m_categories.Count == 0)
+        var categories = G.sys.ressourcesData.defaultStory;
+
+        if (categories.Count == 0)
             return;
 
-        float offset = Mathf.Min(m_categoryHeightMax, m_categories.Count > 1 ? m_categoryHeight / (m_categories.Count - 1) : m_categoryHeight);
-        for(int i = 0; i < m_categories.Count; i++)
+        float offset = Mathf.Min(m_categoryHeightMax, categories.Count > 1 ? m_categoryHeight / (categories.Count - 1) : m_categoryHeight);
+        for(int i = 0; i < categories.Count; i++)
         {
-            var category = m_categories[i];
+            var category = categories[i];
 
             var obj = Instantiate(m_categoryTextPrefab, transform);
             var tr = obj.GetComponent<RectTransform>();
@@ -149,7 +131,13 @@ class StoryPageLogic : MonoBehaviour
 
     void createCategoryPage(string categoryName)
     {
-        var c = m_categories.Find(x => { return x.categoryName == categoryName; });
+        StoryCategory c = null;
+        foreach(var cat in G.sys.ressourcesData.defaultStory)
+            if(cat.categoryName == categoryName)
+            {
+                c = cat;
+                break;
+            }
         if (c == null)
             return;
 
@@ -160,8 +148,10 @@ class StoryPageLogic : MonoBehaviour
             var pos = new Vector2(m_storyArea.x + m_storyArea.width / 2 + item.shift, m_storyArea.y - currentOffset);
             if (item.contentAlignement == StoryItem.ContentAlignement.TOP_LEFT)
                 pos = new Vector2(m_storyArea.x + m_storyArea.width + item.shift, m_storyArea.y);
-            
-            if(item.visibility != StoryItem.VisibilityState.HIDDEN)
+
+            var visibility = SaveAttributes.getStoryItemState(c.categoryName, item.name, item.visibility);
+
+            if(visibility != StoryItem.VisibilityState.HIDDEN)
             {
                 switch(item.contentType)
                 {

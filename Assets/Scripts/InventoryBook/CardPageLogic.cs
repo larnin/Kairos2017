@@ -16,8 +16,7 @@ class CardPageLogic : MonoBehaviour
     [SerializeField] Vector2 m_cardOffset;
     [SerializeField] int m_nbRow;
     [SerializeField] int m_nbColumn;
-
-    List<CardData> m_cards = new List<CardData>();
+    
     List<CardItemLogic> m_cardsObjects = new List<CardItemLogic>();
     List<CardItemLogic> m_currentObjects = new List<CardItemLogic>();
 
@@ -45,7 +44,6 @@ class CardPageLogic : MonoBehaviour
 
     private void Start()
     {
-        loadCardData();
         instanciateAllCards();
         if (m_cardsObjects.Count == 0)
             return;
@@ -94,30 +92,11 @@ class CardPageLogic : MonoBehaviour
             c.hovered = false;
     }
 
-
-    void loadCardData()
-    {
-        string assetName = "InventoryBook/Cards";
-
-        var text = Resources.Load<TextAsset>(assetName);
-        if (text != null)
-        {
-            var items = JsonUtility.FromJson<CardsSerializer>(text.text);
-            if (items != null)
-                m_cards = items.cards;
-            else Debug.LogError("Can't parse story asset !");
-        }
-        else Debug.LogError("Can't load story asset !");
-
-        foreach (var c in m_cards)
-            c.visibility = (CardData.VisibilityState)G.sys.saveSystem.getInt("Card." + c.name, (int)c.visibility);
-    }
-
     void instanciateAllCards()
     {
-        foreach(var c in m_cards)
+        foreach(var c in G.sys.ressourcesData.defaultCardsList)
         {
-            if (c.visibility == CardData.VisibilityState.HIDDEN)
+            if (SaveAttributes.getCardState(c.name, c.visibility) == CardData.VisibilityState.HIDDEN)
                 continue;
 
             var card = Instantiate(m_cardPrefab, transform);
@@ -200,7 +179,7 @@ class CardPageLogic : MonoBehaviour
                 m_currentCardIndex = i;
                 card.selected = true;
 
-                foreach (var c in m_cards)
+                foreach (var c in G.sys.ressourcesData.defaultCardsList)
                     if (c.name == cardName)
                         updateBigCardRender(c, card);
             }

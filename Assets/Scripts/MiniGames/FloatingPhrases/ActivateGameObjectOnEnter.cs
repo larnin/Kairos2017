@@ -9,13 +9,23 @@ public class ActivateGameObjectOnEnter : TriggerBaseLogic
     [SerializeField]
     private RumorsOfShadowsManager m_rumorsOfShadowsManager = null;
     
+
+
     public override void onEnter(TriggerInteractionLogic entity)
     {
-        m_toActivate.appearing();
+        if(entity.tag == "Player")
+        {
+            m_toActivate.appearing();
+        }
+        
     }
 
     public override void onExit(TriggerInteractionLogic entity)
     {
-        m_toActivate.disappearing(m_rumorsOfShadowsManager.UnMtachedAttributes, m_rumorsOfShadowsManager.timeTransitionBetweenAttribute);
+        if (entity.tag == "Player")
+        {
+            m_toActivate.disappearing(m_rumorsOfShadowsManager.UnMtachedAttributes, m_rumorsOfShadowsManager.timeTransitionBetweenAttribute);
+        }
+        
     }
 }

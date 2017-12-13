@@ -15,8 +15,7 @@ class CameraCursorLogic : MonoBehaviour
     
     SubscriberList m_subscriberList = new SubscriberList();
 
-    BaseCameraLogic m_followCamera;
-    Camera m_camera;
+    BaseCameraLogic m_camera;
 
     bool m_controlesLocked = false;
 
@@ -24,26 +23,22 @@ class CameraCursorLogic : MonoBehaviour
     InteractableBaseLogic m_selectedInteractable;
 
     Vector3 m_localHitPos;
-    Vector3 m_oldPosition;
     Vector3 m_targetOldPosition;
     Quaternion m_oldRotation;
 
     Vector3 m_localInteractablePosition;
-    Quaternion m_localInteractableRotation;
     Quaternion m_startInteractableRotation;
     Quaternion m_startCameraRotation;
 
     private void Awake()
     {
-        m_followCamera = GetComponent<BaseCameraLogic>();
-        m_camera = Camera.main;
+        m_camera = GetComponent<BaseCameraLogic>();
 
         m_subscriberList.Add(new Event<LockPlayerControlesEvent>.Subscriber(onControlesLock));
         m_subscriberList.Subscribe();
-
-        m_oldPosition = transform.position;
-		m_oldRotation = transform.rotation;
-		m_targetOldPosition = m_followCamera.target.position;
+        
+        m_oldRotation = transform.rotation;
+        m_targetOldPosition = m_camera.target.position;
     }
 
     private void OnDestroy()
@@ -58,10 +53,9 @@ class CameraCursorLogic : MonoBehaviour
 
         checkHoveredinteractables();
         checkPress();
-
-        m_oldPosition = transform.position;
+        
         m_oldRotation = transform.rotation;
-        m_targetOldPosition = m_followCamera.target.position;
+        m_targetOldPosition = m_camera.target.position;
     }
 
     void checkHoveredinteractables()
@@ -79,7 +73,7 @@ class CameraCursorLogic : MonoBehaviour
 
     void changeCurrentInteractable(InteractableBaseLogic interactable, Vector3 hitposition)
     {
-        InteractableBaseLogic.OrigineType type = m_followCamera.FPSMode ? InteractableBaseLogic.OrigineType.FIRST_PERSON_CAMERA : InteractableBaseLogic.OrigineType.THIRD_PERSON_CAMERA;
+        InteractableBaseLogic.OrigineType type = m_camera.FPSMode ? InteractableBaseLogic.OrigineType.FIRST_PERSON_CAMERA : InteractableBaseLogic.OrigineType.THIRD_PERSON_CAMERA;
 
         if (interactable != null)
             hitposition = interactable.transform.InverseTransformPoint(hitposition);
@@ -104,7 +98,7 @@ class CameraCursorLogic : MonoBehaviour
 
     void checkPress()
     {
-        InteractableBaseLogic.OrigineType type = m_followCamera.FPSMode ? InteractableBaseLogic.OrigineType.FIRST_PERSON_CAMERA : InteractableBaseLogic.OrigineType.THIRD_PERSON_CAMERA;
+        InteractableBaseLogic.OrigineType type = m_camera.FPSMode ? InteractableBaseLogic.OrigineType.FIRST_PERSON_CAMERA : InteractableBaseLogic.OrigineType.THIRD_PERSON_CAMERA;
 
         if (Input.GetButtonDown(inputValidate) && m_hoveredInteractable != null)
         {
@@ -112,9 +106,8 @@ class CameraCursorLogic : MonoBehaviour
                 m_selectedInteractable.onInteractEnd(type);
             m_selectedInteractable = m_hoveredInteractable;
 
-            m_localInteractablePosition = m_selectedInteractable.transform.position - m_followCamera.target.position;
+            m_localInteractablePosition = m_selectedInteractable.transform.position - m_camera.target.position;
             m_localInteractablePosition = transform.forward * m_localInteractablePosition.magnitude;
-            m_localInteractableRotation = m_selectedInteractable.transform.rotation * Quaternion.Inverse(transform.rotation);
             m_startInteractableRotation = m_selectedInteractable.transform.rotation;
             m_startCameraRotation = transform.rotation;
 
@@ -133,7 +126,7 @@ class CameraCursorLogic : MonoBehaviour
 
     void dragObject()
     {
-        InteractableBaseLogic.OrigineType type = m_followCamera.FPSMode ? InteractableBaseLogic.OrigineType.FIRST_PERSON_CAMERA : InteractableBaseLogic.OrigineType.THIRD_PERSON_CAMERA;
+        InteractableBaseLogic.OrigineType type = m_camera.FPSMode ? InteractableBaseLogic.OrigineType.FIRST_PERSON_CAMERA : InteractableBaseLogic.OrigineType.THIRD_PERSON_CAMERA;
 
         var newRot = transform.rotation  * Quaternion.Inverse(m_startCameraRotation) * m_startInteractableRotation;
         var dir = (transform.rotation * Quaternion.Inverse(m_oldRotation)).eulerAngles;
@@ -144,9 +137,9 @@ class CameraCursorLogic : MonoBehaviour
 
         var distance = m_localInteractablePosition.magnitude;
         var newLocalPos = transform.forward * distance;
-        var posOffset = m_followCamera.target.position - m_targetOldPosition;
+        var posOffset = m_camera.target.position - m_targetOldPosition;
         
-        m_selectedInteractable.onDrag(new InteractableBaseLogic.DragData(new Vector2(dir.y, dir.x), posOffset + newLocalPos - m_localInteractablePosition,  Quaternion.Inverse(m_selectedInteractable.transform.rotation) * newRot, m_followCamera.target), type);
+        m_selectedInteractable.onDrag(new InteractableBaseLogic.DragData(new Vector2(dir.y, dir.x), posOffset + newLocalPos - m_localInteractablePosition,  Quaternion.Inverse(m_selectedInteractable.transform.rotation) * newRot, m_camera.target), type);
         m_localInteractablePosition = newLocalPos;
     }
 
@@ -154,7 +147,7 @@ class CameraCursorLogic : MonoBehaviour
     {
         changeCurrentInteractable(null);
         if (m_selectedInteractable != null)
-            m_selectedInteractable.onExit(m_followCamera.FPSMode ? InteractableBaseLogic.OrigineType.FIRST_PERSON_CAMERA : InteractableBaseLogic.OrigineType.THIRD_PERSON_CAMERA);
+            m_selectedInteractable.onExit(m_camera.FPSMode ? InteractableBaseLogic.OrigineType.FIRST_PERSON_CAMERA : InteractableBaseLogic.OrigineType.THIRD_PERSON_CAMERA);
         m_selectedInteractable = null;
     }
 

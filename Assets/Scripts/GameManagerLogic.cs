@@ -28,10 +28,12 @@ public class GameManagerLogic : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+        G.sys.gameManager = this;
 
         m_subscriberlist.Add(new Event<LoadSceneEvent>.Subscriber(onLoadScene));
         m_subscriberlist.Add(new Event<PauseEvent>.Subscriber(onPauseEnd));
         m_subscriberlist.Add(new Event<FindCardEvent>.Subscriber(onCardFind));
+        m_subscriberlist.Add(new Event<EndLoopEvent>.Subscriber(onEndLoop));
         m_subscriberlist.Subscribe();
     }
 
@@ -61,6 +63,14 @@ public class GameManagerLogic : MonoBehaviour
     {
         while (!operation.isDone)
             yield return new WaitForEndOfFrame();
+
+#if UNITY_EDITOR //rebuild the lights in the editor
+        if (UnityEditor.Lightmapping.giWorkflowMode == UnityEditor.Lightmapping.GIWorkflowMode.Iterative)
+        {
+            DynamicGI.UpdateEnvironment();
+        }
+#endif
+
         if (callback != null)
             callback();
     }
@@ -86,25 +96,17 @@ public class GameManagerLogic : MonoBehaviour
 
     void onCardFind(FindCardEvent e)
     {
-        G.sys.saveSystem.set(e.name, (int)CardData.VisibilityState.VISIBLE);
+        SaveAttributes.setCardState(e.name, CardData.VisibilityState.VISIBLE);
         var card = Instantiate(m_cardPrefab);
         var comp = card.GetComponent<BigCardLogic>();
 
-        string assetName = "InventoryBook/Cards";
+        var cardItem = G.sys.ressourcesData.getCard(e.name);
+        if (cardItem != null)
+            comp.set(cardItem.fancyName.Length > 0 ? cardItem.fancyName : cardItem.name, cardItem.textureName, cardItem.description);
+    }
 
-        var text = Resources.Load<TextAsset>(assetName);
-        if (text != null)
-        {
-            var items = JsonUtility.FromJson<CardsSerializer>(text.text);
-            if (items != null)
-            {
-                foreach(var c in items.cards)
-                    if(c.name == e.name)
-                    {
-                        comp.set((c.fancyName.Length == 0 ? c.name : c.fancyName), c.textureName, c.description);
-                        break;
-                    }
-            }
-        }
+    void onEndLoop(EndLoopEvent e)
+    {
+        G.sys.loopSystem.startNextLoop(); 
     }
 }

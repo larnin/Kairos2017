@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 222075104976666700}
   - component: {fileID: 114374461524192128}
   - component: {fileID: 114443335296261476}
-  - component: {fileID: 114646849597401234}
   - component: {fileID: 114636201831759218}
   m_Layer: 9
   m_Name: Indice 01
@@ -207,18 +206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c431ae9b6a14a42807e3b053b6b658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114646849597401234
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1578710452520986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45757dcc8f119454dac6365e8fd15e8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeBetweenChar: 0.03
 --- !u!222 &222075104976666700
 CanvasRenderer:
   m_ObjectHideFlags: 1

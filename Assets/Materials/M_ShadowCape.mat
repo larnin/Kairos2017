@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e2b269e383677444aafec85fbfecb63c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BrushStrokeTexture:
@@ -60,6 +60,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emissive:
+        m_Texture: {fileID: 2800000, guid: 385a5bd22ab61d140bbe513ed00ebdca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -177,7 +181,7 @@ Material:
     - _Parallax: 0.02
     - _Pos: 0
     - _Position: 0.4
-    - _Roughness: 0.934
+    - _Roughness: 0.95
     - _ShadowOpacity: 1
     - _ShadowSoftStep: 0.42
     - _ShadowSoftStrokeStep: 0.492
@@ -196,5 +200,5 @@ Material:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0.03114187, g: 0.04278697, b: 0.05882326, a: 0}
+    - _ShadowColor: {r: 0.031141868, g: 0.042786904, b: 0.05882319, a: 0}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
