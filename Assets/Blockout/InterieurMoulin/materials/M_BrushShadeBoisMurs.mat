@@ -20,7 +20,7 @@ Material:
     m_TexEnvs:
     - _Albedo:
         m_Texture: {fileID: 2800000, guid: a1b8b35fdb22482489c6d99681363d08, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     - _BrushStrokeTexture:
         m_Texture: {fileID: 2800000, guid: 98d9e6ad0c375c34b9a159cddeb180bf, type: 3}
@@ -76,7 +76,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Normal:
         m_Texture: {fileID: 2800000, guid: a751267341a6fd3448838b913fc36f3f, type: 3}
-        m_Scale: {x: 6, y: 6}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
