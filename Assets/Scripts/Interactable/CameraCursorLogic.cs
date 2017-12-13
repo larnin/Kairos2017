@@ -38,6 +38,10 @@ class CameraCursorLogic : MonoBehaviour
         m_subscriberList.Subscribe();
         
         m_oldRotation = transform.rotation;
+    }
+
+    private void Start()
+    {
         m_targetOldPosition = m_camera.target.position;
     }
 

@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Blockout/Ile03/Zone_Watermill.unity
     guid: 1968848489487b046a8ecf913742b645
+  - enabled: 1
+    path: Assets/Blockout/InterieurMoulin/InteriorMoulin.unity
+    guid: aeff420af7667614ea4b98c5d08d7e4c

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33299699859635326}
   - component: {fileID: 23272344422409220}
   - component: {fileID: 95682199382147202}
+  - component: {fileID: 64930293278846974}
   m_Layer: 0
   m_Name: SM_World_Rock03
   m_TagString: Untagged
@@ -80,6 +81,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1837516806852296}
+  m_Mesh: {fileID: 4300002, guid: 488232a37dbdea74db3cdc1334387d37, type: 3}
+--- !u!64 &64930293278846974
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1837516806852296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 488232a37dbdea74db3cdc1334387d37, type: 3}
 --- !u!95 &95682199382147202
 Animator:
