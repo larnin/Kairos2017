@@ -88,7 +88,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Transmission: 0.5
-    - _TurbulenceStrength: 0.5
+    - _TurbulenceStrength: 0.571
     - _TurbulencesSpeed: 0.1
     - _UVSec: 0
     - _ZWrite: 1
