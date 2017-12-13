@@ -16,8 +16,8 @@ public class PowFeedbackLogic : MonoBehaviour
         TIMEOUT,
     }
 
-    Color rightColor = new Color(0, 1, 0);
-    Color falseColor = new Color(1, 0, 0);
+    public Color rightColor = new Color(0, 1, 0);
+    public Color falseColor = new Color(1, 0, 0);
 
     Image m_powBackImage;
     Text m_powText;

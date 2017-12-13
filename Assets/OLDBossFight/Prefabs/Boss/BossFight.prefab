@@ -80,7 +80,7 @@ MonoBehaviour:
       description: A man that Isaac used to visit
     rounds:
     - sentenses:
-      - There never was a Light on the Island
+      - I had no one. There was no Light. Not on the Island.
       rightSentenseindex: 0
       rightCardName: The Old Man in the Mill
       rightSentenseAnswer: I remember him. He shined bright atop the lake.
@@ -92,17 +92,17 @@ MonoBehaviour:
       rightSentenseindex: 2
       rightCardName: The Beginning of a Path
       rightSentenseAnswer: You're right. He first showed me what I wanted to be.
-      wrongSentenseAnswer: 
+      wrongSentenseAnswer: Something happened when He taught me.
     - sentenses:
       - It's pointless. I came back here to die.
       - He is long gone. The Light left when I had just found it.
       - He was a good man. But I can't be like him.
-      - The will isn't lost, but I have no say in what I become
-      - I loved him. And my love destroy what it touches
+      - The will isn't lost, but I have no say in what I become.
+      - I loved him. And my love destroy what it touches.
       rightSentenseindex: 1
       rightCardName: Hate and Rumors
       rightSentenseAnswer: No. It can't be right. He abandoned me.
-      wrongSentenseAnswer: 
+      wrongSentenseAnswer: He left me. I failed him.
     - sentenses:
       - They hated me. I was their bane. Why would they make me come back ?
       - Father hated me ! He was why I fled !
@@ -110,7 +110,7 @@ MonoBehaviour:
       rightSentenseindex: 0
       rightCardName: A Solid Chain
       rightSentenseAnswer: I see...
-      wrongSentenseAnswer: 
+      wrongSentenseAnswer: They wanted me to go !
   - cards:
     - folded: 0
       visibility: 0
@@ -124,6 +124,6 @@ MonoBehaviour:
       rightSentenseindex: 0
       rightCardName: Hate & Displacement
       rightSentenseAnswer: .. I need to do something. To leave that circle
-      wrongSentenseAnswer: 
+      wrongSentenseAnswer: What... are you saying ?
   m_playerLife: 5
   m_answerTime: 5
