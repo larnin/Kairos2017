@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Matched
   m_EditorClassIdentifier: 
   m_fontStyle: 0
-  m_faceSettingColor: {r: 0, g: 0, b: 0, a: 0}
+  m_faceSettingColor: {r: 0.9117647, g: 0.64248896, b: 0.16089964, a: 0}
   m_outlineColor: {r: 0, g: 0, b: 0, a: 0}
   m_timeToApply: 0.4

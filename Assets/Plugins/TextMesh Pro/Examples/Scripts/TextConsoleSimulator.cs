@@ -23,7 +23,7 @@ public class TextConsoleSimulator : MonoBehaviour
             //StartCoroutine(RevealWords(m_TextComponent));
         }
 
-        /*
+        
         void OnEnable()
         {
             // Subscribe to event fired when text object has been regenerated.
@@ -34,7 +34,7 @@ public class TextConsoleSimulator : MonoBehaviour
         {
             TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(ON_TEXT_CHANGED);
         }
-        */
+        
 
         // Event received when the text object has changed.
         void ON_TEXT_CHANGED(Object obj)
@@ -66,6 +66,7 @@ public class TextConsoleSimulator : MonoBehaviour
 
                 if (visibleCount > totalVisibleCharacters)
                 {
+				//print ("SendMessage");	
                     enabled = false;
                     gameObject.SendMessage("activateThatScript");
                     break;
