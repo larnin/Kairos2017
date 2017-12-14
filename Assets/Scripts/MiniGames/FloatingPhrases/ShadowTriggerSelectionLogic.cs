@@ -31,10 +31,7 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
     [SerializeField] private int m_numberOfBlink = 3;
     [SerializeField] private float m_timeToTransitionBetweenColorWrongFeedback = 0.5f;
     [SerializeField] private float m_timeToStayInColor = 0.1f;
-
-
-
-
+    
     private RumorsOfShadowsManager m_rumorsOfShadowsManager;
     private bool m_playerIsInside = false;
     public bool playerIsInside { get { return m_playerIsInside; } }
@@ -88,6 +85,7 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
         m_baseParam.alpha = 1f;
     }
 
+    bool m_onetime = false;
     void Update()
     {
         if (m_playerIsInside && Input.GetButtonDown("Interact") && !m_matched)
@@ -107,6 +105,17 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
                     updateFeedback();
                 }
             }
+
+            //var P = GetComponent<IndiceGeneratorLogic>();
+
+            //if (P)
+            //{
+            //    if (P.m_phraseAppearNumber == P.m_phraseIndices.Length && !m_onetime)
+            //    {
+            //        Event<FindCardEvent>.Broadcast(new FindCardEvent(P.cardName));
+            //        m_onetime = true;
+            //    }
+            //}
 
         }
     }
@@ -160,3 +169,4 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
         unMatchedFeedbackOn = false;
     }
 }
+

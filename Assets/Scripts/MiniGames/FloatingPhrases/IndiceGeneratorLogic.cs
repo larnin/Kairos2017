@@ -14,13 +14,13 @@ public class IndiceGeneratorLogic : MonoBehaviour {
     }
 
     [SerializeField] private float timeBetweenEachPhrase = 1f;
-    [SerializeField] private string cardName = "TEST";
-    [SerializeField] private SpawnIndiceAtNumber[] m_phraseIndices;
+    [SerializeField] public string cardName = "TEST";
+    [SerializeField] public SpawnIndiceAtNumber[] m_phraseIndices;
 
     RumorsOfShadowsManager m_manager = null;
 
-    int m_indiceNumber = 0; // collected
-    int m_phraseAppearNumber = 0; // appeared
+    [NonSerialized] public int m_indiceNumber = 0; // collected
+    [NonSerialized] public int m_phraseAppearNumber = 0; // appeared
 
     Transform m_goToPoints;
     Transform m_spawnPoint;
