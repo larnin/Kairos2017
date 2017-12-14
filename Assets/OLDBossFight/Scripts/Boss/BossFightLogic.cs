@@ -71,11 +71,17 @@ class BossFightLogic : MonoBehaviour
 
     void onCardAndSequenceSelected(CardAndSentenseSelectedEvent e)
     {
-        if (e.cardName == m_stages[m_stageIndex].rounds[m_roundIndex].rightCardName && e.sentenseIndex == m_stages[m_stageIndex].rounds[m_roundIndex].rightSentenseindex)
-            endRound(PowFeedbackLogic.FeedbackType.RIGHT);
-        else
-            endRound(PowFeedbackLogic.FeedbackType.WRONG);
-    }
+		if (e.cardName == m_stages[m_stageIndex].rounds[m_roundIndex].rightCardName && e.sentenseIndex == m_stages[m_stageIndex].rounds[m_roundIndex].rightSentenseindex)
+		{
+			Event<AnimateSentenceEvent>.Broadcast(new AnimateSentenceEvent(e.sentenseIndex, PowFeedbackLogic.FeedbackType.RIGHT));
+			DOVirtual.DelayedCall(0.5f, () => { endRound(PowFeedbackLogic.FeedbackType.RIGHT); });
+		}
+		else
+		{
+			Event<AnimateSentenceEvent>.Broadcast(new AnimateSentenceEvent(e.sentenseIndex, PowFeedbackLogic.FeedbackType.WRONG));
+			DOVirtual.DelayedCall(0.5f, () => { endRound(PowFeedbackLogic.FeedbackType.WRONG); });
+		}
+	}
 
     void onTimerTimeout(TimerTimeoutEvent e)
     {

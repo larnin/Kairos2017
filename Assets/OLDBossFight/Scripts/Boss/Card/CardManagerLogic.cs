@@ -5,6 +5,8 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using NRand;
+using TMPro;
+using DG.Tweening;
 
 public class CardManagerLogic : MonoBehaviour
 {
@@ -45,6 +47,7 @@ public class CardManagerLogic : MonoBehaviour
         m_subscriberList.Add(new Event<SelectCardEvent>.Subscriber(onSelectCard));
         m_subscriberList.Add(new Event<SelectSentenseEvent>.Subscriber(onSelectSentense));
         m_subscriberList.Add(new Event<ShowCardDescriptionEvent>.Subscriber(onShowDescription));
+		m_subscriberList.Add(new Event<AnimateSentenceEvent>.Subscriber(onAnimateSentence));
         m_subscriberList.Subscribe();
     }
 
@@ -323,4 +326,17 @@ public class CardManagerLogic : MonoBehaviour
 
         return sign * valueNormalized * m_maxSentensesHeight / 2;*/
     }
+
+	void onAnimateSentence(AnimateSentenceEvent e)
+	{
+		var sentense = m_bossText[e.sentenseIndex];
+		if (e.type == PowFeedbackLogic.FeedbackType.RIGHT)
+		{
+			sentense.GetComponent<HackBehavior>().enabled = true;
+			}
+		else
+		{
+			sentense.GetComponent<TextMeshProUGUI>().color = Color.red;
+		}
+	}
 }

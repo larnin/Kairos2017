@@ -59,18 +59,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b823b9e301d384a4ba628c95df3a63d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_behavior: {fileID: 0}
+  m_behavior: {fileID: 114431115441318838}
   m_datas:
-  - attributeName: AngleMultiplier
+  - attributeName: CurveScale
     privateAttribute: 0
-    startValue: 50
-    endValue: 2
+    startValue: 1000
+    endValue: 1000
     time: 1
   - attributeName: m_speedUsedForSmooth
     privateAttribute: 0
-    startValue: 200
-    endValue: 5
-    time: 2.5
+    startValue: 1000
+    endValue: 1000
+    time: 1
 --- !u!114 &114594037329885146
 MonoBehaviour:
   m_ObjectHideFlags: 1
