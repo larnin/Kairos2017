@@ -59,7 +59,8 @@ MonoBehaviour:
       name: Hate and Rumors
       fancyName: 
       textureName: 
-      description: He was a good man, driven away by the anger of Isaac's Mother.
+      description: The old man was a good man, driven away by the anger of Isaac's
+        Mother.
     - folded: 0
       visibility: 0
       name: A Solid Chain
@@ -95,10 +96,10 @@ MonoBehaviour:
       wrongSentenseAnswer: Something happened when He taught me.
     - sentenses:
       - It's pointless. I came back here to die.
-      - He is long gone. The Light left when I had just found it.
-      - He was a good man. But I can't be like him.
-      - The will isn't lost, but I have no say in what I become.
-      - I loved him. And my love destroy what it touches.
+      - He is long gone. He left me. I must have failed him.
+      - 'I had to flee to pursue that will. '
+      - This Will was what I wanted. But now it's destroying me.
+      - 
       rightSentenseindex: 1
       rightCardName: Hate and Rumors
       rightSentenseAnswer: No. It can't be right. He abandoned me.
@@ -109,7 +110,7 @@ MonoBehaviour:
       - 'Mother hated me ! She wanted me gone ! '
       rightSentenseindex: 0
       rightCardName: A Solid Chain
-      rightSentenseAnswer: I see...
+      rightSentenseAnswer: They wanted to bind me...
       wrongSentenseAnswer: They wanted me to go !
   - cards:
     - folded: 0
@@ -123,7 +124,8 @@ MonoBehaviour:
       - You're right. They always tried to keep me home..... because... I....
       rightSentenseindex: 0
       rightCardName: Hate & Displacement
-      rightSentenseAnswer: .. I need to do something. To leave that circle
+      rightSentenseAnswer: They dumped their hate on me. I was their outlet. Not a
+        human being.
       wrongSentenseAnswer: What... are you saying ?
   m_playerLife: 5
   m_answerTime: 5

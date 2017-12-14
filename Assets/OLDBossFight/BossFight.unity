@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15602213, g: 0.15812445, b: 0.14941728, a: 1}
+  m_IndirectSpecularColor: {r: 0.32906592, g: 0.34475148, b: 0.3465006, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -42340,17 +42340,17 @@ Prefab:
     - target: {fileID: 114802686174776252, guid: 421b2e50570a06f408ccb45c641a9b2c,
         type: 2}
       propertyPath: m_fontSize
-      value: 40
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 114802686174776252, guid: 421b2e50570a06f408ccb45c641a9b2c,
         type: 2}
       propertyPath: m_fontSizeBase
-      value: 40
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 224700014256590264, guid: 421b2e50570a06f408ccb45c641a9b2c,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 1000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 114905069473061200, guid: 421b2e50570a06f408ccb45c641a9b2c,
         type: 2}
@@ -42411,6 +42411,11 @@ Prefab:
         type: 2}
       propertyPath: rightColor.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802686174776252, guid: 421b2e50570a06f408ccb45c641a9b2c,
+        type: 2}
+      propertyPath: m_characterSpacing
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 421b2e50570a06f408ccb45c641a9b2c, type: 2}
@@ -43338,11 +43343,6 @@ Prefab:
       propertyPath: m_UI
       value: 
       objectReference: {fileID: 1307250004}
-    - target: {fileID: 114965524727942694, guid: 643e6645a6d797845aecd3bcc5e76124,
-        type: 2}
-      propertyPath: m_playerLife
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 643e6645a6d797845aecd3bcc5e76124, type: 2}
   m_IsPrefabParent: 0
