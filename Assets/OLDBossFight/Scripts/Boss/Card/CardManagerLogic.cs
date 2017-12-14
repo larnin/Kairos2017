@@ -332,11 +332,11 @@ public class CardManagerLogic : MonoBehaviour
 		var sentense = m_bossText[e.sentenseIndex];
 		if (e.type == PowFeedbackLogic.FeedbackType.RIGHT)
 		{
-			sentense.GetComponent<HackBehavior>().enabled = true;
-			}
+			//sentense.GetComponent<HackBehavior>().enabled = true;
+		}
 		else
 		{
-			sentense.GetComponent<TextMeshProUGUI>().color = Color.red;
+			//sentense.GetComponent<TextMeshProUGUI>().color = Color.red;
 		}
 	}
 }
