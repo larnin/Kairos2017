@@ -102,6 +102,6 @@ public class FloatingPhraseLogic : MonoBehaviour
         DOTween.To(() => m_textToChange.alpha,
              x => m_textToChange.alpha = x,
              value,
-             1.0f);
+             0.4f);
     }
 }

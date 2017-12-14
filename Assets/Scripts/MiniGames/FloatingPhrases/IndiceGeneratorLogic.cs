@@ -15,12 +15,12 @@ public class IndiceGeneratorLogic : MonoBehaviour {
 
     [SerializeField] private float timeBetweenEachPhrase = 1f;
     [SerializeField] public string cardName = "TEST";
-    [SerializeField] public SpawnIndiceAtNumber[] m_phraseIndices;
+    [SerializeField] private SpawnIndiceAtNumber[] m_phraseIndices;
 
     RumorsOfShadowsManager m_manager = null;
 
-    [NonSerialized] public int m_indiceNumber = 0; // collected
-    [NonSerialized] public int m_phraseAppearNumber = 0; // appeared
+    [NonSerialized] private int m_indiceNumber = 0; // collected
+    [NonSerialized] private int m_phraseAppearNumber = 0; // appeared
 
     Transform m_goToPoints;
     Transform m_spawnPoint;
@@ -43,10 +43,10 @@ public class IndiceGeneratorLogic : MonoBehaviour {
             }
         }
 
-        if (m_phraseAppearNumber == m_phraseIndices.Length)
-        {
-            Event<FindCardEvent>.Broadcast(new FindCardEvent(cardName));
-        }
+        //if (m_phraseAppearNumber == m_phraseIndices.Length)
+        //{
+        //    Event<FindCardEvent>.Broadcast(new FindCardEvent(cardName));
+        //}
     }
 
     void Start()
@@ -65,7 +65,20 @@ public class IndiceGeneratorLogic : MonoBehaviour {
         // unlockOneIndice();
         m_phraseAppearNumber = 1;
     }
+
+    bool hasNotYetTheCard = true;
+    public void tryToGetCard()
+    { 
+        if (m_phraseAppearNumber == m_phraseIndices.Length && hasNotYetTheCard)
+        {
+            Event<FindCardEvent>.Broadcast(new FindCardEvent(cardName));
+            hasNotYetTheCard = false;
+        }
+    }
 }
+
+
+
 
 
 /*

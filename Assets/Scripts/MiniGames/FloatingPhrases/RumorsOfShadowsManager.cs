@@ -140,11 +140,15 @@ public class RumorsOfShadowsManager : MonoBehaviour
 
     private void ApplyFeedBack(Transform e, TextMeshProAttributes meshProAttributes)
     {
-        FloatingPhraseLogic floatingPhrase = e.GetComponent<FloatingPhraseLogic>();
-        if (floatingPhrase && !floatingPhrase.m_beingDestroy)
+        if(e.childCount > 0)
         {
-            floatingPhrase.applyTextMeshProAttributes(meshProAttributes, false);
+            FloatingPhraseLogic floatingPhrase = e.GetChild(0).GetComponent<FloatingPhraseLogic>();
+            if (floatingPhrase && !floatingPhrase.m_beingDestroy)
+            {
+                floatingPhrase.applyTextMeshProAttributes(meshProAttributes, false);
+            }
         }
+
     }
 
     public  IEnumerator animationForCorrectPhrase(Transform shadow1, Transform shadow2)

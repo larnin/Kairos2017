@@ -106,16 +106,12 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
                 }
             }
 
-            //var P = GetComponent<IndiceGeneratorLogic>();
+            IndiceGeneratorLogic indiceGeneratorLogic = transform.parent.parent.GetComponentInChildren<IndiceGeneratorLogic>();
 
-            //if (P)
-            //{
-            //    if (P.m_phraseAppearNumber == P.m_phraseIndices.Length && !m_onetime)
-            //    {
-            //        Event<FindCardEvent>.Broadcast(new FindCardEvent(P.cardName));
-            //        m_onetime = true;
-            //    }
-            //}
+            if (indiceGeneratorLogic)
+            {
+                indiceGeneratorLogic.tryToGetCard();
+            }
 
         }
     }
