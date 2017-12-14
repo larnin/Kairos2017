@@ -475,7 +475,7 @@ Shader "Custom/SHD_Crayon01_Triplanar" {
             }
             ENDCG
         }
-        Pass {
+        /*Pass {
             Name "Meta"
             Tags {
                 "LightMode"="Meta"
@@ -598,7 +598,7 @@ Shader "Custom/SHD_Crayon01_Triplanar" {
                 return UnityMetaFragment( o );
             }
             ENDCG
-        }
+        }*/
     }
     FallBack "Diffuse"
     CustomEditor "ShaderForgeMaterialInspector"
