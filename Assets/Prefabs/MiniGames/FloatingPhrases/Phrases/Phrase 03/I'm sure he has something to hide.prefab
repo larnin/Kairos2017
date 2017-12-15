@@ -187,7 +187,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: I'm sure he has something to hide
+  m_text: I'm sure he has something to <color=#512501>hide</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4546cae5b667fc48bfdb82edf9a27a8, type: 2}
   m_sharedMaterial: {fileID: 21078926720984486, guid: e4546cae5b667fc48bfdb82edf9a27a8,
