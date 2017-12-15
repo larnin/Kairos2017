@@ -72,6 +72,7 @@ ModelImporter:
     100128: Spine1
     100130: Spine2
     100132: Bip002
+    100134: Character
     400000: //RootNode
     400002: Head
     400004: HeadEnd
@@ -139,11 +140,16 @@ ModelImporter:
     400128: Spine1
     400130: Spine2
     400132: Bip002
+    400134: Character
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: lowman_shoes001
+    4300002: Character
     7400000: Run
     7400002: Idle
     9500000: //RootNode
     13700000: lowman_shoes001
+    13700002: Character
   materials:
     importMaterials: 1
     materialName: 0
