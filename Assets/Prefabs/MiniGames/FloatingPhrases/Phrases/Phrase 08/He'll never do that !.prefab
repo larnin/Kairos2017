@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114374461524192128}
   - component: {fileID: 114182174422157278}
   m_Layer: 9
-  m_Name: Hell no !
+  m_Name: He'll never do that !
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Hell no !
+  m_text: He'll never do that !
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4546cae5b667fc48bfdb82edf9a27a8, type: 2}
   m_sharedMaterial: {fileID: 21078926720984486, guid: e4546cae5b667fc48bfdb82edf9a27a8,
