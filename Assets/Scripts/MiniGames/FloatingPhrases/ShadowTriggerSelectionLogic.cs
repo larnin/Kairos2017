@@ -39,8 +39,8 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
     [NonSerialized] public bool m_selected = false;
     [NonSerialized] public bool m_matched = false;
 
-    private Material m_baseMaterial;
-    private Material m_fxMaterial;
+   // private Material m_baseMaterial;
+   // private Material m_fxMaterial;
 
     private bool unMatchedFeedbackOn = false;
 
@@ -78,8 +78,8 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
     void Start()
     {
         m_rumorsOfShadowsManager = transform.GetComponentInParent<RumorsOfShadowsManager>();
-        m_baseMaterial = transform.Find("Base").GetComponent<Renderer>().material;
-        m_fxMaterial = transform.Find("Fx").GetComponent<Renderer>().material;
+      //  m_baseMaterial = transform.Find("Base").GetComponent<Renderer>().material;
+      //  m_fxMaterial = transform.Find("Fx").GetComponent<Renderer>().material;
 
         m_baseParam.baseColor = Color.black;
         m_baseParam.alpha = 1f;
@@ -140,15 +140,26 @@ public class ShadowTriggerSelectionLogic : TriggerBaseLogic
 
     void applyEffect(ShadowParameters shadowParameters, float applyTime)
     {
-        m_baseMaterial.DOColor(shadowParameters.baseColor, applyTime);
-        m_fxMaterial.DOColor(shadowParameters.baseColor, applyTime);
+
+        foreach(Renderer e in GetComponentsInChildren<Renderer>())
+        {
+            e.material.DOColor(shadowParameters.baseColor, applyTime);
+        }
+       // m_baseMaterial.DOColor(shadowParameters.baseColor, applyTime);
+       // m_fxMaterial.DOColor(shadowParameters.baseColor, applyTime);
+
         applyFade(shadowParameters.alpha, applyTime);
     }
 
     void applyFade(float value, float applyTime)
     {
-        m_baseMaterial.DOFloat(value, "_Alpha", applyTime);
-        m_fxMaterial.DOFloat(value, "_Alpha", applyTime);
+        foreach (Renderer e in GetComponentsInChildren<Renderer>())
+        {
+            e.material.DOFloat(value, "_Alpha", applyTime);
+        }
+
+        //m_baseMaterial.DOFloat(value, "_Alpha", applyTime);
+        //m_fxMaterial.DOFloat(value, "_Alpha", applyTime);
     }
 
     public IEnumerator shadowNotMatchedFeedback()
