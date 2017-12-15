@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224016110433369950}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: PivotArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4165635353306838}
   - component: {fileID: 33502495228862626}
   - component: {fileID: 23026943791375204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 222075104976666700}
   - component: {fileID: 114374461524192128}
   - component: {fileID: 114559968289123510}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: but with all the ruckus caused by his bottles it's pretty obvious why.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
