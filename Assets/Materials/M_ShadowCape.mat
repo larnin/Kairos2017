@@ -182,7 +182,7 @@ Material:
     - _Pos: 0
     - _Position: 0.4
     - _Roughness: 0.95
-    - _ShadowOpacity: 1
+    - _ShadowOpacity: 0.95
     - _ShadowSoftStep: 0.42
     - _ShadowSoftStrokeStep: 0.492
     - _ShadowStrokeStep: 0.038
