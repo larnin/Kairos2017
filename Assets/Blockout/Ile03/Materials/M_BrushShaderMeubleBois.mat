@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: 5f567e2822a482241b7b4cca0ef3e317, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2c983f73ad110914b80ac187b6b2e519, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BrushStrokeTexture:
@@ -151,7 +151,7 @@ Material:
     - _BrushStrokeTiling: 0.5
     - _BrushTextureTiling: 1
     - _BumpScale: 1
-    - _Contrast: 0.146
+    - _Contrast: 0.184
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -184,14 +184,14 @@ Material:
     - _Metallic: 0
     - _Metalness: 0
     - _Mode: 0
-    - _MouvSpeed: 0.02
+    - _MouvSpeed: 0
     - _NormalIntensity: 0.5
     - _Occlusion: 0.613
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Position: 0.4
-    - _Roughness: 0.729
-    - _ShadowOpacity: 0.891
+    - _Position: 0.41
+    - _Roughness: 0.85
+    - _ShadowOpacity: 0.8
     - _ShadowSoftStep: 0.42
     - _ShadowSoftStrokeStep: 0.492
     - _ShadowStep: 0.03
@@ -210,7 +210,7 @@ Material:
     - _BrushTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0.03114187, g: 0.0427871, b: 0.0588234, a: 0}
+    - _ShadowColor: {r: 0.031141868, g: 0.042787053, b: 0.058823355, a: 0}
     - _TextureOffset1: {r: 0.3, g: 0.3, b: 0, a: 0}
     - _TextureOffset2: {r: 0, g: 0, b: 0, a: 0}
     - _TextureOffset3: {r: 0, g: 0, b: 0, a: 0}

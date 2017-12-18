@@ -191,7 +191,7 @@ Material:
     - _Parallax: 0.02
     - _Position: 0.4
     - _Roughness: 1
-    - _ShadowOpacity: 0.95
+    - _ShadowOpacity: 0.98
     - _ShadowSoftStep: 0.42
     - _ShadowSoftStrokeStep: 0.492
     - _ShadowStep: 0.03
@@ -207,7 +207,7 @@ Material:
     - _VertexOffsetContrast: -0.91
     - _VertexOffsetPosition: 8.47
     - _VertexOffsetSpeed: 2.15
-    - _VertexOffsetStrength: 0.15
+    - _VertexOffsetStrength: 0.05
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
